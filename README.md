@@ -1,0 +1,1 @@
+DE1_SOC_SCOPE
