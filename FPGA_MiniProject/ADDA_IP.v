@@ -12,10 +12,12 @@ output [13:0] 	ADCOut,
 output 			OutOfRangeOut,
 output			clockOut
 );
+
 localparam signd = false;
 wire signalOut[13:0];
 Assign clockOut = (clockEN == 1) ? clock : 0;
 Assign signalOut = (invertEN == 1) ? ~ADC : ADC;
 Assign ADCOut = (EN == 1) ? signalOut : 0;
 Assign OutOfRangeOut = OutOfRangep;
+
 endmodule 
