@@ -7,9 +7,9 @@ input reg [7:0]	colour_G,
 input reg [7:0]	colour_B,
 output 				vga_hsync,
 output				vga_vsync,
-output	[7:0]		colour_R,
-output	[7:0]		colour_G,
-output	[7:0]		colour_B
+output	[7:0]		R,
+output	[7:0]		G,
+output	[7:0]		B
 
 );
 //parameters for 1024x1028
@@ -47,6 +47,9 @@ reg [2:0] sigIndicator = 0;
 */
 
 assign vga_hsync = (sigIndicator == 0) ? 0 : 1;		//assign hsync
+assign R = (sigIndicator == 2)? colour_R : 0;
+assign G = (sigIndicator == 2)? colour_G : 0;
+assign B = (sigIndicator == 2)? colour_B : 0;
 
 //counters
 always @(posedge clock) begin
