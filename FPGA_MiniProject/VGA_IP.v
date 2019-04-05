@@ -28,4 +28,26 @@ localparam integer h_b_endcount = clockspeed * (h_b * 0.000000001);
 localparam integer h_c_endcount = clockspeed * (h_c * 0.000000001);
 localparam integer h_d_endcount = clockspeed * (h_d * 0.000000001);
 
+//calculate highest reg size required
+localparam regsize = $clog2(h_c_endcount);
+
+//counter initilisations
+reg h_a_counter [regsize:0] = 0;
+reg h_b_counter [regsize:0] = 0;
+reg h_c_counter [regsize:0] = 0;
+reg h_d_counter [regsize:0] = 0;
+
+//Indicator for section of signal
+reg [2:0] sigIndicator = 0;
+/*
+0 - sync
+1 - backporch
+2 - data
+3 - frontporch
+*/
+
+assign vga_hsync = (sigIndicator == 0) ? 1 : 0;		//assign hsync
+
+
+
 endmodule
