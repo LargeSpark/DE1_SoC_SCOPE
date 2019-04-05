@@ -46,8 +46,51 @@ reg [2:0] sigIndicator = 0;
 3 - frontporch
 */
 
-assign vga_hsync = (sigIndicator == 0) ? 1 : 0;		//assign hsync
+assign vga_hsync = (sigIndicator == 0) ? 0 : 1;		//assign hsync
 
+//counters
+always @(posedge clock) begin
 
+	//If sync
+	if(sigIndicator == 0) begin
+		if(h_a_counter == h_a_endcount) begin
+			h_a_counter = 0;
+			sigIndicator = 1;
+		end else begin
+		h_a_counter = h_a_counter + 1;
+		end
+	end
+	
+	//if backporch
+	if(sigIndicator == 1) begin
+		if(h_b_counter == h_b_endcount) begin
+			h_b_counter = 0;
+			sigIndicator = 2;
+		end else begin
+		h_b_counter = h_b_counter + 1;
+		end
+	end
+	
+	//if data
+	if(sigIndicator == 2) begin
+		if(h_c_counter == h_c_endcount) begin
+			h_c_counter = 0;
+			sigIndicator = 3;
+		end else begin
+		h_c_counter = h_c_counter + 1;
+		end
+	end
+	
+	//if frontporch
+	if(sigIndicator == 3) begin
+		if(h_d_counter == h_d_endcount) begin
+			h_d_counter = 0;
+			sigIndicator = 0;
+		end else begin
+		h_d_counter = h_d_counter + 1;
+		end
+	end	
+	
+end
 
 endmodule
