@@ -1,0 +1,7 @@
+
+State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|sigIndicator
+Name sigIndicator.011 sigIndicator.010 sigIndicator.001 sigIndicator.000 
+sigIndicator.000 0 0 0 0 
+sigIndicator.001 0 0 1 1 
+sigIndicator.010 0 1 0 1 
+sigIndicator.011 1 0 0 1 

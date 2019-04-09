@@ -4,9 +4,7 @@ Haider Shafiq - 201207577
 N-Channel Oscilloscope */
 
 // Top Level Module
-module FPGA_MiniProject #(
-
-)(
+module FPGA_MiniProject(
 input 				clock,
 output 				vga_hsync,
 output				vga_vsync,
@@ -18,7 +16,7 @@ output	[7:0]		B
 wire VGAClock;
 
 clockDivider #(
-	.baseClock (225000000),
+	.baseclock (225000000),
 	.clockspeed (108000000)
 	)
 	VGAClkGen(
@@ -27,7 +25,7 @@ clockDivider #(
 );
 
 VGA_drawPixel VGA(
-	.clock()//FROM FREQ DIVIDER),
+	.clock(VGAClock),//FROM FREQ DIVIDER
 	.x_pos (0),
 	.y_pos (0),
 	.colour_R (255),

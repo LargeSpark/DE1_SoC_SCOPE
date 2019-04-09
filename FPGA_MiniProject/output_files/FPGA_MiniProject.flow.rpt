@@ -1,6 +1,6 @@
 Flow report for FPGA_MiniProject
-Sun Mar 24 15:17:13 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Tue Apr 09 11:49:50 2019
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Mar 24 15:17:13 2019       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; FPGA_MiniProject                            ;
-; Top-level Entity Name           ; FPGA_MiniProject                            ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 3                                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Flow Summary                                                                               ;
++---------------------------------+----------------------------------------------------------+
+; Flow Status                     ; Successful - Tue Apr 09 11:49:50 2019                    ;
+; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                   ; FPGA_MiniProject                                         ;
+; Top-level Entity Name           ; FPGA_MiniProject                                         ;
+; Family                          ; Cyclone V                                                ;
+; Device                          ; 5CSEMA5F31C6                                             ;
+; Timing Models                   ; Final                                                    ;
+; Logic utilization (in ALMs)     ; N/A                                                      ;
+; Total registers                 ; 63                                                       ;
+; Total pins                      ; 27                                                       ;
+; Total virtual pins              ; 0                                                        ;
+; Total block memory bits         ; 0                                                        ;
+; Total DSP Blocks                ; 0                                                        ;
+; Total HSSI RX PCSs              ; 0                                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                                        ;
+; Total HSSI TX PCSs              ; 0                                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                                        ;
+; Total PLLs                      ; 0                                                        ;
+; Total DLLs                      ; 0                                                        ;
++---------------------------------+----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2019 15:16:51 ;
+; Start date & time ; 04/09/2019 11:49:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_MiniProject    ;
 +-------------------+---------------------+
@@ -78,10 +78,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176629542275732.155344061002792        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 70465358162119.155480697703976         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -91,18 +95,18 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4840 MB             ; 00:00:28                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 692 MB              ; 00:00:25                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Haiders-PC       ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------

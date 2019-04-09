@@ -2,8 +2,8 @@
 
 /*--Module to divide the clock into requested clock speed--*/
 module clockDivider # (
-	parameter baseclock = 50000000;										//Base clock inputted into module (default 50MHz)
-	parameter clockspeed = 128000;										//Set the output clockspeed of the clock divider (default 128kHz)
+	parameter baseclock = 50000000,										//Base clock inputted into module (default 50MHz)
+	parameter clockspeed = 128000										//Set the output clockspeed of the clock divider (default 128kHz)
 ) (
 input 			clock,														//Input clock
 output reg  	clockdivided												//Output clock
