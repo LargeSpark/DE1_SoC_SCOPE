@@ -1,5 +1,6 @@
 |FPGA_MiniProject
-clock => clock.IN1
+clock => ~NO_FANOUT~
+VGAclock => VGAclock.IN1
 vga_hsync <= VGA_drawPixel:VGA.vga_hsync
 vga_vsync <= VGA_drawPixel:VGA.vga_vsync
 R[0] <= VGA_drawPixel:VGA.R
@@ -28,21 +29,6 @@ B[6] <= VGA_drawPixel:VGA.B
 B[7] <= VGA_drawPixel:VGA.B
 
 
-|FPGA_MiniProject|clockDivider:VGAClkGen
-clock => clockdivided~reg0.CLK
-clock => counter[0].CLK
-clock => counter[1].CLK
-clock => counter[2].CLK
-clock => counter[3].CLK
-clock => counter[4].CLK
-clock => counter[5].CLK
-clock => counter[6].CLK
-clock => counter[7].CLK
-clock => counter[8].CLK
-clock => counter[9].CLK
-clockdivided <= clockdivided~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |FPGA_MiniProject|VGA_drawPixel:VGA
 clock => h_d_counter[0].CLK
 clock => h_d_counter[1].CLK
@@ -55,7 +41,6 @@ clock => h_d_counter[7].CLK
 clock => h_d_counter[8].CLK
 clock => h_d_counter[9].CLK
 clock => h_d_counter[10].CLK
-clock => h_d_counter[11].CLK
 clock => h_c_counter[0].CLK
 clock => h_c_counter[1].CLK
 clock => h_c_counter[2].CLK
@@ -67,7 +52,6 @@ clock => h_c_counter[7].CLK
 clock => h_c_counter[8].CLK
 clock => h_c_counter[9].CLK
 clock => h_c_counter[10].CLK
-clock => h_c_counter[11].CLK
 clock => h_b_counter[0].CLK
 clock => h_b_counter[1].CLK
 clock => h_b_counter[2].CLK
@@ -79,7 +63,6 @@ clock => h_b_counter[7].CLK
 clock => h_b_counter[8].CLK
 clock => h_b_counter[9].CLK
 clock => h_b_counter[10].CLK
-clock => h_b_counter[11].CLK
 clock => h_a_counter[0].CLK
 clock => h_a_counter[1].CLK
 clock => h_a_counter[2].CLK
@@ -91,7 +74,6 @@ clock => h_a_counter[7].CLK
 clock => h_a_counter[8].CLK
 clock => h_a_counter[9].CLK
 clock => h_a_counter[10].CLK
-clock => h_a_counter[11].CLK
 clock => sigIndicator~3.DATAIN
 x_pos => ~NO_FANOUT~
 y_pos => ~NO_FANOUT~

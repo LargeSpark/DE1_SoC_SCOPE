@@ -13,11 +13,11 @@ output	[7:0]		B
 
 );
 //parameters for 1024x1028
-localparam clockspeed = 108000000;
-localparam h_a=1000; 	//nanoseconds - Sync
-localparam h_b=2300; 	//nanoseconds - Backporch
-localparam h_c=11900; //nanoseconds - Display Interval
-localparam h_d=400; 	//nanoseconds - Front Porch
+localparam clockspeed = 25000000;
+localparam h_a=3800; 	//nanoseconds - Sync
+localparam h_b=1900; 	//nanoseconds - Backporch
+localparam h_c=25400; //nanoseconds - Display Interval
+localparam h_d=600; 	//nanoseconds - Front Porch
 
 reg [9:0] screenPosition = 0;
 reg [9:0] linePosition = 0;

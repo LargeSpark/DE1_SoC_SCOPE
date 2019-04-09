@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation
+vFPGA_MiniProject
+Z1 !s110 1554815599
+!i10b 1
+!s100 b1Q3i@PjInbl4U2f_81B@1
+I73TYLRH>Q]ABIT26[@`gj1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1554815572
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
+L0 7
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1554815599.000000
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject
+Z7 tCvgOpt 0
+n@f@p@g@a_@mini@project
+vVGA_drawPixel
+!s110 1554815598
+!i10b 1
+!s100 5bf2i;3[67]f^6=GLzT[B2
+I=CbfzlE@ahFVgcNKAKBE@3
+R2
+R0
+w1554815488
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1554815598.000000
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
+!i113 1
+R5
+R6
+R7
+n@v@g@a_draw@pixel
+vVGATest_tb
+R1
+!i10b 1
+!s100 >>K0=h6Wg@G?XA82;eQVZ1
+IGVZGEQ5EHDjLoRzL^lHPo1
+R2
+R0
+w1554815324
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v|
+!i113 1
+R5
+R6
+R7
+n@v@g@a@test_tb

@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation/modelsim
+vclockDivider
+!s110 1554807837
+!i10b 1
+!s100 6R[nnc^bT1N=64RS6AQe63
+I;nQ@:C0aZi6inGCTXL41A3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1554805337
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v
+L0 4
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1554807837.000000
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v|
+!i113 1
+Z3 o-vlog01compat -work work
+Z4 !s92 -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject
+Z5 tCvgOpt 0
+nclock@divider
+vFPGA_MiniProject
+Z6 !s110 1554807836
+!i10b 1
+!s100 <4gdYW72mMLB7@K=R@c`L0
+IKncdNAeNLe6bd2na_OE]]3
+R1
+R0
+w1554806975
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
+L0 7
+R2
+r1
+!s85 0
+31
+Z7 !s108 1554807836.000000
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
+!i113 1
+R3
+R4
+R5
+n@f@p@g@a_@mini@project
+vVGA_drawPixel
+R6
+!i10b 1
+!s100 0W3cCz=B?DEIGZi=kM8eQ0
+I0L16fVzLF7PznBj;e>Fba0
+R1
+R0
+w1554806772
+8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+L0 1
+R2
+r1
+!s85 0
+31
+R7
+!s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
+!i113 1
+R3
+R4
+R5
+n@v@g@a_draw@pixel
