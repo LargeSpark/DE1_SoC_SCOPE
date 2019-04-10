@@ -18,10 +18,10 @@ localparam h_a=3800; 	//nanoseconds - Sync
 localparam h_b=1900; 	//nanoseconds - Backporch
 localparam h_c=25400; 	//nanoseconds - Display Interval
 localparam h_d=600; 		//nanoseconds - Front Porch
-localparam v_a=h_a * 2;			//lines - Sync
-localparam v_b=h_b * 33;		//lines - Backporch
-localparam v_c=h_c * 480;		//lines - Display Interval
-localparam v_d=h_d * 10;		//lines - Front Porch
+localparam v_a=2;			//lines - Sync
+localparam v_b=33;		//lines - Backporch
+localparam v_c=480;		//lines - Display Interval
+localparam v_d=10;		//lines - Front Porch
 localparam Horizontal_Size = 640;
 localparam Vertical_Size = 480;
 
@@ -34,20 +34,20 @@ localparam integer h_a_endcount = clockspeed * (h_a * 0.000000001);
 localparam integer h_b_endcount = clockspeed * (h_b * 0.000000001);
 localparam integer h_c_endcount = clockspeed * (h_c * 0.000000001);
 localparam integer h_d_endcount = clockspeed * (h_d * 0.000000001);
-localparam integer v_a_endcount = clockspeed * (v_a * 0.000000001);
-localparam integer v_b_endcount = clockspeed * (v_b * 0.000000001);
-localparam integer v_c_endcount = clockspeed * (v_c * 0.000000001);
-localparam integer v_d_endcount = clockspeed * (v_d * 0.000000001);
+//localparam integer v_a_endcount = clockspeed * (v_a * 0.000000001);
+//localparam integer v_b_endcount = clockspeed * (v_b * 0.000000001);
+//localparam integer v_c_endcount = clockspeed * (v_c * 0.000000001);
+//localparam integer v_d_endcount = clockspeed * (v_d * 0.000000001);
 
 //calculate highest reg size required
 localparam Hregsize_a = $clog2(h_a_endcount);
 localparam Hregsize_b = $clog2(h_b_endcount);
 localparam Hregsize_c = $clog2(h_c_endcount);
 localparam Hregsize_d = $clog2(h_d_endcount);
-localparam Vregsize_a = $clog2(v_a_endcount);
-localparam Vregsize_b = $clog2(v_b_endcount);
-localparam Vregsize_c = $clog2(v_c_endcount);
-localparam Vregsize_d = $clog2(v_d_endcount);
+localparam Vregsize_a = $clog2(v_a);
+localparam Vregsize_b = $clog2(v_b);
+localparam Vregsize_c = $clog2(v_c);
+localparam Vregsize_d = $clog2(v_d);
 localparam Hozregsize = $clog2(Horizontal_Size);
 localparam Verregsize = $clog2(Vertical_Size);
 
@@ -162,6 +162,14 @@ always @(posedge clock) begin
 	
 	//###### V SYNC ######
 	
+	
+end
+
+//VerPixel == 0;
+reg [0:0] rstcounter = 1;
+//Vsync
+always @(posedge vga_hsync) begin
+
 	if(VerSigOn == 1 && rstV == 0) begin
 		//if sync
 		if(VerSigIndicator == 0) begin
@@ -203,14 +211,14 @@ always @(posedge clock) begin
 			v_d_counter <= v_d_counter + 1;
 			end
 		end	
+		
+		if(rstV == 1) begin
+			rstcounter <= rstcounter + 1;
+			if(rstcounter == 1) begin
+			rstcounter <= 0;
+			end
+		end
 	end
-
-end
-
-//VerPixel == 0;
-
-//Vsync
-always @(posedge clock) begin
 
 end
 

@@ -1,6 +1,6 @@
 Flow report for FPGA_MiniProject
-Wed Apr 10 13:25:55 2019
-Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Wed Apr 10 19:16:16 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -37,24 +37,24 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------+
-; Flow Summary                                                                           ;
-+-----------------------------+----------------------------------------------------------+
-; Flow Status                 ; Successful - Wed Apr 10 13:25:55 2019                    ;
-; Quartus Prime Version       ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name               ; FPGA_MiniProject                                         ;
-; Top-level Entity Name       ; FPGA_MiniProject                                         ;
-; Family                      ; Cyclone V                                                ;
-; Device                      ; 5CSEMA5F31C6                                             ;
-; Timing Models               ; Final                                                    ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                                ;
-; Total registers             ; N/A until Partition Merge                                ;
-; Total pins                  ; N/A until Partition Merge                                ;
-; Total virtual pins          ; N/A until Partition Merge                                ;
-; Total block memory bits     ; N/A until Partition Merge                                ;
-; Total PLLs                  ; N/A until Partition Merge                                ;
-; Total DLLs                  ; N/A until Partition Merge                                ;
-+-----------------------------+----------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Wed Apr 10 19:16:16 2019       ;
+; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name               ; FPGA_MiniProject                            ;
+; Top-level Entity Name       ; FPGA_MiniProject                            ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CSEMA5F31C6                                ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2019 13:25:45 ;
+; Start date & time ; 04/10/2019 19:16:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_MiniProject    ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                        ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                  ; 70465358162119.155489914410144         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                  ; 1096091850022.155492016412868          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME               ; NA                                     ; --            ; --          ; VGATest_tb     ;
 ; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/load_sim.tcl                ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; VGATest_tb                             ; --            ; --          ; eda_simulation ;
@@ -101,18 +101,18 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 635 MB              ; 00:00:23                           ;
-; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4767 MB             ; 00:00:29                           ;
+; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:29                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                     ;
-+------------------------+------------------+-----------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
-+------------------------+------------------+-----------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; THEBEAST         ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
