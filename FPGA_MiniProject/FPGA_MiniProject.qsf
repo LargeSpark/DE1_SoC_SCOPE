@@ -68,4 +68,31 @@ set_global_assignment -name VERILOG_FILE FPGA_MiniProject.v
 set_global_assignment -name VERILOG_FILE FreqDiv.v
 set_global_assignment -name EDA_TEST_BENCH_FILE VGATB.v -section_id VGATest_tb
 set_global_assignment -name VERILOG_FILE VGAClock.v
+set_location_assignment PIN_B13 -to B[0]
+set_location_assignment PIN_G13 -to B[1]
+set_location_assignment PIN_H13 -to B[2]
+set_location_assignment PIN_F14 -to B[3]
+set_location_assignment PIN_H14 -to B[4]
+set_location_assignment PIN_F15 -to B[5]
+set_location_assignment PIN_G15 -to B[6]
+set_location_assignment PIN_J14 -to B[7]
+set_location_assignment PIN_J9 -to G[0]
+set_location_assignment PIN_J10 -to G[1]
+set_location_assignment PIN_H12 -to G[2]
+set_location_assignment PIN_G10 -to G[3]
+set_location_assignment PIN_G11 -to G[4]
+set_location_assignment PIN_G12 -to G[5]
+set_location_assignment PIN_F11 -to G[6]
+set_location_assignment PIN_E11 -to G[7]
+set_location_assignment PIN_F13 -to R[7]
+set_location_assignment PIN_E12 -to R[6]
+set_location_assignment PIN_D12 -to R[5]
+set_location_assignment PIN_C12 -to R[4]
+set_location_assignment PIN_A13 -to R[0]
+set_location_assignment PIN_C13 -to R[1]
+set_location_assignment PIN_E13 -to R[2]
+set_location_assignment PIN_B12 -to R[3]
+set_location_assignment PIN_B11 -to vga_hsync
+set_location_assignment PIN_D11 -to vga_vsync
+set_location_assignment PIN_AF14 -to clock
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -44,7 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGAclock",
+					"name" : "clock",
 					"strict" : false
 				}
 			]
