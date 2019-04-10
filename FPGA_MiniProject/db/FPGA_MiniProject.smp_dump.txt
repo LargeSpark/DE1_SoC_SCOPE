@@ -1,7 +1,20 @@
 
-State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|sigIndicator
-Name sigIndicator.011 sigIndicator.010 sigIndicator.001 sigIndicator.000 
-sigIndicator.000 0 0 0 0 
-sigIndicator.001 0 0 1 1 
-sigIndicator.010 0 1 0 1 
-sigIndicator.011 1 0 0 1 
+State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigOn
+Name VerSigOn.001 
+VerSigOn.000 0 
+VerSigOn.001 1 
+
+State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigIndicator
+Name VerSigIndicator.011 VerSigIndicator.010 VerSigIndicator.001 VerSigIndicator.000 VerSigIndicator.100 
+VerSigIndicator.000 0 0 0 0 0 
+VerSigIndicator.001 0 0 1 1 0 
+VerSigIndicator.010 0 1 0 1 0 
+VerSigIndicator.011 1 0 0 1 0 
+VerSigIndicator.100 0 0 0 1 1 
+
+State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|HozsigIndicator
+Name HozsigIndicator.011 HozsigIndicator.010 HozsigIndicator.001 HozsigIndicator.000 
+HozsigIndicator.000 0 0 0 0 
+HozsigIndicator.001 0 0 1 1 
+HozsigIndicator.010 0 1 0 1 
+HozsigIndicator.011 1 0 0 1 

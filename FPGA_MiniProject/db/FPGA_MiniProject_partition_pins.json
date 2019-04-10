@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "vga_vsync",
+					"strict" : false
+				},
+				{
 					"name" : "R[0]",
 					"strict" : false
 				},
@@ -40,7 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "VGAclock",
 					"strict" : false
 				}
 			]
