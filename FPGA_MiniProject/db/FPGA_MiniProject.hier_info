@@ -26,6 +26,7 @@ B[4] << VGA_drawPixel:VGA.B
 B[5] << VGA_drawPixel:VGA.B
 B[6] << VGA_drawPixel:VGA.B
 B[7] << VGA_drawPixel:VGA.B
+VClock << VGAclock.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPGA_MiniProject|VGA_clock:VGAClk

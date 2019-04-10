@@ -44,6 +44,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "VClock",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				}

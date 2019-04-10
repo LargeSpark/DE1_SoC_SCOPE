@@ -10,9 +10,12 @@ output 				vga_hsync,
 output				vga_vsync,
 output	[7:0]		R,
 output	[7:0]		G,
-output	[7:0]		B
+output	[7:0]		B,
+output				VClock
 );
 wire VGAclock;
+
+assign VClock = VGAclock;
 
 VGA_clock VGAClk(
 	.T50MHZClock (clock),

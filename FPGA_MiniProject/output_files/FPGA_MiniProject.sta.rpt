@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for FPGA_MiniProject
-Wed Apr 10 12:49:39 2019
+Wed Apr 10 13:07:05 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -97,14 +97,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.7%      ;
-;     Processor 3            ;   2.7%      ;
-;     Processor 4            ;   2.6%      ;
+;     Processor 2            ;   2.2%      ;
+;     Processor 3            ;   2.2%      ;
+;     Processor 4            ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -123,8 +123,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note                                                 ;
 +------------+-----------------+------------------------------+------------------------------------------------------+
-; 267.38 MHz ; 267.38 MHz      ; VGA_clock:VGAClk|T25MHZClock ;                                                      ;
-; 552.18 MHz ; 409.5 MHz       ; clock                        ; limit due to low minimum pulse width violation (tcl) ;
+; 270.2 MHz  ; 270.2 MHz       ; VGA_clock:VGAClk|T25MHZClock ;                                                      ;
+; 525.76 MHz ; 367.92 MHz      ; clock                        ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+------------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -140,8 +140,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; -2.740 ; -335.129      ;
-; clock                        ; -0.811 ; -1.471        ;
+; VGA_clock:VGAClk|T25MHZClock ; -2.701 ; -330.926      ;
+; clock                        ; -0.902 ; -1.426        ;
 +------------------------------+--------+---------------+
 
 
@@ -150,8 +150,8 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; 0.274 ; 0.000         ;
-; clock                        ; 0.394 ; 0.000         ;
+; VGA_clock:VGAClk|T25MHZClock ; 0.273 ; 0.000         ;
+; clock                        ; 0.574 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -172,8 +172,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; clock                        ; -0.721 ; -3.582        ;
-; VGA_clock:VGAClk|T25MHZClock ; -0.394 ; -89.682       ;
+; clock                        ; -0.859 ; -2.970        ;
+; VGA_clock:VGAClk|T25MHZClock ; -0.394 ; -92.750       ;
 +------------------------------+--------+---------------+
 
 
@@ -188,8 +188,8 @@ No synchronizer chains to report.
 +------------+-----------------+------------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note                                                 ;
 +------------+-----------------+------------------------------+------------------------------------------------------+
-; 268.31 MHz ; 268.31 MHz      ; VGA_clock:VGAClk|T25MHZClock ;                                                      ;
-; 562.75 MHz ; 405.84 MHz      ; clock                        ; limit due to low minimum pulse width violation (tcl) ;
+; 270.56 MHz ; 270.56 MHz      ; VGA_clock:VGAClk|T25MHZClock ;                                                      ;
+; 525.49 MHz ; 367.65 MHz      ; clock                        ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+------------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -199,8 +199,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; -2.727 ; -330.474      ;
-; clock                        ; -0.777 ; -1.392        ;
+; VGA_clock:VGAClk|T25MHZClock ; -2.696 ; -322.410      ;
+; clock                        ; -0.903 ; -1.420        ;
 +------------------------------+--------+---------------+
 
 
@@ -209,8 +209,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; 0.275 ; 0.000         ;
-; clock                        ; 0.368 ; 0.000         ;
+; VGA_clock:VGAClk|T25MHZClock ; 0.277 ; 0.000         ;
+; clock                        ; 0.556 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -231,8 +231,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; clock                        ; -0.732 ; -3.747        ;
-; VGA_clock:VGAClk|T25MHZClock ; -0.394 ; -88.386       ;
+; clock                        ; -0.860 ; -3.024        ;
+; VGA_clock:VGAClk|T25MHZClock ; -0.394 ; -90.877       ;
 +------------------------------+--------+---------------+
 
 
@@ -247,8 +247,8 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; -1.293 ; -141.952      ;
-; clock                        ; -0.300 ; -0.300        ;
+; VGA_clock:VGAClk|T25MHZClock ; -1.254 ; -141.104      ;
+; clock                        ; -0.260 ; -0.280        ;
 +------------------------------+--------+---------------+
 
 
@@ -257,8 +257,8 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; 0.094 ; 0.000         ;
-; clock                        ; 0.177 ; 0.000         ;
+; VGA_clock:VGAClk|T25MHZClock ; 0.090 ; 0.000         ;
+; clock                        ; 0.294 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -279,8 +279,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; clock                        ; -0.663 ; -2.921        ;
-; VGA_clock:VGAClk|T25MHZClock ; 0.035  ; 0.000         ;
+; clock                        ; -0.759 ; -2.338        ;
+; VGA_clock:VGAClk|T25MHZClock ; -0.053 ; -1.354        ;
 +------------------------------+--------+---------------+
 
 
@@ -295,8 +295,8 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock ; -1.129 ; -123.430      ;
-; clock                        ; -0.210 ; -0.210        ;
+; VGA_clock:VGAClk|T25MHZClock ; -1.121 ; -122.401      ;
+; clock                        ; -0.196 ; -0.196        ;
 +------------------------------+--------+---------------+
 
 
@@ -306,7 +306,7 @@ No synchronizer chains to report.
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
 ; VGA_clock:VGAClk|T25MHZClock ; 0.079 ; 0.000         ;
-; clock                        ; 0.154 ; 0.000         ;
+; clock                        ; 0.263 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -327,8 +327,8 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; clock                        ; -0.652 ; -2.884        ;
-; VGA_clock:VGAClk|T25MHZClock ; 0.069  ; 0.000         ;
+; clock                        ; -0.727 ; -2.226        ;
+; VGA_clock:VGAClk|T25MHZClock ; -0.007 ; -0.103        ;
 +------------------------------+--------+---------------+
 
 
@@ -343,12 +343,12 @@ No synchronizer chains to report.
 +-------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                         ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; -2.740   ; 0.079 ; N/A      ; N/A     ; -0.732              ;
-;  VGA_clock:VGAClk|T25MHZClock ; -2.740   ; 0.079 ; N/A      ; N/A     ; -0.394              ;
-;  clock                        ; -0.811   ; 0.154 ; N/A      ; N/A     ; -0.732              ;
-; Design-wide TNS               ; -336.6   ; 0.0   ; 0.0      ; 0.0     ; -93.264             ;
-;  VGA_clock:VGAClk|T25MHZClock ; -335.129 ; 0.000 ; N/A      ; N/A     ; -89.682             ;
-;  clock                        ; -1.471   ; 0.000 ; N/A      ; N/A     ; -3.747              ;
+; Worst-case Slack              ; -2.701   ; 0.079 ; N/A      ; N/A     ; -0.860              ;
+;  VGA_clock:VGAClk|T25MHZClock ; -2.701   ; 0.079 ; N/A      ; N/A     ; -0.394              ;
+;  clock                        ; -0.903   ; 0.263 ; N/A      ; N/A     ; -0.860              ;
+; Design-wide TNS               ; -332.352 ; 0.0   ; 0.0      ; 0.0     ; -95.72              ;
+;  VGA_clock:VGAClk|T25MHZClock ; -330.926 ; 0.000 ; N/A      ; N/A     ; -92.750             ;
+;  clock                        ; -1.426   ; 0.000 ; N/A      ; N/A     ; -3.024              ;
 +-------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -383,6 +383,7 @@ No synchronizer chains to report.
 ; B[5]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; B[6]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; B[7]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; VClock    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +-----------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -426,6 +427,7 @@ No synchronizer chains to report.
 ; B[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; B[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; B[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; VClock    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -460,6 +462,7 @@ No synchronizer chains to report.
 ; B[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; B[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; B[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; VClock    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -494,6 +497,7 @@ No synchronizer chains to report.
 ; B[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; B[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; B[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; VClock    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -528,6 +532,7 @@ No synchronizer chains to report.
 ; B[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; B[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; B[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; VClock    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -536,8 +541,8 @@ No synchronizer chains to report.
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; clock                        ; clock                        ; 3        ; 0        ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock ; VGA_clock:VGAClk|T25MHZClock ; 3131     ; 0        ; 0        ; 0        ;
+; clock                        ; clock                        ; 2        ; 0        ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock ; VGA_clock:VGAClk|T25MHZClock ; 3188     ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -547,8 +552,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------+------------------------------+----------+----------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
-; clock                        ; clock                        ; 3        ; 0        ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock ; VGA_clock:VGAClk|T25MHZClock ; 3131     ; 0        ; 0        ; 0        ;
+; clock                        ; clock                        ; 2        ; 0        ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock ; VGA_clock:VGAClk|T25MHZClock ; 3188     ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -574,8 +579,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 10    ; 10   ;
-; Unconstrained Output Port Paths ; 20    ; 20   ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 21    ; 21   ;
 +---------------------------------+-------+------+
 
 
@@ -602,6 +607,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; R[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; R[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; R[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VClock      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -620,6 +626,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; R[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; R[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; R[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; VClock      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -631,7 +638,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Wed Apr 10 12:49:30 2019
+    Info: Processing started: Wed Apr 10 13:06:54 2019
 Info: Command: quartus_sta FPGA_MiniProject -c FPGA_MiniProject
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -649,96 +656,96 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.740
+Info (332146): Worst-case setup slack is -2.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.740            -335.129 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.811              -1.471 clock 
-Info (332146): Worst-case hold slack is 0.274
+    Info (332119):    -2.701            -330.926 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.902              -1.426 clock 
+Info (332146): Worst-case hold slack is 0.273
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.274               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.394               0.000 clock 
+    Info (332119):     0.273               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.574               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.721
+Info (332146): Worst-case minimum pulse width slack is -0.859
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.721              -3.582 clock 
-    Info (332119):    -0.394             -89.682 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.859              -2.970 clock 
+    Info (332119):    -0.394             -92.750 VGA_clock:VGAClk|T25MHZClock 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.727
+Info (332146): Worst-case setup slack is -2.696
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.727            -330.474 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.777              -1.392 clock 
-Info (332146): Worst-case hold slack is 0.275
+    Info (332119):    -2.696            -322.410 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.903              -1.420 clock 
+Info (332146): Worst-case hold slack is 0.277
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.275               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.368               0.000 clock 
+    Info (332119):     0.277               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.556               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.732
+Info (332146): Worst-case minimum pulse width slack is -0.860
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.732              -3.747 clock 
-    Info (332119):    -0.394             -88.386 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.860              -3.024 clock 
+    Info (332119):    -0.394             -90.877 VGA_clock:VGAClk|T25MHZClock 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.293
+Info (332146): Worst-case setup slack is -1.254
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.293            -141.952 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.300              -0.300 clock 
-Info (332146): Worst-case hold slack is 0.094
+    Info (332119):    -1.254            -141.104 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.260              -0.280 clock 
+Info (332146): Worst-case hold slack is 0.090
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.094               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.177               0.000 clock 
+    Info (332119):     0.090               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.294               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.663
+Info (332146): Worst-case minimum pulse width slack is -0.759
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.663              -2.921 clock 
-    Info (332119):     0.035               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.759              -2.338 clock 
+    Info (332119):    -0.053              -1.354 VGA_clock:VGAClk|T25MHZClock 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.129
+Info (332146): Worst-case setup slack is -1.121
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.129            -123.430 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.210              -0.210 clock 
+    Info (332119):    -1.121            -122.401 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.196              -0.196 clock 
 Info (332146): Worst-case hold slack is 0.079
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.079               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.154               0.000 clock 
+    Info (332119):     0.263               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.652
+Info (332146): Worst-case minimum pulse width slack is -0.727
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.652              -2.884 clock 
-    Info (332119):     0.069               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.727              -2.226 clock 
+    Info (332119):    -0.007              -0.103 VGA_clock:VGAClk|T25MHZClock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 996 megabytes
-    Info: Processing ended: Wed Apr 10 12:49:39 2019
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 997 megabytes
+    Info: Processing ended: Wed Apr 10 13:07:05 2019
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:07
 
 

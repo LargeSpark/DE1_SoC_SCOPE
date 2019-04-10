@@ -11,6 +11,7 @@ module VGATest_tb;
 	wire [7:0]		   R;
 	wire [7:0]		   G;
 	wire [7:0]		   B;
+	wire		    VClock;
 	
 FPGA_MiniProject dut (
 
@@ -19,7 +20,8 @@ FPGA_MiniProject dut (
 .vga_vsync (vga_vsync),
 .R (R),
 .G (G),
-.B (B)
+.B (B),
+.VClock(VClock)
 );
 
 localparam freq = 10; //   1/Freq =

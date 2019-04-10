@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation
 vFPGA_MiniProject
-Z1 !s110 1554896843
+Z1 !s110 1554899711
 !i10b 1
-!s100 K_MYc4n`mj]mQ9[]E@K7T0
-Ia<VV_kPVYjYIm9f2JH?Ro2
+!s100 _CIQRZlfdA=a`9hgR:kIK0
+I<1iAK6AoXQI`c]ne>]Wee0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1554894393
+w1554897338
 8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
 FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v
 L0 7
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1554896843.000000
+Z4 !s108 1554899710.000000
 !s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
 !i113 1
@@ -32,7 +32,7 @@ Z6 !s92 -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProjec
 Z7 tCvgOpt 0
 n@f@p@g@a_@mini@project
 vVGA_clock
-Z8 !s110 1554896844
+R1
 !i10b 1
 !s100 IQL_D=I5[67iRYI9@MJfV0
 I9aBEn;De5fIdzczKiOK4a3
@@ -46,7 +46,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1554896844.000000
+Z8 !s108 1554899711.000000
 !s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v|
 !i113 1
@@ -55,13 +55,13 @@ R6
 R7
 n@v@g@a_clock
 vVGA_drawPixel
-R1
+!s110 1554899710
 !i10b 1
-!s100 9;?L[PbkU?EE]EDWS<XkF3
-IB[9OS<ei]8a9A:0h7L@a_3
+!s100 _VEVYe6ZKnnc5:JCL4Q6j2
+IG2dbLOhDWZe5k9Fe]gPB43
 R2
 R0
-w1554895742
+w1554899695
 8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 L0 1
@@ -78,13 +78,13 @@ R6
 R7
 n@v@g@a_draw@pixel
 vVGATest_tb
-R8
+R1
 !i10b 1
-!s100 Vi2Xcg1_DTgabUOSNJQ>Q3
-IW8kh1azY94n<fe9zX<0:D1
+!s100 dbCBnE>BQn6ca>a;jl2_Y2
+I?TWA@O1IJ@A[1BF_;dfUT3
 R2
 R0
-w1554894462
+w1554897408
 8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v
 FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v
 L0 6
@@ -92,7 +92,7 @@ R3
 r1
 !s85 0
 31
-R9
+R8
 !s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v|
 !i113 1
