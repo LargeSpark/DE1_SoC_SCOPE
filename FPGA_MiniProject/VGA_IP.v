@@ -116,9 +116,10 @@ always @(posedge clock) begin
 		if(h_c_counter == Horizontal_Size) begin //changed to work with counting pixels
 			h_c_counter <= 0;
 			HozsigIndicator <= 3;
-			HozPixel <= 0;
 			if(VerSigOn == 0) begin
 				VerPixel <= VerPixel + 1;
+			end else begin
+				VerPixel <= 0;
 			end
 		end else begin
 		h_c_counter <= h_c_counter + 1;
@@ -142,7 +143,7 @@ always @(posedge clock) begin
 	//##Counter
 	if(VerSigOn == 0) begin
 	//always one behind
-		if(h_c_counter == 640 || Hsync == 0) begin
+		if(h_c_counter == 640 || vga_hsync == 0 || VerSigOn == 1) begin
 			HozPixel <= 0;
 		end
 		else begin
@@ -154,14 +155,8 @@ always @(posedge clock) begin
 				VerSigOn <= 1;
 			end
 	end
-	//TEST CODE
-	if(vga_hsync == 0) begin
-		HozPixel = 0;
-	end
 	
 	if(rstV == 1) begin
-		HozPixel <= 0;
-		VerPixel <= 0;
 		VerSigOn <= 0;
 	end
 	//end
@@ -217,16 +212,15 @@ always @(posedge vga_hsync) begin
 			v_d_counter <= v_d_counter + 1;
 			end
 		end	
-		
-		if(rstV == 1) begin
-			rstcounter <= rstcounter + 1;
-			if(rstcounter == 1) begin
-			rstcounter <= 0;
-			rstV <= 0;
-			end
+	end
+	
+	if(rstV == 1) begin
+		rstcounter <= rstcounter + 1;
+		if(rstcounter == 1) begin
+		rstcounter <= 0;
+		rstV <= 0;
 		end
 	end
-
+	
 end
-
 endmodule
