@@ -13,49 +13,49 @@
 # 
 # vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:38:03 on Apr 10,2019
+# Start time: 21:31:15 on Apr 10,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v 
 # -- Compiling module VGA_drawPixel
 # 
 # Top level modules:
 # 	VGA_drawPixel
-# End time: 20:38:03 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:38:03 on Apr 10,2019
+# Start time: 21:31:15 on Apr 10,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v 
 # -- Compiling module FPGA_MiniProject
 # 
 # Top level modules:
 # 	FPGA_MiniProject
-# End time: 20:38:03 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:38:03 on Apr 10,2019
+# Start time: 21:31:15 on Apr 10,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v 
 # -- Compiling module VGA_clock
 # 
 # Top level modules:
 # 	VGA_clock
-# End time: 20:38:03 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGATB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:38:03 on Apr 10,2019
+# Start time: 21:31:15 on Apr 10,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGATB.v 
 # -- Compiling module VGATest_tb
 # 
 # Top level modules:
 # 	VGATest_tb
-# End time: 20:38:03 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  VGATest_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" VGATest_tb 
-# Start time: 20:38:03 on Apr 10,2019
+# Start time: 21:31:15 on Apr 10,2019
 # Loading work.VGATest_tb
 # Loading work.FPGA_MiniProject
 # Loading work.VGA_clock
@@ -149,9 +149,9 @@
 # add wave -noupdate -radix unsigned /VGATest_tb/CLOCK
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: el15asjb  Hostname: EENTPC147  ProcessID: 12168
-#           Attempting to use alternate WLF file "./wlftf00rdc".
+#           Attempting to use alternate WLF file "./wlftz56ef4".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftf00rdc
+#           Using alternate file: ./wlftz56ef4
 # add wave -noupdate -radix unsigned /VGATest_tb/VGACLOCK
 # ** Error: (vish-4014) No objects found matching '/VGATest_tb/VGACLOCK'.
 # Executing ONERROR command at macro E:\FPGA_WS1\FPGA_MiniProject\simulation\wave.do line 4
@@ -221,7 +221,6 @@
 # 
 # wave zoom full
 # 0 ps
-# 13563721500 ps
-run 100ms
-# End time: 20:49:22 on Apr 10,2019, Elapsed time: 0:11:19
+# 100151961 ns
+# End time: 21:43:28 on Apr 10,2019, Elapsed time: 0:12:13
 # Errors: 3, Warnings: 7

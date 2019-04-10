@@ -14,10 +14,10 @@ output	[7:0]		B
 );
 //parameters for 640x480
 localparam clockspeed = 25000000;
-localparam h_a=3800; 	//nanoseconds - Sync
-localparam h_b=1900; 	//nanoseconds - Backporch
-localparam h_c=25400; 	//nanoseconds - Display Interval
-localparam h_d=600; 		//nanoseconds - Front Porch
+localparam h_a=3800; 	//nanoseconds - Sync //3800
+localparam h_b=1900; 	//nanoseconds - Backporch //1900
+localparam h_c=25400; 	//nanoseconds - Display Interval //25400
+localparam h_d=600; 		//nanoseconds - Front Porch //600
 localparam v_a=2;			//lines - Sync
 localparam v_b=33;		//lines - Backporch
 localparam v_c=480;		//lines - Display Interval

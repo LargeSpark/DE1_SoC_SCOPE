@@ -1,5 +1,5 @@
 Analysis & Elaboration report for FPGA_MiniProject
-Wed Apr 10 20:37:53 2019
+Wed Apr 10 21:31:07 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Apr 10 20:37:53 2019       ;
+; Analysis & Elaboration Status ; Successful - Wed Apr 10 21:31:07 2019       ;
 ; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                 ; FPGA_MiniProject                            ;
 ; Top-level Entity Name         ; FPGA_MiniProject                            ;
@@ -179,7 +179,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Apr 10 20:37:42 2019
+    Info: Processing started: Wed Apr 10 21:30:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -220,9 +220,9 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(212): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(218): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 218
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Wed Apr 10 20:37:53 2019
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Wed Apr 10 21:31:07 2019
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 

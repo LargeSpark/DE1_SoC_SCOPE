@@ -3,99 +3,147 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -2.701
-TNS   : -330.926
+Slack : -2.835
+TNS   : -108.118
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -2.734
+TNS   : -62.773
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -0.902
-TNS   : -1.426
+Slack : -1.581
+TNS   : -2.071
 
 Type  : Slow 1100mV 85C Model Hold 'VGA_clock:VGAClk|T25MHZClock'
 Slack : 0.273
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Hold 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : 0.393
+TNS   : 0.000
+
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.574
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.859
-TNS   : -2.970
+Slack : -0.814
+TNS   : -2.790
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_clock:VGAClk|T25MHZClock'
 Slack : -0.394
-TNS   : -92.750
+TNS   : -28.978
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -0.394
+TNS   : -17.710
 
 Type  : Slow 1100mV 0C Model Setup 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -2.696
-TNS   : -322.410
+Slack : -2.807
+TNS   : -105.336
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -2.760
+TNS   : -61.380
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -0.903
-TNS   : -1.420
+Slack : -1.533
+TNS   : -2.015
 
 Type  : Slow 1100mV 0C Model Hold 'VGA_clock:VGAClk|T25MHZClock'
-Slack : 0.277
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : 0.372
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.556
+Slack : 0.501
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.860
-TNS   : -3.024
+Slack : -0.821
+TNS   : -2.862
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_clock:VGAClk|T25MHZClock'
 Slack : -0.394
-TNS   : -90.877
+TNS   : -28.698
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -0.394
+TNS   : -17.479
 
 Type  : Fast 1100mV 85C Model Setup 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -1.254
-TNS   : -141.104
+Slack : -1.391
+TNS   : -45.740
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -1.313
+TNS   : -27.696
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -0.260
-TNS   : -0.280
+Slack : -0.744
+TNS   : -0.750
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : 0.023
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'VGA_clock:VGAClk|T25MHZClock'
-Slack : 0.090
+Slack : 0.029
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.294
+Slack : 0.271
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.759
-TNS   : -2.338
+Slack : -0.706
+TNS   : -2.122
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -0.015
+TNS   : -0.197
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -0.053
-TNS   : -1.354
+Slack : 0.060
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -1.121
-TNS   : -122.401
+Slack : -1.228
+TNS   : -39.307
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -1.174
+TNS   : -24.011
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -0.196
-TNS   : -0.196
+Slack : -0.618
+TNS   : -0.618
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : -0.015
+TNS   : -0.015
 
 Type  : Fast 1100mV 0C Model Hold 'VGA_clock:VGAClk|T25MHZClock'
-Slack : 0.079
+Slack : 0.038
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.263
+Slack : 0.243
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.727
-TNS   : -2.226
+Slack : -0.694
+TNS   : -2.091
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_drawPixel:VGA|HozsigIndicator.000'
+Slack : 0.021
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_clock:VGAClk|T25MHZClock'
-Slack : -0.007
-TNS   : -0.103
+Slack : 0.084
+TNS   : 0.000
 
 ------------------------------------------------------------

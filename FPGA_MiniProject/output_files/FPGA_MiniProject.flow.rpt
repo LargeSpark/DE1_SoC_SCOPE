@@ -1,5 +1,5 @@
 Flow report for FPGA_MiniProject
-Wed Apr 10 20:37:53 2019
+Wed Apr 10 21:31:07 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Apr 10 20:37:53 2019       ;
+; Flow Status                 ; Successful - Wed Apr 10 21:31:07 2019       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; FPGA_MiniProject                            ;
 ; Top-level Entity Name       ; FPGA_MiniProject                            ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/10/2019 20:37:43 ;
+; Start date & time ; 04/10/2019 21:30:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_MiniProject    ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                        ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                  ; 1096091850022.155492506222740          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                  ; 1096091850022.155492825630176          ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME               ; NA                                     ; --            ; --          ; VGATest_tb     ;
 ; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/load_sim.tcl                ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; VGATest_tb                             ; --            ; --          ; eda_simulation ;
@@ -101,8 +101,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4769 MB             ; 00:00:27                           ;
-; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:27                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4771 MB             ; 00:00:26                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:26                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

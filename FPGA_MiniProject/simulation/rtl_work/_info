@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dE:/FPGA_WS1/FPGA_MiniProject/simulation
 vFPGA_MiniProject
-Z1 !s110 1554925083
+Z1 !s110 1554928275
 !i10b 1
 !s100 _CIQRZlfdA=a`9hgR:kIK0
 I`Yn?h`Kfe484gn[<O_oWB1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1554925083.000000
+Z5 !s108 1554928275.000000
 !s107 E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/FPGA_WS1/FPGA_MiniProject|E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v|
 !i113 1
@@ -61,7 +61,7 @@ R1
 I=>]N2D6Wen8;S27`n]Um>1
 R2
 R0
-w1554925018
+w1554927531
 8E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
 FE:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
 L0 1
