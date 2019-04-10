@@ -1,5 +1,5 @@
-Analysis & Synthesis report for FPGA_MiniProject
-Wed Apr 10 10:21:58 2019
+Analysis & Elaboration report for FPGA_MiniProject
+Wed Apr 10 12:29:19 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -7,22 +7,11 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigOn
-  9. State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigIndicator
- 10. State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|HozsigIndicator
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "VGA_drawPixel:VGA"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "VGA_drawPixel:VGA"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -45,31 +34,42 @@ refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                               ;
-+---------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 10 10:21:58 2019                    ;
-; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name                   ; FPGA_MiniProject                                         ;
-; Top-level Entity Name           ; FPGA_MiniProject                                         ;
-; Family                          ; Cyclone V                                                ;
-; Logic utilization (in ALMs)     ; N/A                                                      ;
-; Total registers                 ; 115                                                      ;
-; Total pins                      ; 28                                                       ;
-; Total virtual pins              ; 0                                                        ;
-; Total block memory bits         ; 0                                                        ;
-; Total DSP Blocks                ; 0                                                        ;
-; Total HSSI RX PCSs              ; 0                                                        ;
-; Total HSSI PMA RX Deserializers ; 0                                                        ;
-; Total HSSI TX PCSs              ; 0                                                        ;
-; Total HSSI PMA TX Serializers   ; 0                                                        ;
-; Total PLLs                      ; 0                                                        ;
-; Total DLLs                      ; 0                                                        ;
-+---------------------------------+----------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                           ;
++-------------------------------+----------------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Apr 10 12:29:19 2019                    ;
+; Quartus Prime Version         ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                 ; FPGA_MiniProject                                         ;
+; Top-level Entity Name         ; FPGA_MiniProject                                         ;
+; Family                        ; Cyclone V                                                ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                                ;
+; Total registers               ; N/A until Partition Merge                                ;
+; Total pins                    ; N/A until Partition Merge                                ;
+; Total virtual pins            ; N/A until Partition Merge                                ;
+; Total block memory bits       ; N/A until Partition Merge                                ;
+; Total PLLs                    ; N/A until Partition Merge                                ;
+; Total DLLs                    ; N/A until Partition Merge                                ;
++-------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -155,152 +155,6 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
-; VGA_IP.v                         ; yes             ; User Verilog HDL File  ; M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v           ;         ;
-; FPGA_MiniProject.v               ; yes             ; User Verilog HDL File  ; M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 86             ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 158            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 13             ;
-;     -- 5 input functions                    ; 17             ;
-;     -- 4 input functions                    ; 16             ;
-;     -- <=3 input functions                  ; 112            ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 115            ;
-;                                             ;                ;
-; I/O pins                                    ; 28             ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; VGAclock~input ;
-; Maximum fan-out                             ; 115            ;
-; Total fan-out                               ; 905            ;
-; Average fan-out                             ; 2.75           ;
-+---------------------------------------------+----------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
-; |FPGA_MiniProject          ; 158 (0)             ; 115 (0)                   ; 0                 ; 0          ; 28   ; 0            ; |FPGA_MiniProject                   ; FPGA_MiniProject ; work         ;
-;    |VGA_drawPixel:VGA|     ; 158 (158)           ; 115 (115)                 ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_drawPixel:VGA ; VGA_drawPixel    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+--------------------------------------------------------------+
-; State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigOn ;
-+--------------+-----------------------------------------------+
-; Name         ; VerSigOn.001                                  ;
-+--------------+-----------------------------------------------+
-; VerSigOn.000 ; 0                                             ;
-; VerSigOn.001 ; 1                                             ;
-+--------------+-----------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigIndicator                                                               ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
-; Name                ; VerSigIndicator.011 ; VerSigIndicator.010 ; VerSigIndicator.001 ; VerSigIndicator.000 ; VerSigIndicator.100 ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
-; VerSigIndicator.000 ; 0                   ; 0                   ; 0                   ; 0                   ; 0                   ;
-; VerSigIndicator.001 ; 0                   ; 0                   ; 1                   ; 1                   ; 0                   ;
-; VerSigIndicator.010 ; 0                   ; 1                   ; 0                   ; 1                   ; 0                   ;
-; VerSigIndicator.011 ; 1                   ; 0                   ; 0                   ; 1                   ; 0                   ;
-; VerSigIndicator.100 ; 0                   ; 0                   ; 0                   ; 1                   ; 1                   ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------+
-; State Machine - |FPGA_MiniProject|VGA_drawPixel:VGA|HozsigIndicator                                         ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+
-; Name                ; HozsigIndicator.011 ; HozsigIndicator.010 ; HozsigIndicator.001 ; HozsigIndicator.000 ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+
-; HozsigIndicator.000 ; 0                   ; 0                   ; 0                   ; 0                   ;
-; HozsigIndicator.001 ; 0                   ; 0                   ; 1                   ; 1                   ;
-; HozsigIndicator.010 ; 0                   ; 1                   ; 0                   ; 1                   ;
-; HozsigIndicator.011 ; 1                   ; 0                   ; 0                   ; 1                   ;
-+---------------------+---------------------+---------------------+---------------------+---------------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; VGA_drawPixel:VGA|VerSigOn~4          ; Lost fanout        ;
-; VGA_drawPixel:VGA|VerSigOn~5          ; Lost fanout        ;
-; VGA_drawPixel:VGA|VerSigIndicator~6   ; Lost fanout        ;
-; VGA_drawPixel:VGA|VerSigIndicator~7   ; Lost fanout        ;
-; VGA_drawPixel:VGA|HozsigIndicator~4   ; Lost fanout        ;
-; VGA_drawPixel:VGA|HozsigIndicator~5   ; Lost fanout        ;
-; VGA_drawPixel:VGA|HozsigIndicator~6   ; Lost fanout        ;
-; Total Number of Removed Registers = 7 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 115   ;
-; Number of registers using Synchronous Clear  ; 95    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 97    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_drawPixel:VGA|HozPixel[9]     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigOn        ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|VGA_drawPixel:VGA|HozsigIndicator ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|VGA_drawPixel:VGA|VerSigIndicator ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "VGA_drawPixel:VGA"                                                                                                                                                                          ;
 +----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -319,50 +173,14 @@ Encoding Type:  One-Hot
 +----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 115                         ;
-;     ENA               ; 13                          ;
-;     ENA SCLR          ; 84                          ;
-;     SCLR              ; 11                          ;
-;     plain             ; 7                           ;
-; arriav_lcell_comb     ; 159                         ;
-;     arith             ; 105                         ;
-;         1 data inputs ; 105                         ;
-;     normal            ; 54                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 17                          ;
-;         6 data inputs ; 13                          ;
-; boundary_port         ; 28                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.28                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Wed Apr 10 10:21:45 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
+    Info: Processing started: Wed Apr 10 12:29:08 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vgatb.v
@@ -375,58 +193,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpga_mi
     Info (12023): Found entity 1: FPGA_MiniProject File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file freqdiv.v
     Info (12023): Found entity 1: clockDivider File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file vgaclock.v
+    Info (12023): Found entity 1: VGA_clock File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v Line: 1
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_drawPixel" for hierarchy "VGA_drawPixel:VGA" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 29
+Info (12128): Elaborating entity "VGA_clock" for hierarchy "VGA_clock:VGAClk" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 20
+Warning (10230): Verilog HDL assignment warning at VGAClock.v(9): truncated value with size 32 to match size of target (2) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v Line: 9
+Info (12128): Elaborating entity "VGA_drawPixel" for hierarchy "VGA_drawPixel:VGA" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 34
 Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(29): object "screenPosition" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 29
 Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(30): object "linePosition" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 30
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(76): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 76
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(77): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 77
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(77): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 77
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(78): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 78
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(79): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 79
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(81): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 81
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(80): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 80
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(82): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 82
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(92): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 92
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(102): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 102
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(112): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 112
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(122): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 122
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(134): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 134
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(144): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 144
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(154): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 154
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(165): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 165
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(134): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 134
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(137): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 137
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(162): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 162
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(172): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 172
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(182): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 182
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(187): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 187
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(190): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 190
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(193): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 193
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "G[0]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[1]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[2]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[3]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[4]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[5]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[6]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "G[7]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (13410): Pin "B[0]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[1]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[2]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[3]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[4]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[5]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[6]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (13410): Pin "B[7]" is stuck at GND File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 8
-Info (21057): Implemented 186 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 158 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 693 megabytes
-    Info: Processing ended: Wed Apr 10 10:21:58 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:26
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 633 megabytes
+    Info: Processing ended: Wed Apr 10 12:29:19 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

@@ -29,8 +29,6 @@ localparam Vertical_Size = 480;
 reg [9:0] screenPosition = 0;
 reg [9:0] linePosition = 0;
 
-assign vga_vsync = 0'b0;
-
 //What the counters must count up to to switch at the correct time.
 localparam integer h_a_endcount = clockspeed * (h_a * 0.000000001);
 localparam integer h_b_endcount = clockspeed * (h_b * 0.000000001);
@@ -81,7 +79,7 @@ assign R = (HozsigIndicator == 2 && VerSigOn == 0)? colour_R : 0;
 assign G = (HozsigIndicator == 2 && VerSigOn == 0)? colour_G : 0;
 assign B = (HozsigIndicator == 2 && VerSigOn == 0)? colour_B : 0;
 //assign vsync
-assign vga_vsync = (VerSigIndicator == 0 && VerSigOn == 1) ? 0 : 1;
+assign vga_vsync = (VerSigIndicator == 0 && VerSigOn == 1 && rstV == 0) ? 0 : 1;
 
 //counters
 always @(posedge clock) begin
@@ -127,33 +125,34 @@ always @(posedge clock) begin
 	
 end
 
-//Pixel Counter
+//Pixel Counter & V Sync
 always @(posedge clock) begin
-
-	if(HozPixel < Horizontal_Size) begin
-			HozPixel <= HozPixel + 1; //add one to position
-	end else begin
-		HozPixel <= 0;
-		VerPixel <= VerPixel+1;
-		
-		if(VerPixel >= Vertical_Size) begin
-			VerSigOn <= 1;
+	//##Counter
+	
+	if(VerSigOn == 0) begin
+		if(HozPixel < Horizontal_Size) begin
+				HozPixel <= HozPixel + 1; //add one to position
+		end else begin
+			HozPixel <= 0;
+			VerPixel <= VerPixel+1;
+			
+			if(VerPixel >= Vertical_Size) begin
+				VerSigOn <= 1;
+			end
 		end
 	end
 	
 	if(rstV == 1) begin
+		HozPixel <= 0;
 		VerPixel <= 0;
+		VerSigOn <= 0;
+		rstV <= 0;
 	end
 	//end
-
-end
-
-//VerPixel == 0;
-
-//Vsync
-always @(posedge clock) begin
-
-	if(VerSigOn == 1) begin
+	
+	//###### V SYNC ######
+	
+	if(VerSigOn == 1 && rstV == 0) begin
 		//if sync
 		if(VerSigIndicator == 0) begin
 				if(v_a_counter == v_a) begin
@@ -165,7 +164,7 @@ always @(posedge clock) begin
 			end
 			
 		//if backporch
-		if(VerSigIndicator == 1) begin
+		else if(VerSigIndicator == 1) begin
 			if(v_b_counter == v_b) begin
 				v_b_counter <= 0;
 				VerSigIndicator <= 2;
@@ -175,7 +174,7 @@ always @(posedge clock) begin
 		end
 		
 		//if data
-		if(VerSigIndicator == 2) begin
+		else if(VerSigIndicator == 2) begin
 			if(v_c_counter == v_c) begin
 				v_c_counter <= 0;
 				VerSigIndicator <= 3;
@@ -185,17 +184,24 @@ always @(posedge clock) begin
 		end
 		
 		//if frontporch
-		if(VerSigIndicator == 3) begin
+		else if(VerSigIndicator == 3) begin
 			if(v_d_counter == v_d) begin
 				v_d_counter <= 0;
 				VerSigIndicator <= 0;
-				VerSigOn <=0;
 				rstV <= 1;
 			end else begin
 			v_d_counter <= v_d_counter + 1;
 			end
 		end	
 	end
+
+end
+
+//VerPixel == 0;
+
+//Vsync
+always @(posedge clock) begin
+
 end
 
 endmodule

@@ -1,0 +1,8 @@
+module VGAClock(
+	input 50MHZClock,
+	output 25MHZClock
+	);
+	
+	
+	
+endmodule

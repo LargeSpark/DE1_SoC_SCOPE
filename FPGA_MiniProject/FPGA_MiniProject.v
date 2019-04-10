@@ -6,12 +6,17 @@ N-Channel Oscilloscope */
 // Top Level Module
 module FPGA_MiniProject(
 input 				clock,
-input					VGAclock,
 output 				vga_hsync,
 output				vga_vsync,
 output	[7:0]		R,
 output	[7:0]		G,
 output	[7:0]		B
+);
+wire VGAclock;
+
+VGA_clock VGAClk(
+	.T50MHZClock (clock),
+	.T25MHZClock (VGAclock)
 );
 
 VGA_drawPixel VGA(

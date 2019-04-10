@@ -1,6 +1,5 @@
 |FPGA_MiniProject
-clock => ~NO_FANOUT~
-VGAclock => VGAclock.IN1
+clock => clock.IN1
 vga_hsync << VGA_drawPixel:VGA.vga_hsync
 vga_vsync << VGA_drawPixel:VGA.vga_vsync
 R[0] << VGA_drawPixel:VGA.R
@@ -29,28 +28,14 @@ B[6] << VGA_drawPixel:VGA.B
 B[7] << VGA_drawPixel:VGA.B
 
 
+|FPGA_MiniProject|VGA_clock:VGAClk
+T50MHZClock => T25MHZClock~reg0.CLK
+T50MHZClock => count[0].CLK
+T50MHZClock => count[1].CLK
+T25MHZClock <= T25MHZClock~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |FPGA_MiniProject|VGA_drawPixel:VGA
-clock => VerPixel[0].CLK
-clock => VerPixel[1].CLK
-clock => VerPixel[2].CLK
-clock => VerPixel[3].CLK
-clock => VerPixel[4].CLK
-clock => VerPixel[5].CLK
-clock => VerPixel[6].CLK
-clock => VerPixel[7].CLK
-clock => VerPixel[8].CLK
-clock => VerPixel[9].CLK
-clock => HozPixel[0].CLK
-clock => HozPixel[1].CLK
-clock => HozPixel[2].CLK
-clock => HozPixel[3].CLK
-clock => HozPixel[4].CLK
-clock => HozPixel[5].CLK
-clock => HozPixel[6].CLK
-clock => HozPixel[7].CLK
-clock => HozPixel[8].CLK
-clock => HozPixel[9].CLK
-clock => HozPixel[10].CLK
 clock => v_d_counter[0].CLK
 clock => v_d_counter[1].CLK
 clock => v_d_counter[2].CLK
@@ -91,6 +76,29 @@ clock => v_a_counter[6].CLK
 clock => v_a_counter[7].CLK
 clock => v_a_counter[8].CLK
 clock => v_a_counter[9].CLK
+clock => rstV.CLK
+clock => VerSigOn.CLK
+clock => VerPixel[0].CLK
+clock => VerPixel[1].CLK
+clock => VerPixel[2].CLK
+clock => VerPixel[3].CLK
+clock => VerPixel[4].CLK
+clock => VerPixel[5].CLK
+clock => VerPixel[6].CLK
+clock => VerPixel[7].CLK
+clock => VerPixel[8].CLK
+clock => VerPixel[9].CLK
+clock => HozPixel[0].CLK
+clock => HozPixel[1].CLK
+clock => HozPixel[2].CLK
+clock => HozPixel[3].CLK
+clock => HozPixel[4].CLK
+clock => HozPixel[5].CLK
+clock => HozPixel[6].CLK
+clock => HozPixel[7].CLK
+clock => HozPixel[8].CLK
+clock => HozPixel[9].CLK
+clock => HozPixel[10].CLK
 clock => h_d_counter[0].CLK
 clock => h_d_counter[1].CLK
 clock => h_d_counter[2].CLK
@@ -135,8 +143,7 @@ clock => h_a_counter[7].CLK
 clock => h_a_counter[8].CLK
 clock => h_a_counter[9].CLK
 clock => h_a_counter[10].CLK
-clock => VerSigOn~2.DATAIN
-clock => VerSigIndicator~5.DATAIN
+clock => VerSigIndicator~4.DATAIN
 clock => HozsigIndicator~3.DATAIN
 x_pos => ~NO_FANOUT~
 y_pos => ~NO_FANOUT~
