@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for FPGA_MiniProject
-Wed Apr 10 21:22:59 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon Apr 15 16:47:11 2019
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -75,18 +75,18 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                           ;
-+-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Timing Analyzer       ; TimeQuest                                           ;
-; Revision Name         ; FPGA_MiniProject                                    ;
-; Device Family         ; Cyclone V                                           ;
-; Device Name           ; 5CSEMA5F31C6                                        ;
-; Timing Models         ; Final                                               ;
-; Delay Model           ; Combined                                            ;
-; Rise/Fall Delays      ; Enabled                                             ;
-+-----------------------+-----------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                        ;
++-----------------------+------------------------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                                        ;
+; Revision Name         ; FPGA_MiniProject                                                 ;
+; Device Family         ; Cyclone V                                                        ;
+; Device Name           ; 5CSEMA5F31C6                                                     ;
+; Timing Models         ; Final                                                            ;
+; Delay Model           ; Combined                                                         ;
+; Rise/Fall Delays      ; Enabled                                                          ;
++-----------------------+------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -94,44 +94,40 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.1%      ;
-;     Processor 3            ;   3.0%      ;
-;     Processor 4            ;   3.0%      ;
-;     Processor 5            ;   2.5%      ;
-;     Processor 6            ;   2.5%      ;
-;     Processor 7            ;   2.5%      ;
-;     Processor 8            ;   2.5%      ;
+;     Processor 2            ;   1.6%      ;
+;     Processor 3            ;   1.6%      ;
+;     Processor 4            ;   1.5%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                       ;
-+---------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------+
-; Clock Name                            ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                   ;
-+---------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------+
-; clock                                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                                 ;
-; VGA_clock:VGAClk|T25MHZClock          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_clock:VGAClk|T25MHZClock }          ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_drawPixel:VGA|HozsigIndicator.000 } ;
-+---------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; clock                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                         ;
+; VGA_clock:VGAClk|T25MHZClock  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_clock:VGAClk|T25MHZClock }  ;
+; VGA_drawPixel:VGA|Hcounter[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_drawPixel:VGA|Hcounter[0] } ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                                                          ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                            ; Note                                                 ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
-; 260.76 MHz ; 260.76 MHz      ; VGA_clock:VGAClk|T25MHZClock          ;                                                      ;
-; 267.81 MHz ; 267.81 MHz      ; VGA_drawPixel:VGA|HozsigIndicator.000 ;                                                      ;
-; 387.45 MHz ; 380.52 MHz      ; clock                                 ; limit due to low minimum pulse width violation (tcl) ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
++---------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                  ;
++------------+-----------------+-------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note ;
++------------+-----------------+-------------------------------+------+
+; 230.52 MHz ; 230.52 MHz      ; VGA_clock:VGAClk|T25MHZClock  ;      ;
+; 247.16 MHz ; 247.16 MHz      ; VGA_drawPixel:VGA|Hcounter[0] ;      ;
+; 370.37 MHz ; 370.37 MHz      ; clock                         ;      ;
++------------+-----------------+-------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -141,26 +137,26 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+----------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                            ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; -2.835 ; -108.118      ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -2.734 ; -62.773       ;
-; clock                                 ; -1.581 ; -2.071        ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                    ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; -3.338 ; -66.902       ;
+; VGA_drawPixel:VGA|Hcounter[0] ; -3.046 ; -36.391       ;
+; clock                         ; -1.700 ; -2.203        ;
++-------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                            ;
-+---------------------------------------+-------+---------------+
-; Clock                                 ; Slack ; End Point TNS ;
-+---------------------------------------+-------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; 0.273 ; 0.000         ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; 0.393 ; 0.000         ;
-; clock                                 ; 0.519 ; 0.000         ;
-+---------------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                    ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; 0.091 ; 0.000         ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.428 ; 0.000         ;
+; clock                         ; 0.550 ; 0.000         ;
++-------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -175,15 +171,15 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------+
-; Slow 1100mV 85C Model Minimum Pulse Width Summary              ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; clock                                 ; -0.814 ; -2.790        ;
-; VGA_clock:VGAClk|T25MHZClock          ; -0.394 ; -28.978       ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -0.394 ; -17.710       ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary      ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clock                         ; -0.804 ; -2.679        ;
+; VGA_clock:VGAClk|T25MHZClock  ; -0.394 ; -11.054       ;
+; VGA_drawPixel:VGA|Hcounter[0] ; -0.394 ; -7.254        ;
++-------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -192,38 +188,38 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                                                           ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                            ; Note                                                 ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
-; 262.67 MHz ; 262.67 MHz      ; VGA_clock:VGAClk|T25MHZClock          ;                                                      ;
-; 265.96 MHz ; 265.96 MHz      ; VGA_drawPixel:VGA|HozsigIndicator.000 ;                                                      ;
-; 394.79 MHz ; 378.5 MHz       ; clock                                 ; limit due to low minimum pulse width violation (tcl) ;
-+------------+-----------------+---------------------------------------+------------------------------------------------------+
++---------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                   ;
++------------+-----------------+-------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note ;
++------------+-----------------+-------------------------------+------+
+; 230.47 MHz ; 230.47 MHz      ; VGA_clock:VGAClk|T25MHZClock  ;      ;
+; 253.87 MHz ; 253.87 MHz      ; VGA_drawPixel:VGA|Hcounter[0] ;      ;
+; 378.93 MHz ; 378.93 MHz      ; clock                         ;      ;
++------------+-----------------+-------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                             ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; -2.807 ; -105.336      ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -2.760 ; -61.380       ;
-; clock                                 ; -1.533 ; -2.015        ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                     ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; -3.339 ; -67.714       ;
+; VGA_drawPixel:VGA|Hcounter[0] ; -2.939 ; -35.197       ;
+; clock                         ; -1.639 ; -2.135        ;
++-------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                             ;
-+---------------------------------------+-------+---------------+
-; Clock                                 ; Slack ; End Point TNS ;
-+---------------------------------------+-------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; 0.274 ; 0.000         ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; 0.372 ; 0.000         ;
-; clock                                 ; 0.501 ; 0.000         ;
-+---------------------------------------+-------+---------------+
++-------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                     ;
++-------------------------------+-------+---------------+
+; Clock                         ; Slack ; End Point TNS ;
++-------------------------------+-------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; 0.186 ; 0.000         ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.443 ; 0.000         ;
+; clock                         ; 0.534 ; 0.000         ;
++-------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -238,15 +234,15 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------+
-; Slow 1100mV 0C Model Minimum Pulse Width Summary               ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; clock                                 ; -0.821 ; -2.862        ;
-; VGA_clock:VGAClk|T25MHZClock          ; -0.394 ; -28.698       ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -0.394 ; -17.479       ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary       ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clock                         ; -0.813 ; -2.771        ;
+; VGA_clock:VGAClk|T25MHZClock  ; -0.394 ; -10.994       ;
+; VGA_drawPixel:VGA|Hcounter[0] ; -0.394 ; -6.821        ;
++-------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -255,26 +251,26 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                            ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; -1.391 ; -45.740       ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -1.313 ; -27.696       ;
-; clock                                 ; -0.744 ; -0.750        ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                    ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_drawPixel:VGA|Hcounter[0] ; -1.469 ; -17.608       ;
+; VGA_clock:VGAClk|T25MHZClock  ; -1.382 ; -27.816       ;
+; clock                         ; -0.826 ; -0.831        ;
++-------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                            ;
-+---------------------------------------+-------+---------------+
-; Clock                                 ; Slack ; End Point TNS ;
-+---------------------------------------+-------+---------------+
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; 0.023 ; 0.000         ;
-; VGA_clock:VGAClk|T25MHZClock          ; 0.029 ; 0.000         ;
-; clock                                 ; 0.271 ; 0.000         ;
-+---------------------------------------+-------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                     ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; -0.104 ; -0.204        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.164  ; 0.000         ;
+; clock                         ; 0.281  ; 0.000         ;
++-------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -289,15 +285,15 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary              ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; clock                                 ; -0.706 ; -2.122        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -0.015 ; -0.197        ;
-; VGA_clock:VGAClk|T25MHZClock          ; 0.060  ; 0.000         ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary      ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clock                         ; -0.700 ; -2.052        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.041  ; 0.000         ;
+; VGA_clock:VGAClk|T25MHZClock  ; 0.125  ; 0.000         ;
++-------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -306,26 +302,26 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                             ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; VGA_clock:VGAClk|T25MHZClock          ; -1.228 ; -39.307       ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -1.174 ; -24.011       ;
-; clock                                 ; -0.618 ; -0.618        ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                     ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_drawPixel:VGA|Hcounter[0] ; -1.288 ; -15.441       ;
+; VGA_clock:VGAClk|T25MHZClock  ; -1.248 ; -25.396       ;
+; clock                         ; -0.684 ; -0.684        ;
++-------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                              ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; -0.015 ; -0.015        ;
-; VGA_clock:VGAClk|T25MHZClock          ; 0.038  ; 0.000         ;
-; clock                                 ; 0.243  ; 0.000         ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                      ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; VGA_clock:VGAClk|T25MHZClock  ; -0.082 ; -0.130        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.148  ; 0.000         ;
+; clock                         ; 0.250  ; 0.000         ;
++-------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -340,15 +336,15 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------------------------------+
-; Fast 1100mV 0C Model Minimum Pulse Width Summary               ;
-+---------------------------------------+--------+---------------+
-; Clock                                 ; Slack  ; End Point TNS ;
-+---------------------------------------+--------+---------------+
-; clock                                 ; -0.694 ; -2.091        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; 0.021  ; 0.000         ;
-; VGA_clock:VGAClk|T25MHZClock          ; 0.084  ; 0.000         ;
-+---------------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary       ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; clock                         ; -0.690 ; -2.036        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; 0.065  ; 0.000         ;
+; VGA_clock:VGAClk|T25MHZClock  ; 0.128  ; 0.000         ;
++-------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -357,20 +353,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                   ;
-+----------------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                                  ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                       ; -2.835   ; -0.015 ; N/A      ; N/A     ; -0.821              ;
-;  VGA_clock:VGAClk|T25MHZClock          ; -2.835   ; 0.029  ; N/A      ; N/A     ; -0.394              ;
-;  VGA_drawPixel:VGA|HozsigIndicator.000 ; -2.760   ; -0.015 ; N/A      ; N/A     ; -0.394              ;
-;  clock                                 ; -1.581   ; 0.243  ; N/A      ; N/A     ; -0.821              ;
-; Design-wide TNS                        ; -172.962 ; -0.015 ; 0.0      ; 0.0     ; -49.478             ;
-;  VGA_clock:VGAClk|T25MHZClock          ; -108.118 ; 0.000  ; N/A      ; N/A     ; -28.978             ;
-;  VGA_drawPixel:VGA|HozsigIndicator.000 ; -62.773  ; -0.015 ; N/A      ; N/A     ; -17.710             ;
-;  clock                                 ; -2.071   ; 0.000  ; N/A      ; N/A     ; -2.862              ;
-+----------------------------------------+----------+--------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++--------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                          ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack               ; -3.339   ; -0.104 ; N/A      ; N/A     ; -0.813              ;
+;  VGA_clock:VGAClk|T25MHZClock  ; -3.339   ; -0.104 ; N/A      ; N/A     ; -0.394              ;
+;  VGA_drawPixel:VGA|Hcounter[0] ; -3.046   ; 0.148  ; N/A      ; N/A     ; -0.394              ;
+;  clock                         ; -1.700   ; 0.250  ; N/A      ; N/A     ; -0.813              ;
+; Design-wide TNS                ; -105.496 ; -0.204 ; 0.0      ; 0.0     ; -20.987             ;
+;  VGA_clock:VGAClk|T25MHZClock  ; -67.714  ; -0.204 ; N/A      ; N/A     ; -11.054             ;
+;  VGA_drawPixel:VGA|Hcounter[0] ; -36.391  ; 0.000  ; N/A      ; N/A     ; -7.254              ;
+;  clock                         ; -2.203   ; 0.000  ; N/A      ; N/A     ; -2.771              ;
++--------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -557,31 +553,31 @@ No synchronizer chains to report.
 +-----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                           ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
-; From Clock                            ; To Clock                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
-; clock                                 ; clock                                 ; 2        ; 0        ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock          ; VGA_clock:VGAClk|T25MHZClock          ; 840      ; 0        ; 0        ; 0        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; VGA_clock:VGAClk|T25MHZClock          ; 12       ; 11       ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock          ; VGA_drawPixel:VGA|HozsigIndicator.000 ; 38       ; 0        ; 0        ; 0        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; VGA_drawPixel:VGA|HozsigIndicator.000 ; 417      ; 0        ; 0        ; 0        ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clock                         ; clock                         ; 2        ; 0        ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock  ; VGA_clock:VGAClk|T25MHZClock  ; 1265     ; 0        ; 0        ; 0        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; VGA_clock:VGAClk|T25MHZClock  ; 252      ; 242      ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock  ; VGA_drawPixel:VGA|Hcounter[0] ; 164      ; 0        ; 0        ; 0        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; VGA_drawPixel:VGA|Hcounter[0] ; 331      ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                            ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
-; From Clock                            ; To Clock                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
-; clock                                 ; clock                                 ; 2        ; 0        ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock          ; VGA_clock:VGAClk|T25MHZClock          ; 840      ; 0        ; 0        ; 0        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; VGA_clock:VGAClk|T25MHZClock          ; 12       ; 11       ; 0        ; 0        ;
-; VGA_clock:VGAClk|T25MHZClock          ; VGA_drawPixel:VGA|HozsigIndicator.000 ; 38       ; 0        ; 0        ; 0        ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; VGA_drawPixel:VGA|HozsigIndicator.000 ; 417      ; 0        ; 0        ; 0        ;
-+---------------------------------------+---------------------------------------+----------+----------+----------+----------+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; clock                         ; clock                         ; 2        ; 0        ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock  ; VGA_clock:VGAClk|T25MHZClock  ; 1265     ; 0        ; 0        ; 0        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; VGA_clock:VGAClk|T25MHZClock  ; 252      ; 242      ; 0        ; 0        ;
+; VGA_clock:VGAClk|T25MHZClock  ; VGA_drawPixel:VGA|Hcounter[0] ; 164      ; 0        ; 0        ; 0        ;
+; VGA_drawPixel:VGA|Hcounter[0] ; VGA_drawPixel:VGA|Hcounter[0] ; 331      ; 0        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -607,19 +603,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
 ; Unconstrained Output Ports      ; 11    ; 11   ;
-; Unconstrained Output Port Paths ; 21    ; 21   ;
+; Unconstrained Output Port Paths ; 120   ; 120  ;
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                               ;
-+---------------------------------------+---------------------------------------+------+-------------+
-; Target                                ; Clock                                 ; Type ; Status      ;
-+---------------------------------------+---------------------------------------+------+-------------+
-; VGA_clock:VGAClk|T25MHZClock          ; VGA_clock:VGAClk|T25MHZClock          ; Base ; Constrained ;
-; VGA_drawPixel:VGA|HozsigIndicator.000 ; VGA_drawPixel:VGA|HozsigIndicator.000 ; Base ; Constrained ;
-; clock                                 ; clock                                 ; Base ; Constrained ;
-+---------------------------------------+---------------------------------------+------+-------------+
++------------------------------------------------------------------------------------+
+; Clock Status Summary                                                               ;
++-------------------------------+-------------------------------+------+-------------+
+; Target                        ; Clock                         ; Type ; Status      ;
++-------------------------------+-------------------------------+------+-------------+
+; VGA_clock:VGAClk|T25MHZClock  ; VGA_clock:VGAClk|T25MHZClock  ; Base ; Constrained ;
+; VGA_drawPixel:VGA|Hcounter[0] ; VGA_drawPixel:VGA|Hcounter[0] ; Base ; Constrained ;
+; clock                         ; clock                         ; Base ; Constrained ;
++-------------------------------+-------------------------------+------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -665,128 +661,128 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Apr 10 21:22:52 2019
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+    Info: Processing started: Mon Apr 15 16:47:01 2019
 Info: Command: quartus_sta FPGA_MiniProject -c FPGA_MiniProject
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'FPGA_MiniProject.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name VGA_drawPixel:VGA|Hcounter[0] VGA_drawPixel:VGA|Hcounter[0]
     Info (332105): create_clock -period 1.000 -name VGA_clock:VGAClk|T25MHZClock VGA_clock:VGAClk|T25MHZClock
     Info (332105): create_clock -period 1.000 -name clock clock
-    Info (332105): create_clock -period 1.000 -name VGA_drawPixel:VGA|HozsigIndicator.000 VGA_drawPixel:VGA|HozsigIndicator.000
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.835
+Info (332146): Worst-case setup slack is -3.338
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.835            -108.118 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -2.734             -62.773 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):    -1.581              -2.071 clock 
-Info (332146): Worst-case hold slack is 0.273
+    Info (332119):    -3.338             -66.902 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -3.046             -36.391 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):    -1.700              -2.203 clock 
+Info (332146): Worst-case hold slack is 0.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.273               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.393               0.000 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.519               0.000 clock 
+    Info (332119):     0.091               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.428               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.550               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.814
+Info (332146): Worst-case minimum pulse width slack is -0.804
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.814              -2.790 clock 
-    Info (332119):    -0.394             -28.978 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.394             -17.710 VGA_drawPixel:VGA|HozsigIndicator.000 
+    Info (332119):    -0.804              -2.679 clock 
+    Info (332119):    -0.394             -11.054 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.394              -7.254 VGA_drawPixel:VGA|Hcounter[0] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.807
+Info (332146): Worst-case setup slack is -3.339
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.807            -105.336 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -2.760             -61.380 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):    -1.533              -2.015 clock 
-Info (332146): Worst-case hold slack is 0.274
+    Info (332119):    -3.339             -67.714 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -2.939             -35.197 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):    -1.639              -2.135 clock 
+Info (332146): Worst-case hold slack is 0.186
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.274               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.372               0.000 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.501               0.000 clock 
+    Info (332119):     0.186               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.443               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.534               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.821
+Info (332146): Worst-case minimum pulse width slack is -0.813
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.821              -2.862 clock 
-    Info (332119):    -0.394             -28.698 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -0.394             -17.479 VGA_drawPixel:VGA|HozsigIndicator.000 
+    Info (332119):    -0.813              -2.771 clock 
+    Info (332119):    -0.394             -10.994 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.394              -6.821 VGA_drawPixel:VGA|Hcounter[0] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.391
+Info (332146): Worst-case setup slack is -1.469
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.391             -45.740 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -1.313             -27.696 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):    -0.744              -0.750 clock 
-Info (332146): Worst-case hold slack is 0.023
+    Info (332119):    -1.469             -17.608 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):    -1.382             -27.816 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.826              -0.831 clock 
+Info (332146): Worst-case hold slack is -0.104
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.023               0.000 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.029               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.271               0.000 clock 
+    Info (332119):    -0.104              -0.204 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.164               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.281               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.706
+Info (332146): Worst-case minimum pulse width slack is -0.700
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.706              -2.122 clock 
-    Info (332119):    -0.015              -0.197 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.060               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.700              -2.052 clock 
+    Info (332119):     0.041               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.125               0.000 VGA_clock:VGAClk|T25MHZClock 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.228
+Info (332146): Worst-case setup slack is -1.288
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.228             -39.307 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):    -1.174             -24.011 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):    -0.618              -0.618 clock 
-Info (332146): Worst-case hold slack is -0.015
+    Info (332119):    -1.288             -15.441 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):    -1.248             -25.396 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.684              -0.684 clock 
+Info (332146): Worst-case hold slack is -0.082
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.015              -0.015 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.038               0.000 VGA_clock:VGAClk|T25MHZClock 
-    Info (332119):     0.243               0.000 clock 
+    Info (332119):    -0.082              -0.130 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):     0.148               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.250               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.694
+Info (332146): Worst-case minimum pulse width slack is -0.690
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.694              -2.091 clock 
-    Info (332119):     0.021               0.000 VGA_drawPixel:VGA|HozsigIndicator.000 
-    Info (332119):     0.084               0.000 VGA_clock:VGAClk|T25MHZClock 
+    Info (332119):    -0.690              -2.036 clock 
+    Info (332119):     0.065               0.000 VGA_drawPixel:VGA|Hcounter[0] 
+    Info (332119):     0.128               0.000 VGA_clock:VGAClk|T25MHZClock 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5174 megabytes
-    Info: Processing ended: Wed Apr 10 21:22:59 2019
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 994 megabytes
+    Info: Processing ended: Mon Apr 15 16:47:11 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:07
 
 

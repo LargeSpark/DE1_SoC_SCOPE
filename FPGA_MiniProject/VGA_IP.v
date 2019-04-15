@@ -37,10 +37,6 @@ localparam integer h_d_endcount = clockspeed * (h_d * 0.000000001);
 localparam integer total_Hendcount = h_a_endcount + h_b_endcount + h_c_endcount + h_d_endcount;
 localparam integer total_Vendcount = v_a + v_b + v_c + v_d;
 //calculate highest reg size required
-localparam Vregsize_a = $clog2(v_a);
-localparam Vregsize_b = $clog2(v_b);
-localparam Vregsize_c = $clog2(v_c);
-localparam Vregsize_d = $clog2(v_d);
 localparam Hozregsize = $clog2(Horizontal_Size);
 localparam Verregsize = $clog2(Vertical_Size);
 //other method
@@ -75,7 +71,9 @@ assign R = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + 
 assign G = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_G : 0;
 assign B = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_B : 0;
 assign vga_hsync = (Hcounter<h_a_endcount) ? 0 : 1;
-assign vga_vsync = (Vcounter<v_a) ? 0 : 1;
+assign vga_vsync = (Vcounter<(v_a+1) && VerSigOn == 1) ? 0 : 1;
+
+
 //assign vsync
 //assign vga_hsync = (VerSigIndicator == 0 && VerSigOn == 1 && rstV == 0) ? 0 : 1;
 //counters
@@ -94,19 +92,17 @@ end
 //Pixel Counter & V Sync
 always @(posedge vga_hsync) begin
 	//First Counter
-	if(VerPixel > Vertical_Size) begin
-		VerSigOn <= 1;
-		Vcounter <= Vcounter + 1;
-	end
-	//Second Counter
-	if(VerSigOn == 1 && VerPixel == 0) begin
-		Vcounter <= Vcounter + 1;
-	end
-	//Reset
 	if(Vcounter == total_Vendcount) begin
 		Vcounter <= 0;
 		VerSigOn <= 0;
+	end else if(VerPixel > Vertical_Size) begin
+		VerSigOn <= 1;
+		Vcounter <= Vcounter + 1;
+	end else if(VerSigOn == 1 && VerPixel == 0) begin
+		Vcounter <= Vcounter + 1;
 	end
+	//Reset
+
 end
 
 endmodule
