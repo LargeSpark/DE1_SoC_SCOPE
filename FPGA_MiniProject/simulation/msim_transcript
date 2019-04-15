@@ -1,5 +1,5 @@
-# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
-# Reading E:/FPGA_WS1/FPGA_MiniProject/simulation/modelsim.tcl
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation/modelsim.tcl
 # do FPGA_MiniProject_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -8,70 +8,70 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v}
+# vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:31:15 on Apr 10,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v 
+# Start time: 11:02:32 on Apr 15,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v 
 # -- Compiling module VGA_drawPixel
 # 
 # Top level modules:
 # 	VGA_drawPixel
-# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v}
+# vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:31:15 on Apr 10,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v 
+# Start time: 11:02:33 on Apr 15,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v 
 # -- Compiling module FPGA_MiniProject
 # 
 # Top level modules:
 # 	FPGA_MiniProject
-# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v}
+# vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:31:15 on Apr 10,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v 
+# Start time: 11:02:33 on Apr 15,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v 
 # -- Compiling module VGA_clock
 # 
 # Top level modules:
 # 	VGA_clock
-# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+E:/FPGA_WS1/FPGA_MiniProject {E:/FPGA_WS1/FPGA_MiniProject/VGATB.v}
+# vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:31:15 on Apr 10,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/FPGA_WS1/FPGA_MiniProject" E:/FPGA_WS1/FPGA_MiniProject/VGATB.v 
+# Start time: 11:02:33 on Apr 15,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v 
 # -- Compiling module VGATest_tb
 # 
 # Top level modules:
 # 	VGATest_tb
-# End time: 21:31:15 on Apr 10,2019, Elapsed time: 0:00:00
+# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  VGATest_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" VGATest_tb 
-# Start time: 21:31:15 on Apr 10,2019
+# Start time: 11:02:33 on Apr 15,2019
 # Loading work.VGATest_tb
 # Loading work.FPGA_MiniProject
 # Loading work.VGA_clock
 # Loading work.VGA_drawPixel
-# ** Warning: (vsim-3015) E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'x_pos'. The port definition is at: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
-# ** Warning: (vsim-3015) E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'y_pos'. The port definition is at: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
-# ** Warning: (vsim-3015) E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_R'. The port definition is at: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
-# ** Warning: (vsim-3015) E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_G'. The port definition is at: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
-# ** Warning: (vsim-3015) E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_B'. The port definition is at: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'x_pos'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'y_pos'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_R'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_G'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_B'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 # 
-# do E:/FPGA_WS1/FPGA_MiniProject/simulation/load_sim.tcl
+# do M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation/load_sim.tcl
 #
 # NativeLink Simulation Initialisation Script
 # ===========================================
@@ -135,7 +135,7 @@
 # 
 # We normalise the filename to prevent issues with spaces in the filename
 # set waveFile [file normalize "./wave.do"]
-# E:/FPGA_WS1/FPGA_MiniProject/simulation/wave.do
+# M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation/wave.do
 # 
 # if { [file exists $waveFile] } {
 #     #If the saved file exists, load it
@@ -149,27 +149,43 @@
 # add wave -noupdate -radix unsigned /VGATest_tb/CLOCK
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: el15asjb  Hostname: EENTPC147  ProcessID: 12168
-#           Attempting to use alternate WLF file "./wlftz56ef4".
+#           Attempting to use alternate WLF file "./wlft20tw4f".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftz56ef4
+#           Using alternate file: ./wlft20tw4f
 # add wave -noupdate -radix unsigned /VGATest_tb/VGACLOCK
 # ** Error: (vish-4014) No objects found matching '/VGATest_tb/VGACLOCK'.
-# Executing ONERROR command at macro E:\FPGA_WS1\FPGA_MiniProject\simulation\wave.do line 4
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 4
 # add wave -noupdate -radix unsigned /VGATest_tb/vga_hsync
 # add wave -noupdate -radix unsigned /VGATest_tb/vga_vsync
 # add wave -noupdate -radix unsigned /VGATest_tb/R
 # add wave -noupdate -radix unsigned /VGATest_tb/G
 # add wave -noupdate -radix unsigned /VGATest_tb/B
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/h_a_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/h_a_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 10
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/h_b_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/h_b_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 11
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/h_c_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/h_c_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 12
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/h_d_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/h_d_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 13
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/v_a_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/v_a_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 14
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/v_b_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/v_b_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 15
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/v_c_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/v_c_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 16
 # add wave -noupdate /VGATest_tb/dut/VGA/HozsigIndicator
 # add wave -noupdate /VGATest_tb/dut/VGA/VerSigIndicator
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/v_d_counter
+# ** Error: (vish-4014) No objects found matching '/VGATest_tb/dut/VGA/v_d_counter'.
+# Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 19
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/HozPixel
 # add wave -noupdate -radix decimal /VGATest_tb/dut/VGA/VerPixel
 # add wave -noupdate /VGATest_tb/dut/VGA/VerSigOn
@@ -221,6 +237,16 @@
 # 
 # wave zoom full
 # 0 ps
-# 100151961 ns
-# End time: 21:43:28 on Apr 10,2019, Elapsed time: 0:12:13
-# Errors: 3, Warnings: 7
+# 13139553 ns
+restart; run 100ms
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'x_pos'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'y_pos'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_R'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_G'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+# ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_B'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
+run 50ms

@@ -1,6 +1,6 @@
 Analysis & Elaboration report for FPGA_MiniProject
-Wed Apr 10 21:31:07 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon Apr 15 11:02:26 2019
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -12,6 +12,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   4. Analysis & Elaboration Settings
   5. Port Connectivity Checks: "VGA_drawPixel:VGA"
   6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -34,22 +35,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Apr 10 21:31:07 2019       ;
-; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                 ; FPGA_MiniProject                            ;
-; Top-level Entity Name         ; FPGA_MiniProject                            ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                           ;
++-------------------------------+----------------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Apr 15 11:02:26 2019                    ;
+; Quartus Prime Version         ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                 ; FPGA_MiniProject                                         ;
+; Top-level Entity Name         ; FPGA_MiniProject                                         ;
+; Family                        ; Cyclone V                                                ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                                ;
+; Total registers               ; N/A until Partition Merge                                ;
+; Total pins                    ; N/A until Partition Merge                                ;
+; Total virtual pins            ; N/A until Partition Merge                                ;
+; Total block memory bits       ; N/A until Partition Merge                                ;
+; Total PLLs                    ; N/A until Partition Merge                                ;
+; Total DLLs                    ; N/A until Partition Merge                                ;
++-------------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -57,8 +58,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -178,51 +179,53 @@ refer to the applicable agreement for further details.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Apr 10 21:30:56 2019
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+    Info: Processing started: Mon Apr 15 11:02:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vgatb.v
-    Info (12023): Found entity 1: VGATest_tb File: E:/FPGA_WS1/FPGA_MiniProject/VGATB.v Line: 6
+    Info (12023): Found entity 1: VGATest_tb File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file vga_ip.v
-    Info (12023): Found entity 1: VGA_drawPixel File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 1
+    Info (12023): Found entity 1: VGA_drawPixel File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adda_ip.v
-    Info (12023): Found entity 1: ADDA File: E:/FPGA_WS1/FPGA_MiniProject/ADDA_IP.v Line: 4
+    Info (12023): Found entity 1: ADDA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/ADDA_IP.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fpga_miniproject.v
-    Info (12023): Found entity 1: FPGA_MiniProject File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
+    Info (12023): Found entity 1: FPGA_MiniProject File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file freqdiv.v
-    Info (12023): Found entity 1: clockDivider File: E:/FPGA_WS1/FPGA_MiniProject/FreqDiv.v Line: 4
+    Info (12023): Found entity 1: clockDivider File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FreqDiv.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file vgaclock.v
-    Info (12023): Found entity 1: VGA_clock File: E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v Line: 1
+    Info (12023): Found entity 1: VGA_clock File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v Line: 1
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_clock" for hierarchy "VGA_clock:VGAClk" File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 23
-Warning (10230): Verilog HDL assignment warning at VGAClock.v(9): truncated value with size 32 to match size of target (2) File: E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v Line: 9
-Info (12128): Elaborating entity "VGA_drawPixel" for hierarchy "VGA_drawPixel:VGA" File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 37
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(29): object "screenPosition" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 29
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(30): object "linePosition" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 30
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(65): object "HozPixel" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 65
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(86): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 86
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(87): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 87
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(88): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 88
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(89): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 89
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(91): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 91
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(100): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 100
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(110): truncated value with size 32 to match size of target (7) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 110
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(120): truncated value with size 32 to match size of target (10) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 120
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(125): truncated value with size 32 to match size of target (11) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 125
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(135): truncated value with size 32 to match size of target (5) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 135
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(150): truncated value with size 32 to match size of target (11) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 150
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(181): truncated value with size 32 to match size of target (2) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 181
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(191): truncated value with size 32 to match size of target (7) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 191
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(201): truncated value with size 32 to match size of target (10) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 201
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(212): truncated value with size 32 to match size of target (5) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 212
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(218): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 218
+Info (12128): Elaborating entity "VGA_clock" for hierarchy "VGA_clock:VGAClk" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 23
+Warning (10230): Verilog HDL assignment warning at VGAClock.v(9): truncated value with size 32 to match size of target (2) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v Line: 9
+Info (12128): Elaborating entity "VGA_drawPixel" for hierarchy "VGA_drawPixel:VGA" File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v Line: 37
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(29): object "screenPosition" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 29
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(30): object "linePosition" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 30
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(54): object "HozPixel" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 54
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(57): object "HozsigIndicator" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 57
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(64): object "VerSigIndicator" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 64
+Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(66): object "rstV" assigned a value but never read File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 66
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(81): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 81
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(82): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 82
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(83): truncated value with size 32 to match size of target (8) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 83
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(84): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 84
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(85): truncated value with size 32 to match size of target (1) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 85
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(90): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 90
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(94): truncated value with size 32 to match size of target (10) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 94
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(103): truncated value with size 32 to match size of target (11) File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 103
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Wed Apr 10 21:31:07 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:26
+Info (144001): Generated suppressed messages file M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 630 megabytes
+    Info: Processing ended: Mon Apr 15 11:02:26 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:24
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg.
 
 

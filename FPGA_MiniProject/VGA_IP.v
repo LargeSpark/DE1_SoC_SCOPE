@@ -34,33 +34,22 @@ localparam integer h_a_endcount = clockspeed * (h_a * 0.000000001);
 localparam integer h_b_endcount = clockspeed * (h_b * 0.000000001);
 localparam integer h_c_endcount = clockspeed * (h_c * 0.000000001);
 localparam integer h_d_endcount = clockspeed * (h_d * 0.000000001);
-//localparam integer v_a_endcount = clockspeed * (v_a * 0.000000001);
-//localparam integer v_b_endcount = clockspeed * (v_b * 0.000000001);
-//localparam integer v_c_endcount = clockspeed * (v_c * 0.000000001);
-//localparam integer v_d_endcount = clockspeed * (v_d * 0.000000001);
-
+localparam integer total_Hendcount = h_a_endcount + h_b_endcount + h_c_endcount + h_d_endcount;
+localparam integer total_Vendcount = v_a + v_b + v_c + v_d;
 //calculate highest reg size required
-localparam Hregsize_a = $clog2(h_a_endcount);
-localparam Hregsize_b = $clog2(h_b_endcount);
-localparam Hregsize_c = $clog2(h_c_endcount);
-localparam Hregsize_d = $clog2(h_d_endcount);
 localparam Vregsize_a = $clog2(v_a);
 localparam Vregsize_b = $clog2(v_b);
 localparam Vregsize_c = $clog2(v_c);
 localparam Vregsize_d = $clog2(v_d);
 localparam Hozregsize = $clog2(Horizontal_Size);
 localparam Verregsize = $clog2(Vertical_Size);
+//other method
+localparam Hregsize = $clog2(total_Hendcount);
+localparam Vregsize = $clog2(total_Vendcount);
 
 //counter initilisations
-reg [Hregsize_a:0] h_a_counter  = 0;
-reg [Hregsize_b:0] h_b_counter  = 0;
-reg [Hregsize_c:0] h_c_counter  = 0;
-reg [Hregsize_d:0] h_d_counter  = 0;
-reg [Vregsize_a:0] v_a_counter  = 0;
-reg [Vregsize_b:0] v_b_counter  = 0;
-reg [Vregsize_c:0] v_c_counter  = 0;
-reg [Vregsize_d:0] v_d_counter  = 0;
-
+reg [Hregsize:0] Hcounter = 0;
+reg [Vregsize:0] Vcounter = 0;
 //Positions counter initilisations
 reg [Hozregsize:0] HozPixel = 0;
 reg [Verregsize:0] VerPixel = 0;
@@ -82,145 +71,34 @@ reg rstV = 0;
 3 - frontporch
 */
 
-//assign hsync
-assign vga_hsync = (HozsigIndicator == 0) ? 0 : 1;		
-assign R = (HozsigIndicator == 2 && VerSigOn == 0)? colour_R : 0;
-assign G = (HozsigIndicator == 2 && VerSigOn == 0)? colour_G : 0;
-assign B = (HozsigIndicator == 2 && VerSigOn == 0)? colour_B : 0;
+assign R = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_R : 0;
+assign G = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_G : 0;
+assign B = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_B : 0;
+assign vga_hsync = (Hcounter<h_a_endcount) ? 0 : 1;
+assign vga_vsync = (Vcounter<v_a) ? 0 : 1;
 //assign vsync
-assign vga_vsync = (VerSigIndicator == 0 && VerSigOn == 1 && rstV == 0) ? 0 : 1;
+//assign vga_hsync = (VerSigIndicator == 0 && VerSigOn == 1 && rstV == 0) ? 0 : 1;
 //counters
 always @(posedge clock) begin
-	//If sync
-	if(HozsigIndicator == 0) begin
-		if(h_a_counter == h_a_endcount) begin
-			h_a_counter <= 0;
-			HozsigIndicator <= 1;
-		end else begin
-		h_a_counter <= h_a_counter + 1;
+	Hcounter = Hcounter + 1;
+	if (Hcounter == total_Hendcount) begin
+		Hcounter <= 0;
+		if(VerSigOn == 0) begin
+		VerPixel <= VerPixel + 1;
 		end
 	end
-	
-	//if backporch
-	if(HozsigIndicator == 1) begin
-		if(h_b_counter == h_b_endcount) begin
-			h_b_counter <= 0;
-			HozsigIndicator <= 2;
-		end else begin
-		h_b_counter <= h_b_counter + 1;
-		end
-	end
-	
-	//if data
-	if(HozsigIndicator == 2) begin
-		if(h_c_counter == Horizontal_Size) begin //changed to work with counting pixels
-			h_c_counter <= 0;
-			HozsigIndicator <= 3;
-			if(VerSigOn == 0) begin
-				VerPixel <= VerPixel + 1;
-			end else begin
-				VerPixel <= 0;
-			end
-		end else begin
-		h_c_counter <= h_c_counter + 1;
-		end
-	end
-	
-	//if frontporch
-	if(HozsigIndicator == 3) begin
-		if(h_d_counter == h_d_endcount) begin
-			h_d_counter <= 0;
-			HozsigIndicator <= 0;
-		end else begin
-		h_d_counter <= h_d_counter + 1;
-		end
-	end	
-	
 end
 
 //Pixel Counter & V Sync
-always @(posedge clock) begin
-	//##Counter
-	if(VerSigOn == 0) begin
-	//always one behind
-		if(h_c_counter == 640 || vga_hsync == 0 || VerSigOn == 1) begin
-			HozPixel <= 0;
-		end
-		else begin
-			HozPixel <= h_c_counter + 1;
-		end
-	end
-	if(VerSigOn == 0 && vga_hsync == 1 && HozsigIndicator == 1) begin
-			if(VerPixel >= Vertical_Size) begin
-				VerSigOn <= 1;
-			end
-	end
-	
-	if(rstV == 1) begin
-		VerSigOn <= 0;
-	end
-	//end
-	
-	//###### V SYNC ######
-	
-	
-end
-
-//VerPixel == 0;
-reg rstcounter = 1;
-//Vsync
 always @(posedge vga_hsync) begin
-
-	if(VerSigOn == 1 && rstV == 0) begin
-		//if sync
-		if(VerSigIndicator == 0) begin
-				if(v_a_counter == v_a) begin
-					v_a_counter <= 0;
-					VerSigIndicator <= 1;
-				end else begin
-				v_a_counter <= v_a_counter + 1;
-				end
-			end
-			
-		//if backporch
-		else if(VerSigIndicator == 1) begin
-			if(v_b_counter == v_b) begin
-				v_b_counter <= 0;
-				VerSigIndicator <= 2;
-			end else begin
-			v_b_counter <= v_b_counter + 1;
-			end
-		end
-		
-		//if data
-		else if(VerSigIndicator == 2) begin
-			if(v_c_counter == v_c) begin
-				v_c_counter <= 0;
-				VerSigIndicator <= 3;
-			end else begin
-			v_c_counter <= v_c_counter + 1;
-			end
-		end
-		
-		//if frontporch
-		else if(VerSigIndicator == 3) begin
-			if(v_d_counter == v_d) begin
-				v_d_counter <= 0;
-				VerSigIndicator <= 0;
-				rstV <= 1;
-			end else begin
-			v_d_counter <= v_d_counter + 1;
-			end
-		end	
-	end
-	
-	if(rstV == 1) begin
-		rstcounter <= rstcounter + 1;
-		if(rstcounter == 1) begin
-		rstcounter <= 0;
-		rstV <= 0;
+	if(VerPixel < Vertical_Size) begin
+	VerSigOn <= 1;
+	Vcounter = Vcounter + 1;
+		if(Vcounter == total_Vendcount) begin
+			VerSigOn <= 0;
+			Vcounter <= 0;
 		end
 	end
-	
 end
+
 endmodule
