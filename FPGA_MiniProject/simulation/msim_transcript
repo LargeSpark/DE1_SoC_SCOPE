@@ -13,49 +13,49 @@
 # 
 # vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:02:32 on Apr 15,2019
+# Start time: 15:36:05 on Apr 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v 
 # -- Compiling module VGA_drawPixel
 # 
 # Top level modules:
 # 	VGA_drawPixel
-# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:01
+# End time: 15:36:05 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:02:33 on Apr 15,2019
+# Start time: 15:36:05 on Apr 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v 
 # -- Compiling module FPGA_MiniProject
 # 
 # Top level modules:
 # 	FPGA_MiniProject
-# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
+# End time: 15:36:05 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:02:33 on Apr 15,2019
+# Start time: 15:36:05 on Apr 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGAClock.v 
 # -- Compiling module VGA_clock
 # 
 # Top level modules:
 # 	VGA_clock
-# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
+# End time: 15:36:05 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject {M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:02:33 on Apr 15,2019
+# Start time: 15:36:05 on Apr 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject" M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGATB.v 
 # -- Compiling module VGATest_tb
 # 
 # Top level modules:
 # 	VGATest_tb
-# End time: 11:02:33 on Apr 15,2019, Elapsed time: 0:00:00
+# End time: 15:36:05 on Apr 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  VGATest_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" VGATest_tb 
-# Start time: 11:02:33 on Apr 15,2019
+# Start time: 15:36:06 on Apr 15,2019
 # Loading work.VGATest_tb
 # Loading work.FPGA_MiniProject
 # Loading work.VGA_clock
@@ -149,9 +149,9 @@
 # add wave -noupdate -radix unsigned /VGATest_tb/CLOCK
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: el15asjb  Hostname: EENTPC147  ProcessID: 12168
-#           Attempting to use alternate WLF file "./wlft20tw4f".
+#           Attempting to use alternate WLF file "./wlftxidh74".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft20tw4f
+#           Using alternate file: ./wlftxidh74
 # add wave -noupdate -radix unsigned /VGATest_tb/VGACLOCK
 # ** Error: (vish-4014) No objects found matching '/VGATest_tb/VGACLOCK'.
 # Executing ONERROR command at macro M:\MASTERS\FPGA\FPGA_WS\FPGA_MiniProject\simulation\wave.do line 4
@@ -227,6 +227,7 @@
 # ========== Simulation Starts Here ===========
 # 
 # run -all
+add wave -position end  sim:/VGATest_tb/dut/VGA/Vcounter
 # 
 # ========== Simulation Ends Here ===========
 #
@@ -237,7 +238,7 @@
 # 
 # wave zoom full
 # 0 ps
-# 13139553 ns
+# 67785522 ns
 restart; run 100ms
 # ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (1) does not match connection size (32) for port 'x_pos'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(3).
 #    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
@@ -249,4 +250,5 @@ restart; run 100ms
 #    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 # ** Warning: (vsim-3015) M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v(25): [PCDPC] - Port size (8) does not match connection size (32) for port 'colour_B'. The port definition is at: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v(7).
 #    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
-run 50ms
+# End time: 15:37:34 on Apr 15,2019, Elapsed time: 0:01:28
+# Errors: 27, Warnings: 12

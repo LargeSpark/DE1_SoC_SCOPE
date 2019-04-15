@@ -1,2 +1,1 @@
-Warning (10268): Verilog HDL information at VGA_IP.v(89): always construct contains both blocking and non-blocking assignments File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 89
-Warning (10268): Verilog HDL information at VGA_IP.v(100): always construct contains both blocking and non-blocking assignments File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 100
+Warning (10268): Verilog HDL information at VGA_IP.v(82): always construct contains both blocking and non-blocking assignments File: M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v Line: 82

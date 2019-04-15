@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/simulation
 vFPGA_MiniProject
-Z1 !s110 1555322553
+Z1 !s110 1555338965
 !i10b 1
 !s100 _CIQRZlfdA=a`9hgR:kIK0
 I<1iAK6AoXQI`c]ne>]Wee0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1555322553.000000
+Z4 !s108 1555338965.000000
 !s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/FPGA_MiniProject.v|
 !i113 1
@@ -57,11 +57,11 @@ n@v@g@a_clock
 vVGA_drawPixel
 R1
 !i10b 1
-!s100 [dRl4mB<1B^GPFe;B6hRZ3
-I=fiDMcMWC:S>P1X8bL0FT2
+!s100 G==eO4^QQKI@6g21jO>`I0
+IMX]4Z3a2bEOU@51`e5nKI1
 R2
 R0
-w1555322531
+w1555338940
 8M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 FM:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v
 L0 1
@@ -69,7 +69,7 @@ R3
 r1
 !s85 0
 31
-!s108 1555322552.000000
+R4
 !s107 M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject|M:/MASTERS/FPGA/FPGA_WS/FPGA_MiniProject/VGA_IP.v|
 !i113 1

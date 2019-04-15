@@ -85,19 +85,27 @@ always @(posedge clock) begin
 		Hcounter <= 0;
 		if(VerSigOn == 0) begin
 		VerPixel <= VerPixel + 1;
+		end else begin
+		VerPixel <= 0;
 		end
 	end
 end
 
 //Pixel Counter & V Sync
 always @(posedge vga_hsync) begin
-	if(VerPixel < Vertical_Size) begin
-	VerSigOn <= 1;
-	Vcounter = Vcounter + 1;
-		if(Vcounter == total_Vendcount) begin
-			VerSigOn <= 0;
-			Vcounter <= 0;
-		end
+	//First Counter
+	if(VerPixel > Vertical_Size) begin
+		VerSigOn <= 1;
+		Vcounter <= Vcounter + 1;
+	end
+	//Second Counter
+	if(VerSigOn == 1 && VerPixel == 0) begin
+		Vcounter <= Vcounter + 1;
+	end
+	//Reset
+	if(Vcounter == total_Vendcount) begin
+		Vcounter <= 0;
+		VerSigOn <= 0;
 	end
 end
 
