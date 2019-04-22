@@ -44,11 +44,83 @@
 					"strict" : false
 				},
 				{
+					"name" : "G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[7]",
+					"strict" : false
+				},
+				{
 					"name" : "VClock",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "switch1",
+					"strict" : false
+				},
+				{
+					"name" : "switch0",
 					"strict" : false
 				}
 			]

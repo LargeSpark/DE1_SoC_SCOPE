@@ -1,108 +1,279 @@
-module VGA_drawPixel(
-input 				clock,
-input					x_pos,
-input					y_pos,
-input 		[7:0]	colour_R,
-input 		[7:0]	colour_G,
-input 		[7:0]	colour_B,
-output 				vga_hsync,
-output				vga_vsync,
-output	[7:0]		R,
-output	[7:0]		G,
-output	[7:0]		B
+module vsync(
+	input line_clk, 
+	output vsync_out, 
+	output blank_out
+	);
+   
+   reg [10:0] count = 10'b0000000000;
+   reg vsync  = 0;
+   reg blank  = 0;
 
-);
-//parameters for 640x480
-localparam clockspeed = 25000000;
-localparam h_a=3800; 	//nanoseconds - Sync //3800
-localparam h_b=1900; 	//nanoseconds - Backporch //1900
-localparam h_c=25400; 	//nanoseconds - Display Interval //25400
-localparam h_d=600; 		//nanoseconds - Front Porch //600
-localparam v_a=2;			//lines - Sync
-localparam v_b=33;		//lines - Backporch
-localparam v_c=480;		//lines - Display Interval
-localparam v_d=10;		//lines - Front Porch
-localparam Horizontal_Size = 640;
-localparam Vertical_Size = 480;
+   always @(posedge line_clk)
+	 if (count < 666)
+	   count <= count + 1;
+	 else
+	   count <= 0;
+   
+   always @(posedge line_clk)
+	 if (count < 600)
+	   blank 		<= 0;
+	 else
+	   blank 		<= 1;
+      
+   always @(posedge line_clk)
+	 begin
+		if (count < 637)
+		  vsync 	<= 1;
+		else if (count >= 637 && count < 643)
+		  vsync 	<= 0;
+		else if (count >= 643)
+		  vsync 	<= 1;
+	 end
+
+   assign vsync_out  = vsync;
+   assign blank_out  = blank;
+   
+endmodule // hsync   
+
+module hsync(
+	input clk50, 
+	output hsync_out, 
+	output blank_out, 
+	output newline_out
+	);
+   
+   reg [10:0] count = 10'b0000000000;
+   reg hsync 	= 0;
+   reg blank 	= 0;
+   reg newline 	= 0;
+
+   always @(posedge clk50)
+	 begin
+		if (count < 1040)
+		  count  <= count + 1;
+		else
+		  count  <= 0;
+	 end
+   
+   always @(posedge clk50)
+	 begin
+		if (count == 0)
+		  newline <= 1;
+		else
+		  newline <= 0;
+	 end
+
+   always @(posedge clk50)
+	 begin
+		if (count >= 800)
+		  blank  <= 1;
+		else
+		  blank  <= 0;
+	 end
+
+   always @(posedge clk50)
+	 begin
+		if (count < 856) // pixel data plus front porch
+		  hsync <= 1;
+		else if (count >= 856 && count < 976)
+		  hsync <= 0;
+		else if (count >= 976)
+		  hsync <= 1;
+	 end // always @ (posedge clk50)
+				 
+   assign hsync_out    = hsync;
+   assign blank_out    = blank;
+   assign newline_out  = newline;
+   
+endmodule // hsync
 
 
-reg [9:0] screenPosition = 0;
-reg [9:0] linePosition = 0;
+module color(
+	input clk, 
+	input blank, 
+	output [7:0] red_out, 
+	output [7:0] green_out, 
+	output [7:0] blue_out
+	);
+	
+   reg [8:0] count;
+   
+   always @(posedge clk)
+	 begin
+		if (blank)
+		  count 	<= 0;
+		else
+		  count 	<= 1;
+	 end
 
-//What the counters must count up to to switch at the correct time.
-localparam integer h_a_endcount = clockspeed * (h_a * 0.000000001);
-localparam integer h_b_endcount = clockspeed * (h_b * 0.000000001);
-localparam integer h_c_endcount = clockspeed * (h_c * 0.000000001);
-localparam integer h_d_endcount = clockspeed * (h_d * 0.000000001);
-localparam integer total_Hendcount = h_a_endcount + h_b_endcount + h_c_endcount + h_d_endcount;
-localparam integer total_Vendcount = v_a + v_b + v_c + v_d;
-//calculate highest reg size required
-localparam Hozregsize = $clog2(Horizontal_Size);
-localparam Verregsize = $clog2(Vertical_Size);
-//other method
-localparam Hregsize = $clog2(total_Hendcount);
-localparam Vregsize = $clog2(total_Vendcount);
+   assign red_out	 = (blank) ? 0 : 8'b11111111;
+	assign green_out = (blank) ? 0 : 8'b01111111;
+	assign blue_out  = (blank) ? 0 : 8'b00001111;
+   
+endmodule // color
 
-//counter initilisations
-reg [Hregsize:0] Hcounter = 0;
-reg [Vregsize:0] Vcounter = 0;
-//Positions counter initilisations
-reg [Hozregsize:0] HozPixel = 0;
-reg [Verregsize:0] VerPixel = 0;
-//Indicator for section of signal
-reg [2:0] HozsigIndicator = 0;
-/*
-0 - sync
-1 - backporch
-2 - data
-3 - frontporch
-*/
-reg [2:0] VerSigIndicator = 0; //Keep track of each counter.
-reg VerSigOn = 0; //When 1 it will turn off colour signals
-reg rstV = 0;
-/*
-0 - sync
-1 - backporch
-2 - data
-3 - frontporch
-*/
-
-assign R = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_R : 0;
-assign G = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_G : 0;
-assign B = (Hcounter>=(h_a_endcount + h_b_endcount) && Hcounter<(h_a_endcount + h_b_endcount+h_c_endcount) && VerSigOn == 0)? colour_B : 0;
-assign vga_hsync = (Hcounter<h_a_endcount) ? 0 : 1;
-assign vga_vsync = (Vcounter<(v_a+1) && VerSigOn == 1) ? 0 : 1;
-
-
-//assign vsync
-//assign vga_hsync = (VerSigIndicator == 0 && VerSigOn == 1 && rstV == 0) ? 0 : 1;
-//counters
-always @(posedge clock) begin
-	Hcounter = Hcounter + 1;
-	if (Hcounter == total_Hendcount) begin
-		Hcounter <= 0;
-		if(VerSigOn == 0) begin
-		VerPixel <= VerPixel + 1;
+module gridandwave(
+	input clk, 
+	input blank, 
+	input hsync,
+	input vsync,
+	input cursorX_EN,
+	input cursorY_EN,
+	input [10:0] cursorY1,
+	input [10:0] cursorY2,
+	input [10:0] cursorX1,
+	input [10:0] cursorX2,
+	output [7:0] red_out, 
+	output [7:0] green_out, 
+	output [7:0] blue_out
+	);
+	localparam gridoffset = 20;
+	reg [19:0] x;
+	reg [19:0] y;
+   reg [8:0] count;
+   reg [7:0] pixel_R = 0;
+	reg [7:0] pixel_G = 0;
+	reg [7:0] pixel_B = 0;
+	reg [8:0] i;
+   always @(posedge clk)
+	 begin
+		if (blank) begin
+			if(hsync) begin
+			x <= 0;
+			end else if (vsync) begin
+			x <= 0;
+			end
 		end else begin
-		VerPixel <= 0;
+			x <= x+1;
+			//wave code
+			//cursor code
+			if(cursorX_EN && x == cursorX1) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b00000000;
+			end else if (cursorX_EN && x == cursorX2) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b00000000;
+			end else if (cursorY_EN && y == cursorY1) begin
+			pixel_R <= 8'b00000000;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b00000000;
+			end else if (cursorY_EN && y == cursorY2) begin
+			pixel_R <= 8'b00000000;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b00000000;
+			//grid
+			end else if(y == 60 * 1) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 2) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 3) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 4) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 5) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 6) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 7) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 8) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(y == 60 * 9) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			//X Grid
+			end else if(x == (60 * 1) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 2) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 3) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 4) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 5) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 6) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 7) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 8) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 9) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 10) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 11) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 12) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 13) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if(x == (60 * 14) - gridoffset) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else begin
+			pixel_R <= 8'b0;
+			pixel_G <= 8'b0;
+			pixel_B <= 8'b0;
+			end
+		end
+	 end
+	
+	always @(posedge hsync) begin
+		if(vsync) begin
+			y <= 0;
+		end else begin
+			y <= y + 1;
 		end
 	end
-end
-
-//Pixel Counter & V Sync
-always @(posedge vga_hsync) begin
-	//First Counter
-	if(Vcounter == total_Vendcount) begin
-		Vcounter <= 0;
-		VerSigOn <= 0;
-	end else if(VerPixel > Vertical_Size) begin
-		VerSigOn <= 1;
-		Vcounter <= Vcounter + 1;
-	end else if(VerSigOn == 1 && VerPixel == 0) begin
-		Vcounter <= Vcounter + 1;
-	end
-	//Reset
-
-end
-
-endmodule
+   assign red_out	 = (blank) ? 0 : pixel_R;
+	assign green_out = (blank) ? 0 : pixel_G;
+	assign blue_out  = (blank) ? 0 : pixel_B;
+   
+endmodule // color

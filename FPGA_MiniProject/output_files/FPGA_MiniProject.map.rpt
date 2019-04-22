@@ -1,5 +1,5 @@
-Analysis & Elaboration report for FPGA_MiniProject
-Tue Apr 16 00:47:04 2019
+Analysis & Synthesis report for FPGA_MiniProject
+Mon Apr 22 16:48:18 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -7,12 +7,19 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "VGA_drawPixel:VGA"
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "VGA_IP_Top:VGA"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -35,42 +42,31 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Apr 16 00:47:04 2019       ;
-; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                 ; FPGA_MiniProject                            ;
-; Top-level Entity Name         ; FPGA_MiniProject                            ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 16:48:18 2019       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; FPGA_MiniProject                            ;
+; Top-level Entity Name           ; FPGA_MiniProject                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 70                                          ;
+; Total pins                      ; 30                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,77 +152,219 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VGA_drawPixel:VGA"                                                                                                                                                                          ;
-+----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; x_pos          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; x_pos[-1]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; y_pos          ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; y_pos[-1]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; colour_R       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; colour_R[7..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; colour_G       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; colour_G[7..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; colour_B       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; colour_B[7..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+----------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; VGA_IP_Top.v                     ; yes             ; User Verilog HDL File  ; D:/FPGA_MiniProject/VGA_IP_Top.v       ;         ;
+; VGA_IP.v                         ; yes             ; User Verilog HDL File  ; D:/FPGA_MiniProject/VGA_IP.v           ;         ;
+; FPGA_MiniProject.v               ; yes             ; User Verilog HDL File  ; D:/FPGA_MiniProject/FPGA_MiniProject.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 62          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 110         ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 12          ;
+;     -- 5 input functions                    ; 14          ;
+;     -- 4 input functions                    ; 11          ;
+;     -- <=3 input functions                  ; 72          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 70          ;
+;                                             ;             ;
+; I/O pins                                    ; 30          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 38          ;
+; Total fan-out                               ; 602         ;
+; Average fan-out                             ; 2.51        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
+; |FPGA_MiniProject          ; 110 (0)             ; 70 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |FPGA_MiniProject                                ; FPGA_MiniProject ; work         ;
+;    |VGA_IP_Top:VGA|        ; 110 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                 ; VGA_IP_Top       ; work         ;
+;       |gridandwave:gaw|    ; 71 (71)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw ; gridandwave      ; work         ;
+;       |hsync:hs|           ; 18 (18)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|hsync:hs        ; hsync            ; work         ;
+;       |vsync:vs|           ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|vsync:vs        ; vsync            ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++----------------------------------------------+-------------------------------------------------------+
+; Register name                                ; Reason for Removal                                    ;
++----------------------------------------------+-------------------------------------------------------+
+; VGA_IP_Top:VGA|gridandwave:gaw|pixel_R[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_R[0] ;
+; VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[0] ;
+; VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[0] ;
+; Total Number of Removed Registers = 21       ;                                                       ;
++----------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 70    ;
+; Number of registers using Synchronous Clear  ; 62    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "VGA_IP_Top:VGA"        ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; cursorY1[4..3]  ; Input ; Info     ; Stuck at VCC ;
+; cursorY1[10..5] ; Input ; Info     ; Stuck at GND ;
+; cursorY1[2..1]  ; Input ; Info     ; Stuck at GND ;
+; cursorY1[0]     ; Input ; Info     ; Stuck at VCC ;
+; cursorY2[6..5]  ; Input ; Info     ; Stuck at VCC ;
+; cursorY2[10..7] ; Input ; Info     ; Stuck at GND ;
+; cursorY2[4..3]  ; Input ; Info     ; Stuck at GND ;
+; cursorY2[1..0]  ; Input ; Info     ; Stuck at GND ;
+; cursorY2[2]     ; Input ; Info     ; Stuck at VCC ;
+; cursorX1[10..6] ; Input ; Info     ; Stuck at GND ;
+; cursorX1[4..0]  ; Input ; Info     ; Stuck at GND ;
+; cursorX1[5]     ; Input ; Info     ; Stuck at VCC ;
+; cursorX2[4..3]  ; Input ; Info     ; Stuck at VCC ;
+; cursorX2[10..7] ; Input ; Info     ; Stuck at GND ;
+; cursorX2[6]     ; Input ; Info     ; Stuck at VCC ;
+; cursorX2[5]     ; Input ; Info     ; Stuck at GND ;
+; cursorX2[2]     ; Input ; Info     ; Stuck at GND ;
+; cursorX2[1]     ; Input ; Info     ; Stuck at VCC ;
+; cursorX2[0]     ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 70                          ;
+;     ENA               ; 3                           ;
+;     SCLR              ; 62                          ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 110                         ;
+;     arith             ; 62                          ;
+;         1 data inputs ; 62                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 47                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 11                          ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 12                          ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 16 00:46:50 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject --analysis_and_elaboration
+    Info: Processing started: Mon Apr 22 16:48:05 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file vgatb.v
-    Info (12023): Found entity 1: VGATest_tb File: E:/FPGA_WS1/FPGA_MiniProject/VGATB.v Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file vga_ip.v
-    Info (12023): Found entity 1: VGA_drawPixel File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_ip_top.v
+    Info (12023): Found entity 1: VGA_IP_Top File: D:/FPGA_MiniProject/VGA_IP_Top.v Line: 2
+Info (12021): Found 4 design units, including 4 entities, in source file vga_ip.v
+    Info (12023): Found entity 1: vsync File: D:/FPGA_MiniProject/VGA_IP.v Line: 1
+    Info (12023): Found entity 2: hsync File: D:/FPGA_MiniProject/VGA_IP.v Line: 38
+    Info (12023): Found entity 3: color File: D:/FPGA_MiniProject/VGA_IP.v Line: 91
+    Info (12023): Found entity 4: gridandwave File: D:/FPGA_MiniProject/VGA_IP.v Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file adda_ip.v
-    Info (12023): Found entity 1: ADDA File: E:/FPGA_WS1/FPGA_MiniProject/ADDA_IP.v Line: 4
+    Info (12023): Found entity 1: ADDA File: D:/FPGA_MiniProject/ADDA_IP.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fpga_miniproject.v
-    Info (12023): Found entity 1: FPGA_MiniProject File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file freqdiv.v
-    Info (12023): Found entity 1: clockDivider File: E:/FPGA_WS1/FPGA_MiniProject/FreqDiv.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file vgaclock.v
-    Info (12023): Found entity 1: VGA_clock File: E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v Line: 1
+    Info (12023): Found entity 1: FPGA_MiniProject File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_clock" for hierarchy "VGA_clock:VGAClk" File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 23
-Warning (10230): Verilog HDL assignment warning at VGAClock.v(9): truncated value with size 32 to match size of target (2) File: E:/FPGA_WS1/FPGA_MiniProject/VGAClock.v Line: 9
-Info (12128): Elaborating entity "VGA_drawPixel" for hierarchy "VGA_drawPixel:VGA" File: E:/FPGA_WS1/FPGA_MiniProject/FPGA_MiniProject.v Line: 37
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(29): object "screenPosition" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 29
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(30): object "linePosition" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 30
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(50): object "HozPixel" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 50
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(53): object "HozsigIndicator" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 53
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(60): object "VerSigIndicator" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 60
-Warning (10036): Verilog HDL or VHDL warning at VGA_IP.v(62): object "rstV" assigned a value but never read File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 62
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(70): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 70
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(71): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 71
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(72): truncated value with size 32 to match size of target (8) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 72
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(73): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 73
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(74): truncated value with size 32 to match size of target (1) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 74
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(81): truncated value with size 32 to match size of target (11) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 81
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(85): truncated value with size 32 to match size of target (10) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 85
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(100): truncated value with size 32 to match size of target (11) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 100
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(102): truncated value with size 32 to match size of target (11) File: E:/FPGA_WS1/FPGA_MiniProject/VGA_IP.v Line: 102
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file E:/FPGA_WS1/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Tue Apr 16 00:47:04 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
-
-
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in E:/FPGA_WS1/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg.
+Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
+Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: D:/FPGA_MiniProject/vga_ip_top.v Line: 24
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: D:/FPGA_MiniProject/VGA_IP.v Line: 53
+Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: D:/FPGA_MiniProject/vga_ip_top.v Line: 30
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(13): truncated value with size 32 to match size of target (11) File: D:/FPGA_MiniProject/VGA_IP.v Line: 13
+Info (12128): Elaborating entity "gridandwave" for hierarchy "VGA_IP_Top:VGA|gridandwave:gaw" File: D:/FPGA_MiniProject/vga_ip_top.v Line: 46
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(147): truncated value with size 32 to match size of target (20) File: D:/FPGA_MiniProject/VGA_IP.v Line: 147
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(272): truncated value with size 32 to match size of target (20) File: D:/FPGA_MiniProject/VGA_IP.v Line: 272
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(275): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 275
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(276): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 276
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(277): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 277
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 27 output pins
+    Info (21061): Implemented 110 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Mon Apr 22 16:48:18 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

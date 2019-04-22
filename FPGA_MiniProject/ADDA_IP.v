@@ -1,5 +1,5 @@
 //8192 Levels per side (+ve,-ve)
-//2Vpk-pk max in
+//2Vpk-pk max in//
 
 module ADDA(
 input 			clock,				//clock

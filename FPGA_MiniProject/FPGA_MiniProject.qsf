@@ -61,13 +61,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME VGATest_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id VGATest_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME VGATest_tb -section_id VGATest_tb
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR simulation -section_id eda_simulation
-set_global_assignment -name VERILOG_FILE VGATB.v
-set_global_assignment -name VERILOG_FILE VGA_IP.v
-set_global_assignment -name VERILOG_FILE ADDA_IP.v
-set_global_assignment -name VERILOG_FILE FPGA_MiniProject.v
-set_global_assignment -name VERILOG_FILE FreqDiv.v
 set_global_assignment -name EDA_TEST_BENCH_FILE VGATB.v -section_id VGATest_tb
-set_global_assignment -name VERILOG_FILE VGAClock.v
 set_location_assignment PIN_B13 -to B[0]
 set_location_assignment PIN_G13 -to B[1]
 set_location_assignment PIN_H13 -to B[2]
@@ -96,4 +90,11 @@ set_location_assignment PIN_B11 -to vga_hsync
 set_location_assignment PIN_D11 -to vga_vsync
 set_location_assignment PIN_AF14 -to clock
 set_location_assignment PIN_A11 -to VClock
+set_global_assignment -name VERILOG_FILE VGA_IP_Top.v
+set_global_assignment -name VERILOG_FILE VGA_IP.v
+set_global_assignment -name VERILOG_FILE ADDA_IP.v
+set_global_assignment -name VERILOG_FILE FPGA_MiniProject.v
+set_global_assignment -name VERILOG_FILE vga_ip_top.v
+set_location_assignment PIN_AB12 -to switch0
+set_location_assignment PIN_AC12 -to switch1
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
