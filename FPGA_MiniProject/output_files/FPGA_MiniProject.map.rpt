@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Mon Apr 22 20:49:05 2019
+Mon Apr 22 21:10:05 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 22 20:49:04 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 21:10:05 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; FPGA_MiniProject                            ;
 ; Top-level Entity Name           ; FPGA_MiniProject                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 137                                         ;
+; Total registers                 ; 151                                         ;
 ; Total pins                      ; 35                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 11,214                                      ;
@@ -205,16 +205,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 123         ;
+; Estimate of Logic utilization (ALMs needed) ; 135         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 211         ;
+; Combinational ALUT usage for logic          ; 234         ;
 ;     -- 7 input functions                    ; 2           ;
-;     -- 6 input functions                    ; 32          ;
-;     -- 5 input functions                    ; 24          ;
-;     -- 4 input functions                    ; 15          ;
-;     -- <=3 input functions                  ; 138         ;
+;     -- 6 input functions                    ; 33          ;
+;     -- 5 input functions                    ; 29          ;
+;     -- 4 input functions                    ; 19          ;
+;     -- <=3 input functions                  ; 151         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 137         ;
+; Dedicated logic registers                   ; 151         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 35          ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -223,9 +223,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 78          ;
-; Total fan-out                               ; 1446        ;
-; Average fan-out                             ; 3.35        ;
+; Maximum fan-out                             ; 92          ;
+; Total fan-out                               ; 1584        ;
+; Average fan-out                             ; 3.38        ;
 +---------------------------------------------+-------------+
 
 
@@ -234,8 +234,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name      ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+------------------+--------------+
-; |FPGA_MiniProject                         ; 211 (6)             ; 137 (3)                   ; 11214             ; 0          ; 35   ; 0            ; |FPGA_MiniProject                                                                          ; FPGA_MiniProject ; work         ;
-;    |Sample:sample|                        ; 29 (29)             ; 23 (23)                   ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                            ; Sample           ; work         ;
+; |FPGA_MiniProject                         ; 234 (6)             ; 151 (3)                   ; 11214             ; 0          ; 35   ; 0            ; |FPGA_MiniProject                                                                          ; FPGA_MiniProject ; work         ;
+;    |Sample:sample|                        ; 52 (52)             ; 37 (37)                   ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                            ; Sample           ; work         ;
 ;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0                                ; altsyncram       ; work         ;
 ;          |altsyncram_u8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_u8n1:auto_generated ; altsyncram_u8n1  ; work         ;
 ;    |VGA_IP_Top:VGA|                       ; 121 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                           ; VGA_IP_Top       ; work         ;
@@ -275,12 +275,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 137   ;
-; Number of registers using Synchronous Clear  ; 108   ;
+; Total registers                              ; 151   ;
+; Number of registers using Synchronous Clear  ; 131   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,7 +299,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[12] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[10]     ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[1]       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggerHighPoint[7]    ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[13] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -437,29 +440,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 137                         ;
-;     ENA               ; 12                          ;
+; arriav_ff             ; 151                         ;
+;     ENA               ; 3                           ;
+;     ENA SCLR          ; 23                          ;
 ;     SCLR              ; 108                         ;
 ;     plain             ; 17                          ;
-; arriav_lcell_comb     ; 211                         ;
-;     arith             ; 116                         ;
-;         1 data inputs ; 113                         ;
+; arriav_lcell_comb     ; 234                         ;
+;     arith             ; 130                         ;
+;         1 data inputs ; 127                         ;
 ;         2 data inputs ; 1                           ;
 ;         4 data inputs ; 2                           ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 93                          ;
+;     normal            ; 102                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 24                          ;
-;         6 data inputs ; 32                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 17                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 33                          ;
 ; boundary_port         ; 35                          ;
 ; stratixv_ram_block    ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.60                        ;
-; Average LUT depth     ; 3.13                        ;
+; Average LUT depth     ; 3.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -478,7 +482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 20:48:52 2019
+    Info: Processing started: Mon Apr 22 21:09:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -537,11 +541,13 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(291): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(292): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 292
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 293
 Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 67
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(14): object "outputcounter" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 14
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "randomreg1" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 16
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(17): object "randomreg2" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 17
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(41): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 41
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(43): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(15): object "outputcounter" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 15
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(17): object "randomreg1" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 17
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "randomreg2" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 18
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(45): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 45
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(46): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 46
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(50): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 50
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(51): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 51
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer Mux0 File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 33
 Info (276014): Found 1 instances of uninferred RAM logic
@@ -590,16 +596,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clockTest[2]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 252 logic cells
+    Info (21061): Implemented 275 logic cells
     Info (21064): Implemented 14 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
     Info: Peak virtual memory: 4875 megabytes
-    Info: Processing ended: Mon Apr 22 20:49:05 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Processing ended: Mon Apr 22 21:10:05 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+
