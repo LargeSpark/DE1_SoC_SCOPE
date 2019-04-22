@@ -1,0 +1,212 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGA_MiniProject/simulation
+vcolor
+Z1 !s110 1555954368
+!i10b 1
+!s100 UgFXklUen`XF8mSd^ThHE0
+I7De65lNTh0giCm:hkT3e]2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1555949531
+Z4 8D:/FPGA_MiniProject/VGA_IP.v
+Z5 FD:/FPGA_MiniProject/VGA_IP.v
+L0 91
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1555954368.000000
+Z8 !s107 D:/FPGA_MiniProject/VGA_IP.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGA_IP.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+D:/FPGA_MiniProject
+Z12 tCvgOpt 0
+vFPGA_MiniProject
+R1
+!i10b 1
+!s100 ?]dn5OBjUlUA`_^5jo3I92
+I1_9`a9fh=mJPM5CODChDR2
+R2
+R0
+w1555954101
+8D:/FPGA_MiniProject/FPGA_MiniProject.v
+FD:/FPGA_MiniProject/FPGA_MiniProject.v
+L0 7
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/FPGA_MiniProject/FPGA_MiniProject.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/FPGA_MiniProject.v|
+!i113 1
+R10
+R11
+R12
+n@f@p@g@a_@mini@project
+vgridandwave
+R1
+!i10b 1
+!s100 0R7ol=X5d[Fzbnna4o8IE3
+IGRMh[HJFg^@gm[HRhMm`C2
+R2
+R0
+R3
+R4
+R5
+L0 115
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vhsync
+R1
+!i10b 1
+!s100 gCh=3`7K_le^:bZ=f3M:`3
+ICGN]@BfgBzb33Q]QngEP^2
+R2
+R0
+R3
+R4
+R5
+L0 38
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vSample
+R1
+!i10b 1
+!s100 N5L=P8<fOE;FjkTh9X>;C3
+IN>zQdNWZ;lMl^O;C]jmR93
+R2
+R0
+w1555953907
+8D:/FPGA_MiniProject/Sample_IP.v
+FD:/FPGA_MiniProject/Sample_IP.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/FPGA_MiniProject/Sample_IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/Sample_IP.v|
+!i113 1
+R10
+R11
+R12
+n@sample
+vsine_wave_gen
+R1
+!i10b 1
+!s100 ?=f=CL[RR2<1FZe2_]5Z^0
+Im?;ROD698hcaJM<Q;P>SD3
+R2
+R0
+w1555949444
+8D:/FPGA_MiniProject/sineGen.v
+FD:/FPGA_MiniProject/sineGen.v
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/FPGA_MiniProject/sineGen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/sineGen.v|
+!i113 1
+R10
+R11
+R12
+vVGA_IP_Top
+R1
+!i10b 1
+!s100 SADVHK>9JFOifG6[=OcPl1
+I0PK:???6]jFL9c?0e?9<X0
+R2
+R0
+w1555949130
+8D:/FPGA_MiniProject/VGA_IP_Top.v
+FD:/FPGA_MiniProject/VGA_IP_Top.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/FPGA_MiniProject/VGA_IP_Top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGA_IP_Top.v|
+!i113 1
+R10
+R11
+R12
+n@v@g@a_@i@p_@top
+vVGATest_tb
+R1
+!i10b 1
+!s100 1^T>VIcAgL`<:cQl]S@FK2
+IW`4EN_9DnHgckQQ<e`>;E3
+R2
+R0
+w1555953319
+8D:/FPGA_MiniProject/VGATB.v
+FD:/FPGA_MiniProject/VGATB.v
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/FPGA_MiniProject/VGATB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGATB.v|
+!i113 1
+R10
+R11
+R12
+n@v@g@a@test_tb
+vvsync
+R1
+!i10b 1
+!s100 D`fkEKW>?keUm8L^;?E=d0
+I1[ochZ3od5hI`L0DUMn`32
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

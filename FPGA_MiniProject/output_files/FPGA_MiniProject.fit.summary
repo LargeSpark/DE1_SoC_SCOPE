@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Apr 22 16:49:30 2019
+Fitter Status : Successful - Mon Apr 22 18:46:02 2019
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : FPGA_MiniProject
 Top-level Entity Name : FPGA_MiniProject
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 63 / 32,070 ( < 1 % )
-Total registers : 86
-Total pins : 30 / 457 ( 7 % )
+Logic utilization (in ALMs) : 118 / 32,070 ( < 1 % )
+Total registers : 153
+Total pins : 32 / 457 ( 7 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 4,065,280 ( 0 % )
-Total RAM Blocks : 0 / 397 ( 0 % )
+Total block memory bits : 6,408 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 1 / 397 ( < 1 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

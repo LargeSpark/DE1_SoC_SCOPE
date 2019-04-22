@@ -120,7 +120,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "switch2",
+					"strict" : false
+				},
+				{
 					"name" : "switch0",
+					"strict" : false
+				},
+				{
+					"name" : "switch3",
 					"strict" : false
 				}
 			]

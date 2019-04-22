@@ -123,9 +123,15 @@ module gridandwave(
 	input [10:0] cursorY2,
 	input [10:0] cursorX1,
 	input [10:0] cursorX2,
+	input [13:0] waveSigIn1,
+	input [13:0] waveSigIn2,
+	input waveSigIn1_En,
+	input waveSigIn2_En,
 	output [7:0] red_out, 
 	output [7:0] green_out, 
-	output [7:0] blue_out
+	output [7:0] blue_out,
+	output [10:0] sX,
+	output [10:0] sY
 	);
 	localparam gridoffset = 20;
 	reg [19:0] x;
@@ -135,6 +141,8 @@ module gridandwave(
 	reg [7:0] pixel_G = 0;
 	reg [7:0] pixel_B = 0;
 	reg [8:0] i;
+	assign sX = x;
+	assign sY = y;
    always @(posedge clk)
 	 begin
 		if (blank) begin
@@ -146,8 +154,16 @@ module gridandwave(
 		end else begin
 			x <= x+1;
 			//wave code
+			if (waveSigIn1_En && y == waveSigIn1) begin
+			pixel_R <= 8'b00000000;
+			pixel_G <= 8'b11111111;
+			pixel_B <= 8'b11111111;
+			end else if (waveSigIn2_En && y == waveSigIn2) begin
+			pixel_R <= 8'b11111111;
+			pixel_G <= 8'b00000000;
+			pixel_B <= 8'b11111111;
 			//cursor code
-			if(cursorX_EN && x == cursorX1) begin
+			end else if(cursorX_EN && x == cursorX1) begin
 			pixel_R <= 8'b11111111;
 			pixel_G <= 8'b11111111;
 			pixel_B <= 8'b00000000;
