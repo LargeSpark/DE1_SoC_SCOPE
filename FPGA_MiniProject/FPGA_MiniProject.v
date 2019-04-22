@@ -10,6 +10,7 @@ input					switch0, //Cursor X En
 input					switch1,	//Cursor Y En
 input					switch2, //Signal 1 En
 input					switch3,	//Signal 2 En
+input [2:0]			clockTest,
 output 				vga_hsync,
 output				vga_vsync,
 output	[7:0]		R,
@@ -29,8 +30,10 @@ reg [2:0] slowerClock = 0;
 wire [10:0] sX;
 wire [10:0] sY;
 
+wire slClock = slowerClock[clockTest];
+
 sine_wave_gen testWave(
-	.Clk (slowerClock[1]),
+	.Clk (slClock),
 	.data_out (testwave)
 	);
 
@@ -56,7 +59,7 @@ VGA_IP_Top VGA(
 );
 
 Sample sample(
-	.clock (slowerClock[1]),
+	.clock (clock),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),

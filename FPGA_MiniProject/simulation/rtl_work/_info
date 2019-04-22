@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dD:/FPGA_MiniProject/simulation
 vcolor
-Z1 !s110 1555954368
+Z1 !s110 1555961996
 !i10b 1
 !s100 UgFXklUen`XF8mSd^ThHE0
 I7De65lNTh0giCm:hkT3e]2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1555949531
+Z3 w1555954745
 Z4 8D:/FPGA_MiniProject/VGA_IP.v
 Z5 FD:/FPGA_MiniProject/VGA_IP.v
 L0 91
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1555954368.000000
+Z7 !s108 1555961996.000000
 Z8 !s107 D:/FPGA_MiniProject/VGA_IP.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGA_IP.v|
 !i113 1
@@ -33,11 +33,11 @@ Z12 tCvgOpt 0
 vFPGA_MiniProject
 R1
 !i10b 1
-!s100 ?]dn5OBjUlUA`_^5jo3I92
-I1_9`a9fh=mJPM5CODChDR2
+!s100 z:nhe06GYSI>0Oc;5S7b`2
+IQ9b6_EZOg9G`T1mPKzP;O0
 R2
 R0
-w1555954101
+w1555955077
 8D:/FPGA_MiniProject/FPGA_MiniProject.v
 FD:/FPGA_MiniProject/FPGA_MiniProject.v
 L0 7
@@ -56,8 +56,8 @@ n@f@p@g@a_@mini@project
 vgridandwave
 R1
 !i10b 1
-!s100 0R7ol=X5d[Fzbnna4o8IE3
-IGRMh[HJFg^@gm[HRhMm`C2
+!s100 `h3:5Qz0:z>Xo89;NjH`N1
+IVY2K[Bf7[5a:_S;<5bhLe3
 R2
 R0
 R3
@@ -100,11 +100,11 @@ R12
 vSample
 R1
 !i10b 1
-!s100 N5L=P8<fOE;FjkTh9X>;C3
-IN>zQdNWZ;lMl^O;C]jmR93
+!s100 [JEP8lm8doEU5;:ZY=Ccn3
+IQ[KcR?P;>a4R9O6iZ69:g2
 R2
 R0
-w1555953907
+w1555961960
 8D:/FPGA_MiniProject/Sample_IP.v
 FD:/FPGA_MiniProject/Sample_IP.v
 L0 3
@@ -123,11 +123,11 @@ n@sample
 vsine_wave_gen
 R1
 !i10b 1
-!s100 ?=f=CL[RR2<1FZe2_]5Z^0
-Im?;ROD698hcaJM<Q;P>SD3
+!s100 bUB6hSRmDgC=BDZJnQHF62
+IzBDgaB>OTRPC;ZO5=_CSB0
 R2
 R0
-w1555949444
+w1555960789
 8D:/FPGA_MiniProject/sineGen.v
 FD:/FPGA_MiniProject/sineGen.v
 L0 4
@@ -145,11 +145,11 @@ R12
 vVGA_IP_Top
 R1
 !i10b 1
-!s100 SADVHK>9JFOifG6[=OcPl1
-I0PK:???6]jFL9c?0e?9<X0
+!s100 Cko3In?aMeYAmnzTNE]:G1
+I^hVFV_Z@Jdg^ZXSAB:b2V2
 R2
 R0
-w1555949130
+w1555954986
 8D:/FPGA_MiniProject/VGA_IP_Top.v
 FD:/FPGA_MiniProject/VGA_IP_Top.v
 L0 2

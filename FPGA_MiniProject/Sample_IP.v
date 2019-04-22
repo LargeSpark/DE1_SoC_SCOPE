@@ -10,25 +10,23 @@ module Sample(
 
 reg [13:0] sampleData[800:0];
 reg [13:0] triggerHighPoint = 0;
-reg [10:0] samplecounter = 0;
+reg [13:0] samplecounter = 0;
 reg [10:0] outputcounter = 0;
 reg [13:0] outputData = 0;
+reg randomreg1 = 0;
+reg randomreg2 = 0;
 assign screenData = outputData;
 //output data
 always @(posedge clock) begin
-	/*if(outputcounter < 480) begin
-	outputData <= sampleData[outputcounter];
-	outputcounter <= outputcounter + 1;
-	end else begin
-	outputcounter <= 0;
-	end*/
 	outputData <= sampleData[screenX];
 end
 
 //Trigger Set
 always @(posedge clock) begin
-	if(data > triggerHighPoint) begin
-	triggerHighPoint <= data;
+	//randomreg1 <= ~randomreg1;
+	if(triggerHighPoint<data) begin
+		triggerHighPoint <= data;
+		//randomreg2 <= ~randomreg2;
 	end
 end
 
@@ -40,6 +38,8 @@ always @(posedge clock) begin
 	//if samplecounter is below 480 then sample
 	end else if(samplecounter < 800) begin
 	sampleData[samplecounter] <= data;
+	samplecounter <= samplecounter + 1;
+	end else begin
 	samplecounter <= samplecounter + 1;
 	end
 end

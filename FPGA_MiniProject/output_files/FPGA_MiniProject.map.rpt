@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Mon Apr 22 18:44:52 2019
+Mon Apr 22 20:49:05 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  10. General Register Statistics
  11. Registers Packed Into Inferred Megafunctions
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_46n1:auto_generated
+ 13. Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_u8n1:auto_generated
  14. Parameter Settings for Inferred Entity Instance: Sample:sample|altsyncram:sampleData_rtl_0
  15. altsyncram Parameter Settings by Entity Instance
  16. Port Connectivity Checks: "Sample:sample"
@@ -52,16 +52,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 22 18:44:52 2019       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 22 20:49:04 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; FPGA_MiniProject                            ;
 ; Top-level Entity Name           ; FPGA_MiniProject                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 131                                         ;
-; Total pins                      ; 32                                          ;
+; Total registers                 ; 137                                         ;
+; Total pins                      ; 35                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 6,408                                       ;
+; Total block memory bits         ; 11,214                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -196,37 +196,37 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_46n1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/FPGA_MiniProject/db/altsyncram_46n1.tdf                                   ;         ;
+; db/altsyncram_u8n1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/FPGA_MiniProject/db/altsyncram_u8n1.tdf                                   ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 117            ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 202            ;
-;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 29             ;
-;     -- 5 input functions                    ; 27             ;
-;     -- 4 input functions                    ; 9              ;
-;     -- <=3 input functions                  ; 135            ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 131            ;
-;                                             ;                ;
-; I/O pins                                    ; 32             ;
-; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 6408           ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; slowerClock[1] ;
-; Maximum fan-out                             ; 68             ;
-; Total fan-out                               ; 1266           ;
-; Average fan-out                             ; 3.13           ;
-+---------------------------------------------+----------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 123         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 211         ;
+;     -- 7 input functions                    ; 2           ;
+;     -- 6 input functions                    ; 32          ;
+;     -- 5 input functions                    ; 24          ;
+;     -- 4 input functions                    ; 15          ;
+;     -- <=3 input functions                  ; 138         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 137         ;
+;                                             ;             ;
+; I/O pins                                    ; 35          ;
+; Total MLAB memory bits                      ; 0           ;
+; Total block memory bits                     ; 11214       ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 78          ;
+; Total fan-out                               ; 1446        ;
+; Average fan-out                             ; 3.35        ;
++---------------------------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -234,26 +234,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name      ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+------------------+--------------+
-; |FPGA_MiniProject                         ; 202 (2)             ; 131 (2)                   ; 6408              ; 0          ; 32   ; 0            ; |FPGA_MiniProject                                                                          ; FPGA_MiniProject ; work         ;
-;    |Sample:sample|                        ; 25 (25)             ; 19 (19)                   ; 6408              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                            ; Sample           ; work         ;
-;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 6408              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0                                ; altsyncram       ; work         ;
-;          |altsyncram_46n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6408              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_46n1:auto_generated ; altsyncram_46n1  ; work         ;
+; |FPGA_MiniProject                         ; 211 (6)             ; 137 (3)                   ; 11214             ; 0          ; 35   ; 0            ; |FPGA_MiniProject                                                                          ; FPGA_MiniProject ; work         ;
+;    |Sample:sample|                        ; 29 (29)             ; 23 (23)                   ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                            ; Sample           ; work         ;
+;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0                                ; altsyncram       ; work         ;
+;          |altsyncram_u8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 11214             ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_u8n1:auto_generated ; altsyncram_u8n1  ; work         ;
 ;    |VGA_IP_Top:VGA|                       ; 121 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                           ; VGA_IP_Top       ; work         ;
 ;       |gridandwave:gaw|                   ; 82 (82)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw                                           ; gridandwave      ; work         ;
 ;       |hsync:hs|                          ; 18 (18)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|hsync:hs                                                  ; hsync            ; work         ;
 ;       |vsync:vs|                          ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|vsync:vs                                                  ; vsync            ; work         ;
-;    |sine_wave_gen:testWave|               ; 54 (54)             ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|sine_wave_gen:testWave                                                   ; sine_wave_gen    ; work         ;
+;    |sine_wave_gen:testWave|               ; 55 (55)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|sine_wave_gen:testWave                                                   ; sine_wave_gen    ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                        ;
-+-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_46n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 801          ; 8            ; 801          ; 8            ; 6408 ; None ;
-+-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                         ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_u8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 801          ; 14           ; 801          ; 14           ; 11214 ; None ;
++-------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -261,13 +261,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------------------------------------------------------+
 ; Register name                                ; Reason for Removal                                    ;
 +----------------------------------------------+-------------------------------------------------------+
-; Sample:sample|triggerHighPoint[8..13]        ; Stuck at GND due to stuck port data_in                ;
-; Sample:sample|outputData[8..13]              ; Stuck at GND due to stuck port data_in                ;
 ; VGA_IP_Top:VGA|gridandwave:gaw|pixel_R[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_R[0] ;
 ; VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[0] ;
 ; VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[0] ;
-; slowerClock[2]                               ; Lost fanout                                           ;
-; Total Number of Removed Registers = 34       ;                                                       ;
+; sine_wave_gen:testWave|data_out[9..13]       ; Merged with sine_wave_gen:testWave|data_out[8]        ;
+; Sample:sample|triggerHighPoint[8,9,11..13]   ; Merged with Sample:sample|triggerHighPoint[10]        ;
+; Total Number of Removed Registers = 31       ;                                                       ;
 +----------------------------------------------+-------------------------------------------------------+
 
 
@@ -276,23 +275,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 131   ;
-; Number of registers using Synchronous Clear  ; 105   ;
+; Total registers                              ; 137   ;
+; Number of registers using Synchronous Clear  ; 108   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                           ;
-+--------------------------------+--------------------------------+------+
-; Register Name                  ; Megafunction                   ; Type ;
-+--------------------------------+--------------------------------+------+
-; Sample:sample|outputData[0..7] ; Sample:sample|sampleData_rtl_0 ; RAM  ;
-+--------------------------------+--------------------------------+------+
++-------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                            ;
++---------------------------------+--------------------------------+------+
+; Register Name                   ; Megafunction                   ; Type ;
++---------------------------------+--------------------------------+------+
+; Sample:sample|outputData[0..13] ; Sample:sample|sampleData_rtl_0 ; RAM  ;
++---------------------------------+--------------------------------+------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -300,13 +299,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[6]       ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[15] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[12] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
-; Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_46n1:auto_generated ;
+; Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_u8n1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------+
 ; Assignment                      ; Value              ; From ; To                                ;
 +---------------------------------+--------------------+------+-----------------------------------+
@@ -326,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
-; WIDTH_A                            ; 8                    ; Untyped                        ;
+; WIDTH_A                            ; 14                   ; Untyped                        ;
 ; WIDTHAD_A                          ; 10                   ; Untyped                        ;
 ; NUMWORDS_A                         ; 801                  ; Untyped                        ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
@@ -335,7 +333,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
-; WIDTH_B                            ; 8                    ; Untyped                        ;
+; WIDTH_B                            ; 14                   ; Untyped                        ;
 ; WIDTHAD_B                          ; 10                   ; Untyped                        ;
 ; NUMWORDS_B                         ; 801                  ; Untyped                        ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
@@ -370,7 +368,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_46n1      ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_u8n1      ; Untyped                        ;
 +------------------------------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -383,10 +381,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances                ; 1                                         ;
 ; Entity Instance                           ; Sample:sample|altsyncram:sampleData_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                 ;
-;     -- WIDTH_A                            ; 8                                         ;
+;     -- WIDTH_A                            ; 14                                        ;
 ;     -- NUMWORDS_A                         ; 801                                       ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                              ;
-;     -- WIDTH_B                            ; 8                                         ;
+;     -- WIDTH_B                            ; 14                                        ;
 ;     -- NUMWORDS_B                         ; 801                                       ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                    ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                              ;
@@ -395,14 +393,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "Sample:sample"     ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; data[13..8] ; Input ; Info     ; Stuck at GND ;
-; reset       ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sample:sample"                                                                                                                                                                         ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -439,30 +437,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 131                         ;
-;     ENA               ; 11                          ;
-;     ENA SCLR          ; 11                          ;
-;     SCLR              ; 94                          ;
-;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 202                         ;
-;     arith             ; 112                         ;
-;         1 data inputs ; 110                         ;
+; arriav_ff             ; 137                         ;
+;     ENA               ; 12                          ;
+;     SCLR              ; 108                         ;
+;     plain             ; 17                          ;
+; arriav_lcell_comb     ; 211                         ;
+;     arith             ; 116                         ;
+;         1 data inputs ; 113                         ;
 ;         2 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 88                          ;
+;     normal            ; 93                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 12                          ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 27                          ;
-;         6 data inputs ; 29                          ;
-; boundary_port         ; 32                          ;
-; stratixv_ram_block    ; 8                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 32                          ;
+; boundary_port         ; 35                          ;
+; stratixv_ram_block    ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.60                        ;
-; Average LUT depth     ; 3.33                        ;
+; Average LUT depth     ; 3.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -481,7 +478,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 22 18:44:39 2019
+    Info: Processing started: Mon Apr 22 20:48:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -503,30 +500,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file sinegen
 Info (12021): Found 1 design units, including 1 entities, in source file sample_ip.v
     Info (12023): Found entity 1: Sample File: D:/FPGA_MiniProject/Sample_IP.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at VGATB.v(28): created implicit net for "R" File: D:/FPGA_MiniProject/VGATB.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(46): created implicit net for "waveSigIn2" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(49): created implicit net for "waveSigIn2" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 49
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(67): truncated value with size 32 to match size of target (3) File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 67
-Warning (10030): Net "waveSigIn2" at FPGA_MiniProject.v(46) has no driver or initial value, using a default initial value '0' File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 46
-Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 35
-Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 32
-Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 33
-Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 34
-Warning (10230): Verilog HDL assignment warning at sineGen.v(35): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 35
-Warning (10230): Verilog HDL assignment warning at sineGen.v(36): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 36
-Warning (10230): Verilog HDL assignment warning at sineGen.v(37): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 37
-Warning (10230): Verilog HDL assignment warning at sineGen.v(38): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 38
-Warning (10230): Verilog HDL assignment warning at sineGen.v(39): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 39
-Warning (10230): Verilog HDL assignment warning at sineGen.v(40): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 40
-Warning (10230): Verilog HDL assignment warning at sineGen.v(41): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 41
-Warning (10230): Verilog HDL assignment warning at sineGen.v(42): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 42
-Warning (10230): Verilog HDL assignment warning at sineGen.v(43): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 43
-Warning (10230): Verilog HDL assignment warning at sineGen.v(44): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 44
-Warning (10230): Verilog HDL assignment warning at sineGen.v(45): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 45
-Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/sineGen.v Line: 51
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(70): truncated value with size 32 to match size of target (3) File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 70
+Warning (10030): Net "waveSigIn2" at FPGA_MiniProject.v(49) has no driver or initial value, using a default initial value '0' File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 49
+Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
+Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 32
+Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 33
+Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 34
+Warning (10230): Verilog HDL assignment warning at sineGen.v(35): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 35
+Warning (10230): Verilog HDL assignment warning at sineGen.v(36): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 36
+Warning (10230): Verilog HDL assignment warning at sineGen.v(37): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 37
+Warning (10230): Verilog HDL assignment warning at sineGen.v(38): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 38
+Warning (10230): Verilog HDL assignment warning at sineGen.v(39): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 39
+Warning (10230): Verilog HDL assignment warning at sineGen.v(40): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 40
+Warning (10230): Verilog HDL assignment warning at sineGen.v(41): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 41
+Warning (10230): Verilog HDL assignment warning at sineGen.v(42): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 42
+Warning (10230): Verilog HDL assignment warning at sineGen.v(43): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 43
+Warning (10230): Verilog HDL assignment warning at sineGen.v(44): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 44
+Warning (10230): Verilog HDL assignment warning at sineGen.v(45): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 45
+Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 51
 Warning (10030): Net "sine.data_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: D:/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.waddr_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: D:/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.we_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: D:/FPGA_MiniProject/sineGen.v Line: 9
-Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 56
+Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 59
 Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: D:/FPGA_MiniProject/VGA_IP_Top.v Line: 30
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: D:/FPGA_MiniProject/VGA_IP.v Line: 53
 Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: D:/FPGA_MiniProject/VGA_IP_Top.v Line: 36
@@ -539,19 +536,24 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(288): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(291): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 291
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(292): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 292
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: D:/FPGA_MiniProject/VGA_IP.v Line: 293
-Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 64
+Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 67
 Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(14): object "outputcounter" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 14
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(43): truncated value with size 32 to match size of target (11) File: D:/FPGA_MiniProject/Sample_IP.v Line: 43
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "randomreg1" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(17): object "randomreg2" assigned a value but never read File: D:/FPGA_MiniProject/Sample_IP.v Line: 17
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(41): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 41
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(43): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/Sample_IP.v Line: 43
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer Mux0 File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 33
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "sine_wave_gen:testWave|sine" is uninferred due to inappropriate RAM size File: D:/FPGA_MiniProject/sineGen.v Line: 9
 Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (30) in the Memory Initialization File "D:/FPGA_MiniProject/db/FPGA_MiniProject.ram0_sine_wave_gen_630b7358.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Sample:sample|sampleData_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTH_A set to 14
         Info (286033): Parameter WIDTHAD_A set to 10
         Info (286033): Parameter NUMWORDS_A set to 801
-        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTH_B set to 14
         Info (286033): Parameter WIDTHAD_B set to 10
         Info (286033): Parameter NUMWORDS_B set to 801
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
@@ -565,10 +567,10 @@ Info (19000): Inferred 1 megafunctions from design logic
 Info (12130): Elaborated megafunction instantiation "Sample:sample|altsyncram:sampleData_rtl_0"
 Info (12133): Instantiated megafunction "Sample:sample|altsyncram:sampleData_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTH_A" = "14"
     Info (12134): Parameter "WIDTHAD_A" = "10"
     Info (12134): Parameter "NUMWORDS_A" = "801"
-    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTH_B" = "14"
     Info (12134): Parameter "WIDTHAD_B" = "10"
     Info (12134): Parameter "NUMWORDS_B" = "801"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
@@ -579,23 +581,25 @@ Info (12133): Instantiated megafunction "Sample:sample|altsyncram:sampleData_rtl
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_46n1.tdf
-    Info (12023): Found entity 1: altsyncram_46n1 File: D:/FPGA_MiniProject/db/altsyncram_46n1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_u8n1.tdf
+    Info (12023): Found entity 1: altsyncram_u8n1 File: D:/FPGA_MiniProject/db/altsyncram_u8n1.tdf Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 282 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clockTest[2]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
+Info (21057): Implemented 301 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 242 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Mon Apr 22 18:44:52 2019
+    Info (21061): Implemented 252 logic cells
+    Info (21064): Implemented 14 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Mon Apr 22 20:49:05 2019
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

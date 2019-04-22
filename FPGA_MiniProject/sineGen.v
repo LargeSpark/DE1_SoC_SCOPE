@@ -4,12 +4,12 @@
 module sine_wave_gen(Clk,data_out);
 //declare input and output
     input Clk;
-    output [7:0] data_out;
+    output [13:0] data_out;
 //declare the sine ROM - 30 registers each 8 bit wide.  
-    reg [7:0] sine [0:29];
+    reg [13:0] sine [0:29];
 //Internal signals  
     integer i;  
-    reg [7:0] data_out; 
+    reg [13:0] data_out = 0; 
 //Initialize the sine rom with samples. 
     initial begin
         i = 0;

@@ -1,13 +1,12 @@
 |FPGA_MiniProject
-clock => VGA_IP_Top:VGA.clk50
-clock => slowerClock[0].CLK
-clock => slowerClock[1].CLK
-clock => slowerClock[2].CLK
-clock => VClock.DATAIN
+clock => clock.IN1
 switch0 => VGA_IP_Top:VGA.cursorX_EN
 switch1 => VGA_IP_Top:VGA.cursorY_EN
 switch2 => VGA_IP_Top:VGA.waveSigIn1_En
 switch3 => VGA_IP_Top:VGA.waveSigIn2_En
+clockTest[0] => Mux0.IN2
+clockTest[1] => Mux0.IN1
+clockTest[2] => ~NO_FANOUT~
 vga_hsync <= VGA_IP_Top:VGA.hsync_out
 vga_vsync <= VGA_IP_Top:VGA.vsync_out
 R[0] <= VGA_IP_Top:VGA.red_out[0]
@@ -78,6 +77,12 @@ Clk => data_out[4]~reg0.CLK
 Clk => data_out[5]~reg0.CLK
 Clk => data_out[6]~reg0.CLK
 Clk => data_out[7]~reg0.CLK
+Clk => data_out[8]~reg0.CLK
+Clk => data_out[9]~reg0.CLK
+Clk => data_out[10]~reg0.CLK
+Clk => data_out[11]~reg0.CLK
+Clk => data_out[12]~reg0.CLK
+Clk => data_out[13]~reg0.CLK
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -86,6 +91,12 @@ data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= data_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= data_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[10] <= data_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[11] <= data_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[12] <= data_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[13] <= data_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FPGA_MiniProject|VGA_IP_Top:VGA
@@ -610,6 +621,9 @@ clock => samplecounter[7].CLK
 clock => samplecounter[8].CLK
 clock => samplecounter[9].CLK
 clock => samplecounter[10].CLK
+clock => samplecounter[11].CLK
+clock => samplecounter[12].CLK
+clock => samplecounter[13].CLK
 clock => triggerHighPoint[0].CLK
 clock => triggerHighPoint[1].CLK
 clock => triggerHighPoint[2].CLK
