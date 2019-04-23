@@ -112,6 +112,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "ADDAClock",
+					"strict" : false
+				},
+				{
+					"name" : "ResampleLED",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				},

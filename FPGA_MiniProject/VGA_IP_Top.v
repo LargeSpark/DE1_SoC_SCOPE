@@ -7,6 +7,8 @@ input [10:0] cursorY1,
 input [10:0] cursorY2,
 input [10:0] cursorX1,
 input [10:0] cursorX2,
+input [10:0] waveSigIn1_Offset,
+input [10:0] waveSigIn2_Offset,
 input [13:0] waveSigIn1,
 input [13:0] waveSigIn2,
 input waveSigIn1_En,
@@ -53,6 +55,8 @@ output [10:0] sY
 	.cursorY2 (cursorY2),
 	.cursorX1 (cursorX1),
 	.cursorX2 (cursorX2),
+	.wave1YOffset (waveSigIn1_Offset),
+	.wave2YOffset (waveSigIn2_Offset),
 	.sX (sX),
 	.sY (sY)
 	);

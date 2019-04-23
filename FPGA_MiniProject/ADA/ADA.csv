@@ -1,0 +1,19 @@
+# system info ADA on 2019.04.23.15:08:52
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1556028527
+#
+#
+# Files generated for ADA on 2019.04.23.15:08:52
+files:
+filepath,kind,attributes,module,is_top
+simulation/ADA.v,VERILOG,,ADA,true
+simulation/submodules/altera_up_avalon_adv_adc.v,VERILOG,,ADA_adc_mega_0,false
+simulation/submodules/ADA_adc_mega_0.v,VERILOG,,ADA_adc_mega_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ADA.adc_mega_0,ADA_adc_mega_0

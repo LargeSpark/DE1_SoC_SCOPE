@@ -48,10 +48,10 @@ module sine_wave_gen(Clk,data_out);
     //At every positive edge of the clock, output a sine wave sample.
     always@ (posedge(Clk))
     begin
-        data_out = sine[i] + 77;
-        i = i+ 1;
+        data_out <= ((sine[i]) + 77);
+        i <= i+ 1;
         if(i == 29)
-            i = 0;
+            i <= 0;
     end
 
 endmodule
