@@ -10,7 +10,17 @@ input					switch0, //Cursor X En
 input					switch1,	//Cursor Y En
 input					switch2, //Signal 1 En
 input					switch3,	//Signal 2 En
-input [2:0]			clockTest,
+input 				switch4, //Cursor Y set
+input					switch5, //Cursor X Set 
+input 				switch6, //Wave 1 Shift /Squish
+input 				switch7, //Wave 2 Shift/Squish
+input 				switch8, //Wave 1 Clock 
+input 				switch9, //Wave 2 Clock 
+input					butt0,	//x1/y1 left/up
+input					butt1,  	//x1/y1 right/down
+input					butt2,	//x2/y2 left/up
+input					butt3,	//x2/y2 right/down
+//input [2:0]			clockTest,
 input [13:0] 	ADCin,
 input 			OutOfRange,
 output 				vga_hsync,
@@ -38,7 +48,7 @@ wire [11:0] waveSigIn2;
 wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
 //Clocks
-reg [2:0] slowerClock = 0;
+reg [15:0] slowerClock = 0;
 //VGA IP Wires
 wire [10:0] sX;
 wire [10:0] sY;
@@ -47,9 +57,18 @@ reg [3:0] shiftDown1 = 0;
 reg [3:0] shiftDown2 = 3;
 assign waveSigIn1 = (sampledwave1 >> shiftDown1);
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
-wire slClock = slowerClock[clockTest];
+//wire slClock = slowerClock[clockTest];
 assign ADDAClock = slClock;
 wire [11:0] adda1;
+localparam downSize = 1;
+//Code to move cursors 
+always @ (posedge slowerClock[14])
+begin
+		if (switch4 && !butt3)
+		begin 
+				cursorY1 <= cursorY1 + downSize;
+		end 
+end 
 
 sine_wave_gen testWave(
 	.Clk (slClock),

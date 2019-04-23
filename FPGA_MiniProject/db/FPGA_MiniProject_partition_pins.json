@@ -112,19 +112,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ADDAClock",
-					"strict" : false
-				},
-				{
 					"name" : "ResampleLED",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "switch1",
 					"strict" : false
 				},
 				{
@@ -136,15 +128,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "switch1",
+					"strict" : false
+				},
+				{
 					"name" : "switch3",
 					"strict" : false
 				},
 				{
-					"name" : "clockTest[0]",
+					"name" : "switch4",
 					"strict" : false
 				},
 				{
-					"name" : "clockTest[1]",
+					"name" : "butt3",
 					"strict" : false
 				}
 			]

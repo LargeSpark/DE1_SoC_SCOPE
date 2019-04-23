@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for FPGA_MiniProject
-Tue Apr 23 15:31:30 2019
+Tue Apr 23 17:02:46 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -97,20 +97,16 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.31        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.26        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.0%      ;
-;     Processor 3            ;   4.9%      ;
-;     Processor 4            ;   4.8%      ;
-;     Processor 5            ;   4.1%      ;
-;     Processor 6            ;   4.1%      ;
-;     Processor 7            ;   4.0%      ;
-;     Processor 8            ;   4.0%      ;
+;     Processor 2            ;   8.7%      ;
+;     Processor 3            ;   8.6%      ;
+;     Processor 4            ;   8.5%      ;
 +----------------------------+-------------+
 
 
@@ -120,7 +116,7 @@ refer to the applicable agreement for further details.
 ; Clock Name                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                             ;
 +---------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------+
 ; clock                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                           ;
-; clockTest[0]                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockTest[0] }                    ;
+; slowerClock[14]                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slowerClock[14] }                 ;
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_IP_Top:VGA|hsync:hs|blank }   ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_IP_Top:VGA|hsync:hs|newline } ;
 +---------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------------+
@@ -131,10 +127,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
 +------------+-----------------+---------------------------------+------+
-; 136.26 MHz ; 136.26 MHz      ; clock                           ;      ;
-; 237.25 MHz ; 237.25 MHz      ; clockTest[0]                    ;      ;
-; 351.37 MHz ; 351.37 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
-; 373.69 MHz ; 373.69 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 194.97 MHz ; 194.97 MHz      ; clock                           ;      ;
+; 307.03 MHz ; 307.03 MHz      ; slowerClock[14]                 ;      ;
+; 360.75 MHz ; 360.75 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
+; 368.73 MHz ; 368.73 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
 +------------+-----------------+---------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,10 +146,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -7.307 ; -649.723      ;
-; clockTest[0]                    ; -3.215 ; -187.036      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -1.846 ; -38.104       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.676 ; -27.834       ;
+; clock                           ; -4.200 ; -202.878      ;
+; slowerClock[14]                 ; -2.257 ; -18.430       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -1.772 ; -38.446       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.712 ; -28.439       ;
 +---------------------------------+--------+---------------+
 
 
@@ -162,10 +158,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.281 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.279 ; 0.000         ;
 ; clock                           ; 0.375 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.449 ; 0.000         ;
-; clockTest[0]                    ; 0.525 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.438 ; 0.000         ;
+; slowerClock[14]                 ; 0.518 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
@@ -186,10 +182,10 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -313.390      ;
-; clockTest[0]                    ; -0.817 ; -92.032       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -10.735       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.480       ;
+; clock                           ; -0.444 ; -48.770       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -11.479       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.420       ;
+; slowerClock[14]                 ; -0.394 ; -5.683        ;
 +---------------------------------+--------+---------------+
 
 
@@ -204,10 +200,10 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
 +------------+-----------------+---------------------------------+------+
-; 134.64 MHz ; 134.64 MHz      ; clock                           ;      ;
-; 237.36 MHz ; 237.36 MHz      ; clockTest[0]                    ;      ;
-; 358.17 MHz ; 358.17 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
-; 362.45 MHz ; 362.45 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 189.11 MHz ; 189.11 MHz      ; clock                           ;      ;
+; 306.94 MHz ; 306.94 MHz      ; slowerClock[14]                 ;      ;
+; 357.65 MHz ; 357.65 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 364.3 MHz  ; 364.3 MHz       ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
 +------------+-----------------+---------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -217,10 +213,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -6.764 ; -604.399      ;
-; clockTest[0]                    ; -3.213 ; -186.625      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -1.792 ; -37.049       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.759 ; -28.930       ;
+; clock                           ; -4.288 ; -195.846      ;
+; slowerClock[14]                 ; -2.258 ; -19.046       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.796 ; -29.437       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -1.745 ; -37.941       ;
 +---------------------------------+--------+---------------+
 
 
@@ -229,10 +225,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; clock                           ; 0.180 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.283 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.457 ; 0.000         ;
-; clockTest[0]                    ; 0.522 ; 0.000         ;
+; clock                           ; 0.046 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.282 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.452 ; 0.000         ;
+; slowerClock[14]                 ; 0.506 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
@@ -253,10 +249,10 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -318.074      ;
-; clockTest[0]                    ; -0.910 ; -101.904      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -10.791       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.280       ;
+; clock                           ; -0.423 ; -52.048       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -11.261       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.240       ;
+; slowerClock[14]                 ; -0.394 ; -5.632        ;
 +---------------------------------+--------+---------------+
 
 
@@ -271,10 +267,10 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -4.537 ; -371.755      ;
-; clockTest[0]                    ; -1.548 ; -89.684       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.808 ; -16.238       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.626 ; -10.521       ;
+; clock                           ; -3.196 ; -105.752      ;
+; slowerClock[14]                 ; -1.062 ; -7.010        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.703 ; -15.064       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.647 ; -10.360       ;
 +---------------------------------+--------+---------------+
 
 
@@ -283,10 +279,10 @@ No synchronizer chains to report.
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; clock                           ; 0.010 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.064 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.170 ; 0.000         ;
-; clockTest[0]                    ; 0.218 ; 0.000         ;
+; clock                           ; 0.008 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.041 ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.163 ; 0.000         ;
+; slowerClock[14]                 ; 0.229 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
@@ -307,10 +303,10 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -260.739      ;
-; clockTest[0]                    ; -0.694 ; -64.721       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.114  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.144  ; 0.000         ;
+; clock                           ; -0.413 ; -9.208        ;
+; slowerClock[14]                 ; 0.132  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.152  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.159  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
@@ -325,10 +321,10 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -3.981 ; -317.328      ;
-; clockTest[0]                    ; -1.387 ; -80.152       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.675 ; -13.919       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.593 ; -9.159        ;
+; clock                           ; -2.684 ; -86.058       ;
+; slowerClock[14]                 ; -0.927 ; -6.362        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.612 ; -9.328        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.596 ; -12.981       ;
 +---------------------------------+--------+---------------+
 
 
@@ -337,10 +333,10 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -0.175 ; -0.500        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.006  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.153  ; 0.000         ;
-; clockTest[0]                    ; 0.190  ; 0.000         ;
+; clock                           ; -0.179 ; -0.485        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.018 ; -0.350        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.151  ; 0.000         ;
+; slowerClock[14]                 ; 0.205  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
@@ -361,10 +357,10 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -260.833      ;
-; clockTest[0]                    ; -0.722 ; -68.015       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.124  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.153  ; 0.000         ;
+; clock                           ; -0.397 ; -9.104        ;
+; slowerClock[14]                 ; 0.145  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.157  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.163  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
@@ -379,16 +375,16 @@ No synchronizer chains to report.
 +----------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                 ; -7.307   ; -0.175 ; N/A      ; N/A     ; -2.636              ;
-;  VGA_IP_Top:VGA|hsync:hs|blank   ; -1.759   ; 0.006  ; N/A      ; N/A     ; -0.394              ;
-;  VGA_IP_Top:VGA|hsync:hs|newline ; -1.846   ; 0.153  ; N/A      ; N/A     ; -0.394              ;
-;  clock                           ; -7.307   ; -0.175 ; N/A      ; N/A     ; -2.636              ;
-;  clockTest[0]                    ; -3.215   ; 0.190  ; N/A      ; N/A     ; -0.910              ;
-; Design-wide TNS                  ; -902.697 ; -0.5   ; 0.0      ; 0.0     ; -441.049            ;
-;  VGA_IP_Top:VGA|hsync:hs|blank   ; -28.930  ; 0.000  ; N/A      ; N/A     ; -10.480             ;
-;  VGA_IP_Top:VGA|hsync:hs|newline ; -38.104  ; 0.000  ; N/A      ; N/A     ; -10.791             ;
-;  clock                           ; -649.723 ; -0.500 ; N/A      ; N/A     ; -318.074            ;
-;  clockTest[0]                    ; -187.036 ; 0.000  ; N/A      ; N/A     ; -101.904            ;
+; Worst-case Slack                 ; -4.288   ; -0.179 ; N/A      ; N/A     ; -0.444              ;
+;  VGA_IP_Top:VGA|hsync:hs|blank   ; -1.796   ; -0.018 ; N/A      ; N/A     ; -0.394              ;
+;  VGA_IP_Top:VGA|hsync:hs|newline ; -1.772   ; 0.151  ; N/A      ; N/A     ; -0.394              ;
+;  clock                           ; -4.288   ; -0.179 ; N/A      ; N/A     ; -0.444              ;
+;  slowerClock[14]                 ; -2.258   ; 0.205  ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                  ; -288.193 ; -0.835 ; 0.0      ; 0.0     ; -79.181             ;
+;  VGA_IP_Top:VGA|hsync:hs|blank   ; -29.437  ; -0.350 ; N/A      ; N/A     ; -10.420             ;
+;  VGA_IP_Top:VGA|hsync:hs|newline ; -38.446  ; 0.000  ; N/A      ; N/A     ; -11.479             ;
+;  clock                           ; -202.878 ; -0.485 ; N/A      ; N/A     ; -52.048             ;
+;  slowerClock[14]                 ; -19.046  ; 0.000  ; N/A      ; N/A     ; -5.683              ;
 +----------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -429,35 +425,42 @@ No synchronizer chains to report.
 +-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+-----------------------------------------------------------------+
-; Input Transition Times                                          ;
-+--------------+--------------+-----------------+-----------------+
-; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+--------------+--------------+-----------------+-----------------+
-; clockTest[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[0]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[1]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[2]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[3]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[4]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[5]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[6]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[7]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[8]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[9]     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[10]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[11]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[12]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ADCin[13]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; OutOfRange   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clock        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; switch1      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; switch2      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; switch0      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; switch3      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clockTest[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clockTest[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+--------------+--------------+-----------------+-----------------+
++---------------------------------------------------------------+
+; Input Transition Times                                        ;
++------------+--------------+-----------------+-----------------+
+; Pin        ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++------------+--------------+-----------------+-----------------+
+; switch5    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch6    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch7    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch8    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch9    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; butt0      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; butt1      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; butt2      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[4]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[5]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[6]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[7]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[8]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[9]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[10]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[11]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[12]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADCin[13]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; OutOfRange ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clock      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch2    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch0    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch1    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch3    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; switch4    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; butt3      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++------------+--------------+-----------------+-----------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -613,14 +616,14 @@ No synchronizer chains to report.
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 ; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
-; clock                           ; clock                           ; 4272     ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clock                           ; 0        ; 591      ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 341      ; 23       ; 0        ; 0        ;
+; clock                           ; clock                           ; 2308     ; 0        ; 0        ; 0        ;
+; slowerClock[14]                 ; clock                           ; 34       ; 1        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 329      ; 23       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; clock                           ; 23       ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2700     ;
+; slowerClock[14]                 ; slowerClock[14]                 ; 66       ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; VGA_IP_Top:VGA|hsync:hs|blank   ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|blank   ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 321      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 348      ; 0        ; 0        ; 0        ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -630,14 +633,14 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 ; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
-; clock                           ; clock                           ; 4272     ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clock                           ; 0        ; 591      ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 341      ; 23       ; 0        ; 0        ;
+; clock                           ; clock                           ; 2308     ; 0        ; 0        ; 0        ;
+; slowerClock[14]                 ; clock                           ; 34       ; 1        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 329      ; 23       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; clock                           ; 23       ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2700     ;
+; slowerClock[14]                 ; slowerClock[14]                 ; 66       ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; VGA_IP_Top:VGA|hsync:hs|blank   ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|blank   ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 321      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 348      ; 0        ; 0        ; 0        ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -662,9 +665,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 15    ; 15   ;
-; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 81    ; 81   ;
+; Unconstrained Input Port Paths  ; 35    ; 35   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 76    ; 76   ;
 +---------------------------------+-------+------+
 
 
@@ -676,23 +679,23 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; VGA_IP_Top:VGA|hsync:hs|blank   ; Base ; Constrained ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; Base ; Constrained ;
 ; clock                           ; clock                           ; Base ; Constrained ;
-; clockTest[0]                    ; clockTest[0]                    ; Base ; Constrained ;
+; slowerClock[14]                 ; slowerClock[14]                 ; Base ; Constrained ;
 +---------------------------------+---------------------------------+------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                           ;
-+--------------+--------------------------------------------------------------------------------------+
-; Input Port   ; Comment                                                                              ;
-+--------------+--------------------------------------------------------------------------------------+
-; clock        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clockTest[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clockTest[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch0      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch3      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; butt3      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clock      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch0    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch1    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch3    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch4    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -700,7 +703,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; ADDAClock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -732,19 +734,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                           ;
-+--------------+--------------------------------------------------------------------------------------+
-; Input Port   ; Comment                                                                              ;
-+--------------+--------------------------------------------------------------------------------------+
-; clock        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clockTest[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; clockTest[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch0      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; switch3      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+--------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; butt3      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clock      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch0    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch1    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch3    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; switch4    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -752,7 +754,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; ADDAClock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -790,11 +791,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 15:31:22 2019
+    Info: Processing started: Tue Apr 23 17:02:29 2019
 Info: Command: quartus_sta FPGA_MiniProject -c FPGA_MiniProject
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'FPGA_MiniProject.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -803,135 +804,127 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock clock
     Info (332105): create_clock -period 1.000 -name VGA_IP_Top:VGA|hsync:hs|newline VGA_IP_Top:VGA|hsync:hs|newline
     Info (332105): create_clock -period 1.000 -name VGA_IP_Top:VGA|hsync:hs|blank VGA_IP_Top:VGA|hsync:hs|blank
-    Info (332105): create_clock -period 1.000 -name clockTest[0] clockTest[0]
-Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332105): create_clock -period 1.000 -name slowerClock[14] slowerClock[14]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.307
+Info (332146): Worst-case setup slack is -4.200
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.307            -649.723 clock 
-    Info (332119):    -3.215            -187.036 clockTest[0] 
-    Info (332119):    -1.846             -38.104 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.676             -27.834 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.281
+    Info (332119):    -4.200            -202.878 clock 
+    Info (332119):    -2.257             -18.430 slowerClock[14] 
+    Info (332119):    -1.772             -38.446 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -1.712             -28.439 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is 0.279
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.281               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.279               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
     Info (332119):     0.375               0.000 clock 
-    Info (332119):     0.449               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.525               0.000 clockTest[0] 
+    Info (332119):     0.438               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.518               0.000 slowerClock[14] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -0.444
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -313.390 clock 
-    Info (332119):    -0.817             -92.032 clockTest[0] 
-    Info (332119):    -0.394             -10.735 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.480 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.444             -48.770 clock 
+    Info (332119):    -0.394             -11.479 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.394             -10.420 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.394              -5.683 slowerClock[14] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.764
+Info (332146): Worst-case setup slack is -4.288
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.764            -604.399 clock 
-    Info (332119):    -3.213            -186.625 clockTest[0] 
-    Info (332119):    -1.792             -37.049 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.759             -28.930 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.180
+    Info (332119):    -4.288            -195.846 clock 
+    Info (332119):    -2.258             -19.046 slowerClock[14] 
+    Info (332119):    -1.796             -29.437 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -1.745             -37.941 VGA_IP_Top:VGA|hsync:hs|newline 
+Info (332146): Worst-case hold slack is 0.046
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.180               0.000 clock 
-    Info (332119):     0.283               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.457               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.522               0.000 clockTest[0] 
+    Info (332119):     0.046               0.000 clock 
+    Info (332119):     0.282               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.452               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.506               0.000 slowerClock[14] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -0.423
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -318.074 clock 
-    Info (332119):    -0.910            -101.904 clockTest[0] 
-    Info (332119):    -0.394             -10.791 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.280 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.423             -52.048 clock 
+    Info (332119):    -0.394             -11.261 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.394             -10.240 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.394              -5.632 slowerClock[14] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.537
+Info (332146): Worst-case setup slack is -3.196
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.537            -371.755 clock 
-    Info (332119):    -1.548             -89.684 clockTest[0] 
-    Info (332119):    -0.808             -16.238 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.626             -10.521 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.010
+    Info (332119):    -3.196            -105.752 clock 
+    Info (332119):    -1.062              -7.010 slowerClock[14] 
+    Info (332119):    -0.703             -15.064 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.647             -10.360 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is 0.008
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.010               0.000 clock 
-    Info (332119):     0.064               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.170               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.218               0.000 clockTest[0] 
+    Info (332119):     0.008               0.000 clock 
+    Info (332119):     0.041               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.163               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.229               0.000 slowerClock[14] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -0.413
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -260.739 clock 
-    Info (332119):    -0.694             -64.721 clockTest[0] 
-    Info (332119):     0.114               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.144               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.413              -9.208 clock 
+    Info (332119):     0.132               0.000 slowerClock[14] 
+    Info (332119):     0.152               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.159               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.981
+Info (332146): Worst-case setup slack is -2.684
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.981            -317.328 clock 
-    Info (332119):    -1.387             -80.152 clockTest[0] 
-    Info (332119):    -0.675             -13.919 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.593              -9.159 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.175
+    Info (332119):    -2.684             -86.058 clock 
+    Info (332119):    -0.927              -6.362 slowerClock[14] 
+    Info (332119):    -0.612              -9.328 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.596             -12.981 VGA_IP_Top:VGA|hsync:hs|newline 
+Info (332146): Worst-case hold slack is -0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.175              -0.500 clock 
-    Info (332119):     0.006               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.153               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.190               0.000 clockTest[0] 
+    Info (332119):    -0.179              -0.485 clock 
+    Info (332119):    -0.018              -0.350 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.151               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.205               0.000 slowerClock[14] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.636
+Info (332146): Worst-case minimum pulse width slack is -0.397
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -260.833 clock 
-    Info (332119):    -0.722             -68.015 clockTest[0] 
-    Info (332119):     0.124               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.153               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.397              -9.104 clock 
+    Info (332119):     0.145               0.000 slowerClock[14] 
+    Info (332119):     0.157               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.163               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5213 megabytes
-    Info: Processing ended: Tue Apr 23 15:31:30 2019
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5157 megabytes
+    Info: Processing ended: Tue Apr 23 17:02:46 2019
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:19
 
 

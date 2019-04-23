@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/FPGA_MiniProject/output_files/") File("FPGA_MiniProject.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/output_files/") File("FPGA_MiniProject.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
