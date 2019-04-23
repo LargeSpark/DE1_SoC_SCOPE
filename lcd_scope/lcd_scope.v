@@ -104,18 +104,29 @@ begin
 	if (rstApp)
 	begin
 		pixData	<= 16'b0; // Set data to 0
-	end else
-		 if (pixReady)
-		 begin
-			 // Set Red from pixData = to the xPos
-			 //pixData[10:5] <= xPos[7:0]; // xPos = 1111000 = 120
-			 // Set blue from pixData = to the yPos 
-			 pixData[15:11] <= 5'b0;
-			 pixData[10:5] <= 6'b1; 
-			 pixData[4:0]	<= 5'b0;
-			 pixData <= xPos[7:0];
-			 // pixData[4:0] <= yPos[8:0];
-		 end
+	end else if (pixReady)
+				 begin
+					if (xPos == 5)
+					begin
+						pixData[15:11] <= 5'b1;
+						pixData[10:5] <= 6'b0; 
+						pixData[4:0]	<= 5'b0;			
+					end else 
+					begin 
+						pixData[15:11] <= 5'b1;
+						pixData[10:5] <= 6'b1; 
+						pixData[4:0]	<= 5'b0;	
+					end
+					 // Set Red from pixData = to the xPos
+					// pixData[10:5] <= xPos[7:6]; // xPos = 1111000 = 120
+					 // Set blue from pixData = to the yPos 
+					// pixData[15:11] <= 5'b0;
+					// pixData[10:5] <= 6'b1; 
+					// pixData[4:0]	<= 5'b0;
+					// pixData[15:0] <= 15'b0000011111100000;
+					 //pixData <= xPos[7:0];
+					 // pixData[4:0] <= yPos[8:0];
+				 end
 end 
 
 endmodule 

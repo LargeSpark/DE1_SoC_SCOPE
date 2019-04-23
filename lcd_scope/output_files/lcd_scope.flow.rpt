@@ -1,5 +1,5 @@
 Flow report for lcd_scope
-Tue Apr 23 09:32:27 2019
+Tue Apr 23 10:04:24 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 23 09:32:27 2019       ;
+; Flow Status                     ; Successful - Tue Apr 23 10:04:24 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lcd_scope                                   ;
 ; Top-level Entity Name           ; lcd_scope                                   ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 85 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 137                                         ;
+; Total registers                 ; 122                                         ;
 ; Total pins                      ; 25 / 457 ( 5 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2019 09:31:10 ;
+; Start date & time ; 04/23/2019 10:03:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lcd_scope           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 176629542275732.155600827014568        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 176629542275732.155601018611760        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -98,12 +98,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4849 MB             ; 00:00:24                           ;
-; Fitter                    ; 00:00:44     ; 1.0                     ; 6627 MB             ; 00:01:27                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 4849 MB             ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.1                     ; 5156 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4758 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:13     ; --                      ; --                  ; 00:02:08                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4848 MB             ; 00:00:25                           ;
+; Fitter                    ; 00:00:44     ; 1.0                     ; 6636 MB             ; 00:01:32                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 4846 MB             ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 5152 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4760 MB             ; 00:00:02                           ;
+; Total                     ; 00:01:12     ; --                      ; --                  ; 00:02:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

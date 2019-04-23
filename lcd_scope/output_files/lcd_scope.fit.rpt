@@ -1,5 +1,5 @@
 Fitter report for lcd_scope
-Tue Apr 23 09:32:06 2019
+Tue Apr 23 10:04:03 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Apr 23 09:32:06 2019       ;
+; Fitter Status                   ; Successful - Tue Apr 23 10:04:03 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lcd_scope                                   ;
 ; Top-level Entity Name           ; lcd_scope                                   ;
@@ -71,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 85 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 137                                         ;
+; Total registers                 ; 122                                         ;
 ; Total pins                      ; 25 / 457 ( 5 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -153,14 +153,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processor 3            ;   0.6%      ;
-;     Processor 4            ;   0.6%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -170,28 +170,24 @@ refer to the applicable agreement for further details.
 ; Node                                                               ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                             ; Destination Port ; Destination Port Name ;
 +--------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------------------+------------------+-----------------------+
 ; clock~inputCLKENA0                                                 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                              ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[9]~DUPLICATE  ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[11]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[12]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[14]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[18] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[18]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[19]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[20] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[20]~DUPLICATE ;                  ;                       ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[17] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[17]~DUPLICATE ;                  ;                       ;
 ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[21]~DUPLICATE ;                  ;                       ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|writeDly    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|LT24DisplayInterface:LT24Interface|writeDly~DUPLICATE    ;                  ;                       ;
+; LT24Display:Display|displayRegSelect                               ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|displayRegSelect~DUPLICATE                               ;                  ;                       ;
 ; LT24Display:Display|initDataRomAddr[3]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|initDataRomAddr[3]~DUPLICATE                             ;                  ;                       ;
-; LT24Display:Display|initDataRomAddr[4]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|initDataRomAddr[4]~DUPLICATE                             ;                  ;                       ;
 ; LT24Display:Display|initDataRomAddr[6]                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|initDataRomAddr[6]~DUPLICATE                             ;                  ;                       ;
+; LT24Display:Display|stateMachine.CASET_STATE                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.CASET_STATE~DUPLICATE                       ;                  ;                       ;
 ; LT24Display:Display|stateMachine.IDLE_STATE                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.IDLE_STATE~DUPLICATE                        ;                  ;                       ;
 ; LT24Display:Display|stateMachine.XHADDR_STATE                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.XHADDR_STATE~DUPLICATE                      ;                  ;                       ;
-; NbitCounter:xCount|cntOut[1]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:xCount|cntOut[1]~DUPLICATE                                       ;                  ;                       ;
+; LT24Display:Display|stateMachine.XLADDR_STATE                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.XLADDR_STATE~DUPLICATE                      ;                  ;                       ;
+; LT24Display:Display|stateMachine.YHADDR_STATE                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.YHADDR_STATE~DUPLICATE                      ;                  ;                       ;
+; LT24Display:Display|stateMachine.YLADDR_STATE                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LT24Display:Display|stateMachine.YLADDR_STATE~DUPLICATE                      ;                  ;                       ;
+; NbitCounter:xCount|cntOut[2]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:xCount|cntOut[2]~DUPLICATE                                       ;                  ;                       ;
 ; NbitCounter:xCount|cntOut[3]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:xCount|cntOut[3]~DUPLICATE                                       ;                  ;                       ;
-; NbitCounter:xCount|cntOut[5]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:xCount|cntOut[5]~DUPLICATE                                       ;                  ;                       ;
 ; NbitCounter:xCount|cntOut[7]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:xCount|cntOut[7]~DUPLICATE                                       ;                  ;                       ;
 ; NbitCounter:yCount|cntOut[0]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[0]~DUPLICATE                                       ;                  ;                       ;
-; NbitCounter:yCount|cntOut[4]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[4]~DUPLICATE                                       ;                  ;                       ;
+; NbitCounter:yCount|cntOut[2]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[2]~DUPLICATE                                       ;                  ;                       ;
+; NbitCounter:yCount|cntOut[5]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[5]~DUPLICATE                                       ;                  ;                       ;
 ; NbitCounter:yCount|cntOut[7]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[7]~DUPLICATE                                       ;                  ;                       ;
-; NbitCounter:yCount|cntOut[8]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; NbitCounter:yCount|cntOut[8]~DUPLICATE                                       ;                  ;                       ;
 ; pixWrite                                                           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; pixWrite~DUPLICATE                                                           ;                  ;                       ;
 +--------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------------------+------------------+-----------------------+
 
@@ -212,8 +208,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 303 ) ; 0.00 % ( 0 / 303 )         ; 0.00 % ( 0 / 303 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 303 ) ; 0.00 % ( 0 / 303 )         ; 0.00 % ( 0 / 303 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 293 ) ; 0.00 % ( 0 / 293 )         ; 0.00 % ( 0 / 293 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 293 ) ; 0.00 % ( 0 / 293 )         ; 0.00 % ( 0 / 293 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -236,7 +232,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 303 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 293 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -254,12 +250,12 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 85 / 32,070        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 85                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 46                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 40                 ;       ;
-;         [c] ALMs used for registers                         ; 11                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 96 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 42                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 44                 ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 12 / 32,070        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 32,070        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -268,25 +264,25 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 13 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 13                 ;       ;
+; Total LABs:  partially or completely used                   ; 12 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 12                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 140                ;       ;
-;     -- 7 input functions                                    ; 1                  ;       ;
-;     -- 6 input functions                                    ; 30                 ;       ;
-;     -- 5 input functions                                    ; 24                 ;       ;
-;     -- 4 input functions                                    ; 17                 ;       ;
-;     -- <=3 input functions                                  ; 68                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 4                  ;       ;
+; Combinational ALUT usage for logic                          ; 142                ;       ;
+;     -- 7 input functions                                    ; 0                  ;       ;
+;     -- 6 input functions                                    ; 31                 ;       ;
+;     -- 5 input functions                                    ; 22                 ;       ;
+;     -- 4 input functions                                    ; 16                 ;       ;
+;     -- <=3 input functions                                  ; 73                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 3                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 137                ;       ;
+; Dedicated logic registers                                   ; 122                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 113 / 64,140       ; < 1 % ;
-;         -- Secondary logic registers                        ; 24 / 64,140        ; < 1 % ;
+;         -- Primary logic registers                          ; 103 / 64,140       ; < 1 % ;
+;         -- Secondary logic registers                        ; 19 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 114                ;       ;
-;         -- Routing optimization registers                   ; 23                 ;       ;
+;         -- Design implementation registers                  ; 103                ;       ;
+;         -- Routing optimization registers                   ; 19                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 25 / 457           ; 5 %   ;
@@ -342,11 +338,11 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 2.0% / 2.0% / 2.2% ;       ;
-; Maximum fan-out                                             ; 137                ;       ;
-; Highest non-global fan-out                                  ; 32                 ;       ;
-; Total fan-out                                               ; 994                ;       ;
-; Average fan-out                                             ; 2.99               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.9% / 1.8% / 2.2% ;       ;
+; Maximum fan-out                                             ; 122                ;       ;
+; Highest non-global fan-out                                  ; 27                 ;       ;
+; Total fan-out                                               ; 930                ;       ;
+; Average fan-out                                             ; 2.92               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -357,12 +353,12 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 85 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 85                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 97 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 46                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 40                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 11                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 96 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 42                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 44                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 12 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )     ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -371,28 +367,28 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 13 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 13                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 12 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 12                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 140                   ; 0                              ;
-;     -- 7 input functions                                    ; 1                     ; 0                              ;
-;     -- 6 input functions                                    ; 30                    ; 0                              ;
-;     -- 5 input functions                                    ; 24                    ; 0                              ;
-;     -- 4 input functions                                    ; 17                    ; 0                              ;
-;     -- <=3 input functions                                  ; 68                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 4                     ; 0                              ;
+; Combinational ALUT usage for logic                          ; 142                   ; 0                              ;
+;     -- 7 input functions                                    ; 0                     ; 0                              ;
+;     -- 6 input functions                                    ; 31                    ; 0                              ;
+;     -- 5 input functions                                    ; 22                    ; 0                              ;
+;     -- 4 input functions                                    ; 16                    ; 0                              ;
+;     -- <=3 input functions                                  ; 73                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 3                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 113 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 24 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 103 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 19 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 114                   ; 0                              ;
-;         -- Routing optimization registers                   ; 23                    ; 0                              ;
+;         -- Design implementation registers                  ; 103                   ; 0                              ;
+;         -- Routing optimization registers                   ; 19                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -409,8 +405,8 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 994                   ; 0                              ;
-;     -- Registered Connections                               ; 456                   ; 0                              ;
+;     -- Total Connections                                    ; 930                   ; 0                              ;
+;     -- Registered Connections                               ; 422                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -442,7 +438,7 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clock     ; AA16  ; 4A       ; 56           ; 0            ; 0            ; 137                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clock     ; AA16  ; 4A       ; 56           ; 0            ; 0            ; 122                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; globalRst ; AD9   ; 3A       ; 2            ; 0            ; 74           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
@@ -474,7 +470,7 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ; LT24Rd_n     ; AH18  ; 4A       ; 56           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; LT24Reset_n  ; AG20  ; 4A       ; 62           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; LT24Wr_n     ; AH17  ; 4A       ; 56           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; rstApp       ; AH22  ; 4A       ; 66           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; rstApp       ; AG18  ; 4A       ; 58           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -730,7 +726,7 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 134        ; 4A             ; LT24RS                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG17     ; 132        ; 4A             ; LT24Data[6]                     ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AG18     ; 150        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG18     ; 150        ; 4A             ; rstApp                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG19     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AG20     ; 157        ; 4A             ; LT24Reset_n                     ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AG21     ; 143        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -764,7 +760,7 @@ The pin-out file can be found in C:/Users/Haider/lcd_scope/output_files/lcd_scop
 ; AH19     ; 148        ; 4A             ; LT24Data[11]                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AH20     ; 141        ; 4A             ; LT24Data[13]                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AH21     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AH22     ; 164        ; 4A             ; rstApp                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH22     ; 164        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH23     ; 174        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH24     ; 161        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH25     ; 188        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1445,12 +1441,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                 ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name          ; Library Name ;
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
-; |lcd_scope                                 ; 85.0 (0.7)           ; 96.0 (4.2)                       ; 11.0 (3.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 140 (2)             ; 137 (10)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 25   ; 0            ; |lcd_scope                                                        ; lcd_scope            ; work         ;
-;    |LT24Display:Display|                   ; 72.3 (37.2)          ; 79.9 (42.3)                      ; 7.6 (5.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 114 (57)            ; 102 (60)                  ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display                                    ; LT24Display          ; work         ;
-;       |LT24DisplayInterface:LT24Interface| ; 15.3 (15.3)          ; 15.6 (15.6)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 33 (33)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display|LT24DisplayInterface:LT24Interface ; LT24DisplayInterface ; work         ;
-;       |LT24InitialData:initDataRom|        ; 19.8 (19.8)          ; 22.1 (22.1)                      ; 2.3 (2.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display|LT24InitialData:initDataRom        ; LT24InitialData      ; work         ;
-;    |NbitCounter:xCount|                    ; 5.3 (5.3)            ; 5.7 (5.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|NbitCounter:xCount                                     ; NbitCounter          ; work         ;
-;    |NbitCounter:yCount|                    ; 6.2 (6.2)            ; 6.2 (6.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|NbitCounter:yCount                                     ; NbitCounter          ; work         ;
+; |lcd_scope                                 ; 85.0 (1.3)           ; 95.5 (3.1)                       ; 10.5 (1.7)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 142 (5)             ; 122 (4)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 25   ; 0            ; |lcd_scope                                                        ; lcd_scope            ; work         ;
+;    |LT24Display:Display|                   ; 71.3 (35.0)          ; 78.9 (42.9)                      ; 7.6 (7.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 113 (56)            ; 94 (59)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display                                    ; LT24Display          ; work         ;
+;       |LT24DisplayInterface:LT24Interface| ; 15.7 (15.7)          ; 15.8 (15.8)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display|LT24DisplayInterface:LT24Interface ; LT24DisplayInterface ; work         ;
+;       |LT24InitialData:initDataRom|        ; 20.2 (20.2)          ; 20.2 (20.2)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display|LT24InitialData:initDataRom        ; LT24InitialData      ; work         ;
+;    |NbitCounter:xCount|                    ; 5.8 (5.8)            ; 6.0 (6.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|NbitCounter:xCount                                     ; NbitCounter          ; work         ;
+;    |NbitCounter:yCount|                    ; 6.5 (6.5)            ; 7.5 (7.5)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |lcd_scope|NbitCounter:yCount                                     ; NbitCounter          ; work         ;
 +--------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1503,20 +1499,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                               ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|LessThan0~4 ; LABCELL_X63_Y6_N6   ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|ready       ; LABCELL_X63_Y6_N9   ; 22      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|Selector1~0                                    ; LABCELL_X63_Y6_N18  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|displayData[3]~0                               ; LABCELL_X63_Y5_N51  ; 28      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|displayData[3]~5                               ; LABCELL_X62_Y5_N21  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|displayData[4]~7                               ; LABCELL_X62_Y6_N51  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|displayInitialised                             ; FF_X65_Y6_N8        ; 16      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|pixelReady                                     ; FF_X64_Y5_N50       ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; LT24Display:Display|stateMachine.LOAD_STATE                        ; FF_X64_Y6_N32       ; 23      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; NbitCounter:xCount|cntOut[4]~0                                     ; MLABCELL_X65_Y6_N21 ; 12      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; NbitCounter:xCount|cntOut[4]~1                                     ; MLABCELL_X65_Y6_N18 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; NbitCounter:yCount|cntOut[3]~1                                     ; LABCELL_X64_Y4_N57  ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; NbitCounter:yCount|cntOut[3]~2                                     ; MLABCELL_X65_Y6_N3  ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clock                                                              ; PIN_AA16            ; 137     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|LessThan0~4 ; LABCELL_X61_Y4_N57  ; 26      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|ready       ; LABCELL_X61_Y4_N45  ; 27      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|Selector1~0                                    ; LABCELL_X62_Y4_N33  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|displayData[4]~0                               ; LABCELL_X61_Y5_N6   ; 22      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|displayData[4]~4                               ; LABCELL_X61_Y3_N21  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|displayInitialised                             ; FF_X60_Y4_N44       ; 10      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|pixelReady                                     ; FF_X60_Y5_N2        ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; LT24Display:Display|stateMachine.LOAD_STATE                        ; FF_X61_Y3_N17       ; 22      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; NbitCounter:xCount|cntOut[4]~0                                     ; MLABCELL_X59_Y3_N48 ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; NbitCounter:xCount|cntOut[4]~1                                     ; MLABCELL_X59_Y3_N51 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; NbitCounter:yCount|cntOut[3]~1                                     ; MLABCELL_X59_Y4_N6  ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; NbitCounter:yCount|cntOut[3]~2                                     ; MLABCELL_X59_Y3_N42 ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clock                                                              ; PIN_AA16            ; 122     ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 +--------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1525,7 +1520,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_AA16 ; 137     ; Global Clock         ; GCLK6            ; --                        ;
+; clock ; PIN_AA16 ; 122     ; Global Clock         ; GCLK6            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1534,14 +1529,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 229 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 2 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 71 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 43 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 195 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 0 / 13,420 ( 0 % )      ;
+; C2 interconnects                            ; 92 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 34 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 48 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 38 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1597,12 +1592,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 87 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 99 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 7 / 12,676 ( < 1 % )    ;
-; R14/C12 interconnect drivers                ; 7 / 20,720 ( < 1 % )    ;
-; R3 interconnects                            ; 101 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 78 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 5 / 12,676 ( < 1 % )    ;
+; R14/C12 interconnect drivers                ; 4 / 20,720 ( < 1 % )    ;
+; R3 interconnects                            ; 86 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 70 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1743,76 +1738,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clock           ; clock                ; 5.3               ;
+; clock           ; clock                ; 2.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                        ;
-+--------------------------------------------------------------------+---------------------------------------------+-------------------+
-; Source Register                                                    ; Destination Register                        ; Delay Added in ns ;
-+--------------------------------------------------------------------+---------------------------------------------+-------------------+
-; LT24Display:Display|pixelDataTemp[7]                               ; LT24Display:Display|displayData[7]          ; 0.271             ;
-; LT24Display:Display|stateMachine.LOAD_STATE                        ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.264             ;
-; LT24Display:Display|xAddrTemp[5]                                   ; LT24Display:Display|displayData[5]          ; 0.257             ;
-; LT24Display:Display|xAddrTemp[3]                                   ; LT24Display:Display|displayData[3]          ; 0.257             ;
-; LT24Display:Display|stateMachine.CASET_STATE                       ; LT24Display:Display|pixelReady              ; 0.241             ;
-; pixWrite                                                           ; LT24Display:Display|stateMachine.LOAD_STATE ; 0.234             ;
-; LT24Display:Display|stateMachine.IDLE_STATE                        ; LT24Display:Display|stateMachine.LOAD_STATE ; 0.217             ;
-; LT24Display:Display|stateMachine.XHADDR_STATE                      ; LT24Display:Display|displayData[5]          ; 0.209             ;
-; LT24Display:Display|stateMachine.INIT_STATE                        ; LT24Display:Display|displayData[10]         ; 0.208             ;
-; LT24Display:Display|displayRegSelect                               ; LT24Display:Display|displayRegSelect        ; 0.192             ;
-; LT24Display:Display|xAddrTemp[7]                                   ; LT24Display:Display|displayData[7]          ; 0.163             ;
-; LT24Display:Display|xAddrTemp[6]                                   ; LT24Display:Display|displayData[6]          ; 0.163             ;
-; LT24Display:Display|xAddrTemp[4]                                   ; LT24Display:Display|displayData[4]          ; 0.163             ;
-; LT24Display:Display|pixelDataTemp[2]                               ; LT24Display:Display|displayData[2]          ; 0.161             ;
-; LT24Display:Display|yAddrTemp[2]                                   ; LT24Display:Display|displayData[2]          ; 0.161             ;
-; LT24Display:Display|stateMachine.WRITE_STATE                       ; LT24Display:Display|displayData[2]          ; 0.161             ;
-; LT24Display:Display|stateMachine.YHADDR_STATE                      ; LT24Display:Display|displayData[2]          ; 0.161             ;
-; LT24Display:Display|stateMachine.YLADDR_STATE                      ; LT24Display:Display|displayData[2]          ; 0.161             ;
-; LT24Display:Display|displayData[2]                                 ; LT24Display:Display|displayData[2]          ; 0.147             ;
-; LT24Display:Display|xAddrTemp[2]                                   ; LT24Display:Display|displayData[2]          ; 0.138             ;
-; LT24Display:Display|LT24InitialData:initDataRom|initData[2]        ; LT24Display:Display|displayData[2]          ; 0.138             ;
-; LT24Display:Display|displayData[0]                                 ; LT24Display:Display|displayData[0]          ; 0.132             ;
-; LT24Display:Display|pixelDataTemp[3]                               ; LT24Display:Display|displayData[3]          ; 0.132             ;
-; LT24Display:Display|initDataRomAddr[5]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|initDataRomAddr[4]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|initDataRomAddr[2]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|initDataRomAddr[1]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|initDataRomAddr[3]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|initDataRomAddr[6]                             ; LT24Display:Display|stateMachine.IDLE_STATE ; 0.129             ;
-; LT24Display:Display|pixelDataTemp[5]                               ; LT24Display:Display|displayData[5]          ; 0.125             ;
-; LT24Display:Display|yAddrTemp[4]                                   ; LT24Display:Display|displayData[4]          ; 0.095             ;
-; LT24Display:Display|LT24InitialData:initDataRom|initData[4]        ; LT24Display:Display|displayData[4]          ; 0.095             ;
-; LT24Display:Display|stateMachine.XLADDR_STATE                      ; LT24Display:Display|displayData[2]          ; 0.091             ;
-; LT24Display:Display|stateMachine.PASET_STATE                       ; LT24Display:Display|displayData[2]          ; 0.091             ;
-; NbitCounter:xCount|cntOut[4]                                       ; pixData[4]                                  ; 0.081             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[22] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[21] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[20] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[19] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[18] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[16] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[14] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[13] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[12] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[11] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[10] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[9]  ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[8]  ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[7]  ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[17] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[15] ; LT24Display:Display|displayWrite            ; 0.079             ;
-; NbitCounter:xCount|cntOut[6]                                       ; pixData[6]                                  ; 0.075             ;
-; NbitCounter:xCount|cntOut[1]                                       ; pixData[1]                                  ; 0.075             ;
-; NbitCounter:xCount|cntOut[7]                                       ; pixData[7]                                  ; 0.068             ;
-; LT24Display:Display|LT24InitialData:initDataRom|initData[8]        ; LT24Display:Display|displayRegSelect        ; 0.065             ;
-; LT24Display:Display|LT24DisplayInterface:LT24Interface|writeDly    ; LT24Display:Display|displayRegSelect        ; 0.065             ;
-; LT24Display:Display|displayWrite                                   ; LT24Display:Display|displayRegSelect        ; 0.065             ;
-+--------------------------------------------------------------------+---------------------------------------------+-------------------+
-Note: This table only shows the top 57 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                         ;
++--------------------------------------------------------------------+----------------------------------------------+-------------------+
+; Source Register                                                    ; Destination Register                         ; Delay Added in ns ;
++--------------------------------------------------------------------+----------------------------------------------+-------------------+
+; LT24Display:Display|stateMachine.LOAD_STATE                        ; LT24Display:Display|stateMachine.IDLE_STATE  ; 0.264             ;
+; pixWrite                                                           ; LT24Display:Display|displayData[10]          ; 0.243             ;
+; LT24Display:Display|stateMachine.IDLE_STATE                        ; LT24Display:Display|stateMachine.CASET_STATE ; 0.220             ;
+; LT24Display:Display|LT24InitialData:initDataRom|initData[6]        ; LT24Display:Display|displayData[6]           ; 0.201             ;
+; LT24Display:Display|stateMachine.YLADDR_STATE                      ; LT24Display:Display|displayData[1]           ; 0.190             ;
+; LT24Display:Display|stateMachine.WRITE_STATE                       ; LT24Display:Display|stateMachine.IDLE_STATE  ; 0.161             ;
+; LT24Display:Display|displayData[0]                                 ; LT24Display:Display|displayData[0]           ; 0.137             ;
+; LT24Display:Display|LT24InitialData:initDataRom|initData[3]        ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|yAddrTemp[3]                                   ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|xAddrTemp[3]                                   ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|stateMachine.XHADDR_STATE                      ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|stateMachine.XLADDR_STATE                      ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|stateMachine.YHADDR_STATE                      ; LT24Display:Display|displayData[3]           ; 0.123             ;
+; LT24Display:Display|displayData[2]                                 ; LT24Display:Display|displayData[2]           ; 0.061             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|writeDly    ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|stateMachine.INIT_STATE                        ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|displayWrite                                   ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[22] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[21] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[20] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[19] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[18] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[16] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[14] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[13] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[12] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[11] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[10] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[9]  ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[8]  ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[7]  ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[17] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24DisplayInterface:LT24Interface|counter[15] ; LT24Display:Display|displayData[0]           ; 0.058             ;
+; LT24Display:Display|LT24InitialData:initDataRom|initData[4]        ; LT24Display:Display|displayData[4]           ; 0.054             ;
+; LT24Display:Display|displayRegSelect                               ; LT24Display:Display|displayRegSelect         ; 0.054             ;
+; LT24Display:Display|LT24InitialData:initDataRom|initData[8]        ; LT24Display:Display|displayRegSelect         ; 0.038             ;
++--------------------------------------------------------------------+----------------------------------------------+-------------------+
+Note: This table only shows the top 36 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1829,7 +1803,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 25 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clock~inputCLKENA0 with 114 fanout uses global clock CLKCTRL_G6
+    Info (11162): clock~inputCLKENA0 with 103 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'lcd_scope.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1842,32 +1816,32 @@ Info (176235): Finished register packing
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "globalReset" is assigned to location or region, but does not exist in design
     Warning (15706): Node "resetApp" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:16
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:15
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Haider/lcd_scope/output_files/lcd_scope.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 6627 megabytes
-    Info: Processing ended: Tue Apr 23 09:32:07 2019
+    Info: Peak virtual memory: 6636 megabytes
+    Info: Processing ended: Tue Apr 23 10:04:04 2019
     Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:01:28
+    Info: Total CPU time (on all processors): 00:01:32
 
 
 +----------------------------+

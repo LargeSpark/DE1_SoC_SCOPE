@@ -1,29 +1,29 @@
 |lcd_scope
 clock => clock.IN3
 globalRst => globalRst.IN1
-rstApp <= rstApp.DB_MAX_OUTPUT_PORT_TYPE
-LT24Wr_n <= LT24Display:Display.LT24Wr_n
-LT24Rd_n <= LT24Display:Display.LT24Rd_n
-LT24CS_n <= LT24Display:Display.LT24CS_n
-LT24RS <= LT24Display:Display.LT24RS
-LT24Reset_n <= LT24Display:Display.LT24Reset_n
-LT24Data[0] <= LT24Display:Display.LT24Data
-LT24Data[1] <= LT24Display:Display.LT24Data
-LT24Data[2] <= LT24Display:Display.LT24Data
-LT24Data[3] <= LT24Display:Display.LT24Data
-LT24Data[4] <= LT24Display:Display.LT24Data
-LT24Data[5] <= LT24Display:Display.LT24Data
-LT24Data[6] <= LT24Display:Display.LT24Data
-LT24Data[7] <= LT24Display:Display.LT24Data
-LT24Data[8] <= LT24Display:Display.LT24Data
-LT24Data[9] <= LT24Display:Display.LT24Data
-LT24Data[10] <= LT24Display:Display.LT24Data
-LT24Data[11] <= LT24Display:Display.LT24Data
-LT24Data[12] <= LT24Display:Display.LT24Data
-LT24Data[13] <= LT24Display:Display.LT24Data
-LT24Data[14] <= LT24Display:Display.LT24Data
-LT24Data[15] <= LT24Display:Display.LT24Data
-LT24LCDOn <= LT24Display:Display.LT24LCDOn
+rstApp << rstApp.DB_MAX_OUTPUT_PORT_TYPE
+LT24Wr_n << LT24Display:Display.LT24Wr_n
+LT24Rd_n << LT24Display:Display.LT24Rd_n
+LT24CS_n << LT24Display:Display.LT24CS_n
+LT24RS << LT24Display:Display.LT24RS
+LT24Reset_n << LT24Display:Display.LT24Reset_n
+LT24Data[0] << LT24Display:Display.LT24Data
+LT24Data[1] << LT24Display:Display.LT24Data
+LT24Data[2] << LT24Display:Display.LT24Data
+LT24Data[3] << LT24Display:Display.LT24Data
+LT24Data[4] << LT24Display:Display.LT24Data
+LT24Data[5] << LT24Display:Display.LT24Data
+LT24Data[6] << LT24Display:Display.LT24Data
+LT24Data[7] << LT24Display:Display.LT24Data
+LT24Data[8] << LT24Display:Display.LT24Data
+LT24Data[9] << LT24Display:Display.LT24Data
+LT24Data[10] << LT24Display:Display.LT24Data
+LT24Data[11] << LT24Display:Display.LT24Data
+LT24Data[12] << LT24Display:Display.LT24Data
+LT24Data[13] << LT24Display:Display.LT24Data
+LT24Data[14] << LT24Display:Display.LT24Data
+LT24Data[15] << LT24Display:Display.LT24Data
+LT24LCDOn << LT24Display:Display.LT24LCDOn
 
 
 |lcd_scope|LT24Display:Display

@@ -541,9 +541,8 @@ localparam ROM_LENGTH = 2**(`CLOG2(INIT_LENGTH)); //Find next highest power of t
 reg [8:0] ROM [ROM_LENGTH-1:0];
 
 integer i;
-/*
-initial 
-begin
+
+initial begin
     //Note - this is ugly. A better approach is to use a .mif file.
     ROM[7'd000] <= {1'b0,8'hEF};
     ROM[7'd001] <= {1'b1,8'h03};
@@ -652,7 +651,7 @@ begin
         ROM[i]  <= {1'b0,8'h00}; //Pad others as NOP command.
     end
 end
-*/
+
 always @ (posedge clock) begin
     initData <= ROM[addr];
 end
