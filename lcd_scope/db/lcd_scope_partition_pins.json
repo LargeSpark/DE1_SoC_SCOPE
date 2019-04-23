@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rstApp",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Wr_n",
+					"strict" : false
+				},
+				{
+					"name" : "LT24RS",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "LT24Data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

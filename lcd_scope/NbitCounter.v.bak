@@ -1,0 +1,35 @@
+/* Nbit Counter module
+ * For DE1-SoC Scope 
+ */
+ 
+// Lab 5 up counter used as basis
+module NbitCounter #(
+    parameter Wide  = 10,          // 10 bits wide
+    parameter Up	  = 1,           // Increase counter by 1
+    parameter Max   = (2**Wide)-1  //Max value default is 2^Wide - 1
+)(   
+    input                    clock,
+    input                    reset,
+    input                    enable,    //Increments when enable is high
+    output reg [(Wide-1):0] countValue //Output is declared as "WIDTH" bits wide
+);
+
+always @ (posedge clock) begin
+    if (reset) begin
+        //When reset is high, set back to 0
+        countValue <= {(Wide){1'b0}};
+    end else if (enable) begin
+        //Otherwise counter is not in reset
+        if (countValue >= MAX_VALUE[WIDTH-1:0]) begin
+            //If the counter value is equal or exceeds the maximum value
+            countValue <= {(WIDTH){1'b0}};   //Reset back to 0
+        end else begin
+            //Otherwise increment
+            countValue <= countValue + INCREMENT[WIDTH-1:0];
+        end
+    end
+end
+
+endmodule
+
+
