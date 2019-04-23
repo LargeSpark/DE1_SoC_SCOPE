@@ -68,6 +68,7 @@
 					"strict" : false
 				},
 				{
+<<<<<<< Updated upstream
 					"name" : "LT24Data[13]",
 					"strict" : false
 				},
@@ -80,6 +81,8 @@
 					"strict" : false
 				},
 				{
+=======
+>>>>>>> Stashed changes
 					"name" : "clock",
 					"strict" : false
 				}

@@ -12,7 +12,11 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/LT24Display.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+<<<<<<< Updated upstream
 # Start time: 12:05:30 on Apr 23,2019
+=======
+# Start time: 13:01:53 on Apr 23,2019
+>>>>>>> Stashed changes
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/LT24Display.v 
 # -- Compiling module LT24Display
 # -- Compiling module LT24DisplayInterface
@@ -21,43 +25,75 @@
 # 
 # Top level modules:
 # 	LT24Display
+<<<<<<< Updated upstream
 # End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/lcd_scope.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # Start time: 12:05:31 on Apr 23,2019
+=======
+# End time: 13:01:53 on Apr 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/lcd_scope.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:01:53 on Apr 23,2019
+>>>>>>> Stashed changes
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/lcd_scope.v 
 # -- Compiling module lcd_scope
 # 
 # Top level modules:
 # 	lcd_scope
+<<<<<<< Updated upstream
 # End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/NbitCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 # Start time: 12:05:31 on Apr 23,2019
+=======
+# End time: 13:01:53 on Apr 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/NbitCounter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:01:53 on Apr 23,2019
+>>>>>>> Stashed changes
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/NbitCounter.v 
 # -- Compiling module NbitCounter
 # 
 # Top level modules:
 # 	NbitCounter
+<<<<<<< Updated upstream
 # End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
+=======
+# End time: 13:01:53 on Apr 23,2019, Elapsed time: 0:00:00
+>>>>>>> Stashed changes
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope/simulation {C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+<<<<<<< Updated upstream
 # Start time: 12:05:31 on Apr 23,2019
+=======
+# Start time: 13:01:53 on Apr 23,2019
+>>>>>>> Stashed changes
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope/simulation" C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v 
 # -- Compiling module LT24Top_tb
 # 
 # Top level modules:
 # 	LT24Top_tb
+<<<<<<< Updated upstream
 # End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
+=======
+# End time: 13:01:53 on Apr 23,2019, Elapsed time: 0:00:00
+>>>>>>> Stashed changes
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  LT24Top_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" LT24Top_tb 
+<<<<<<< Updated upstream
 # Start time: 12:05:31 on Apr 23,2019
+=======
+# Start time: 13:01:53 on Apr 23,2019
+>>>>>>> Stashed changes
 # Loading work.LT24Top_tb
 # Loading work.lcd_scope
 # Loading work.LT24Display
@@ -237,5 +273,9 @@ restart; run 500ms;
 #    Time: 20 us  Iteration: 0  Instance: /LT24Top_tb
 # Break in Module LT24Top_tb at C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v line 132
 # altEditor error: invalid command name "external_editor"
+<<<<<<< Updated upstream
 # End time: 12:06:51 on Apr 23,2019, Elapsed time: 0:01:20
+=======
+# End time: 13:02:34 on Apr 23,2019, Elapsed time: 0:00:41
+>>>>>>> Stashed changes
 # Errors: 2, Warnings: 0

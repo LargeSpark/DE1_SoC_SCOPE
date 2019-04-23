@@ -1,10 +1,18 @@
+<<<<<<< Updated upstream
 Analysis & Synthesis Status : Successful - Tue Apr 23 12:07:47 2019
+=======
+Analysis & Synthesis Status : Successful - Tue Apr 23 13:15:19 2019
+>>>>>>> Stashed changes
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : lcd_scope
 Top-level Entity Name : lcd_scope
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
+<<<<<<< Updated upstream
 Total registers : 96
+=======
+Total registers : 101
+>>>>>>> Stashed changes
 Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0

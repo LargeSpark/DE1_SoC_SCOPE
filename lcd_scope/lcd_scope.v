@@ -22,12 +22,19 @@
 	
 // Varaibles
 wire [7:0]  x;
+<<<<<<< Updated upstream
 reg  [7:0]	xPos; 		// Screen width is 240, 240 is 8 bits
+=======
+reg  [7:0]	xPos = 0; 		// Screen width is 240, 240 is 8 bits
+>>>>>>> Stashed changes
 wire [8:0]  yPos;			// Screen width is 320, 320 is 9 bits
 reg  [15:0] pixData;	   // 15->11 = red, 10->5 = green, 4->0 = blue
 wire 			pixReady;
 reg			pixWrite;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 // LT24 Dimensions
 localparam LCD_W = 240;
 localparam LCD_H = 320;
@@ -97,10 +104,17 @@ begin
 		pixWrite <= 1'b1; // Else write a pixel
 		 end
 end
+<<<<<<< Updated upstream
 always @ (posedge clock or posedge rstApp)
 begin
 xPos <= xPos + 1;
 end
+=======
+/*always @ (posedge clock or posedge rstApp)
+begin
+xPos <= xPos + 1;
+end*/
+>>>>>>> Stashed changes
 // Following code is to get some pixels on screen
 // Runs on +ve egede of clock or +ve edge of application reset
 always @ (posedge clock or posedge rstApp)
@@ -111,6 +125,7 @@ begin
 	end else if (pixReady)
 				 begin
 				 //xPos <= xPos + 1; 
+<<<<<<< Updated upstream
 					if (xPos == 5)
 					begin
 						pixData[15:11] <= 5'b1;
@@ -120,6 +135,18 @@ begin
 					end else 
 					begin 
 					//xPos <= xPos + 1; 
+=======
+					if (xPos > 0)
+					begin
+						/*pixData[15:11] <= 5'b1;
+						pixData[10:5] <= 6'b0; 
+						pixData[4:0]	<= 5'b0;	
+						pixData <= xPos[7:5];*/	
+						pixData[10:5] <= xPos[2:0];
+					end else 
+					begin 
+					xPos <= xPos + 1; 
+>>>>>>> Stashed changes
 						pixData[15:11] <= xPos[7:3];
 					end
 					 // Set Red from pixData = to the xPos

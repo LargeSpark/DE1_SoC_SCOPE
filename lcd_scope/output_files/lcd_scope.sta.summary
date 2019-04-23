@@ -3,6 +3,7 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
+<<<<<<< Updated upstream
 Slack : -2.674
 TNS   : -206.836
 
@@ -16,10 +17,26 @@ TNS   : -0.791
 
 Type  : Slow 1100mV 85C Model Removal 'clock'
 Slack : 0.566
+=======
+Slack : -2.736
+TNS   : -218.680
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clock'
+Slack : -0.103
+TNS   : -0.579
+
+Type  : Slow 1100mV 85C Model Removal 'clock'
+Slack : 0.551
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.394
+<<<<<<< Updated upstream
 TNS   : -55.305
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
@@ -36,10 +53,29 @@ TNS   : -0.623
 
 Type  : Slow 1100mV 0C Model Removal 'clock'
 Slack : 0.520
+=======
+TNS   : -60.044
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -2.653
+TNS   : -209.663
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : 0.257
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clock'
+Slack : -0.073
+TNS   : -0.402
+
+Type  : Slow 1100mV 0C Model Removal 'clock'
+Slack : 0.507
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.394
+<<<<<<< Updated upstream
 TNS   : -58.564
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
@@ -76,10 +112,52 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'clock'
 Slack : 0.270
+=======
+TNS   : -63.569
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -1.174
+TNS   : -71.975
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clock'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'clock'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.095
+TNS   : -10.394
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -0.994
+TNS   : -56.919
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clock'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clock'
+Slack : 0.262
+>>>>>>> Stashed changes
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.092
+<<<<<<< Updated upstream
 TNS   : -9.298
+=======
+TNS   : -10.107
+>>>>>>> Stashed changes
 
 ------------------------------------------------------------

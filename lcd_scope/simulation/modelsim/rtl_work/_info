@@ -9,6 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Haider/lcd_scope/simulation/modelsim
 vlcd_scope
+<<<<<<< Updated upstream
 Z1 !s110 1556017531
 !i10b 1
 !s100 0_?>bV;JBfJoHc@cIX=BR3
@@ -16,6 +17,15 @@ Ihb7B[>;_Nmz8TKI=^]T?41
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1556017489
+=======
+Z1 !s110 1556020913
+!i10b 1
+!s100 `^@Z1[a8@HQRX>i8M4L4>0
+IJ_lc8fe:DGR[^GRa_WQ1i0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1556020879
+>>>>>>> Stashed changes
 8C:/Users/Haider/lcd_scope/lcd_scope.v
 FC:/Users/Haider/lcd_scope/lcd_scope.v
 L0 7
@@ -23,7 +33,11 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 Z4 !s108 1556017531.000000
+=======
+Z4 !s108 1556020913.000000
+>>>>>>> Stashed changes
 !s107 C:/Users/Haider/lcd_scope/lcd_scope.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/lcd_scope.v|
 !i113 1
@@ -45,9 +59,15 @@ R3
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 Z11 !s108 1556017530.000000
 Z12 !s107 C:/Users/Haider/lcd_scope/LT24Display.v|
 Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/LT24Display.v|
+=======
+R4
+Z11 !s107 C:/Users/Haider/lcd_scope/LT24Display.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/LT24Display.v|
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6
@@ -68,9 +88,15 @@ R3
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 R11
 R12
 R13
+=======
+R4
+R11
+R12
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6
@@ -91,9 +117,15 @@ R3
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 R11
 R12
 R13
+=======
+R4
+R11
+R12
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6
@@ -160,9 +192,15 @@ R3
 r1
 !s85 0
 31
+<<<<<<< Updated upstream
 R11
 R12
 R13
+=======
+R4
+R11
+R12
+>>>>>>> Stashed changes
 !i113 1
 R5
 R6

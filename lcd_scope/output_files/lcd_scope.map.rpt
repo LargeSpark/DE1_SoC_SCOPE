@@ -1,5 +1,9 @@
 Analysis & Synthesis report for lcd_scope
+<<<<<<< Updated upstream
 Tue Apr 23 12:07:47 2019
+=======
+Tue Apr 23 13:15:20 2019
+>>>>>>> Stashed changes
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,6 +18,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |lcd_scope|LT24Display:Display|stateMachine
+<<<<<<< Updated upstream
   9. Logic Cells Representing Combinational Loops
  10. Registers Removed During Synthesis
  11. Removed Registers Triggering Further Register Optimizations
@@ -30,6 +35,23 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  22. Post-Synthesis Netlist Statistics for Top Partition
  23. Elapsed Time Per Partition
  24. Analysis & Synthesis Messages
+=======
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for LT24Display:Display
+ 14. Parameter Settings for User Entity Instance: LT24Display:Display
+ 15. Parameter Settings for User Entity Instance: LT24Display:Display|LT24InitialData:initDataRom
+ 16. Parameter Settings for User Entity Instance: LT24Display:Display|LT24DisplayInterface:LT24Interface
+ 17. Parameter Settings for User Entity Instance: NbitCounter:xCount
+ 18. Parameter Settings for User Entity Instance: NbitCounter:yCount
+ 19. Port Connectivity Checks: "NbitCounter:xCount"
+ 20. Port Connectivity Checks: "LT24Display:Display"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+>>>>>>> Stashed changes
 
 
 
@@ -55,13 +77,21 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status     ; Successful - Tue Apr 23 12:07:47 2019       ;
+=======
+; Analysis & Synthesis Status     ; Successful - Tue Apr 23 13:15:19 2019       ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lcd_scope                                   ;
 ; Top-level Entity Name           ; lcd_scope                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
+<<<<<<< Updated upstream
 ; Total registers                 ; 96                                          ;
+=======
+; Total registers                 ; 101                                         ;
+>>>>>>> Stashed changes
 ; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -195,6 +225,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
+<<<<<<< Updated upstream
 ; Estimate of Logic utilization (ALMs needed) ; 67          ;
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 111         ;
@@ -205,15 +236,33 @@ refer to the applicable agreement for further details.
 ;     -- <=3 input functions                  ; 60          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 96          ;
+=======
+; Estimate of Logic utilization (ALMs needed) ; 70          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 110         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 25          ;
+;     -- 5 input functions                    ; 14          ;
+;     -- 4 input functions                    ; 13          ;
+;     -- <=3 input functions                  ; 58          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 101         ;
+>>>>>>> Stashed changes
 ;                                             ;             ;
 ; I/O pins                                    ; 25          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
+<<<<<<< Updated upstream
 ; Maximum fan-out                             ; 96          ;
 ; Total fan-out                               ; 723         ;
 ; Average fan-out                             ; 2.81        ;
+=======
+; Maximum fan-out                             ; 101         ;
+; Total fan-out                               ; 736         ;
+; Average fan-out                             ; 2.82        ;
+>>>>>>> Stashed changes
 +---------------------------------------------+-------------+
 
 
@@ -222,8 +271,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name          ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
+<<<<<<< Updated upstream
 ; |lcd_scope                                 ; 111 (9)             ; 96 (6)                    ; 0                 ; 0          ; 25   ; 0            ; |lcd_scope                                                        ; lcd_scope            ; work         ;
 ;    |LT24Display:Display|                   ; 90 (60)             ; 81 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display                                    ; LT24Display          ; work         ;
+=======
+; |lcd_scope                                 ; 110 (14)            ; 101 (14)                  ; 0                 ; 0          ; 25   ; 0            ; |lcd_scope                                                        ; lcd_scope            ; work         ;
+;    |LT24Display:Display|                   ; 84 (54)             ; 78 (54)                   ; 0                 ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display                                    ; LT24Display          ; work         ;
+>>>>>>> Stashed changes
 ;       |LT24DisplayInterface:LT24Interface| ; 30 (30)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |lcd_scope|LT24Display:Display|LT24DisplayInterface:LT24Interface ; LT24DisplayInterface ; work         ;
 ;    |NbitCounter:yCount|                    ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |lcd_scope|NbitCounter:yCount                                     ; NbitCounter          ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+----------------------+--------------+
@@ -250,6 +304,7 @@ Encoding Type:  One-Hot
 +---------------------------+-------------------------+--------------------------+---------------------------+---------------------------+--------------------------+---------------------------+---------------------------+--------------------------+------------------------+-------------------------+-------------------------+
 
 
+<<<<<<< Updated upstream
 +------------------------------------------------------------+
 ; Logic Cells Representing Combinational Loops               ;
 +--------------------------------------------------------+---+
@@ -268,12 +323,15 @@ Encoding Type:  One-Hot
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
+=======
+>>>>>>> Stashed changes
 +------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                               ;
 +----------------------------------------------------------------+-------------------------------------------------+
 ; Register name                                                  ; Reason for Removal                              ;
 +----------------------------------------------------------------+-------------------------------------------------+
 ; LT24Display:Display|LT24InitialData:initDataRom|initData[0..8] ; Stuck at GND due to stuck port data_in          ;
+<<<<<<< Updated upstream
 ; pixData[3..10]                                                 ; Stuck at GND due to stuck port data_in          ;
 ; LT24Display:Display|xAddrTemp[8..15]                           ; Stuck at GND due to stuck port data_in          ;
 ; LT24Display:Display|yAddrTemp[9..15]                           ; Stuck at GND due to stuck port data_in          ;
@@ -281,11 +339,23 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; LT24Display:Display|displayData[8,9]                           ; Merged with LT24Display:Display|displayData[10] ;
 ; pixData[0..2]                                                  ; Stuck at GND due to stuck port data_in          ;
 ; LT24Display:Display|pixelDataTemp[0..2]                        ; Stuck at GND due to stuck port data_in          ;
+=======
+; pixData[8..10]                                                 ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|pixelDataTemp[0]                           ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|xAddrTemp[8..15]                           ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|yAddrTemp[9..15]                           ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|pixelDataTemp[1..4,8..10]                  ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|displayData[8,9]                           ; Merged with LT24Display:Display|displayData[10] ;
+; pixData[13..15]                                                ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|pixelDataTemp[13..15]                      ; Stuck at GND due to stuck port data_in          ;
+; LT24Display:Display|displayData[13..15]                        ; Stuck at GND due to stuck port data_in          ;
+>>>>>>> Stashed changes
 ; LT24Display:Display|stateMachine~15                            ; Lost fanout                                     ;
 ; LT24Display:Display|stateMachine~16                            ; Lost fanout                                     ;
 ; LT24Display:Display|stateMachine~17                            ; Lost fanout                                     ;
 ; LT24Display:Display|stateMachine~18                            ; Lost fanout                                     ;
 ; LT24Display:Display|stateMachine.CMD_STATE                     ; Stuck at GND due to stuck port data_in          ;
+<<<<<<< Updated upstream
 ; Total Number of Removed Registers = 53                         ;                                                 ;
 +----------------------------------------------------------------+-------------------------------------------------+
 
@@ -318,6 +388,30 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; pixData[2]    ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[2]   ;
 ;               ; due to stuck port data_in ;                                        ;
 +---------------+---------------------------+----------------------------------------+
+=======
+; Total Number of Removed Registers = 51                         ;                                                 ;
++----------------------------------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++---------------+---------------------------+----------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                     ;
++---------------+---------------------------+----------------------------------------------------------------------------+
+; pixData[13]   ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[13], LT24Display:Display|displayData[13] ;
+;               ; due to stuck port data_in ;                                                                            ;
+; pixData[14]   ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[14], LT24Display:Display|displayData[14] ;
+;               ; due to stuck port data_in ;                                                                            ;
+; pixData[15]   ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[15], LT24Display:Display|displayData[15] ;
+;               ; due to stuck port data_in ;                                                                            ;
+; pixData[10]   ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[10]                                      ;
+;               ; due to stuck port data_in ;                                                                            ;
+; pixData[9]    ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[9]                                       ;
+;               ; due to stuck port data_in ;                                                                            ;
+; pixData[8]    ; Stuck at GND              ; LT24Display:Display|pixelDataTemp[8]                                       ;
+;               ; due to stuck port data_in ;                                                                            ;
++---------------+---------------------------+----------------------------------------------------------------------------+
+>>>>>>> Stashed changes
 
 
 +------------------------------------------------------+
@@ -325,12 +419,20 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< Updated upstream
 ; Total registers                              ; 96    ;
+=======
+; Total registers                              ; 101   ;
+>>>>>>> Stashed changes
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
+<<<<<<< Updated upstream
 ; Number of registers using Clock Enable       ; 82    ;
+=======
+; Number of registers using Clock Enable       ; 83    ;
+>>>>>>> Stashed changes
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -340,11 +442,18 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+<<<<<<< Updated upstream
 ; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |lcd_scope|NbitCounter:yCount|cntOut[6]        ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |lcd_scope|LT24Display:Display|displayData[12] ;
 ; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |lcd_scope|LT24Display:Display|displayData[4]  ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |lcd_scope|LT24Display:Display|displayData[5]  ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |lcd_scope|LT24Display:Display|Selector17      ;
+=======
+; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |lcd_scope|NbitCounter:yCount|cntOut[5]        ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |lcd_scope|LT24Display:Display|displayData[12] ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |lcd_scope|LT24Display:Display|displayData[7]  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |lcd_scope|LT24Display:Display|Selector8       ;
+>>>>>>> Stashed changes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
@@ -425,6 +534,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
+<<<<<<< Updated upstream
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "LT24Display:Display"           ;
 +--------------+--------+----------+------------------------+
@@ -436,6 +546,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cmdDone      ; Input  ; Info     ; Stuck at GND           ;
 ; cmdReady     ; Output ; Info     ; Explicitly unconnected ;
 +--------------+--------+----------+------------------------+
+=======
++--------------------------------------------------------------+
+; Port Connectivity Checks: "LT24Display:Display"              ;
++-----------------+--------+----------+------------------------+
+; Port            ; Type   ; Severity ; Details                ;
++-----------------+--------+----------+------------------------+
+; pixelData[4..0] ; Input  ; Info     ; Stuck at GND           ;
+; pixelRawMode    ; Input  ; Info     ; Stuck at GND           ;
+; cmdData         ; Input  ; Info     ; Stuck at GND           ;
+; cmdWrite        ; Input  ; Info     ; Stuck at GND           ;
+; cmdDone         ; Input  ; Info     ; Stuck at GND           ;
+; cmdReady        ; Output ; Info     ; Explicitly unconnected ;
++-----------------+--------+----------+------------------------+
+>>>>>>> Stashed changes
 
 
 +-----------------------------------------------------+
@@ -443,6 +567,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
+<<<<<<< Updated upstream
 ; arriav_ff             ; 96                          ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 61                          ;
@@ -467,6 +592,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
 ; Average LUT depth     ; 2.19                        ;
+=======
+; arriav_ff             ; 101                         ;
+;     CLR               ; 1                           ;
+;     ENA               ; 62                          ;
+;     ENA CLR           ; 5                           ;
+;     ENA SCLR          ; 16                          ;
+;     plain             ; 17                          ;
+; arriav_lcell_comb     ; 113                         ;
+;     arith             ; 45                          ;
+;         1 data inputs ; 43                          ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 68                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 25                          ;
+; boundary_port         ; 25                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.29                        ;
+>>>>>>> Stashed changes
 +-----------------------+-----------------------------+
 
 
@@ -485,7 +634,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Tue Apr 23 12:07:21 2019
+=======
+    Info: Processing started: Tue Apr 23 13:15:07 2019
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd_scope -c lcd_scope
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -499,20 +652,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file lcd_sco
 Info (12021): Found 1 design units, including 1 entities, in source file nbitcounter.v
     Info (12023): Found entity 1: NbitCounter File: C:/Users/Haider/lcd_scope/NbitCounter.v Line: 6
 Info (12127): Elaborating entity "lcd_scope" for the top level hierarchy
+<<<<<<< Updated upstream
 Warning (10230): Verilog HDL assignment warning at lcd_scope.v(102): truncated value with size 32 to match size of target (8) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 102
 Critical Warning (10237): Verilog HDL warning at lcd_scope.v(102): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 102
 Info (12128): Elaborating entity "LT24Display" for hierarchy "LT24Display:Display" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 62
+=======
+Warning (10230): Verilog HDL assignment warning at lcd_scope.v(122): truncated value with size 32 to match size of target (8) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 122
+Warning (10240): Verilog HDL Always Construct warning at lcd_scope.v(105): inferring latch(es) for variable "pixData", which holds its previous value in one or more paths through the always construct File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (10041): Inferred latch for "pixData[0]" at lcd_scope.v(105) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (10041): Inferred latch for "pixData[1]" at lcd_scope.v(105) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (10041): Inferred latch for "pixData[2]" at lcd_scope.v(105) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (10041): Inferred latch for "pixData[3]" at lcd_scope.v(105) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (10041): Inferred latch for "pixData[4]" at lcd_scope.v(105) File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 105
+Info (12128): Elaborating entity "LT24Display" for hierarchy "LT24Display:Display" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 61
+>>>>>>> Stashed changes
 Info (12128): Elaborating entity "ResetSynchroniser" for hierarchy "LT24Display:Display|ResetSynchroniser:resetGen" File: C:/Users/Haider/lcd_scope/LT24Display.v Line: 157
 Warning (10034): Output port "resetOut" at LT24Display.v(499) has no driver File: C:/Users/Haider/lcd_scope/LT24Display.v Line: 499
 Info (12128): Elaborating entity "LT24InitialData" for hierarchy "LT24Display:Display|LT24InitialData:initDataRom" File: C:/Users/Haider/lcd_scope/LT24Display.v Line: 174
 Warning (10858): Verilog HDL warning at LT24Display.v(541): object ROM used but never assigned File: C:/Users/Haider/lcd_scope/LT24Display.v Line: 541
 Info (12128): Elaborating entity "LT24DisplayInterface" for hierarchy "LT24Display:Display|LT24DisplayInterface:LT24Interface" File: C:/Users/Haider/lcd_scope/LT24Display.v Line: 392
+<<<<<<< Updated upstream
 Info (12128): Elaborating entity "NbitCounter" for hierarchy "NbitCounter:xCount" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 73
 Info (12128): Elaborating entity "NbitCounter" for hierarchy "NbitCounter:yCount" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 86
+=======
+Info (12128): Elaborating entity "NbitCounter" for hierarchy "NbitCounter:xCount" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 72
+Info (12128): Elaborating entity "NbitCounter" for hierarchy "NbitCounter:yCount" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 85
+>>>>>>> Stashed changes
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LT24Rd_n" is stuck at VCC File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 15
     Warning (13410): Pin "LT24CS_n" is stuck at GND File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 16
     Warning (13410): Pin "LT24Reset_n" is stuck at VCC File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 18
+<<<<<<< Updated upstream
+=======
+    Warning (13410): Pin "LT24Data[13]" is stuck at GND File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 19
+    Warning (13410): Pin "LT24Data[14]" is stuck at GND File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 19
+    Warning (13410): Pin "LT24Data[15]" is stuck at GND File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 19
+>>>>>>> Stashed changes
     Warning (13410): Pin "LT24LCDOn" is stuck at VCC File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
@@ -520,6 +695,7 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "globalRst" File: C:/Users/Haider/lcd_scope/lcd_scope.v Line: 11
+<<<<<<< Updated upstream
 Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 23 output pins
@@ -529,5 +705,16 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Processing ended: Tue Apr 23 12:07:47 2019
     Info: Elapsed time: 00:00:26
     Info: Total CPU time (on all processors): 00:01:05
+=======
+Info (21057): Implemented 171 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 146 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Tue Apr 23 13:15:20 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
+>>>>>>> Stashed changes
 
 
