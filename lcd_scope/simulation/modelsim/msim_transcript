@@ -1,0 +1,241 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do lcd_scope_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/LT24Display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:05:30 on Apr 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/LT24Display.v 
+# -- Compiling module LT24Display
+# -- Compiling module LT24DisplayInterface
+# -- Compiling module ResetSynchroniser
+# -- Compiling module LT24InitialData
+# 
+# Top level modules:
+# 	LT24Display
+# End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/lcd_scope.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:05:31 on Apr 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/lcd_scope.v 
+# -- Compiling module lcd_scope
+# 
+# Top level modules:
+# 	lcd_scope
+# End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope {C:/Users/Haider/lcd_scope/NbitCounter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:05:31 on Apr 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope" C:/Users/Haider/lcd_scope/NbitCounter.v 
+# -- Compiling module NbitCounter
+# 
+# Top level modules:
+# 	NbitCounter
+# End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope/simulation {C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:05:31 on Apr 23,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Haider/lcd_scope/simulation" C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v 
+# -- Compiling module LT24Top_tb
+# 
+# Top level modules:
+# 	LT24Top_tb
+# End time: 12:05:31 on Apr 23,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  LT24Top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" LT24Top_tb 
+# Start time: 12:05:31 on Apr 23,2019
+# Loading work.LT24Top_tb
+# Loading work.lcd_scope
+# Loading work.LT24Display
+# Loading work.ResetSynchroniser
+# Loading work.LT24InitialData
+# Loading work.LT24DisplayInterface
+# Loading work.NbitCounter
+# 
+# do C:/Users/Haider/lcd_scope/simulation/load_sim.tcl
+#
+# NativeLink Simulation Initialisation Script
+# ===========================================
+# By: Thomas Carpenter
+# Date: 31st December 2017
+# For: University of Leeds
+#
+# Description
+# ===========
+# This is a basic sample script for initialising a simulation
+#
+# All commands in this script will be executed, and comments will
+# be printed to the screen
+#
+# Most of the work in compiling is done by Quartus automatically.
+# Here we can add some extra commands.
+#
+# There is lots of stuff you can do, such as running initialisation
+# scripts, preparing memory contents, setting up the simulator.
+#
+# 
+#
+# First lets clean up any old NativeLink backup files. Quartus
+# creates a new backup file every time it runs. It never deletes
+# these files so you end up with an ever increasing number of them.
+#
+# The {*}[glob -nocomplain ... ] command performs wildcard matching
+# of filenames, to make sure we get all .bak files. The "-nocomplain"
+# and "catch {}" ensure that if no backups exist, there is no error.
+#
+# 
+# catch {file delete {*}[glob -nocomplain *_msim_rtl_verilog.do.bak*]}
+# 0
+# 
+#
+# Clear up an running simulation
+#
+# 
+# restart
+# 
+#
+# This will continue executing our script if a break point in the
+# simulation is reached - for example the $stop command in Verilog
+#
+# 
+# onbreak {resume}
+# 
+# 
+# Once you add signals to the Wave view to see them graphically
+# and got them all set up to your liking (Radix, arrangement, etc.)
+# it is possible to save that layout as a "Waveform Format Do File".
+# From modelsim if you click on the Wave window and File->Save Format
+# this will generate the "Do" file for you.
+#
+# I will assume that you saved the file with name "wave.do" (default)
+# in the simulation folder (same place as this TCL).
+#
+# Each time we run the simulation, we can run this file to restore 
+# the setup:
+#
+#   do <filename>
+#
+# Of course the first time you run the simulation the file might not
+# yet exist - you might never choose to save a format. So we also
+# first check if the file exists before do-ing it.
+# 
+# 
+# We normalise the filename to prevent issues with spaces in the filename
+# set waveFile [file normalize "./wave.do"]
+# C:/Users/Haider/lcd_scope/simulation/modelsim/wave.do
+# 
+# if { [file exists $waveFile] } {
+#     #If the saved file exists, load it
+#     do $waveFile
+# } else {
+#     #Otherwise simply add all signals in the testbench formatted as unsigned decimal.
+#     add wave -radix unsigned -position insertpoint sim:/*
+# }
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate -radix unsigned /LT24Top_tb/clock
+# add wave -noupdate -radix unsigned /LT24Top_tb/reset
+# add wave -noupdate -radix unsigned /LT24Top_tb/resetApp
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24Wr_n
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24Rd_n
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24CS_n
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24RS
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24Reset_n
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24Data
+# add wave -noupdate -radix unsigned /LT24Top_tb/LT24LCDOn
+# add wave -noupdate -radix unsigned /LT24Top_tb/HALF_CLOCK_PERIOD
+# add wave -noupdate -radix unsigned /LT24Top_tb/half_cycles
+# add wave -noupdate /LT24Top_tb/NUM_CYCLES
+# add wave -noupdate /LT24Top_tb/CLOCK_FREQ
+# add wave -noupdate /LT24Top_tb/clock
+# add wave -noupdate /LT24Top_tb/reset
+# add wave -noupdate /LT24Top_tb/HALF_CLOCK_PERIOD
+# add wave -noupdate /LT24Top_tb/half_cycles
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/xCount/clk
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/xCount/rst
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/xCount/enable
+# add wave -noupdate -expand /LT24Top_tb/lcd_scope_dut/Display/yAddr
+# add wave -noupdate {/LT24Top_tb/lcd_scope_dut/Display/yAddr[2]}
+# add wave -noupdate -expand /LT24Top_tb/lcd_scope_dut/Display/xAddr
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/xCount/cntOut
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/yCount/clk
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/yCount/rst
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/yCount/enable
+# add wave -noupdate /LT24Top_tb/lcd_scope_dut/yCount/cntOut
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {1395168 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {9203946 ps}
+# 
+#
+# Then we can configure the units for the timeline. Lets stick to
+# nanoseconds instead of the default of picoseconds.
+#
+# 
+# configure wave -timelineunits ns
+# 
+# 
+# Next we can start the simulation. We simply say "run".
+#
+# The "run" command can be followed by a time parameter, such as:
+#
+#     run 100ns     # Run for 100ns
+#     run -all      # Run until the testbench stops changing stimuli
+#     run 10        # Run for 10 "timesteps" (typically 1ps per step)
+#
+# ========== Simulation Starts Here ===========
+# 
+# run -all
+#                    0 ns	Simulation Started
+# ** Note: $stop    : C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v(132)
+#    Time: 20 us  Iteration: 0  Instance: /LT24Top_tb
+# Break in Module LT24Top_tb at C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v line 132
+# altEditor error: invalid command name "external_editor"
+# 
+# ========== Simulation Ends Here ===========
+#
+# Once the simulation finishes we will reach here
+#
+# Let's for example zoom out in the wave display to fit all data
+#
+# 
+# wave zoom full
+# 0 ps
+# 21 us
+add wave -position 5  sim:/LT24Top_tb/lcd_scope_dut/xPos
+restart; run 500ms;
+#                    0 ns	Simulation Started
+# ** Note: $stop    : C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v(132)
+#    Time: 20 us  Iteration: 0  Instance: /LT24Top_tb
+# Break in Module LT24Top_tb at C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v line 132
+# altEditor error: invalid command name "external_editor"
+# End time: 12:06:51 on Apr 23,2019, Elapsed time: 0:01:20
+# Errors: 2, Warnings: 0

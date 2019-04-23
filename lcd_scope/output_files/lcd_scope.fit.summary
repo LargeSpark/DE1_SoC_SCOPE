@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Apr 23 10:04:03 2019
+Fitter Status : Successful - Tue Apr 23 12:08:41 2019
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : lcd_scope
 Top-level Entity Name : lcd_scope
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 85 / 32,070 ( < 1 % )
-Total registers : 122
+Logic utilization (in ALMs) : 65 / 32,070 ( < 1 % )
+Total registers : 105
 Total pins : 25 / 457 ( 5 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

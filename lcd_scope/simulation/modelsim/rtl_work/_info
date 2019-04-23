@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Haider/lcd_scope/simulation/modelsim
+vlcd_scope
+Z1 !s110 1556017531
+!i10b 1
+!s100 0_?>bV;JBfJoHc@cIX=BR3
+Ihb7B[>;_Nmz8TKI=^]T?41
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1556017489
+8C:/Users/Haider/lcd_scope/lcd_scope.v
+FC:/Users/Haider/lcd_scope/lcd_scope.v
+L0 7
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1556017531.000000
+!s107 C:/Users/Haider/lcd_scope/lcd_scope.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/lcd_scope.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope
+Z7 tCvgOpt 0
+vLT24Display
+R1
+!i10b 1
+!s100 g0Ml0H`ILV7gf4e]j455d3
+I8cK`]PA;Mo;Dl`gK[2iI?2
+R2
+R0
+Z8 w1556010312
+Z9 8C:/Users/Haider/lcd_scope/LT24Display.v
+Z10 FC:/Users/Haider/lcd_scope/LT24Display.v
+L0 86
+R3
+r1
+!s85 0
+31
+Z11 !s108 1556017530.000000
+Z12 !s107 C:/Users/Haider/lcd_scope/LT24Display.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/LT24Display.v|
+!i113 1
+R5
+R6
+R7
+n@l@t24@display
+vLT24DisplayInterface
+R1
+!i10b 1
+!s100 S52Fa_]jASRIg5HK3cSR53
+INAdiP?_l@M?]3XHVTaP9b1
+R2
+R0
+R8
+R9
+R10
+L0 409
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 1
+R5
+R6
+R7
+n@l@t24@display@interface
+vLT24InitialData
+R1
+!i10b 1
+!s100 e?^B<GdY`<Gma3mm`SLTC1
+IQ1:DD_V?[LT6_WMgCDDCY0
+R2
+R0
+R8
+R9
+R10
+L0 524
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 1
+R5
+R6
+R7
+n@l@t24@initial@data
+vLT24Top_tb
+R1
+!i10b 1
+!s100 ECTEk8Qh37ekUD7e:F@?02
+ILbL7ibeHm43z=^8IFa9M40
+R2
+R0
+w1556014278
+8C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v
+FC:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v
+L0 32
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope/simulation|C:/Users/Haider/lcd_scope/simulation/LT24Top_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Haider/lcd_scope/simulation
+R7
+n@l@t24@top_tb
+vNbitCounter
+R1
+!i10b 1
+!s100 mBgMkg^a[zC9mWHQ63[aM3
+IFER4UI;H35kX_[mFe]CGj0
+R2
+R0
+w1555858097
+8C:/Users/Haider/lcd_scope/NbitCounter.v
+FC:/Users/Haider/lcd_scope/NbitCounter.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Haider/lcd_scope/NbitCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Haider/lcd_scope|C:/Users/Haider/lcd_scope/NbitCounter.v|
+!i113 1
+R5
+R6
+R7
+n@nbit@counter
+vResetSynchroniser
+R1
+!i10b 1
+!s100 L8N[clKB7VCKUjFzP@`C73
+IdH5WDikSn6>mPg9c=7[QK1
+R2
+R0
+R8
+R9
+R10
+L0 494
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 1
+R5
+R6
+R7
+n@reset@synchroniser
