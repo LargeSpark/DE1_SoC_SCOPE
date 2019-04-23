@@ -4,7 +4,7 @@
 ; Hierarchy    ; Input ; Constant Input ; Unused Input ; Floating Input ; Output ; Constant Output ; Unused Output ; Floating Output ; Bidir ; Constant Bidir ; Unused Bidir ; Input only Bidir ; Output only Bidir ;
 +--------------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
 ; ada|ADC_CTRL ; 4     ; 0              ; 0            ; 0              ; 100    ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; ada          ; 3     ; 1              ; 0            ; 1              ; 99     ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; ada          ; 3     ; 85             ; 0            ; 85             ; 99     ; 85              ; 85            ; 85              ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; sample2      ; 26    ; 2              ; 1            ; 2              ; 13     ; 2               ; 2             ; 2               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; sample       ; 26    ; 2              ; 1            ; 2              ; 12     ; 2               ; 2             ; 2               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; VGA|gaw      ; 102   ; 0              ; 0            ; 0              ; 46     ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;

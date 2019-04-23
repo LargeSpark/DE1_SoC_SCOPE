@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Tue Apr 23 16:07:50 2019
+Tue Apr 23 17:10:56 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -61,16 +61,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 23 16:07:50 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 23 17:10:56 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; FPGA_MiniProject                            ;
 ; Top-level Entity Name           ; FPGA_MiniProject                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 263                                         ;
+; Total registers                 ; 249                                         ;
 ; Total pins                      ; 56                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 16,821                                      ;
+; Total block memory bits         ; 18,423                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -216,27 +216,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 220         ;
+; Estimate of Logic utilization (ALMs needed) ; 208         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 367         ;
+; Combinational ALUT usage for logic          ; 359         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 65          ;
-;     -- 5 input functions                    ; 42          ;
-;     -- 4 input functions                    ; 34          ;
-;     -- <=3 input functions                  ; 225         ;
+;     -- 6 input functions                    ; 52          ;
+;     -- 5 input functions                    ; 40          ;
+;     -- 4 input functions                    ; 26          ;
+;     -- <=3 input functions                  ; 240         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 263         ;
+; Dedicated logic registers                   ; 249         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 56          ;
 ; Total MLAB memory bits                      ; 0           ;
-; Total block memory bits                     ; 16821       ;
+; Total block memory bits                     ; 18423       ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 211         ;
-; Total fan-out                               ; 2588        ;
-; Average fan-out                             ; 3.39        ;
+; Maximum fan-out                             ; 120         ;
+; Total fan-out                               ; 2468        ;
+; Average fan-out                             ; 3.32        ;
 +---------------------------------------------+-------------+
 
 
@@ -245,17 +245,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name              ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |FPGA_MiniProject                         ; 367 (7)             ; 263 (3)                   ; 16821             ; 0          ; 56   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
+; |FPGA_MiniProject                         ; 359 (11)            ; 249 (10)                  ; 18423             ; 0          ; 56   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
 ;    |ADA:ada|                              ; 65 (1)              ; 79 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADA:ada                                                                   ; ADA                      ; work         ;
 ;       |altera_up_avalon_adv_adc:ADC_CTRL| ; 64 (64)             ; 66 (66)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL                                 ; altera_up_avalon_adv_adc ; work         ;
-;    |Sample:sample2|                       ; 54 (54)             ; 37 (37)                   ; 7209              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                                                            ; Sample                   ; work         ;
-;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 7209              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0                                ; altsyncram               ; work         ;
-;          |altsyncram_q8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 7209              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated ; altsyncram_q8n1          ; work         ;
-;    |Sample:sample|                        ; 44 (44)             ; 33 (33)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                             ; Sample                   ; work         ;
+;    |Sample:sample2|                       ; 40 (40)             ; 25 (25)                   ; 8811              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                                                            ; Sample                   ; work         ;
+;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 8811              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0                                ; altsyncram               ; work         ;
+;          |altsyncram_q8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8811              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated ; altsyncram_q8n1          ; work         ;
+;    |Sample:sample|                        ; 39 (39)             ; 24 (24)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                             ; Sample                   ; work         ;
 ;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0                                 ; altsyncram               ; work         ;
 ;          |altsyncram_q8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated  ; altsyncram_q8n1          ; work         ;
-;    |VGA_IP_Top:VGA|                       ; 142 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                            ; VGA_IP_Top               ; work         ;
-;       |gridandwave:gaw|                   ; 103 (103)           ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw                                            ; gridandwave              ; work         ;
+;    |VGA_IP_Top:VGA|                       ; 149 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                            ; VGA_IP_Top               ; work         ;
+;       |gridandwave:gaw|                   ; 110 (110)           ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw                                            ; gridandwave              ; work         ;
 ;       |hsync:hs|                          ; 18 (18)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|hsync:hs                                                   ; hsync                    ; work         ;
 ;       |vsync:vs|                          ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|vsync:vs                                                   ; vsync                    ; work         ;
 ;    |sine_wave_gen:testWave|               ; 55 (55)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|sine_wave_gen:testWave                                                    ; sine_wave_gen            ; work         ;
@@ -302,8 +302,8 @@ Encoding Type:  One-Hot
 ; ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|currState~2         ; Lost fanout                                           ;
 ; ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|currState~3         ; Lost fanout                                           ;
 ; ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|currState~4         ; Lost fanout                                           ;
-; Sample:sample|triggerHighPoint[8,9,11]                        ; Merged with Sample:sample|triggerHighPoint[10]        ;
 ; ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|currState.waitState ; Stuck at GND due to stuck port data_in                ;
+; slowerClock[10..12]                                           ; Lost fanout                                           ;
 ; Total Number of Removed Registers = 38                        ;                                                       ;
 +---------------------------------------------------------------+-------------------------------------------------------+
 
@@ -327,12 +327,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 263   ;
-; Number of registers using Synchronous Clear  ; 163   ;
+; Total registers                              ; 249   ;
+; Number of registers using Synchronous Clear  ; 142   ;
 ; Number of registers using Synchronous Load   ; 21    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -347,24 +347,22 @@ Encoding Type:  One-Hot
 +----------------------------------+---------------------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|counter[4]        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|counter[0]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|address[0]        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[4]                            ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[0]                             ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggerHighPoint[11]                         ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[11]                            ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[5]                              ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggerHighPoint[8]                           ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[19]                        ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[10] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|counter[4]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|counter[0]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|address[0]       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[9]                           ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[3]                            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[7]                            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[3]                             ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[0]                        ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -568,21 +566,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ADA:ada"                                                                                                                                                                                ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; RESET     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; RESET[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; CH1       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH2       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH3       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH4       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH5       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH6       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; CH7       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ADA:ada"                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; RESET ; Input  ; Info     ; Stuck at GND                                                                        ;
+; CH1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; CH7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -646,13 +643,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sine_wave_gen:testWave"                                                                                                             ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                         ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
-; data_out ; Output ; Warning  ; Output or bidir port (14 bits) is wider than the port expression (12 bits) it drives; bit(s) "data_out[13..12]" have no fanouts ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sine_wave_gen:testWave"                                                                         ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_out[13..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -660,32 +657,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 263                         ;
+; arriav_ff             ; 249                         ;
 ;     ENA               ; 50                          ;
-;     ENA SCLR          ; 45                          ;
+;     ENA SCLR          ; 24                          ;
 ;     SCLR              ; 118                         ;
 ;     SLD               ; 21                          ;
-;     plain             ; 29                          ;
-; arriav_lcell_comb     ; 368                         ;
-;     arith             ; 183                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 179                         ;
-;         2 data inputs ; 1                           ;
+;     plain             ; 36                          ;
+; arriav_lcell_comb     ; 360                         ;
+;     arith             ; 200                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 193                         ;
+;         2 data inputs ; 3                           ;
 ;         4 data inputs ; 2                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 184                         ;
+;     normal            ; 159                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 32                          ;
-;         5 data inputs ; 42                          ;
-;         6 data inputs ; 65                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 40                          ;
+;         6 data inputs ; 52                          ;
 ; boundary_port         ; 56                          ;
-; stratixv_ram_block    ; 21                          ;
+; stratixv_ram_block    ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
+; Max LUT depth         ; 4.70                        ;
 ; Average LUT depth     ; 2.50                        ;
 +-----------------------+-----------------------------+
 
@@ -705,7 +702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 16:07:37 2019
+    Info: Processing started: Tue Apr 23 17:10:42 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -729,7 +726,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file sample_
 Info (12021): Found 1 design units, including 1 entities, in source file ada_generated.v
     Info (12023): Found entity 1: ADA File: D:/FPGA_MiniProject/ADA_Generated.v Line: 1
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(145): truncated value with size 32 to match size of target (3) File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 145
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(145): truncated value with size 32 to match size of target (13) File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 145
 Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 63
 Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 32
 Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: D:/FPGA_MiniProject/sineGen.v Line: 33
@@ -772,8 +769,6 @@ Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated va
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(55): truncated value with size 32 to match size of target (12) File: D:/FPGA_MiniProject/Sample_IP.v Line: 55
 Info (12128): Elaborating entity "ADA" for hierarchy "ADA:ada" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 142
 Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL" File: D:/FPGA_MiniProject/ADA_Generated.v Line: 37
-Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Mux0 File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 56
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "sine_wave_gen:testWave|sine" is uninferred due to inappropriate RAM size File: D:/FPGA_MiniProject/sineGen.v Line: 9
 Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (30) in the Memory Initialization File "D:/FPGA_MiniProject/db/FPGA_MiniProject.ram0_sine_wave_gen_630b7358.hdl.mif" -- setting initial value for remaining addresses to 0
@@ -849,15 +844,15 @@ Info (12133): Instantiated megafunction "Sample:sample|altsyncram:sampleData_rtl
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated|ram_block1a0" File: D:/FPGA_MiniProject/db/altsyncram_q8n1.tdf Line: 37
-        Warning (14320): Synthesized away node "Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated|ram_block1a1" File: D:/FPGA_MiniProject/db/altsyncram_q8n1.tdf Line: 65
-        Warning (14320): Synthesized away node "Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated|ram_block1a2" File: D:/FPGA_MiniProject/db/altsyncram_q8n1.tdf Line: 93
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clockTest[0]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
+    Warning (15610): No output dependent on input pin "clockTest[1]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
     Warning (15610): No output dependent on input pin "clockTest[2]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
     Warning (15610): No output dependent on input pin "ADCin[0]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
     Warning (15610): No output dependent on input pin "ADCin[1]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
@@ -874,14 +869,14 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADCin[12]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
     Warning (15610): No output dependent on input pin "ADCin[13]" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
     Warning (15610): No output dependent on input pin "OutOfRange" File: D:/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-Info (21057): Implemented 500 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 473 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 423 logic cells
-    Info (21064): Implemented 21 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Tue Apr 23 16:07:51 2019
+    Info (21061): Implemented 394 logic cells
+    Info (21064): Implemented 23 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Tue Apr 23 17:10:56 2019
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:30
 

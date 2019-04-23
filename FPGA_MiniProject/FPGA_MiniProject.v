@@ -15,7 +15,7 @@ input [13:0] 	ADCin,
 input 			OutOfRange,
 //ADC Onboard
 output				ADC_CS_N,
-output 				ADC_SCLK,
+output 				ADC_SCLK, //clock
 output 				ADC_DIN,
 input					ADC_DOUT,
 //VGA
@@ -44,21 +44,21 @@ wire [11:0] waveSigIn2;
 wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
 //Clocks
-reg [2:0] slowerClock = 0;
+reg [12:0] slowerClock = 0;
 //VGA IP Wires
 wire [10:0] sX;
 wire [10:0] sY;
 //To programatically change down shifts
 reg [3:0] shiftDown1 = 0;
-reg [3:0] shiftDown2 = 3;
+reg [3:0] shiftDown2 = 1;
 assign waveSigIn1 = (sampledwave1 >> shiftDown1);
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
-wire slClock = slowerClock[clockTest];
+wire slClock = slowerClock[9];
 assign ADDAClock = slClock;
 wire [11:0] adda1;
 
 sine_wave_gen testWave(
-	.Clk (slClock),
+	.Clk (slowerClock[2]),
 	.data_out (testwave)
 	);
 
@@ -125,7 +125,7 @@ wire [11:0] CH6;
 wire [11:0] CH7;
 
 ADA ada(
-	.CLOCK(clock),
+	.CLOCK(slowerClock[3]),
 	.RESET(0),
 	.ADC_CS_N(ADC_CS_N),
 	.ADC_SCLK(ADC_SCLK),
