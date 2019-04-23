@@ -1,0 +1,10 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst ADA -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst ADA.adc_mega_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>ADA</net_container>(SLAVE)ADA.external_interface,(SLAVE)adc_mega_0.external_interface) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ADA</net_container>(SLAVE)adc_mega_0.readings,(SLAVE)ADA.readings) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ADA</net_container>(SLAVE)adc_mega_0.clk,(SLAVE)ADA.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ADA</net_container>(SLAVE)ADA.reset,(SLAVE)adc_mega_0.reset) 1 0 1 NJ
+levelinfo -pg 1 0 120 320
+levelinfo -hier ADA 130 160 310

@@ -2,20 +2,23 @@
 
 module Sample(
 	input clock,
-	input [13:0] data,
-	input [10:0] screenX,
+	input [11:0] data,
+	input [11:0] screenX,
 	input reset,
-	output [13:0] screenData
+	output [11:0] screenData,
+	output resample
 );
 
-reg [13:0] sampleData[800:0];
-reg [13:0] triggerHighPoint = 0;
-reg [13:0] samplecounter = 0;
-reg [13:0] triggercounter = 0;
-reg [10:0] outputcounter = 0;
-reg [13:0] outputData = 0;
+reg [11:0] sampleData[800:0];
+reg [11:0] triggerHighPoint = 0;
+reg [11:0] samplecounter = 0;
+reg [11:0] triggercounter = 0;
+reg [11:0] outputcounter = 0;
+reg [11:0] outputData = 0;
 reg randomreg1 = 0;
 reg randomreg2 = 0;
+reg resamplereg = 0;
+assign resample = resamplereg;
 assign screenData = outputData;
 //output data
 always @(posedge clock) begin
@@ -39,6 +42,7 @@ always @(posedge clock) begin
 	if(data == triggerHighPoint && samplecounter > 800) begin
 	samplecounter <= 0;
 	triggercounter <= 0;
+	resamplereg = ~resamplereg;
 	//if samplecounter is below 480 then sample
 	end else if(samplecounter < 800) begin
 	sampleData[samplecounter] <= data;
@@ -50,11 +54,6 @@ always @(posedge clock) begin
 	samplecounter <= samplecounter + 1;
 	triggercounter <= triggercounter+1;
 	end
-end
-
-//Trigger Reset
-
-always @(posedge clock) begin
 end
 
 endmodule
