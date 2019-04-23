@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "ADC_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DIN",
+					"strict" : false
+				},
+				{
 					"name" : "vga_hsync",
 					"strict" : false
 				},
@@ -145,6 +157,10 @@
 				},
 				{
 					"name" : "clockTest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_DOUT",
 					"strict" : false
 				}
 			]

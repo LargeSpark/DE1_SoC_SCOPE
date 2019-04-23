@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for FPGA_MiniProject
-Tue Apr 23 15:31:30 2019
+Tue Apr 23 16:11:13 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -99,18 +99,18 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.31        ;
+; Average used               ; 1.38        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.0%      ;
-;     Processor 3            ;   4.9%      ;
-;     Processor 4            ;   4.8%      ;
-;     Processor 5            ;   4.1%      ;
-;     Processor 6            ;   4.1%      ;
-;     Processor 7            ;   4.0%      ;
-;     Processor 8            ;   4.0%      ;
+;     Processor 2            ;   6.2%      ;
+;     Processor 3            ;   6.1%      ;
+;     Processor 4            ;   5.9%      ;
+;     Processor 5            ;   5.0%      ;
+;     Processor 6            ;   5.0%      ;
+;     Processor 7            ;   5.0%      ;
+;     Processor 8            ;   5.0%      ;
 +----------------------------+-------------+
 
 
@@ -131,10 +131,10 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
 +------------+-----------------+---------------------------------+------+
-; 136.26 MHz ; 136.26 MHz      ; clock                           ;      ;
-; 237.25 MHz ; 237.25 MHz      ; clockTest[0]                    ;      ;
-; 351.37 MHz ; 351.37 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
-; 373.69 MHz ; 373.69 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 117.47 MHz ; 117.47 MHz      ; clock                           ;      ;
+; 246.73 MHz ; 246.73 MHz      ; clockTest[0]                    ;      ;
+; 352.24 MHz ; 352.24 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
+; 362.19 MHz ; 362.19 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
 +------------+-----------------+---------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,23 +150,23 @@ HTML report is unavailable in plain text report export.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -7.307 ; -649.723      ;
-; clockTest[0]                    ; -3.215 ; -187.036      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -1.846 ; -38.104       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.676 ; -27.834       ;
+; clock                           ; -7.513 ; -784.574      ;
+; clockTest[0]                    ; -3.053 ; -145.858      ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -1.839 ; -37.681       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.761 ; -29.130       ;
 +---------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                      ;
-+---------------------------------+-------+---------------+
-; Clock                           ; Slack ; End Point TNS ;
-+---------------------------------+-------+---------------+
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.281 ; 0.000         ;
-; clock                           ; 0.375 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.449 ; 0.000         ;
-; clockTest[0]                    ; 0.525 ; 0.000         ;
-+---------------------------------+-------+---------------+
++----------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                       ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clock                           ; -0.147 ; -0.147        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.279  ; 0.000         ;
+; clockTest[0]                    ; 0.439  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.443  ; 0.000         ;
++---------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -186,17 +186,18 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -313.390      ;
-; clockTest[0]                    ; -0.817 ; -92.032       ;
+; clock                           ; -2.636 ; -505.252      ;
+; clockTest[0]                    ; -0.606 ; -60.070       ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -10.735       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.480       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.500       ;
 +---------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +-----------------------------------------------------------------------+
@@ -204,10 +205,10 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                      ; Note ;
 +------------+-----------------+---------------------------------+------+
-; 134.64 MHz ; 134.64 MHz      ; clock                           ;      ;
-; 237.36 MHz ; 237.36 MHz      ; clockTest[0]                    ;      ;
-; 358.17 MHz ; 358.17 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
-; 362.45 MHz ; 362.45 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 115.69 MHz ; 115.69 MHz      ; clock                           ;      ;
+; 251.26 MHz ; 251.26 MHz      ; clockTest[0]                    ;      ;
+; 349.41 MHz ; 349.41 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank   ;      ;
+; 359.84 MHz ; 359.84 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline ;      ;
 +------------+-----------------+---------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -217,23 +218,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -6.764 ; -604.399      ;
-; clockTest[0]                    ; -3.213 ; -186.625      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -1.792 ; -37.049       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.759 ; -28.930       ;
+; clock                           ; -7.644 ; -739.744      ;
+; clockTest[0]                    ; -2.980 ; -143.202      ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -1.862 ; -30.306       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -1.779 ; -36.561       ;
 +---------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                       ;
-+---------------------------------+-------+---------------+
-; Clock                           ; Slack ; End Point TNS ;
-+---------------------------------+-------+---------------+
-; clock                           ; 0.180 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.283 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.457 ; 0.000         ;
-; clockTest[0]                    ; 0.522 ; 0.000         ;
-+---------------------------------+-------+---------------+
++----------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                        ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clock                           ; -0.368 ; -0.368        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.281  ; 0.000         ;
+; clockTest[0]                    ; 0.450  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.457  ; 0.000         ;
++---------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -253,17 +254,18 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -318.074      ;
-; clockTest[0]                    ; -0.910 ; -101.904      ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -10.791       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.280       ;
+; clock                           ; -2.636 ; -511.168      ;
+; clockTest[0]                    ; -0.622 ; -59.687       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.394 ; -10.747       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.394 ; -10.320       ;
 +---------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +----------------------------------------------------------+
@@ -271,23 +273,23 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -4.537 ; -371.755      ;
-; clockTest[0]                    ; -1.548 ; -89.684       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.808 ; -16.238       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.626 ; -10.521       ;
+; clock                           ; -4.012 ; -411.409      ;
+; clockTest[0]                    ; -1.464 ; -68.406       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.745 ; -15.306       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.645 ; -10.319       ;
 +---------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                      ;
-+---------------------------------+-------+---------------+
-; Clock                           ; Slack ; End Point TNS ;
-+---------------------------------+-------+---------------+
-; clock                           ; 0.010 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.064 ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.170 ; 0.000         ;
-; clockTest[0]                    ; 0.218 ; 0.000         ;
-+---------------------------------+-------+---------------+
++----------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                       ;
++---------------------------------+--------+---------------+
+; Clock                           ; Slack  ; End Point TNS ;
++---------------------------------+--------+---------------+
+; clock                           ; -0.292 ; -0.292        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.066  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.164  ; 0.000         ;
+; clockTest[0]                    ; 0.164  ; 0.000         ;
++---------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -307,17 +309,18 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -260.739      ;
-; clockTest[0]                    ; -0.694 ; -64.721       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.114  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.144  ; 0.000         ;
+; clock                           ; -2.636 ; -413.126      ;
+; clockTest[0]                    ; -0.545 ; -35.094       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.105  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.127  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +----------------------------------------------------------+
@@ -325,10 +328,10 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -3.981 ; -317.328      ;
-; clockTest[0]                    ; -1.387 ; -80.152       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; -0.675 ; -13.919       ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.593 ; -9.159        ;
+; clock                           ; -3.746 ; -350.190      ;
+; clockTest[0]                    ; -1.299 ; -60.403       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; -0.641 ; -13.132       ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; -0.614 ; -9.339        ;
 +---------------------------------+--------+---------------+
 
 
@@ -337,10 +340,10 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -0.175 ; -0.500        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.006  ; 0.000         ;
+; clock                           ; -0.426 ; -0.770        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.007  ; 0.000         ;
+; clockTest[0]                    ; 0.148  ; 0.000         ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; 0.153  ; 0.000         ;
-; clockTest[0]                    ; 0.190  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
@@ -361,17 +364,18 @@ No paths to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; clock                           ; -2.636 ; -260.833      ;
-; clockTest[0]                    ; -0.722 ; -68.015       ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; 0.124  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.153  ; 0.000         ;
+; clock                           ; -2.636 ; -413.332      ;
+; clockTest[0]                    ; -0.526 ; -33.409       ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; 0.117  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; 0.135  ; 0.000         ;
 +---------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -379,16 +383,16 @@ No synchronizer chains to report.
 +----------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                 ; -7.307   ; -0.175 ; N/A      ; N/A     ; -2.636              ;
-;  VGA_IP_Top:VGA|hsync:hs|blank   ; -1.759   ; 0.006  ; N/A      ; N/A     ; -0.394              ;
-;  VGA_IP_Top:VGA|hsync:hs|newline ; -1.846   ; 0.153  ; N/A      ; N/A     ; -0.394              ;
-;  clock                           ; -7.307   ; -0.175 ; N/A      ; N/A     ; -2.636              ;
-;  clockTest[0]                    ; -3.215   ; 0.190  ; N/A      ; N/A     ; -0.910              ;
-; Design-wide TNS                  ; -902.697 ; -0.5   ; 0.0      ; 0.0     ; -441.049            ;
-;  VGA_IP_Top:VGA|hsync:hs|blank   ; -28.930  ; 0.000  ; N/A      ; N/A     ; -10.480             ;
-;  VGA_IP_Top:VGA|hsync:hs|newline ; -38.104  ; 0.000  ; N/A      ; N/A     ; -10.791             ;
-;  clock                           ; -649.723 ; -0.500 ; N/A      ; N/A     ; -318.074            ;
-;  clockTest[0]                    ; -187.036 ; 0.000  ; N/A      ; N/A     ; -101.904            ;
+; Worst-case Slack                 ; -7.644   ; -0.426 ; N/A      ; N/A     ; -2.636              ;
+;  VGA_IP_Top:VGA|hsync:hs|blank   ; -1.862   ; 0.007  ; N/A      ; N/A     ; -0.394              ;
+;  VGA_IP_Top:VGA|hsync:hs|newline ; -1.839   ; 0.153  ; N/A      ; N/A     ; -0.394              ;
+;  clock                           ; -7.644   ; -0.426 ; N/A      ; N/A     ; -2.636              ;
+;  clockTest[0]                    ; -3.053   ; 0.148  ; N/A      ; N/A     ; -0.622              ;
+; Design-wide TNS                  ; -997.243 ; -0.77  ; 0.0      ; 0.0     ; -591.922            ;
+;  VGA_IP_Top:VGA|hsync:hs|blank   ; -30.306  ; 0.000  ; N/A      ; N/A     ; -10.500             ;
+;  VGA_IP_Top:VGA|hsync:hs|newline ; -37.681  ; 0.000  ; N/A      ; N/A     ; -10.747             ;
+;  clock                           ; -784.574 ; -0.770 ; N/A      ; N/A     ; -511.168            ;
+;  clockTest[0]                    ; -145.858 ; 0.000  ; N/A      ; N/A     ; -60.070             ;
 +----------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -397,6 +401,9 @@ No synchronizer chains to report.
 +-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin         ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +-------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ADC_CS_N    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_SCLK    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ADC_DIN     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_hsync   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vga_vsync   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; R[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -457,6 +464,7 @@ No synchronizer chains to report.
 ; switch3      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clockTest[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clockTest[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ADC_DOUT     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------------+--------------+-----------------+-----------------+
 
 
@@ -465,6 +473,9 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ADC_CS_N    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; ADC_SCLK    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; ADC_DIN     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; vga_hsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; vga_vsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; R[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
@@ -502,6 +513,9 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ADC_CS_N    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; ADC_SCLK    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; ADC_DIN     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; vga_hsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; vga_vsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; R[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
@@ -539,6 +553,9 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ADC_CS_N    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ADC_SCLK    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; ADC_DIN     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vga_hsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vga_vsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; R[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -576,6 +593,9 @@ No synchronizer chains to report.
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin         ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ADC_CS_N    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; ADC_SCLK    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; ADC_DIN     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vga_hsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vga_vsync   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; R[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -613,14 +633,14 @@ No synchronizer chains to report.
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 ; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
-; clock                           ; clock                           ; 4272     ; 0        ; 0        ; 0        ;
+; clock                           ; clock                           ; 7846     ; 0        ; 0        ; 0        ;
 ; clockTest[0]                    ; clock                           ; 0        ; 591      ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 341      ; 23       ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 302      ; 23       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; clock                           ; 23       ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2700     ;
+; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2316     ;
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; VGA_IP_Top:VGA|hsync:hs|blank   ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|blank   ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 321      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 328      ; 0        ; 0        ; 0        ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -630,14 +650,14 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 ; From Clock                      ; To Clock                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
-; clock                           ; clock                           ; 4272     ; 0        ; 0        ; 0        ;
+; clock                           ; clock                           ; 7846     ; 0        ; 0        ; 0        ;
 ; clockTest[0]                    ; clock                           ; 0        ; 591      ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 341      ; 23       ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|blank   ; clock                           ; 302      ; 23       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; clock                           ; 23       ; 0        ; 0        ; 0        ;
-; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2700     ;
+; clockTest[0]                    ; clockTest[0]                    ; 0        ; 0        ; 0        ; 2316     ;
 ; VGA_IP_Top:VGA|hsync:hs|blank   ; VGA_IP_Top:VGA|hsync:hs|blank   ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|blank   ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 321      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline ; VGA_IP_Top:VGA|hsync:hs|newline ; 328      ; 0        ; 0        ; 0        ;
 +---------------------------------+---------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -661,10 +681,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 15    ; 15   ;
-; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 81    ; 81   ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 17    ; 17   ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 85    ; 85   ;
 +---------------------------------+-------+------+
 
 
@@ -685,6 +705,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
+; ADC_DOUT     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clock        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clockTest[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clockTest[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -700,6 +721,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; ADC_CS_N    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_DIN     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SCLK    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ADDAClock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -737,6 +761,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
+; ADC_DOUT     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clock        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clockTest[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; clockTest[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -752,6 +777,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; ADC_CS_N    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_DIN     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ADC_SCLK    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ADDAClock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; B[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -790,7 +818,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 15:31:22 2019
+    Info: Processing started: Tue Apr 23 16:11:04 2019
 Info: Command: quartus_sta FPGA_MiniProject -c FPGA_MiniProject
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -805,133 +833,141 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_IP_Top:VGA|hsync:hs|blank VGA_IP_Top:VGA|hsync:hs|blank
     Info (332105): create_clock -period 1.000 -name clockTest[0] clockTest[0]
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: dataf  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.307
+Info (332146): Worst-case setup slack is -7.513
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.307            -649.723 clock 
-    Info (332119):    -3.215            -187.036 clockTest[0] 
-    Info (332119):    -1.846             -38.104 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.676             -27.834 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.281
+    Info (332119):    -7.513            -784.574 clock 
+    Info (332119):    -3.053            -145.858 clockTest[0] 
+    Info (332119):    -1.839             -37.681 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -1.761             -29.130 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.281               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.375               0.000 clock 
-    Info (332119):     0.449               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.525               0.000 clockTest[0] 
+    Info (332119):    -0.147              -0.147 clock 
+    Info (332119):     0.279               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.439               0.000 clockTest[0] 
+    Info (332119):     0.443               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -313.390 clock 
-    Info (332119):    -0.817             -92.032 clockTest[0] 
+    Info (332119):    -2.636            -505.252 clock 
+    Info (332119):    -0.606             -60.070 clockTest[0] 
     Info (332119):    -0.394             -10.735 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.480 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.394             -10.500 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: dataf  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.764
+Info (332146): Worst-case setup slack is -7.644
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.764            -604.399 clock 
-    Info (332119):    -3.213            -186.625 clockTest[0] 
-    Info (332119):    -1.792             -37.049 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.759             -28.930 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.180
+    Info (332119):    -7.644            -739.744 clock 
+    Info (332119):    -2.980            -143.202 clockTest[0] 
+    Info (332119):    -1.862             -30.306 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -1.779             -36.561 VGA_IP_Top:VGA|hsync:hs|newline 
+Info (332146): Worst-case hold slack is -0.368
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.180               0.000 clock 
-    Info (332119):     0.283               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.368              -0.368 clock 
+    Info (332119):     0.281               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.450               0.000 clockTest[0] 
     Info (332119):     0.457               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.522               0.000 clockTest[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -318.074 clock 
-    Info (332119):    -0.910            -101.904 clockTest[0] 
-    Info (332119):    -0.394             -10.791 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.280 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -2.636            -511.168 clock 
+    Info (332119):    -0.622             -59.687 clockTest[0] 
+    Info (332119):    -0.394             -10.747 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.394             -10.320 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: dataf  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.537
+Info (332146): Worst-case setup slack is -4.012
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.537            -371.755 clock 
-    Info (332119):    -1.548             -89.684 clockTest[0] 
-    Info (332119):    -0.808             -16.238 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.626             -10.521 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is 0.010
+    Info (332119):    -4.012            -411.409 clock 
+    Info (332119):    -1.464             -68.406 clockTest[0] 
+    Info (332119):    -0.745             -15.306 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.645             -10.319 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.010               0.000 clock 
-    Info (332119):     0.064               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.170               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.218               0.000 clockTest[0] 
+    Info (332119):    -0.292              -0.292 clock 
+    Info (332119):     0.066               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.164               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.164               0.000 clockTest[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -260.739 clock 
-    Info (332119):    -0.694             -64.721 clockTest[0] 
-    Info (332119):     0.114               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.144               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -2.636            -413.126 clock 
+    Info (332119):    -0.545             -35.094 clockTest[0] 
+    Info (332119):     0.105               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.127               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: dataf  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.981
+Info (332146): Worst-case setup slack is -3.746
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.981            -317.328 clock 
-    Info (332119):    -1.387             -80.152 clockTest[0] 
-    Info (332119):    -0.675             -13.919 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.593              -9.159 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.175
+    Info (332119):    -3.746            -350.190 clock 
+    Info (332119):    -1.299             -60.403 clockTest[0] 
+    Info (332119):    -0.641             -13.132 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.614              -9.339 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.426
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.175              -0.500 clock 
-    Info (332119):     0.006               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -0.426              -0.770 clock 
+    Info (332119):     0.007               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.148               0.000 clockTest[0] 
     Info (332119):     0.153               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.190               0.000 clockTest[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -260.833 clock 
-    Info (332119):    -0.722             -68.015 clockTest[0] 
-    Info (332119):     0.124               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.153               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):    -2.636            -413.332 clock 
+    Info (332119):    -0.526             -33.409 clockTest[0] 
+    Info (332119):     0.117               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.135               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5213 megabytes
-    Info: Processing ended: Tue Apr 23 15:31:30 2019
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 5215 megabytes
+    Info: Processing ended: Tue Apr 23 16:11:13 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:10
 
 

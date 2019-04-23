@@ -13,6 +13,12 @@ input					switch3,	//Signal 2 En
 input [2:0]			clockTest,
 input [13:0] 	ADCin,
 input 			OutOfRange,
+//ADC Onboard
+output				ADC_CS_N,
+output 				ADC_SCLK,
+output 				ADC_DIN,
+input					ADC_DOUT,
+//VGA
 output 				vga_hsync,
 output				vga_vsync,
 output	[7:0]		R,
@@ -106,8 +112,34 @@ ADDA adda(
 	.invertEN (0),			//INVERT OUTPUT
 	.ADCOut (adda1),				
 	.OutOfRangeOut ( ),
-	.clockOut ( )
+	.clockOut	( )
 );*/
+
+wire [11:0] CH0;
+wire [11:0] CH1;
+wire [11:0] CH2;
+wire [11:0] CH3;
+wire [11:0] CH4;
+wire [11:0] CH5;
+wire [11:0] CH6;
+wire [11:0] CH7;
+
+ADA ada(
+	.CLOCK(clock),
+	.RESET(0),
+	.ADC_CS_N(ADC_CS_N),
+	.ADC_SCLK(ADC_SCLK),
+	.ADC_DIN(ADC_DIN),
+	.ADC_DOUT(ADC_DOUT),
+	.CH0 (CH0), 
+	.CH1 (CH1), 
+	.CH2 (CH2), 
+	.CH3 (CH3), 
+	.CH4 (CH4), 
+	.CH5 (CH5), 
+	.CH6 (CH6), 
+	.CH7 (CH7)
+);
 
 always @(posedge clock) begin
 	slowerClock <= slowerClock + 1;
