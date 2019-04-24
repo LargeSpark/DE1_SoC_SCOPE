@@ -26,7 +26,12 @@ output	[7:0]		G,
 output	[7:0]		B,
 output				VClock,
 output				ADDAClock,
-output				ResampleLED
+output				ResampleLED,
+//seven seg
+output 	[6:0]		seg0,
+output 	[6:0]		seg1,
+output 	[6:0]		seg2,
+output 	[6:0]		seg3
 );
 
 assign VClock = clock;
@@ -114,6 +119,17 @@ ADDA adda(
 	.OutOfRangeOut ( ),
 	.clockOut	( )
 );*/
+
+sevenseg sevSeg(
+.clock (clock),
+.seg_En (4'b1111),
+.number (1234),
+.decimalPoint_EN (0),
+.seg0 (seg0),
+.seg1 (seg1),
+.seg2 (seg2),
+.seg3 (seg3),
+);
 
 wire [11:0] CH0;
 wire [11:0] CH1;

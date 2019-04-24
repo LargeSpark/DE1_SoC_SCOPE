@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY FPGA_MiniProject
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:03:03  MARCH 20, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.1 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -127,4 +127,33 @@ set_location_assignment PIN_AJ4 -to ADC_CS_N
 set_location_assignment PIN_AK3 -to ADC_DOUT
 set_location_assignment PIN_AK4 -to ADC_DIN
 set_location_assignment PIN_AK2 -to ADC_SCLK
+set_global_assignment -name VERILOG_FILE SevenSeg_IP.v
+set_location_assignment PIN_AE26 -to seg0[0]
+set_location_assignment PIN_AE27 -to seg0[1]
+set_location_assignment PIN_AE28 -to seg0[2]
+set_location_assignment PIN_AG27 -to seg0[3]
+set_location_assignment PIN_AF28 -to seg0[4]
+set_location_assignment PIN_AG28 -to seg0[5]
+set_location_assignment PIN_AH28 -to seg0[6]
+set_location_assignment PIN_AJ29 -to seg1[0]
+set_location_assignment PIN_AH29 -to seg1[1]
+set_location_assignment PIN_AH30 -to seg1[2]
+set_location_assignment PIN_AG30 -to seg1[3]
+set_location_assignment PIN_AF29 -to seg1[4]
+set_location_assignment PIN_AF30 -to seg1[5]
+set_location_assignment PIN_AD27 -to seg1[6]
+set_location_assignment PIN_AB23 -to seg2[0]
+set_location_assignment PIN_AE29 -to seg2[1]
+set_location_assignment PIN_AD29 -to seg2[2]
+set_location_assignment PIN_AC28 -to seg2[3]
+set_location_assignment PIN_AD30 -to seg2[4]
+set_location_assignment PIN_AC29 -to seg2[5]
+set_location_assignment PIN_AC30 -to seg2[6]
+set_location_assignment PIN_AD26 -to seg3[0]
+set_location_assignment PIN_AC27 -to seg3[1]
+set_location_assignment PIN_AD25 -to seg3[2]
+set_location_assignment PIN_AC25 -to seg3[3]
+set_location_assignment PIN_AB28 -to seg3[4]
+set_location_assignment PIN_AB25 -to seg3[5]
+set_location_assignment PIN_AB22 -to seg3[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
