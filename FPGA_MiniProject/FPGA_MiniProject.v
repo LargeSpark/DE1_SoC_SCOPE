@@ -79,7 +79,7 @@ reg [3:0] shiftDown2 = 3;
 assign waveSigIn1 = (sampledwave1 >> shiftDown1); // Squish 
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
 //wire slClock = slowerClock[clockTest];
-assign ADDAClock = slClock;
+//assign ADDAClock = slClock;
 wire [11:0] adda1;
 //Parameters for Cursors
 localparam moveSize = 1;	
@@ -282,7 +282,6 @@ ADA ada(
 
 always @(posedge clock) begin
 	slowerClock <= slowerClock + 1;
-	slowerClock1 <= slowerClock1 + 1;
 
 end
 

@@ -110,7 +110,6 @@ set_location_assignment PIN_AK27 -to ADCin[11]
 set_location_assignment PIN_AK28 -to ADCin[12]
 set_location_assignment PIN_AJ26 -to ADCin[13]
 set_location_assignment PIN_AB21 -to OutOfRange
-set_location_assignment PIN_V16 -to ResampleLED
 set_location_assignment PIN_AJ4 -to ADC_CS_N
 set_location_assignment PIN_AK3 -to ADC_DOUT
 set_location_assignment PIN_AK4 -to ADC_DIN
