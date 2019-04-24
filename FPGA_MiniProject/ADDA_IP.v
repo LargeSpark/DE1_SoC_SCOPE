@@ -1,5 +1,5 @@
 //8192 Levels per side (+ve,-ve)
-//2Vpk-pk max in
+//2Vpk-pk max in//
 
 module ADDA(
 input 			clock,				//clock
@@ -12,10 +12,12 @@ output [13:0] 	ADCOut,
 output 			OutOfRangeOut,
 output			clockOut
 );
-localparam signd = false;
-wire signalOut[13:0];
-Assign clockOut = (clockEN == 1) ? clock : 0;
-Assign signalOut = (invertEN == 1) ? ~ADC : ADC;
-Assign ADCOut = (EN == 1) ? signalOut : 0;
-Assign OutOfRangeOut = OutOfRangep;
+
+localparam signd = 0;
+wire [13:0] signalOut;
+assign clockOut = (clockEN == 1) ? clock : 0;
+assign signalOut = (invertEN == 1) ? ~ADC : ADC;
+assign ADCOut = (EN == 1) ? signalOut : 0;
+assign OutOfRangeOut = OutOfRange;
+
 endmodule 

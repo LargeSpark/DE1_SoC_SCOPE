@@ -1,0 +1,30 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\FPGA_MiniProject\ADA.qsys --block-symbol-file --output-directory=D:\FPGA_MiniProject\ADA --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading FPGA_MiniProject/ADA.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 17.1]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\FPGA_MiniProject\ADA.qsys --synthesis=VERILOG --output-directory=D:\FPGA_MiniProject\ADA\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading FPGA_MiniProject/ADA.qsys
+Progress: Reading input file
+Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 17.1]
+Progress: Parameterizing module adc_mega_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADA: Generating ADA "ADA" for QUARTUS_SYNTH
+Info: adc_mega_0: Starting Generation of ADC Controller for DE-series Board
+Info: adc_mega_0: C:/intelfpga_lite/17.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/thesk/AppData/Local/Temp/alt8009_395382285236911248.dir/0002_sopcgen/ADA_adc_mega_0.v
+Info: adc_mega_0: "ADA" instantiated altera_up_avalon_adc_mega "adc_mega_0"
+Info: ADA: Done "ADA" with 2 modules, 3 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
