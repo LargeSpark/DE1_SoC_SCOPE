@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="ADA" kind="ADA" version="1.0" fabric="QSYS">
- <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2019.04.23.17:00:33 -->
+ <!-- Format version 17.1 593 (Future versions may contain additional information.) -->
+ <!-- 2019.04.24.13:27:30 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1556035233</value>
+  <value>1556108850</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -499,6 +499,6 @@ parameters are a RESULT of the module parameters. -->
   <displayName>Conduit</displayName>
   <version>17.1</version>
  </plugin>
- <reportVersion>17.1 590</reportVersion>
+ <reportVersion>17.1 593</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>

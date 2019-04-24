@@ -1,6 +1,6 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Tue Apr 23 17:00:43 2019
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Wed Apr 24 13:27:36 2019
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -48,27 +48,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 23 17:00:43 2019       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; FPGA_MiniProject                            ;
-; Top-level Entity Name           ; FPGA_MiniProject                            ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 121                                         ;
-; Total pins                      ; 59                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                               ;
++---------------------------------+----------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Apr 24 13:27:36 2019                    ;
+; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                   ; FPGA_MiniProject                                         ;
+; Top-level Entity Name           ; FPGA_MiniProject                                         ;
+; Family                          ; Cyclone V                                                ;
+; Logic utilization (in ALMs)     ; N/A                                                      ;
+; Total registers                 ; 185                                                      ;
+; Total pins                      ; 59                                                       ;
+; Total virtual pins              ; 0                                                        ;
+; Total block memory bits         ; 0                                                        ;
+; Total DSP Blocks                ; 0                                                        ;
+; Total HSSI RX PCSs              ; 0                                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                                        ;
+; Total HSSI TX PCSs              ; 0                                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                                        ;
+; Total PLLs                      ; 0                                                        ;
+; Total DLLs                      ; 0                                                        ;
++---------------------------------+----------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -163,7 +163,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -175,17 +175,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; VGA_IP_Top.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v       ;         ;
-; VGA_IP.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v           ;         ;
-; FPGA_MiniProject.v               ; yes             ; User Verilog HDL File  ; C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v ;         ;
-; sineGen.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v          ;         ;
-; Sample_IP.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v        ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; VGA_IP_Top.v                     ; yes             ; User Verilog HDL File  ; C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v       ;         ;
+; VGA_IP.v                         ; yes             ; User Verilog HDL File  ; C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v           ;         ;
+; FPGA_MiniProject.v               ; yes             ; User Verilog HDL File  ; C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v ;         ;
+; sineGen.v                        ; yes             ; User Verilog HDL File  ; C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v          ;         ;
+; Sample_IP.v                      ; yes             ; User Verilog HDL File  ; C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v        ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -193,25 +193,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 108         ;
+; Estimate of Logic utilization (ALMs needed) ; 168         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 188         ;
+; Combinational ALUT usage for logic          ; 296         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 27          ;
-;     -- 5 input functions                    ; 19          ;
-;     -- 4 input functions                    ; 10          ;
-;     -- <=3 input functions                  ; 131         ;
+;     -- 6 input functions                    ; 37          ;
+;     -- 5 input functions                    ; 64          ;
+;     -- 4 input functions                    ; 28          ;
+;     -- <=3 input functions                  ; 166         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 121         ;
+; Dedicated logic registers                   ; 185         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 59          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 78          ;
-; Total fan-out                               ; 1006        ;
-; Average fan-out                             ; 2.36        ;
+; Maximum fan-out                             ; 83          ;
+; Total fan-out                               ; 1707        ;
+; Average fan-out                             ; 2.85        ;
 +---------------------------------------------+-------------+
 
 
@@ -220,10 +220,10 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name      ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
-; |FPGA_MiniProject          ; 188 (29)            ; 121 (26)                  ; 0                 ; 0          ; 59   ; 0            ; |FPGA_MiniProject                                ; FPGA_MiniProject ; work         ;
+; |FPGA_MiniProject          ; 296 (126)           ; 185 (90)                  ; 0                 ; 0          ; 59   ; 0            ; |FPGA_MiniProject                                ; FPGA_MiniProject ; work         ;
 ;    |Sample:sample2|        ; 34 (34)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                 ; Sample           ; work         ;
-;    |VGA_IP_Top:VGA|        ; 125 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                 ; VGA_IP_Top       ; work         ;
-;       |gridandwave:gaw|    ; 86 (86)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw ; gridandwave      ; work         ;
+;    |VGA_IP_Top:VGA|        ; 136 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                 ; VGA_IP_Top       ; work         ;
+;       |gridandwave:gaw|    ; 97 (97)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw ; gridandwave      ; work         ;
 ;       |hsync:hs|           ; 18 (18)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|hsync:hs        ; hsync            ; work         ;
 ;       |vsync:vs|           ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|vsync:vs        ; vsync            ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+------------------+--------------+
@@ -249,8 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_B[0] ;
 ; VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[1..7] ; Merged with VGA_IP_Top:VGA|gridandwave:gaw|pixel_G[0] ;
 ; Sample:sample2|triggerHighPoint[0]           ; Stuck at GND due to stuck port data_in                ;
-; slowerClock[15]                              ; Lost fanout                                           ;
-; Total Number of Removed Registers = 138      ;                                                       ;
+; Total Number of Removed Registers = 137      ;                                                       ;
 +----------------------------------------------+-------------------------------------------------------+
 
 
@@ -274,37 +273,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 121   ;
-; Number of registers using Synchronous Clear  ; 86    ;
+; Total registers                              ; 185   ;
+; Number of registers using Synchronous Clear  ; 104   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 26    ;
+; Number of registers using Clock Enable       ; 85    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; cursorY1[0]                            ; 3       ;
-; cursorY1[3]                            ; 2       ;
-; cursorY1[4]                            ; 2       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; offset1[1]                              ; 2       ;
+; offset1[2]                              ; 2       ;
+; offset1[3]                              ; 2       ;
+; offset1[4]                              ; 2       ;
+; offset2[6]                              ; 2       ;
+; offset2[7]                              ; 2       ;
+; offset2[3]                              ; 2       ;
+; cursorX1[5]                             ; 3       ;
+; cursorX2[6]                             ; 2       ;
+; cursorX2[1]                             ; 2       ;
+; cursorX2[3]                             ; 2       ;
+; cursorX2[4]                             ; 2       ;
+; cursorY1[0]                             ; 2       ;
+; cursorY1[3]                             ; 2       ;
+; cursorY1[4]                             ; 2       ;
+; cursorY2[6]                             ; 2       ;
+; cursorY2[2]                             ; 2       ;
+; cursorY2[5]                             ; 2       ;
+; Total number of inverted registers = 18 ;         ;
++-----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[0]    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[9]     ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY1[2]                          ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[2]     ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[6]      ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[13] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX1[3]                          ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX2[7]                          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY2[9]                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY1[4]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |FPGA_MiniProject|cursorX2[4]                          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY2[2]                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add0                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add6                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -331,38 +354,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VGA_IP_Top:VGA"                                                                                         ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                     ; Type   ; Severity ; Details                                                                             ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; cursorY2[6..5]           ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorY2[10..7]          ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorY2[4..3]           ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorY2[1..0]           ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorY2[2]              ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorX1[10..6]          ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorX1[4..0]           ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorX1[5]              ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorX2[4..3]           ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorX2[10..7]          ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorX2[6]              ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorX2[5]              ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorX2[2]              ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cursorX2[1]              ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cursorX2[0]              ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn1[13..12]       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn2[13..12]       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn1_Offset[4..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; waveSigIn1_Offset[10..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn1_Offset[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn2_Offset[7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; waveSigIn2_Offset[10..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn2_Offset[5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn2_Offset[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; waveSigIn2_Offset[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; sY                       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_IP_Top:VGA"                                                                                   ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; waveSigIn1[13..12] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; waveSigIn2[13..12] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sY                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -379,29 +379,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 121                         ;
-;     ENA               ; 14                          ;
-;     ENA SCLR          ; 12                          ;
+; arriav_ff             ; 185                         ;
+;     ENA               ; 55                          ;
+;     ENA SCLR          ; 30                          ;
 ;     SCLR              ; 74                          ;
-;     plain             ; 21                          ;
-; arriav_lcell_comb     ; 189                         ;
-;     arith             ; 110                         ;
-;         1 data inputs ; 108                         ;
-;         2 data inputs ; 2                           ;
+;     plain             ; 26                          ;
+; arriav_lcell_comb     ; 297                         ;
+;     arith             ; 171                         ;
+;         1 data inputs ; 110                         ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 20                          ;
+;         5 data inputs ; 40                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 78                          ;
+;     normal            ; 125                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 19                          ;
-;         6 data inputs ; 27                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 37                          ;
 ; boundary_port         ; 59                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.41                        ;
+; Average LUT depth     ; 2.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -410,7 +412,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -419,142 +421,166 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 16:59:50 2019
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+    Info: Processing started: Wed Apr 24 13:27:14 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12248): Elaborating Platform Designer system entity "ADA.qsys"
-Info (12250): 2019.04.23.17:00:28 Progress: Loading FPGA_MiniProject/ADA.qsys
-Info (12250): 2019.04.23.17:00:29 Progress: Reading input file
-Info (12250): 2019.04.23.17:00:30 Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 17.1]
-Info (12250): 2019.04.23.17:00:32 Progress: Parameterizing module adc_mega_0
-Info (12250): 2019.04.23.17:00:32 Progress: Building connections
-Info (12250): 2019.04.23.17:00:32 Progress: Parameterizing connections
-Info (12250): 2019.04.23.17:00:32 Progress: Validating
-Info (12250): 2019.04.23.17:00:32 Progress: Done reading input file
+Info (12250): 2019.04.24.13:27:29 Progress: Loading FPGA_MiniProject/ADA.qsys
+Info (12250): 2019.04.24.13:27:29 Progress: Reading input file
+Info (12250): 2019.04.24.13:27:29 Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 17.1]
+Info (12250): 2019.04.24.13:27:30 Progress: Parameterizing module adc_mega_0
+Info (12250): 2019.04.24.13:27:30 Progress: Building connections
+Info (12250): 2019.04.24.13:27:30 Progress: Parameterizing connections
+Info (12250): 2019.04.24.13:27:30 Progress: Validating
+Info (12250): 2019.04.24.13:27:30 Progress: Done reading input file
 Info (12250): ADA: Generating ADA "ADA" for QUARTUS_SYNTH
 Info (12250): Adc_mega_0: Starting Generation of ADC Controller for DE-series Board
-Info (12250): Adc_mega_0: C:/intelfpga_lite/17.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/Haider/AppData/Local/Temp/alt8009_5749774317626146733.dir/0002_sopcgen/ADA_adc_mega_0.v
+Info (12250): Adc_mega_0: C:/intelfpga/17.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/el18hs/AppData/Local/Temp/alt8010_3449677167036842740.dir/0002_sopcgen/ADA_adc_mega_0.v
 Info (12250): Adc_mega_0: "ADA" instantiated altera_up_avalon_adc_mega "adc_mega_0"
 Info (12250): ADA: Done "ADA" with 2 modules, 3 files
 Info (12249): Finished elaborating Platform Designer system entity "ADA.qsys"
 Info (12021): Found 1 design units, including 1 entities, in source file vgatb.v
-    Info (12023): Found entity 1: VGATest_tb File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v Line: 6
+    Info (12023): Found entity 1: VGATest_tb File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file vga_ip_top.v
-    Info (12023): Found entity 1: VGA_IP_Top File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 2
+    Info (12023): Found entity 1: VGA_IP_Top File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 2
 Info (12021): Found 4 design units, including 4 entities, in source file vga_ip.v
-    Info (12023): Found entity 1: vsync File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 1
-    Info (12023): Found entity 2: hsync File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 38
-    Info (12023): Found entity 3: color File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 91
-    Info (12023): Found entity 4: gridandwave File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 115
+    Info (12023): Found entity 1: vsync File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 1
+    Info (12023): Found entity 2: hsync File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 38
+    Info (12023): Found entity 3: color File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 91
+    Info (12023): Found entity 4: gridandwave File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file adda_ip.v
-    Info (12023): Found entity 1: ADDA File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/ADDA_IP.v Line: 4
+    Info (12023): Found entity 1: ADDA File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/ADDA_IP.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fpga_miniproject.v
-    Info (12023): Found entity 1: FPGA_MiniProject File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
+    Info (12023): Found entity 1: FPGA_MiniProject File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file sinegen.v
-    Info (12023): Found entity 1: sine_wave_gen File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 4
+    Info (12023): Found entity 1: sine_wave_gen File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file sample_ip.v
-    Info (12023): Found entity 1: Sample File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 3
+    Info (12023): Found entity 1: Sample File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/ada/ada.v
-    Info (12023): Found entity 1: ADA File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/ada.v Line: 6
+    Info (12023): Found entity 1: ADA File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/ada.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/ada/submodules/ada_adc_mega_0.v
-    Info (12023): Found entity 1: ADA_adc_mega_0 File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/submodules/ada_adc_mega_0.v Line: 22
+    Info (12023): Found entity 1: ADA_adc_mega_0 File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/submodules/ada_adc_mega_0.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/ada/submodules/altera_up_avalon_adv_adc.v
-    Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/submodules/altera_up_avalon_adv_adc.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at VGATB.v(28): created implicit net for "R" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(74): created implicit net for "slClock" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 74
-Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(112): created implicit net for "CH0" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 112
+    Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/db/ip/ada/submodules/altera_up_avalon_adv_adc.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at VGATB.v(28): created implicit net for "R" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(177): created implicit net for "slClock" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 177
+Warning (10236): Verilog HDL Implicit Net warning at FPGA_MiniProject.v(215): created implicit net for "CH0" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 215
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(69): truncated value with size 32 to match size of target (11) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 69
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(132): truncated value with size 32 to match size of target (16) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 132
-Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 76
-Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 32
-Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 33
-Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 34
-Warning (10230): Verilog HDL assignment warning at sineGen.v(35): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 35
-Warning (10230): Verilog HDL assignment warning at sineGen.v(36): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 36
-Warning (10230): Verilog HDL assignment warning at sineGen.v(37): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 37
-Warning (10230): Verilog HDL assignment warning at sineGen.v(38): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 38
-Warning (10230): Verilog HDL assignment warning at sineGen.v(39): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 39
-Warning (10230): Verilog HDL assignment warning at sineGen.v(40): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 40
-Warning (10230): Verilog HDL assignment warning at sineGen.v(41): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 41
-Warning (10230): Verilog HDL assignment warning at sineGen.v(42): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 42
-Warning (10230): Verilog HDL assignment warning at sineGen.v(43): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 43
-Warning (10230): Verilog HDL assignment warning at sineGen.v(44): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 44
-Warning (10230): Verilog HDL assignment warning at sineGen.v(45): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 45
-Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated value with size 32 to match size of target (14) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 51
-Warning (10030): Net "sine.data_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
-Warning (10030): Net "sine.waddr_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
-Warning (10030): Net "sine.we_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
-Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 99
-Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 32
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 53
-Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 38
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(13): truncated value with size 32 to match size of target (11) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 13
-Info (12128): Elaborating entity "gridandwave" for hierarchy "VGA_IP_Top:VGA|gridandwave:gaw" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 62
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(146): truncated value with size 20 to match size of target (11) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 146
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(147): truncated value with size 20 to match size of target (11) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 147
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(157): truncated value with size 32 to match size of target (20) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 157
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(290): truncated value with size 32 to match size of target (20) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 290
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 293
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(294): truncated value with size 32 to match size of target (8) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 294
-Warning (10230): Verilog HDL assignment warning at VGA_IP.v(295): truncated value with size 32 to match size of target (8) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 295
-Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 107
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "outputcounter" assigned a value but never read File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 16
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "randomreg1" assigned a value but never read File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(19): object "randomreg2" assigned a value but never read File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 19
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(49): truncated value with size 32 to match size of target (12) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 49
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(50): truncated value with size 32 to match size of target (12) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 50
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated value with size 32 to match size of target (12) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 54
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(55): truncated value with size 32 to match size of target (12) File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 55
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(39): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 39
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(40): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 40
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(41): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 41
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(42): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 42
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(88): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 88
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(92): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 92
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(96): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 96
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(100): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 100
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(105): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 105
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(109): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 109
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(113): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 113
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(117): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 117
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(122): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 122
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(123): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 123
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(124): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 124
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(128): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 128
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(129): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 129
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(130): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 130
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(135): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 135
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(136): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 136
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(137): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 137
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(141): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 141
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(142): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 142
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(143): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 143
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(159): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 159
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(163): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 163
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(168): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 168
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(172): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 172
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(235): truncated value with size 32 to match size of target (20) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 235
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(236): truncated value with size 32 to match size of target (20) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 236
+Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 179
+Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 32
+Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 33
+Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 34
+Warning (10230): Verilog HDL assignment warning at sineGen.v(35): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 35
+Warning (10230): Verilog HDL assignment warning at sineGen.v(36): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 36
+Warning (10230): Verilog HDL assignment warning at sineGen.v(37): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 37
+Warning (10230): Verilog HDL assignment warning at sineGen.v(38): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 38
+Warning (10230): Verilog HDL assignment warning at sineGen.v(39): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 39
+Warning (10230): Verilog HDL assignment warning at sineGen.v(40): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 40
+Warning (10230): Verilog HDL assignment warning at sineGen.v(41): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 41
+Warning (10230): Verilog HDL assignment warning at sineGen.v(42): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 42
+Warning (10230): Verilog HDL assignment warning at sineGen.v(43): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 43
+Warning (10230): Verilog HDL assignment warning at sineGen.v(44): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 44
+Warning (10230): Verilog HDL assignment warning at sineGen.v(45): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 45
+Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated value with size 32 to match size of target (14) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 51
+Warning (10030): Net "sine.data_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
+Warning (10030): Net "sine.waddr_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
+Warning (10030): Net "sine.we_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v Line: 9
+Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 202
+Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 32
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 53
+Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 38
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(13): truncated value with size 32 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 13
+Info (12128): Elaborating entity "gridandwave" for hierarchy "VGA_IP_Top:VGA|gridandwave:gaw" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v Line: 62
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(146): truncated value with size 20 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 146
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(147): truncated value with size 20 to match size of target (11) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 147
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(157): truncated value with size 32 to match size of target (20) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 157
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(290): truncated value with size 32 to match size of target (20) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 290
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 293
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(294): truncated value with size 32 to match size of target (8) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 294
+Warning (10230): Verilog HDL assignment warning at VGA_IP.v(295): truncated value with size 32 to match size of target (8) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v Line: 295
+Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 210
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "outputcounter" assigned a value but never read File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "randomreg1" assigned a value but never read File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 18
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(19): object "randomreg2" assigned a value but never read File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 19
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(49): truncated value with size 32 to match size of target (12) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 49
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(50): truncated value with size 32 to match size of target (12) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 50
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated value with size 32 to match size of target (12) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 54
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(55): truncated value with size 32 to match size of target (12) File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 55
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADDAClock" is stuck at GND File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 32
+    Warning (13410): Pin "ADDAClock" is stuck at GND File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 32
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 37 registers lost all their fanouts during netlist optimizations.
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 19 assignments for entity "ADA" -- entity does not exist in design
-Info (144001): Generated suppressed messages file C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 23 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "switch5" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
-    Warning (15610): No output dependent on input pin "switch6" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
-    Warning (15610): No output dependent on input pin "switch7" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 16
-    Warning (15610): No output dependent on input pin "switch8" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 17
-    Warning (15610): No output dependent on input pin "switch9" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 18
-    Warning (15610): No output dependent on input pin "butt0" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 19
-    Warning (15610): No output dependent on input pin "butt1" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 20
-    Warning (15610): No output dependent on input pin "butt2" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 21
-    Warning (15610): No output dependent on input pin "ADCin[0]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[1]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[2]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[3]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[4]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[5]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[6]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[7]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[8]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[9]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[10]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[11]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[12]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "ADCin[13]" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
-    Warning (15610): No output dependent on input pin "OutOfRange" File: C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 25
-Info (21057): Implemented 247 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switch4" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
+    Warning (15610): No output dependent on input pin "switch5" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
+    Warning (15610): No output dependent on input pin "switch6" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
+    Warning (15610): No output dependent on input pin "switch7" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 16
+    Warning (15610): No output dependent on input pin "ADCin[0]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[1]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[2]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[3]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[4]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[5]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[6]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[7]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[8]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[9]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[10]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[11]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[12]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "ADCin[13]" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
+    Warning (15610): No output dependent on input pin "OutOfRange" File: C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 25
+Info (21057): Implemented 359 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 30 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 188 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Tue Apr 23 17:00:43 2019
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:56
+    Info (21061): Implemented 300 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 696 megabytes
+    Info: Processing ended: Wed Apr 24 13:27:36 2019
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Haider/DE1_SoC_SCOPE/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg.
+The suppressed messages can be found in C:/Users/el18hs/DE1_SoC_SCOPE/DE1_SoC_SCOPE/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg.
 
 
