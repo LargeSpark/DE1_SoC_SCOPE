@@ -39,7 +39,7 @@ end
 //Trigger Sample Data
 always @(posedge clock) begin
 //find highest point after 
-	if(data == triggerHighPoint && samplecounter > 800) begin
+	if(data == /*triggerHighPoint*/0 && samplecounter > 800) begin
 	samplecounter <= 0;
 	triggercounter <= 0;
 	resamplereg = ~resamplereg;

@@ -23,6 +23,12 @@ input					butt3,	//x2/y2 right/down
 //input [2:0]			clockTest,
 input [13:0] 	ADCin,
 input 			OutOfRange,
+//ADC Onboard
+output				ADC_CS_N,
+output 				ADC_SCLK, //clock
+output 				ADC_DIN,
+input					ADC_DOUT,
+//VGA
 output 				vga_hsync,
 output				vga_vsync,
 output	[7:0]		R,
@@ -30,7 +36,12 @@ output	[7:0]		G,
 output	[7:0]		B,
 output				VClock,
 output				ADDAClock,
-output				ResampleLED
+output				ResampleLED,
+//seven seg
+output 	[6:0]		seg0,
+output 	[6:0]		seg1,
+output 	[6:0]		seg2,
+output 	[6:0]		seg3
 );
 
 assign VClock = clock;
@@ -59,7 +70,6 @@ wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
 //Clocks
 reg [19:0] slowerClock = 0;
-reg [19:0] slowerClock1 = 0;
 //VGA IP Wires
 wire [10:0] sX;
 wire [10:0] sY;
@@ -173,8 +183,17 @@ begin
 		end			
 	end
 end
+  
+wire [11:0] CH0;
+wire [11:0] CH1;
+wire [11:0] CH2;
+wire [11:0] CH3;
+wire [11:0] CH4;
+wire [11:0] CH5;
+wire [11:0] CH6;
+wire [11:0] CH7;
 sine_wave_gen testWave(
-	.Clk (slClock),
+	.Clk (slowerClock[2]),
 	.data_out (testwave)
 	);
 
@@ -228,8 +247,38 @@ ADDA adda(
 	.invertEN (0),			//INVERT OUTPUT
 	.ADCOut (adda1),				
 	.OutOfRangeOut ( ),
-	.clockOut ( )
+	.clockOut	( )
 );*/
+
+sevenseg sevSeg(
+.clock (clock),
+.seg_En (4'b1111),
+.number (4567),
+.decimalPoint_EN (0),
+.seg0 (seg0),
+.seg1 (seg1),
+.seg2 (seg2),
+.seg3 (seg3)
+);
+
+
+
+ADA ada(
+	.CLOCK(slowerClock[3]),
+	.RESET(0),
+	.ADC_CS_N(ADC_CS_N),
+	.ADC_SCLK(ADC_SCLK),
+	.ADC_DIN(ADC_DIN),
+	.ADC_DOUT(ADC_DOUT),
+	.CH0 (CH0), 
+	.CH1 (CH1), 
+	.CH2 (CH2), 
+	.CH3 (CH3), 
+	.CH4 (CH4), 
+	.CH5 (CH5), 
+	.CH6 (CH6), 
+	.CH7 (CH7)
+);
 
 always @(posedge clock) begin
 	slowerClock <= slowerClock + 1;
