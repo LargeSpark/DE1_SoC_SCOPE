@@ -10,7 +10,17 @@ input					switch0, //Cursor X En
 input					switch1,	//Cursor Y En
 input					switch2, //Signal 1 En
 input					switch3,	//Signal 2 En
-input [2:0]			clockTest,
+input 				switch4, //Cursor Y set
+input					switch5, //Cursor X Set 
+input 				switch6, //Wave 1 Shift /Squish
+input 				switch7, //Wave 2 Shift/Squish
+input 				switch8, //Wave 1 Clock 
+input 				switch9, //Wave 2 Clock 
+input					butt0,	//x1/y1 left/up
+input					butt1,  	//x1/y1 right/down
+input					butt2,	//x2/y2 left/up
+input					butt3,	//x2/y2 right/down
+//input [2:0]			clockTest,
 input [13:0] 	ADCin,
 input 			OutOfRange,
 //ADC Onboard
@@ -37,31 +47,143 @@ output 	[6:0]		seg3
 assign VClock = clock;
 wire [11:0] testwave; //test wave output
 //test code
-reg [10:0] cursorY1 = 25; 	//TESTCODE
-reg [10:0] cursorY2 = 100;	//TESTCODE
-reg [10:0] cursorX1 = 32;  //TESTCODE
-reg [10:0] cursorX2 = 90; //TESTCODE
+reg [10:0] cursorY1 = defaultY1; 	//TESTCODE
+reg [10:0] cursorY2 = defaultY2;	//TESTCODE
+reg [10:0] cursorX1 = defaultX1;  //TESTCODE
+reg [10:0] cursorX2 = defaultX2; //TESTCODE
 reg [10:0] offset1 = 30;
 reg [10:0] offset2 = 200;
+//Default codes 
+localparam defaultY1 = 25;
+localparam defaultY2 = 100;
+localparam defaultX1 = 32;
+localparam defaultX2 = 90;
+//TEST REG's
+reg testWave1;
+reg testWave2;
+reg testCx;
+reg testCy;
 //Wave wires
 wire [11:0] waveSigIn1;
 wire [11:0] waveSigIn2;
 wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
 //Clocks
-reg [12:0] slowerClock = 0;
+reg [19:0] slowerClock = 0;
 //VGA IP Wires
 wire [10:0] sX;
 wire [10:0] sY;
 //To programatically change down shifts
 reg [3:0] shiftDown1 = 0;
-reg [3:0] shiftDown2 = 1;
-assign waveSigIn1 = (sampledwave1 >> shiftDown1);
+reg [3:0] shiftDown2 = 3;
+assign waveSigIn1 = (sampledwave1 >> shiftDown1); // Squish 
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
-wire slClock = slowerClock[9];
+//wire slClock = slowerClock[clockTest];
 assign ADDAClock = slClock;
 wire [11:0] adda1;
-//SCOPE CHANNELS
+//Parameters for Cursors
+localparam moveSize = 1;	
+//Code to move cursors on Measre screen
+always @ (posedge slowerClock[19])
+begin
+	//State 1
+	if (!switch9 && !switch8)
+	begin	
+	//Switch on Cursors
+	testCx <= switch0;
+	testCy <= switch1;
+		//Code for yCursors 
+		if (switch3 && !butt3)
+		begin 
+				cursorY1 <= cursorY1 + moveSize;
+		end 
+		else if (switch3 && !butt2)
+		begin 
+				cursorY1 <= cursorY1 - moveSize;
+		end 
+		else if (switch3 && !butt1)
+		begin 
+				cursorY2 <= cursorY2 + moveSize;
+		end 
+		else if (switch3 && !butt0)
+		begin 
+				cursorY2 <= cursorY2 - moveSize;
+		end 
+		//Codr for xCursors
+		if (switch2 && !butt3)
+		begin 
+				cursorX1 <= cursorX1 + moveSize;
+		end 
+		else if (switch2 && !butt2)
+		begin 
+				cursorX1 <= cursorX1 - moveSize;
+		end 
+		else if (switch2 && !butt1)
+		begin 
+				cursorX2 <= cursorX2 + moveSize;
+		end 
+		else if (switch2 && !butt0)
+		begin 
+				cursorX2 <= cursorX2 - moveSize;
+		end
+		//Code to move both Y Cursors @ same time
+		if (switch3 && switch2 && !butt3)
+		begin
+				cursorY1 <= cursorY1 + moveSize;
+				cursorY2 <= cursorY2 + moveSize;
+				cursorX1 <= defaultX1;
+		end
+		if (switch3 && switch2 && !butt2)
+		begin
+				cursorY1 <= cursorY1 - moveSize;
+				cursorY2 <= cursorY2 - moveSize;
+				cursorX2 <= defaultX2;
+		end
+		//Code to move both X Cursors @ same time
+		if (switch3 && switch2 && !butt1)
+		begin
+				cursorX1 <= cursorX1 + moveSize;
+				cursorX2 <= cursorX2 + moveSize;
+				cursorY2 <= defaultY2;
+		end
+		if (switch3 && switch2	&& !butt0)
+		begin
+				cursorX1 <= cursorX1 - moveSize;
+				cursorX2 <= cursorX2 - moveSize;
+				cursorY2 <= defaultY2;
+		end
+	end
+end 
+//Code for Waves 
+always @ (posedge slowerClock[19])
+begin
+	//State 2
+	if (!switch9 && switch8)
+	begin 
+	//Code to see Waves 	
+	testWave1 <= switch0;
+	testWave2 <= switch1;
+		//Move Wave 1 up and down 
+		if (switch2 && !butt3)
+		begin
+				offset1 <= offset1 + moveSize;		
+		end	
+		else if (switch2 && !butt2)
+		begin
+				offset1 <= offset1 - moveSize;		
+		end	
+		//Move Wave 2 up and down 
+		else if (switch2 && !butt1)
+		begin
+				offset2 <= offset2 + moveSize;		
+		end	
+		else if (switch2 && !butt0)
+		begin
+				offset2 <= offset2 - moveSize;		
+		end			
+	end
+end
+  
 wire [11:0] CH0;
 wire [11:0] CH1;
 wire [11:0] CH2;
@@ -70,7 +192,6 @@ wire [11:0] CH4;
 wire [11:0] CH5;
 wire [11:0] CH6;
 wire [11:0] CH7;
-
 sine_wave_gen testWave(
 	.Clk (slowerClock[2]),
 	.data_out (testwave)
@@ -78,16 +199,16 @@ sine_wave_gen testWave(
 
 VGA_IP_Top VGA(
 	.clk50 		(clock),
-	.cursorX_EN (switch0),
-	.cursorY_EN (switch1),
+	.cursorX_EN (testCx),
+	.cursorY_EN (testCy),
 	.cursorY1 	(cursorY1),
 	.cursorY2 	(cursorY2),
 	.cursorX1 	(cursorX1),
 	.cursorX2 	(cursorX2),
 	.waveSigIn1 (waveSigIn1),
 	.waveSigIn2 (waveSigIn2),
-	.waveSigIn1_En (switch2),
-	.waveSigIn2_En (switch3),
+	.waveSigIn1_En (testWave1),
+	.waveSigIn2_En (testWave2),
 	.hsync_out 	(vga_hsync),
 	.vsync_out 	(vga_vsync),
 	.red_out 	(R),
@@ -161,6 +282,8 @@ ADA ada(
 
 always @(posedge clock) begin
 	slowerClock <= slowerClock + 1;
+	slowerClock1 <= slowerClock1 + 1;
+
 end
 
 endmodule 
