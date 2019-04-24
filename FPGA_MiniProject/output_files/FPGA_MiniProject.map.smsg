@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at FPGA_MiniProject.v(38): object "testwave" differs only in case from object "testWave" in the same scope File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
-Warning (10268): Verilog HDL information at Sample_IP.v(40): always construct contains both blocking and non-blocking assignments File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v Line: 40
