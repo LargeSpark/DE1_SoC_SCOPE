@@ -256,15 +256,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch3",
-					"strict" : false
-				},
-				{
 					"name" : "butt2",
 					"strict" : false
 				},
 				{
 					"name" : "butt3",
+					"strict" : false
+				},
+				{
+					"name" : "switch3",
 					"strict" : false
 				},
 				{

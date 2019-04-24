@@ -180,7 +180,23 @@ begin
 		else if (switch2 && !butt0)
 		begin
 				offset2 <= offset2 - moveSize;		
-		end			
+		end		
+		else if (switch3 && !butt0)
+		begin
+			shiftDown1 = shiftDown1 + 1;
+		end
+		else if (switch3 && !butt1)
+		begin
+			shiftDown1 = shiftDown1 - 1;
+		end
+		else if (switch3 && !butt2)
+		begin
+			shiftDown2 = shiftDown2 + 1;
+		end
+		else if (switch3 && !butt3)
+		begin
+			shiftDown2 = shiftDown2 - 1;
+		end	
 	end
 end
   
