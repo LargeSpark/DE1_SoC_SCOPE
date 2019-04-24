@@ -10,6 +10,7 @@ output [6:0] seg3
 );
 //Split Numbers
 reg start = 0;
+reg started = 0;
 wire done;
 wire [3:0] ones;
 wire [3:0] tens;
@@ -59,15 +60,18 @@ generateSevenSegOutput segoutput3(
 );
 
 always @(posedge clock) begin
-	if(prevNumber != number) begin
+	if(prevNumber != number && !start && !started) begin
 		start <= 1;
+		started <= 1;
 	end else if(start) begin
 		start <= 0;
 	end else if(done) begin
+		started <= 0;
 		onescomplete <= ones;
 		tenscomplete <= tens;
 		hundredscomplete <= hundreds;
 		thousandscomplete <= thousands;
+		prevNumber <= number;
 	end
 end
 
@@ -85,14 +89,14 @@ module numbersplit(
 	output [3:0] hundredsOut,
 	output [3:0] thousandsOut
 );
-	reg   [13:0] counter;
-	reg   [3:0]  ones;
-	reg   [3:0]  tens;
-	reg   [3:0]  hundreds;
-	reg   [3:0]  thousands;
-	reg done;
+	reg   [13:0] counter = 0;
+	reg   [3:0]  ones = 0;
+	reg   [3:0]  tens = 0;
+	reg   [3:0]  hundreds = 0;
+	reg   [3:0]  thousands = 0;
+	reg done = 0;
 	assign doneOut = done;
-	assign onesOut = ones;
+	assign onesOut = ones - 1;
 	assign tensOut = tens;
 	assign hundredsOut = hundreds;
 	assign thousandsOut = thousands;
@@ -130,25 +134,25 @@ assign segOutput = seg;
 
 always @(posedge clock) begin
 	if(number == 0) begin
-		seg <= 7'h3F;
+		seg <= ~(7'h3F);
 	end else if(number == 1) begin
-		seg <= 7'h06;
+		seg <= ~(7'h06);
 	end else if(number == 2) begin
-		seg <= 7'h5B;
+		seg <= ~(7'h5B);
 	end else if(number == 3) begin
-		seg <= 7'h4F;
+		seg <= ~(7'h4F);
 	end else if(number == 4) begin
-		seg <= 7'h66;
+		seg <= ~(7'h66);
 	end else if(number == 5) begin
-		seg <= 7'h6D;
+		seg <= ~(7'h6D);
 	end else if(number == 6) begin
-		seg <= 7'h7D;
+		seg <= ~(7'h7D);
 	end else if(number == 7) begin
-		seg <= 7'h07;
+		seg <= ~(7'h07);
 	end else if(number == 8) begin
-		seg <= 7'h7F;
+		seg <= ~(7'h7F);
 	end else if(number == 9) begin
-		seg <= 7'h67;
+		seg <= ~(7'h67);
 	end
 end
 

@@ -7,206 +7,318 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/FPGA_MiniProject/simulation
-vcolor
-Z1 !s110 1555961996
+Z0 dC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/simulation
+vADA
+Z1 !s110 1556109765
 !i10b 1
-!s100 UgFXklUen`XF8mSd^ThHE0
-I7De65lNTh0giCm:hkT3e]2
+!s100 l?`4^5g5Cf7>:?DVLBOHf1
+I`n]G2Hz:S8Z@?;Mh7;gC30
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1555954745
-Z4 8D:/FPGA_MiniProject/VGA_IP.v
-Z5 FD:/FPGA_MiniProject/VGA_IP.v
-L0 91
-Z6 OV;L;10.5b;63
+Z3 w1556096369
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v
+L0 1
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1555961996.000000
-Z8 !s107 D:/FPGA_MiniProject/VGA_IP.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGA_IP.v|
+Z5 !s108 1556109765.000000
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v|
 !i113 1
-Z10 o-vlog01compat -work work
-Z11 !s92 -vlog01compat -work work +incdir+D:/FPGA_MiniProject
-Z12 tCvgOpt 0
-vFPGA_MiniProject
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject
+Z8 tCvgOpt 0
+n@a@d@a
+valtera_up_avalon_adv_adc
 R1
 !i10b 1
-!s100 z:nhe06GYSI>0Oc;5S7b`2
-IQ9b6_EZOg9G`T1mPKzP;O0
-R2
-R0
-w1555955077
-8D:/FPGA_MiniProject/FPGA_MiniProject.v
-FD:/FPGA_MiniProject/FPGA_MiniProject.v
-L0 7
-R6
-r1
-!s85 0
-31
-R7
-!s107 D:/FPGA_MiniProject/FPGA_MiniProject.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/FPGA_MiniProject.v|
-!i113 1
-R10
-R11
-R12
-n@f@p@g@a_@mini@project
-vgridandwave
-R1
-!i10b 1
-!s100 `h3:5Qz0:z>Xo89;NjH`N1
-IVY2K[Bf7[5a:_S;<5bhLe3
+!s100 Fj4=HVHERR26f]F5nnoNa3
+IPZ<;>k00>[k5J7C4CM6ON2
 R2
 R0
 R3
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v
+L0 23
 R4
-R5
-L0 115
-R6
 r1
 !s85 0
 31
+R5
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v|
+!i113 1
+R6
 R7
 R8
-R9
+vcolor
+R1
+!i10b 1
+!s100 UgFXklUen`XF8mSd^ThHE0
+I[iciS1Xlj?:]Q5mz:KiZO2
+R2
+R0
+Z9 w1556096370
+Z10 8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v
+Z11 FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v
+L0 91
+R4
+r1
+!s85 0
+31
+R5
+Z12 !s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v|
 !i113 1
+R6
+R7
+R8
+vFPGA_MiniProject
+R1
+!i10b 1
+!s100 ?ITfzFZ<3:99MG@?BbQaW2
+IcY^X^N2HO=Yb<3:7M9WSa0
+R2
+R0
+w1556108454
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+L0 7
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v|
+!i113 1
+R6
+R7
+R8
+n@f@p@g@a_@mini@project
+vgenerateSevenSegOutput
+Z14 !s110 1556109766
+!i10b 1
+!s100 zgldNZ1B@QP50Lmm4<?So1
+IWAMz9[jh?RiUA<2F309Gn0
+R2
+R0
+Z15 w1556109756
+Z16 8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+Z17 FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+L0 125
+R4
+r1
+!s85 0
+31
+R5
+Z18 !s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v|
+!i113 1
+R6
+R7
+R8
+ngenerate@seven@seg@output
+vgridandwave
+R1
+!i10b 1
+!s100 3=WiR^Ko;mC4Q^]^@RF]I2
+IHd3VG8LdIFjVnHK6b<oA;3
+R2
+R0
+R9
 R10
 R11
+L0 115
+R4
+r1
+!s85 0
+31
+R5
 R12
+R13
+!i113 1
+R6
+R7
+R8
 vhsync
 R1
 !i10b 1
 !s100 gCh=3`7K_le^:bZ=f3M:`3
-ICGN]@BfgBzb33Q]QngEP^2
+I5T<8a7m:]J0ZA_Dfk18AR1
 R2
 R0
-R3
-R4
-R5
+R9
+R10
+R11
 L0 38
-R6
+R4
 r1
 !s85 0
 31
+R5
+R12
+R13
+!i113 1
+R6
 R7
 R8
-R9
+vnumbersplit
+R14
+!i10b 1
+!s100 SAY4zzz?:7oU8h=9m6R^M1
+I^d3GL;>9@0L4Z@YQbdlbP2
+R2
+R0
+R15
+R16
+R17
+L0 82
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
 !i113 1
-R10
-R11
-R12
+R6
+R7
+R8
 vSample
 R1
 !i10b 1
-!s100 [JEP8lm8doEU5;:ZY=Ccn3
-IQ[KcR?P;>a4R9O6iZ69:g2
+!s100 4Qm;MUNDZRVf:nKJL7M`;0
+IiAVJd>JYOm8b7Lej]iWmB0
 R2
 R0
-w1555961960
-8D:/FPGA_MiniProject/Sample_IP.v
-FD:/FPGA_MiniProject/Sample_IP.v
+R3
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
 L0 3
-R6
+R4
 r1
 !s85 0
 31
-R7
-!s107 D:/FPGA_MiniProject/Sample_IP.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/Sample_IP.v|
+R5
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v|
 !i113 1
-R10
-R11
-R12
+R6
+R7
+R8
 n@sample
+vsevenseg
+R14
+!i10b 1
+!s100 TZQR<_4b3G4YC56a9e3cc3
+Ik`[:^SXCNaD@5R=7XiPje3
+R2
+R0
+R15
+R16
+R17
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
+!i113 1
+R6
+R7
+R8
 vsine_wave_gen
 R1
 !i10b 1
-!s100 bUB6hSRmDgC=BDZJnQHF62
-IzBDgaB>OTRPC;ZO5=_CSB0
+!s100 SLzno3m6?Ig0B@`Gfd4:52
+I=cPC?FD30j205Bi=9fz=k1
 R2
 R0
-w1555960789
-8D:/FPGA_MiniProject/sineGen.v
-FD:/FPGA_MiniProject/sineGen.v
+R9
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v
 L0 4
-R6
+R4
 r1
 !s85 0
 31
-R7
-!s107 D:/FPGA_MiniProject/sineGen.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/sineGen.v|
+R5
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v|
 !i113 1
-R10
-R11
-R12
+R6
+R7
+R8
 vVGA_IP_Top
 R1
 !i10b 1
-!s100 Cko3In?aMeYAmnzTNE]:G1
-I^hVFV_Z@Jdg^ZXSAB:b2V2
+!s100 LJZ@^d`aNb[T3lJ4d`K5Z1
+I3Ugoka:=b:Meo?@Sl4AVD3
 R2
 R0
-w1555954986
-8D:/FPGA_MiniProject/VGA_IP_Top.v
-FD:/FPGA_MiniProject/VGA_IP_Top.v
+R9
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
 L0 2
-R6
+R4
 r1
 !s85 0
 31
-R7
-!s107 D:/FPGA_MiniProject/VGA_IP_Top.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGA_IP_Top.v|
+R5
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v|
 !i113 1
-R10
-R11
-R12
+R6
+R7
+R8
 n@v@g@a_@i@p_@top
 vVGATest_tb
-R1
+R14
 !i10b 1
 !s100 1^T>VIcAgL`<:cQl]S@FK2
-IW`4EN_9DnHgckQQ<e`>;E3
+IRTDh[AC:NPf2Jzoc^bDDN3
 R2
 R0
-w1555953319
-8D:/FPGA_MiniProject/VGATB.v
-FD:/FPGA_MiniProject/VGATB.v
+w1556108328
+8C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v
+FC:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v
 L0 6
-R6
+R4
 r1
 !s85 0
 31
-R7
-!s107 D:/FPGA_MiniProject/VGATB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_MiniProject|D:/FPGA_MiniProject/VGATB.v|
+!s108 1556109766.000000
+!s107 C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject|C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v|
 !i113 1
-R10
-R11
-R12
+R6
+R7
+R8
 n@v@g@a@test_tb
 vvsync
 R1
 !i10b 1
 !s100 D`fkEKW>?keUm8L^;?E=d0
-I1[ochZ3od5hI`L0DUMn`32
+I:S=;OC_n<:mFbm?FN<`kF2
 R2
 R0
-R3
-R4
-R5
+R9
+R10
+R11
 L0 1
-R6
+R4
 r1
 !s85 0
 31
+R5
+R12
+R13
+!i113 1
+R6
 R7
 R8
-R9
-!i113 1
-R10
-R11
-R12

@@ -61,6 +61,15 @@ assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave samp
 wire slClock = slowerClock[9];
 assign ADDAClock = slClock;
 wire [11:0] adda1;
+//SCOPE CHANNELS
+wire [11:0] CH0;
+wire [11:0] CH1;
+wire [11:0] CH2;
+wire [11:0] CH3;
+wire [11:0] CH4;
+wire [11:0] CH5;
+wire [11:0] CH6;
+wire [11:0] CH7;
 
 sine_wave_gen testWave(
 	.Clk (slowerClock[2]),
@@ -123,22 +132,15 @@ ADDA adda(
 sevenseg sevSeg(
 .clock (clock),
 .seg_En (4'b1111),
-.number (1234),
+.number (4567),
 .decimalPoint_EN (0),
 .seg0 (seg0),
 .seg1 (seg1),
 .seg2 (seg2),
-.seg3 (seg3),
+.seg3 (seg3)
 );
 
-wire [11:0] CH0;
-wire [11:0] CH1;
-wire [11:0] CH2;
-wire [11:0] CH3;
-wire [11:0] CH4;
-wire [11:0] CH5;
-wire [11:0] CH6;
-wire [11:0] CH7;
+
 
 ADA ada(
 	.CLOCK(slowerClock[3]),

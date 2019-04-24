@@ -1,5 +1,5 @@
-# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
-# Reading D:/FPGA_MiniProject/simulation/modelsim.tcl
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/simulation/modelsim.tcl
 # do FPGA_MiniProject_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -8,23 +8,33 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/VGA_IP_Top.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/VGA_IP_Top.v 
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/altera_up_avalon_adv_adc.v 
+# -- Compiling module altera_up_avalon_adv_adc
+# 
+# Top level modules:
+# 	altera_up_avalon_adv_adc
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v 
 # -- Compiling module VGA_IP_Top
 # 
 # Top level modules:
 # 	VGA_IP_Top
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/VGA_IP.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/VGA_IP.v 
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP.v 
 # -- Compiling module vsync
 # -- Compiling module hsync
 # -- Compiling module color
@@ -35,53 +45,75 @@
 # 	hsync
 # 	color
 # 	gridandwave
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/FPGA_MiniProject.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/FPGA_MiniProject.v 
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v 
 # -- Compiling module FPGA_MiniProject
 # 
 # Top level modules:
 # 	FPGA_MiniProject
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/sineGen.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/sineGen.v 
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v 
 # -- Compiling module sine_wave_gen
 # 
 # Top level modules:
 # 	sine_wave_gen
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/Sample_IP.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/Sample_IP.v 
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v 
 # -- Compiling module Sample
 # 
 # Top level modules:
 # 	Sample
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v 
+# -- Compiling module ADA
+# 
+# Top level modules:
+# 	ADA
+# End time: 13:42:45 on Apr 24,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:45 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v 
+# -- Compiling module sevenseg
+# -- Compiling module numbersplit
+# -- Compiling module generateSevenSegOutput
+# 
+# Top level modules:
+# 	sevenseg
+# End time: 13:42:46 on Apr 24,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+D:/FPGA_MiniProject {D:/FPGA_MiniProject/VGATB.v}
+# vlog -vlog01compat -work work +incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject {C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:39:56 on Apr 22,2019
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA_MiniProject" D:/FPGA_MiniProject/VGATB.v 
+# Start time: 13:42:46 on Apr 24,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject" C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v 
 # -- Compiling module VGATest_tb
 # 
 # Top level modules:
 # 	VGATest_tb
-# End time: 20:39:56 on Apr 22,2019, Elapsed time: 0:00:00
+# End time: 13:42:46 on Apr 24,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  VGATest_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" VGATest_tb 
-# Start time: 20:39:57 on Apr 22,2019
+# Start time: 13:42:46 on Apr 24,2019
 # Loading work.VGATest_tb
 # Loading work.FPGA_MiniProject
 # Loading work.sine_wave_gen
@@ -90,14 +122,53 @@
 # Loading work.vsync
 # Loading work.gridandwave
 # Loading work.Sample
-# ** Warning: (vsim-3015) D:/FPGA_MiniProject/VGATB.v(19): [PCDPC] - Port size (8) does not match connection size (1) for port 'R'. The port definition is at: D:/FPGA_MiniProject/FPGA_MiniProject.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut File: D:/FPGA_MiniProject/FPGA_MiniProject.v
-# ** Warning: (vsim-3015) D:/FPGA_MiniProject/FPGA_MiniProject.v(37): [PCDPC] - Port size (14) does not match connection size (1) for port 'waveSigIn2'. The port definition is at: D:/FPGA_MiniProject/VGA_IP_Top.v(11).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: D:/FPGA_MiniProject/VGA_IP_Top.v
-# ** Warning: (vsim-3015) D:/FPGA_MiniProject/FPGA_MiniProject.v(58): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: D:/FPGA_MiniProject/Sample_IP.v(7).
-#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: D:/FPGA_MiniProject/Sample_IP.v
+# Loading work.sevenseg
+# Loading work.numbersplit
+# Loading work.generateSevenSegOutput
+# Loading work.ADA
+# Loading work.altera_up_avalon_adv_adc
+# ** Warning: (vsim-3017) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Too few port connections. Expected 24, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [PCDPC] - Port size (8) does not match connection size (1) for port 'R'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(24).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'clockTest'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADCin'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'OutOfRange'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_CS_N'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADDAClock'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ResampleLED'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg0'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg1'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg2'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg3'.
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(74): [PCDPC] - Port size (14) does not match connection size (12) for port 'data_out'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/testWave File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(79): [PCDPC] - Port size (14) does not match connection size (12) for port 'waveSigIn1'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(79): [PCDPC] - Port size (14) does not match connection size (12) for port 'waveSigIn2'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
+# ** Warning: (vsim-3017) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [PCDPC] - Port size (12) does not match connection size (11) for port 'screenX'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [TFMPC] - Missing connection for port 'resample'.
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(111): [PCDPC] - Port size (12) does not match connection size (11) for port 'screenX'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample2 File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(111): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample2 File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(132): [PCDPC] - Port size (14) does not match connection size (32) for port 'number'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sevSeg File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(132): [PCDPC] - Port size (6) does not match connection size (32) for port 'decimalPoint_EN'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sevSeg File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(145): [PCDPC] - Port size (1) does not match connection size (32) for port 'RESET'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/ada File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v
 # 
-# do D:/FPGA_MiniProject/simulation/load_sim.tcl
+# do C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/simulation/load_sim.tcl
 #
 # NativeLink Simulation Initialisation Script
 # ===========================================
@@ -161,7 +232,7 @@
 # 
 # We normalise the filename to prevent issues with spaces in the filename
 # set waveFile [file normalize "./wave.do"]
-# D:/FPGA_MiniProject/simulation/wave.do
+# C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/simulation/wave.do
 # 
 # if { [file exists $waveFile] } {
 #     #If the saved file exists, load it
@@ -175,9 +246,9 @@
 # add wave -noupdate -radix unsigned /VGATest_tb/CLOCK
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: el15asjb  Hostname: EENTPC147  ProcessID: 12168
-#           Attempting to use alternate WLF file "./wlftbe4mzd".
+#           Attempting to use alternate WLF file "./wlftaiat9x".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftbe4mzd
+#           Using alternate file: ./wlftaiat9x
 # add wave -noupdate -radix unsigned /VGATest_tb/switch0
 # add wave -noupdate -radix unsigned /VGATest_tb/switch1
 # add wave -noupdate -radix unsigned /VGATest_tb/switch2
@@ -247,4 +318,46 @@
 # 
 # wave zoom full
 # 0 ps
-# 63441703500 ps
+# 22432336500 ps
+add wave -position end sim:/VGATest_tb/dut/sevSeg/*
+restart; run 100ms
+# ** Warning: (vsim-3017) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Too few port connections. Expected 24, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [PCDPC] - Port size (8) does not match connection size (1) for port 'R'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(24).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'clockTest'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADCin'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'OutOfRange'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_CS_N'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_SCLK'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_DIN'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADC_DOUT'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ADDAClock'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'ResampleLED'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg0'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg1'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg2'.
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGATB.v(19): [TFMPC] - Missing connection for port 'seg3'.
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(74): [PCDPC] - Port size (14) does not match connection size (12) for port 'data_out'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/testWave File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/sineGen.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(79): [PCDPC] - Port size (14) does not match connection size (12) for port 'waveSigIn1'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(79): [PCDPC] - Port size (14) does not match connection size (12) for port 'waveSigIn2'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/VGA File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/VGA_IP_Top.v
+# ** Warning: (vsim-3017) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [PCDPC] - Port size (12) does not match connection size (11) for port 'screenX'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3722) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(102): [TFMPC] - Missing connection for port 'resample'.
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(111): [PCDPC] - Port size (12) does not match connection size (11) for port 'screenX'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample2 File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(111): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sample2 File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/Sample_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(132): [PCDPC] - Port size (14) does not match connection size (32) for port 'number'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sevSeg File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(132): [PCDPC] - Port size (6) does not match connection size (32) for port 'decimalPoint_EN'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/sevSeg File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/SevenSeg_IP.v
+# ** Warning: (vsim-3015) C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/FPGA_MiniProject.v(145): [PCDPC] - Port size (1) does not match connection size (32) for port 'RESET'. The port definition is at: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /VGATest_tb/dut/ada File: C:/FPGA/DE1_SoC_SCOPE/FPGA_MiniProject/ADA_Generated.v

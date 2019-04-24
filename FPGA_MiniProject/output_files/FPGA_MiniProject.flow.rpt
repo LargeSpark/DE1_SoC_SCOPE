@@ -1,5 +1,5 @@
 Flow report for FPGA_MiniProject
-Wed Apr 24 12:12:42 2019
+Wed Apr 24 14:11:22 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 24 12:12:31 2019                    ;
+; Flow Status                     ; Successful - Wed Apr 24 14:11:22 2019                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; FPGA_MiniProject                                         ;
 ; Top-level Entity Name           ; FPGA_MiniProject                                         ;
 ; Family                          ; Cyclone V                                                ;
 ; Device                          ; 5CSEMA5F31C6                                             ;
 ; Timing Models                   ; Final                                                    ;
-; Logic utilization (in ALMs)     ; 208 / 32,070 ( < 1 % )                                   ;
-; Total registers                 ; 292                                                      ;
+; Logic utilization (in ALMs)     ; 253 / 32,070 ( < 1 % )                                   ;
+; Total registers                 ; 387                                                      ;
 ; Total pins                      ; 84 / 457 ( 18 % )                                        ;
 ; Total virtual pins              ; 0                                                        ;
 ; Total block memory bits         ; 18,423 / 4,065,280 ( < 1 % )                             ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/24/2019 12:06:31 ;
+; Start date & time ; 04/24/2019 14:09:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_MiniProject    ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                        ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                  ; 70465358162119.155610399110692         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                  ; 70465358162119.155611138711116         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME               ; NA                                     ; --            ; --          ; VGATest_tb     ;
 ; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/load_sim.tcl                ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; VGATest_tb                             ; --            ; --          ; eda_simulation ;
@@ -106,11 +106,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 703 MB              ; 00:00:26                           ;
-; Fitter                    ; 00:01:04     ; 1.0                     ; 2579 MB             ; 00:01:26                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 698 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.2                     ; 1033 MB             ; 00:00:10                           ;
-; Total                     ; 00:01:37     ; --                      ; --                  ; 00:02:09                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 709 MB              ; 00:00:24                           ;
+; Fitter                    ; 00:00:58     ; 1.0                     ; 2572 MB             ; 00:01:30                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 703 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.3                     ; 1029 MB             ; 00:00:10                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 618 MB              ; 00:00:02                           ;
+; Total                     ; 00:01:28     ; --                      ; --                  ; 00:02:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,6 +124,7 @@ refer to the applicable agreement for further details.
 ; Fitter                    ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
 ; Assembler                 ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -130,9 +132,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
-quartus_fit --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
+quartus_fit --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 quartus_asm --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 quartus_sta FPGA_MiniProject -c FPGA_MiniProject
+quartus_eda --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 
 
 
