@@ -12,7 +12,7 @@ module VGATest_tb;
 	reg		switch3 = 0;	//Signal 2 En
 	wire		vga_hsync;
 	wire		vga_vsync;
-	wire [7:0]		G;
+	wire  [7:0]		G;
 	wire	[7:0]		B;
 	wire				VClock;
 	
