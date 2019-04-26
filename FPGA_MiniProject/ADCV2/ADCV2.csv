@@ -1,0 +1,19 @@
+# system info ADCV2 on 2019.04.26.11:51:22
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1556275879
+#
+#
+# Files generated for ADCV2 on 2019.04.26.11:51:22
+files:
+filepath,kind,attributes,module,is_top
+simulation/ADCV2.v,VERILOG,,ADCV2,true
+simulation/submodules/altera_up_avalon_adv_adc.v,VERILOG,,ADCV2_adc_mega_0,false
+simulation/submodules/ADCV2_adc_mega_0.v,VERILOG,,ADCV2_adc_mega_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ADCV2.adc_mega_0,ADCV2_adc_mega_0

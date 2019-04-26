@@ -252,7 +252,7 @@ wire [11:0] CH5;
 wire [11:0] CH6;
 wire [11:0] CH7;
 sine_wave_gen testWave(
-	.Clk (slowerClock[2]),
+	.Clk (slowerClock[6]),
 	.data_out (testwave)
 	);
 
@@ -280,7 +280,7 @@ VGA_IP_Top VGA(
 );
 
 Sample sample(
-	.clock (clock),
+	.clock (slowerClock[3]),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -289,7 +289,7 @@ Sample sample(
 
 //test adc
 Sample sample2(
-	.clock (clock),
+	.clock (slowerClock[3]),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),
@@ -322,7 +322,7 @@ sevenseg sevSeg(
 
 
 
-ADA ada(
+/*ADA ada(
 	.CLOCK(slowerClock[3]),
 	.RESET(0),
 	.ADC_CS_N(ADC_CS_N),
@@ -337,7 +337,31 @@ ADA ada(
 	.CH5 (CH5), 
 	.CH6 (CH6), 
 	.CH7 (CH7)
-);
+);*/
+
+	ADCV2_adc_mega_0 #(
+		.board          ("DE1-SoC"),
+		.board_rev      ("Autodetect"),
+		.tsclk          (13),
+		.numch          (7),
+		.max10pllmultby (1),
+		.max10plldivby  (1)
+	) adc_mega_0 (
+		.CLOCK    (slowerClock[2]),    //                clk.clk
+		.RESET    (0),    //              reset.reset
+		.CH0      (CH0),      //           readings.export
+		.CH1      (CH1),      //                   .export
+		.CH2      (CH2),      //                   .export
+		.CH3      (CH3),      //                   .export
+		.CH4      (CH4),      //                   .export
+		.CH5      (CH5),      //                   .export
+		.CH6      (CH6),      //                   .export
+		.CH7      (CH7),      //                   .export
+		.ADC_SCLK (ADC_SCLK), // external_interface.export
+		.ADC_CS_N (ADC_CS_N), //                   .export
+		.ADC_DOUT (ADC_DOUT), //                   .export
+		.ADC_DIN  (ADC_DIN)   //                   .export
+	);
 
 always @(posedge clock) begin
 	slowerClock <= slowerClock + 1;
