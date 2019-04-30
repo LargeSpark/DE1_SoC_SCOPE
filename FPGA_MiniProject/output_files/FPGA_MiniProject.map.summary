@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Apr 24 15:00:42 2019
+Analysis & Synthesis Status : Successful - Fri Apr 26 12:02:51 2019
 Quartus Prime Version : 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 Revision Name : FPGA_MiniProject
 Top-level Entity Name : FPGA_MiniProject
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 415
+Total registers : 431
 Total pins : 91
 Total virtual pins : 0
 Total block memory bits : 19,224
