@@ -282,6 +282,7 @@ VGA_IP_Top VGA(
 Sample sample(
 	.readClock (clock),
 	.writeClock (slowerClock[3]),
+	.hold ( ),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -292,6 +293,7 @@ Sample sample(
 Sample sample2(
 	.readClock (clock),
 	.writeClock (slowerClock[3]),
+	.hold ( ),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),

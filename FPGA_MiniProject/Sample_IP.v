@@ -6,6 +6,7 @@ module Sample(
 	input [11:0] data,
 	input [11:0] screenX,
 	input reset,
+	input hold,
 	output [11:0] screenData,
 	output resample
 );
@@ -41,19 +42,21 @@ end
 always @(posedge writeClock) begin
 //find highest point after 
 	if(data == /*triggerHighPoint*/0 && samplecounter > 800) begin
-	samplecounter <= 0;
-	triggercounter <= 0;
-	resamplereg = ~resamplereg;
+		samplecounter <= 0;
+		triggercounter <= 0;
+		resamplereg = ~resamplereg;
 	//if samplecounter is below 480 then sample
+	end else if(samplecounter < 800 && hold) begin
+		
 	end else if(samplecounter < 800) begin
-	sampleData[samplecounter] <= data;
-	samplecounter <= samplecounter + 1;
-	triggercounter <= triggercounter+1;
+		sampleData[samplecounter] <= data;
+		samplecounter <= samplecounter + 1;
+		triggercounter <= triggercounter+1;
 	end else if (triggercounter > 2000) begin
-	triggercounter <= 0;
+		triggercounter <= 0;
 	end else begin
-	samplecounter <= samplecounter + 1;
-	triggercounter <= triggercounter+1;
+		samplecounter <= samplecounter + 1;
+		triggercounter <= triggercounter+1;
 	end
 end
 
