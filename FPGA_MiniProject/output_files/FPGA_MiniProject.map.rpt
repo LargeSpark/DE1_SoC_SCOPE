@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Tue Apr 30 10:58:13 2019
+Tue Apr 30 12:13:09 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -61,13 +61,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 30 10:58:12 2019                    ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 12:13:09 2019                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; FPGA_MiniProject                                         ;
 ; Top-level Entity Name           ; FPGA_MiniProject                                         ;
 ; Family                          ; Cyclone V                                                ;
 ; Logic utilization (in ALMs)     ; N/A                                                      ;
-; Total registers                 ; 458                                                      ;
+; Total registers                 ; 475                                                      ;
 ; Total pins                      ; 91                                                       ;
 ; Total virtual pins              ; 0                                                        ;
 ; Total block memory bits         ; 19,224                                                   ;
@@ -218,16 +218,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 387         ;
+; Estimate of Logic utilization (ALMs needed) ; 428         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 661         ;
+; Combinational ALUT usage for logic          ; 740         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 102         ;
-;     -- 5 input functions                    ; 130         ;
-;     -- 4 input functions                    ; 82          ;
-;     -- <=3 input functions                  ; 346         ;
+;     -- 6 input functions                    ; 105         ;
+;     -- 5 input functions                    ; 129         ;
+;     -- 4 input functions                    ; 108         ;
+;     -- <=3 input functions                  ; 397         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 458         ;
+; Dedicated logic registers                   ; 475         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 91          ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -236,9 +236,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 184         ;
-; Total fan-out                               ; 4470        ;
-; Average fan-out                             ; 3.37        ;
+; Maximum fan-out                             ; 190         ;
+; Total fan-out                               ; 4770        ;
+; Average fan-out                             ; 3.36        ;
 +---------------------------------------------+-------------+
 
 
@@ -247,7 +247,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name              ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |FPGA_MiniProject                         ; 661 (171)           ; 458 (102)                 ; 19224             ; 0          ; 91   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
+; |FPGA_MiniProject                         ; 740 (250)           ; 475 (119)                 ; 19224             ; 0          ; 91   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
 ;    |ADCV2_adc_mega_0:adc_mega_0|          ; 96 (1)              ; 94 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0                                               ; ADCV2_adc_mega_0         ; work         ;
 ;       |altera_up_avalon_adv_adc:ADC_CTRL| ; 95 (95)             ; 81 (81)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL             ; altera_up_avalon_adv_adc ; work         ;
 ;    |Sample:sample2|                       ; 42 (42)             ; 37 (37)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                                                            ; Sample                   ; work         ;
@@ -311,7 +311,9 @@ Encoding Type:  One-Hot
 ; ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~2 ; Lost fanout                                           ;
 ; ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~3 ; Lost fanout                                           ;
 ; ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~4 ; Lost fanout                                           ;
-; Total Number of Removed Registers = 40                                    ;                                                       ;
+; sampleAdjust2[5]                                                          ; Lost fanout                                           ;
+; sampleAdjust1[5]                                                          ; Lost fanout                                           ;
+; Total Number of Removed Registers = 42                                    ;                                                       ;
 +---------------------------------------------------------------------------+-------------------------------------------------------+
 
 
@@ -320,12 +322,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 458   ;
+; Total registers                              ; 475   ;
 ; Number of registers using Synchronous Clear  ; 165   ;
 ; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 250   ;
+; Number of registers using Clock Enable       ; 260   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -364,34 +366,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[3]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[3]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[2]        ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[1]                                                 ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[3]                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY1[2]                                                                     ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|numbersplit:NS|counter[2]                                       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[11]                                            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[4]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[4]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[0]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[0]        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[11]                                                ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[5]                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY1[10]                                                                    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|numbersplit:NS|counter[1]                                       ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[13]                                            ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[2]  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX2[0]                                                                     ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[7]                                                ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[6]                                                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX2[5]                                                                     ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[3]                                                ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[10]                                                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[10] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX1[0]                                                                     ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY2[10]                                                                    ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput0|seg[3]                        ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput1|seg[0]                        ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput2|seg[5]                        ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput3|seg[5]                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY1[4]                                                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |FPGA_MiniProject|cursorX2[4]                                                                     ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY2[2]                                                                     ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX1[7]                                                                     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY2[4]                                                                     ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput0|seg[1]                        ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput1|seg[3]                        ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput2|seg[3]                        ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput3|seg[1]                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY1[3]                                                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |FPGA_MiniProject|cursorX2[6]                                                                     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY2[6]                                                                     ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                     ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight0                                                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight0                                                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add2                                                                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add0                                                                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add4                                                                            ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x                                                ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                     ;
@@ -636,25 +638,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "Sample:sample2"    ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; screenX[11] ; Input ; Info     ; Stuck at GND ;
-; reset       ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sample:sample2"                                                                                                                                                                        ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; screenX   ; Input ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                ;
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Sample:sample"                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; screenX[11] ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; reset       ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; resample    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sample:sample"                                                                                                                                                                          ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; screenX   ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; resample  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -682,35 +686,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 458                         ;
-;     ENA               ; 170                         ;
+; arriav_ff             ; 475                         ;
+;     ENA               ; 180                         ;
 ;     ENA SCLR          ; 80                          ;
 ;     SCLR              ; 85                          ;
 ;     SLD               ; 13                          ;
-;     plain             ; 110                         ;
-; arriav_lcell_comb     ; 662                         ;
-;     arith             ; 296                         ;
+;     plain             ; 117                         ;
+; arriav_lcell_comb     ; 741                         ;
+;     arith             ; 312                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 206                         ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 8                           ;
+;         1 data inputs ; 214                         ;
+;         2 data inputs ; 18                          ;
+;         4 data inputs ; 28                          ;
 ;         5 data inputs ; 50                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 365                         ;
+;     normal            ; 428                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 26                          ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 42                          ;
-;         4 data inputs ; 74                          ;
-;         5 data inputs ; 80                          ;
-;         6 data inputs ; 102                         ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 80                          ;
+;         5 data inputs ; 79                          ;
+;         6 data inputs ; 105                         ;
 ; boundary_port         ; 91                          ;
 ; stratixv_ram_block    ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.80                        ;
-; Average LUT depth     ; 2.73                        ;
+; Average LUT depth     ; 2.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -729,7 +732,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Tue Apr 30 10:57:59 2019
+    Info: Processing started: Tue Apr 30 12:12:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -760,42 +763,45 @@ Info (12021): Found 3 design units, including 3 entities, in source file sevense
     Info (12023): Found entity 3: generateSevenSegOutput File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 125
 Warning (10236): Verilog HDL Implicit Net warning at VGATB.v(28): created implicit net for "R" File: C:/FPGA/FPGA_MiniProject/VGATB.v Line: 28
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at FPGA_MiniProject.v(67): object "buttPush1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 67
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(50): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 50
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(51): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 51
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(52): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 52
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(53): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 53
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(103): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 103
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(107): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 107
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(111): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 111
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(115): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 115
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(120): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 120
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(124): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 124
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(128): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 128
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(132): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 132
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(137): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 137
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(109): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 109
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(113): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 113
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(117): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 117
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(121): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 121
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(126): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 126
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(130): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 130
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(134): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 134
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(138): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 138
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(139): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 139
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(143): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 143
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(144): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 144
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(145): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 145
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(149): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 149
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(150): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 150
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(151): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 151
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(152): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 152
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(156): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 156
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(157): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 157
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(158): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 158
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(174): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 174
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(178): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 178
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(183): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 183
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(187): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 187
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(162): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 162
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(163): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 163
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(164): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 164
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(180): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 180
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(184): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 184
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(189): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 189
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(193): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 193
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(206): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 206
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(211): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 211
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(216): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 216
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(221): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 221
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(226): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 226
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(231): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 231
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(236): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 236
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(401): truncated value with size 32 to match size of target (20) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 401
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(263): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 263
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(268): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 268
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(273): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 273
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(278): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 278
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(411): truncated value with size 32 to match size of target (26) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 411
 Warning (10034): Output port "ADDAClock" at FPGA_MiniProject.v(38) has no driver File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
-Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 287
+Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 297
 Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 32
 Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 33
 Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 34
@@ -814,7 +820,7 @@ Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated valu
 Warning (10030): Net "sine.data_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.waddr_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.we_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
-Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 310
+Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 320
 Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: C:/FPGA/FPGA_MiniProject/VGA_IP_Top.v Line: 32
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 53
 Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: C:/FPGA/FPGA_MiniProject/VGA_IP_Top.v Line: 38
@@ -827,7 +833,7 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(290): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 293
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(294): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 294
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(295): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 295
-Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 320
+Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 330
 Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "outputcounter" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 18
 Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(20): object "randomreg1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 20
 Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(21): object "randomreg2" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 21
@@ -835,7 +841,7 @@ Warning (10230): Verilog HDL assignment warning at Sample_IP.v(53): truncated va
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 54
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(58): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 58
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(59): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 59
-Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:sevSeg" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 355
+Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:sevSeg" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 365
 Info (12128): Elaborating entity "numbersplit" for hierarchy "sevenseg:sevSeg|numbersplit:NS" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 36
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(99): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 99
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(110): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 110
@@ -844,8 +850,11 @@ Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(113): truncated
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(115): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 115
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(117): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 117
 Info (12128): Elaborating entity "generateSevenSegOutput" for hierarchy "sevenseg:sevSeg|generateSevenSegOutput:segoutput0" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 42
-Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 398
+Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 408
 Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL" File: C:/FPGA/FPGA_MiniProject/ADA_Generated.v Line: 58
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer Mux1 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 76
+    Warning (19017): Found clock multiplexer Mux0 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 75
 Warning (276027): Inferred dual-clock RAM node "Sample:sample2|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "Sample:sample|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
@@ -900,17 +909,15 @@ Info (12133): Instantiated megafunction "Sample:sample2|altsyncram:sampleData_rt
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0cj1.tdf
     Info (12023): Found entity 1: altsyncram_0cj1 File: C:/FPGA/FPGA_MiniProject/db/altsyncram_0cj1.tdf Line: 27
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADDAClock" is stuck at GND File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/FPGA/FPGA_MiniProject/output_files/FPGA_MiniProject.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "switch4" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 13
-    Warning (15610): No output dependent on input pin "switch5" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 14
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "switch6" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 15
     Warning (15610): No output dependent on input pin "switch7" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 16
     Warning (15610): No output dependent on input pin "ADCin[0]" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
@@ -928,14 +935,14 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADCin[12]" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
     Warning (15610): No output dependent on input pin "ADCin[13]" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
     Warning (15610): No output dependent on input pin "OutOfRange" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 25
-Info (21057): Implemented 866 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 945 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 31 input pins
     Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 751 logic cells
+    Info (21061): Implemented 830 logic cells
     Info (21064): Implemented 24 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 709 megabytes
-    Info: Processing ended: Tue Apr 30 10:58:13 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 713 megabytes
+    Info: Processing ended: Tue Apr 30 12:13:09 2019
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:26
 

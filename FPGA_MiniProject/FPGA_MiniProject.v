@@ -68,13 +68,19 @@ reg buttPush1 = 0;
 reg hol;
 reg hold1 = 0;
 reg hold2 = 0;
+reg [5:0] sampleAdjust1 = 0;
+reg [5:0] sampleAdjust2 = 0;
+wire sampleWriteClock1;
+wire sampleWriteClock2;
+assign sampleWriteClock1 = slowerClock[sampleAdjust1];
+assign sampleWriteClock2 = slowerClock[sampleAdjust2];
 //Wave wires
 wire [11:0] waveSigIn1;
 wire [11:0] waveSigIn2;
 wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
 //Clocks
-reg [19:0] slowerClock = 0;
+reg [25:0] slowerClock = 0;
 //VGA IP Wires 
 wire [10:0] sX;
 wire [10:0] sY;
@@ -169,39 +175,23 @@ begin
 	testWave1 <= switch0;
 	testWave2 <= switch1;
 		//Move Wave 1 up and down 
-		if (switch2 && !butt3)
+		if (switch2 && !butt3 && !switch5)
 		begin
 				offset1 <= offset1 + moveSize;		
 		end	
-		else if (switch2 && !butt2)
+		else if (switch2 && !butt2 && !switch5)
 		begin
 				offset1 <= offset1 - moveSize;		
 		end	
 		//Move Wave 2 up and down 
-		else if (switch2 && !butt1)
+		else if (switch2 && !butt1 && !switch5)
 		begin
 				offset2 <= offset2 + moveSize;		
 		end	
-		else if (switch2 && !butt0)
+		else if (switch2 && !butt0 && !switch5)
 		begin
 				offset2 <= offset2 - moveSize;		
-		end		
-		/*else if (switch3 && !butt0)
-		begin
-			shiftDown1 = shiftDown1 + 1;
-		end
-		else if (switch3 && !butt1)
-		begin
-			shiftDown1 = shiftDown1 - 1;
-		end
-		else if (switch3 && !butt2)
-		begin
-			shiftDown2 = shiftDown2 + 1;
-		end
-		else if (switch3 && !butt3)
-		begin
-			shiftDown2 = shiftDown2 - 1;
-		end*/	
+		end				
 	end
 end
 
@@ -209,12 +199,7 @@ end
 always @ (posedge slowerClock[19])
 begin
 	if (!switch9 && switch8)
-	begin 
-		/*if (switch3 && !butt3 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown1 = shiftDown1 + 1;			
-		end*/
+	begin
 		if (switch3 && !butt3 && !buttPush)
 		begin
 			buttPush <= 1;
@@ -235,11 +220,6 @@ begin
 			buttPush <= 1;
 			shiftDown2 = shiftDown2 - 1;			
 		end
-		/*else if (switch3 && !butt0) //&& buttPush1)
-		begin
-			buttPush <= 0;
-			shiftDown2 = shiftDown2 - 1;			
-		end*/
 		else if ((butt0 && butt1 && butt2 && butt3) && buttPush) begin
 			buttPush <= 0;
 		end
@@ -250,26 +230,56 @@ always @ (posedge slowerClock[19])
 begin
 	if (!switch9 && switch8)
 	begin 
-		if (!butt3 && !hold1)
+		if (switch4 && !butt3 && !hold1)
 		begin
 			hold1 <= 1;
 			hol  <= hold1;
 		end
-		else if (!butt2 && hold1)
+		else if (switch4 && !butt2 && hold1)
 		begin
 			hold1 <= 0;
 			hol  <= hold1;
 		end
-		else if (!butt1 && !hold2)
+		else if (switch4 && !butt1 && !hold2)
 		begin
 			hold2 <= 1;
 			hol  <= hold2;
 		end
-		else if (!butt0 && !hold2)
+		else if (switch4 && !butt0 && hold2)
 		begin
 			hold2 <= 0;
 			hol  <= hold2;
 		end	
+	end
+end
+// Code for sample adjust
+always @ (posedge slowerClock[19])
+begin
+	if (!switch9 && switch8)
+	begin 
+		if (switch5 && !butt3 && !buttPush1)
+		begin
+			buttPush1 <= 1; 
+			sampleAdjust1 <= sampleAdjust1 + 1;
+		end 
+		else if (switch5 &&  !butt2 && !buttPush1)
+		begin
+		   buttPush1 <= 1;
+			sampleAdjust1 <= sampleAdjust1 - 1;
+		end
+		else if (switch5 &&  !butt1	&& !buttPush1)
+		begin
+			buttPush1 <= 1;
+			sampleAdjust2 <= sampleAdjust2 + 1;
+		end 
+		else if (switch5 &&  !butt0 && !buttPush1)
+		begin
+			buttPush1 <= 1;
+			sampleAdjust2 <= sampleAdjust2 - 1;
+		end
+		else if ((butt0 && butt1 && butt2 && butt3) && buttPush1) begin
+			buttPush1 <= 0;
+		end
 	end
 end
  
@@ -311,7 +321,7 @@ VGA_IP_Top VGA(
 
 Sample sample(
 	.readClock (clock),
-	.writeClock (slowerClock[3]),
+	.writeClock (sampleWriteClock1),
 	.hold (hol ),
 	.data (testwave),
 	.screenX (sX),
@@ -322,7 +332,7 @@ Sample sample(
 //test adc
 Sample sample2(
 	.readClock (clock),
-	.writeClock (slowerClock[3]),
+	.writeClock (sampleWriteClock2),
 	.hold ( hol),
 	.data (CH0),
 	.screenX (sX),
