@@ -183,22 +183,6 @@ begin
 		begin
 				offset2 <= offset2 - moveSize;		
 		end		
-		/*else if (switch3 && !butt0)
-		begin
-			shiftDown1 = shiftDown1 + 1;
-		end
-		else if (switch3 && !butt1)
-		begin
-			shiftDown1 = shiftDown1 - 1;
-		end
-		else if (switch3 && !butt2)
-		begin
-			shiftDown2 = shiftDown2 + 1;
-		end
-		else if (switch3 && !butt3)
-		begin
-			shiftDown2 = shiftDown2 - 1;
-		end*/	
 	end
 end
 
@@ -207,11 +191,6 @@ always @ (posedge slowerClock[19])
 begin
 	if (!switch9 && switch8)
 	begin 
-		/*if (switch3 && !butt3 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown1 = shiftDown1 + 1;			
-		end*/
 		if (switch3 && !butt3 && !buttPush)
 		begin
 			buttPush <= 1;
@@ -232,11 +211,6 @@ begin
 			buttPush <= 1;
 			shiftDown2 = shiftDown2 - 1;			
 		end
-		/*else if (switch3 && !butt0) //&& buttPush1)
-		begin
-			buttPush <= 0;
-			shiftDown2 = shiftDown2 - 1;			
-		end*/
 		else if ((butt0 && butt1 && butt2 && butt3) && buttPush) begin
 			buttPush <= 0;
 		end
