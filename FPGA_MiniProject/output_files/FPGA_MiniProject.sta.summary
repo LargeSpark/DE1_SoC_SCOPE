@@ -3,291 +3,291 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -8.568
-TNS   : -718.251
-
-Type  : Slow 1100mV 85C Model Setup 'slowerClock[2]'
-Slack : -2.893
-TNS   : -136.778
-
-Type  : Slow 1100mV 85C Model Setup 'slowerClock[3]'
-Slack : -2.819
-TNS   : -217.468
+Slack : -6.727
+TNS   : -621.186
 
 Type  : Slow 1100mV 85C Model Setup 'slowerClock[19]'
-Slack : -2.228
-TNS   : -114.161
+Slack : -5.705
+TNS   : -877.477
+
+Type  : Slow 1100mV 85C Model Setup 'slowerClock[6]'
+Slack : -5.479
+TNS   : -882.072
+
+Type  : Slow 1100mV 85C Model Setup 'slowerClock[2]'
+Slack : -5.294
+TNS   : -934.532
 
 Type  : Slow 1100mV 85C Model Setup 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : -1.802
-TNS   : -36.952
+Slack : -1.835
+TNS   : -35.083
 
 Type  : Slow 1100mV 85C Model Setup 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : -1.629
-TNS   : -27.364
+Slack : -1.661
+TNS   : -27.823
 
-Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : -2.708
-TNS   : -70.059
+Type  : Slow 1100mV 85C Model Hold 'slowerClock[2]'
+Slack : -1.531
+TNS   : -41.159
 
 Type  : Slow 1100mV 85C Model Hold 'slowerClock[19]'
-Slack : 0.126
-TNS   : 0.000
+Slack : -1.292
+TNS   : -11.584
+
+Type  : Slow 1100mV 85C Model Hold 'slowerClock[6]'
+Slack : -1.041
+TNS   : -22.265
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : -0.759
+TNS   : -7.760
 
 Type  : Slow 1100mV 85C Model Hold 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : 0.281
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'slowerClock[3]'
-Slack : 0.286
+Slack : 0.279
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.299
+Slack : 0.301
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'slowerClock[2]'
-Slack : 0.432
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -2.636
-TNS   : -609.442
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slowerClock[3]'
-Slack : -0.394
-TNS   : -52.962
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slowerClock[19]'
-Slack : -0.394
-TNS   : -51.389
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slowerClock[2]'
-Slack : -0.394
-TNS   : -28.508
+Slack : -2.174
+TNS   : -409.196
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slowerClock[19]'
+Slack : -2.174
+TNS   : -399.492
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slowerClock[6]'
+Slack : -2.174
+TNS   : -376.137
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -278.736
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
 Slack : -0.394
-TNS   : -10.961
+TNS   : -11.730
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|blank'
 Slack : -0.394
-TNS   : -10.160
+TNS   : -10.680
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -8.519
-TNS   : -669.336
-
-Type  : Slow 1100mV 0C Model Setup 'slowerClock[2]'
-Slack : -2.841
-TNS   : -135.238
-
-Type  : Slow 1100mV 0C Model Setup 'slowerClock[3]'
-Slack : -2.761
-TNS   : -210.486
+Slack : -6.809
+TNS   : -604.708
 
 Type  : Slow 1100mV 0C Model Setup 'slowerClock[19]'
-Slack : -2.257
-TNS   : -117.348
+Slack : -5.521
+TNS   : -841.302
+
+Type  : Slow 1100mV 0C Model Setup 'slowerClock[6]'
+Slack : -5.444
+TNS   : -847.436
+
+Type  : Slow 1100mV 0C Model Setup 'slowerClock[2]'
+Slack : -5.281
+TNS   : -902.310
 
 Type  : Slow 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : -1.781
-TNS   : -36.523
+Slack : -1.838
+TNS   : -34.551
 
 Type  : Slow 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : -1.754
-TNS   : -28.753
+Slack : -1.747
+TNS   : -28.709
 
-Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : -2.921
-TNS   : -79.447
+Type  : Slow 1100mV 0C Model Hold 'slowerClock[2]'
+Slack : -1.503
+TNS   : -42.296
 
 Type  : Slow 1100mV 0C Model Hold 'slowerClock[19]'
-Slack : 0.117
-TNS   : 0.000
+Slack : -1.388
+TNS   : -14.124
+
+Type  : Slow 1100mV 0C Model Hold 'slowerClock[6]'
+Slack : -1.090
+TNS   : -23.674
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : -0.939
+TNS   : -11.987
 
 Type  : Slow 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|blank'
 Slack : 0.282
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'slowerClock[3]'
-Slack : 0.283
-TNS   : 0.000
-
 Type  : Slow 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.293
+Slack : 0.301
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'slowerClock[2]'
-Slack : 0.442
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -2.636
-TNS   : -616.271
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slowerClock[3]'
-Slack : -0.394
-TNS   : -51.809
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slowerClock[19]'
-Slack : -0.394
-TNS   : -49.362
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slowerClock[2]'
-Slack : -0.394
-TNS   : -28.067
+Slack : -2.174
+TNS   : -411.533
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slowerClock[19]'
+Slack : -2.174
+TNS   : -403.169
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slowerClock[6]'
+Slack : -2.174
+TNS   : -377.050
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -284.102
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
 Slack : -0.394
-TNS   : -10.797
+TNS   : -11.927
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|blank'
 Slack : -0.394
-TNS   : -10.200
+TNS   : -10.480
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -4.680
-TNS   : -363.584
-
-Type  : Fast 1100mV 85C Model Setup 'slowerClock[2]'
-Slack : -1.392
-TNS   : -62.761
-
-Type  : Fast 1100mV 85C Model Setup 'slowerClock[3]'
-Slack : -1.358
-TNS   : -99.579
+Slack : -3.876
+TNS   : -330.060
 
 Type  : Fast 1100mV 85C Model Setup 'slowerClock[19]'
-Slack : -0.962
-TNS   : -43.271
+Slack : -3.333
+TNS   : -508.833
+
+Type  : Fast 1100mV 85C Model Setup 'slowerClock[6]'
+Slack : -3.192
+TNS   : -524.238
+
+Type  : Fast 1100mV 85C Model Setup 'slowerClock[2]'
+Slack : -3.052
+TNS   : -538.519
 
 Type  : Fast 1100mV 85C Model Setup 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : -0.703
-TNS   : -14.516
+Slack : -0.799
+TNS   : -13.791
 
 Type  : Fast 1100mV 85C Model Setup 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : -0.604
-TNS   : -9.634
+Slack : -0.621
+TNS   : -10.569
 
-Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : -1.681
-TNS   : -42.124
+Type  : Fast 1100mV 85C Model Hold 'slowerClock[2]'
+Slack : -1.062
+TNS   : -33.117
 
 Type  : Fast 1100mV 85C Model Hold 'slowerClock[19]'
-Slack : 0.022
-TNS   : 0.000
+Slack : -0.997
+TNS   : -17.816
+
+Type  : Fast 1100mV 85C Model Hold 'slowerClock[6]'
+Slack : -0.797
+TNS   : -21.227
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : -0.657
+TNS   : -5.647
 
 Type  : Fast 1100mV 85C Model Hold 'VGA_IP_Top:VGA|hsync:hs|blank'
 Slack : 0.091
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'slowerClock[3]'
-Slack : 0.097
-TNS   : 0.000
-
 Type  : Fast 1100mV 85C Model Hold 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.103
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'slowerClock[2]'
-Slack : 0.160
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -2.636
-TNS   : -517.094
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[19]'
-Slack : -0.076
-TNS   : -2.908
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[3]'
-Slack : 0.008
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.083
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[2]'
-Slack : 0.091
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : 0.158
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -4.290
-TNS   : -286.755
-
-Type  : Fast 1100mV 0C Model Setup 'slowerClock[2]'
-Slack : -1.228
-TNS   : -55.618
-
-Type  : Fast 1100mV 0C Model Setup 'slowerClock[3]'
-Slack : -1.189
-TNS   : -85.553
-
-Type  : Fast 1100mV 0C Model Setup 'slowerClock[19]'
-Slack : -0.887
-TNS   : -38.686
-
-Type  : Fast 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : -0.615
-TNS   : -12.653
-
-Type  : Fast 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : -0.565
-TNS   : -8.501
-
-Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : -1.770
-TNS   : -47.204
-
-Type  : Fast 1100mV 0C Model Hold 'slowerClock[19]'
-Slack : 0.011
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : 0.078
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'slowerClock[3]'
-Slack : 0.081
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.088
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'slowerClock[2]'
-Slack : 0.146
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -2.636
-TNS   : -516.994
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[19]'
-Slack : -0.020
-TNS   : -0.463
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[3]'
-Slack : 0.048
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
-Slack : 0.100
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[2]'
 Slack : 0.104
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[19]'
+Slack : -2.174
+TNS   : -305.435
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[6]'
+Slack : -2.174
+TNS   : -302.711
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slowerClock[2]'
+Slack : -2.174
+TNS   : -297.895
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -202.951
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|blank'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -3.375
+TNS   : -278.745
+
+Type  : Fast 1100mV 0C Model Setup 'slowerClock[19]'
+Slack : -2.896
+TNS   : -432.812
+
+Type  : Fast 1100mV 0C Model Setup 'slowerClock[6]'
+Slack : -2.818
+TNS   : -447.542
+
+Type  : Fast 1100mV 0C Model Setup 'slowerClock[2]'
+Slack : -2.695
+TNS   : -456.469
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|newline'
+Slack : -0.677
+TNS   : -11.892
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_IP_Top:VGA|hsync:hs|blank'
+Slack : -0.579
+TNS   : -9.139
+
+Type  : Fast 1100mV 0C Model Hold 'slowerClock[2]'
+Slack : -1.008
+TNS   : -33.035
+
+Type  : Fast 1100mV 0C Model Hold 'slowerClock[19]'
+Slack : -0.969
+TNS   : -18.223
+
+Type  : Fast 1100mV 0C Model Hold 'slowerClock[6]'
+Slack : -0.776
+TNS   : -20.891
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -0.754
+TNS   : -7.910
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|blank'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_IP_Top:VGA|hsync:hs|newline'
+Slack : 0.090
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[6]'
+Slack : -2.174
+TNS   : -302.167
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[19]'
+Slack : -2.174
+TNS   : -301.054
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slowerClock[2]'
+Slack : -2.174
+TNS   : -296.725
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -202.665
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|newline'
+Slack : 0.057
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_IP_Top:VGA|hsync:hs|blank'
-Slack : 0.158
+Slack : 0.104
 TNS   : 0.000
 
 ------------------------------------------------------------

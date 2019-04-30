@@ -1,5 +1,5 @@
 
-State Machine - |FPGA_MiniProject|ADA:ada|altera_up_avalon_adv_adc:ADC_CTRL|currState
+State Machine - |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
 Name currState.pauseStateNoAddrIncr currState.initCtrlRegState currState.pauseState currState.doneState currState.transState currState.waitState currState.resetState 
 currState.resetState 0 0 0 0 0 0 0 
 currState.waitState 0 0 0 0 0 1 1 
