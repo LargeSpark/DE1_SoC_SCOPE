@@ -280,7 +280,8 @@ VGA_IP_Top VGA(
 );
 
 Sample sample(
-	.clock (slowerClock[3]),
+	.readClock (clock),
+	.writeClock (slowerClock[3]),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -289,7 +290,8 @@ Sample sample(
 
 //test adc
 Sample sample2(
-	.clock (slowerClock[3]),
+	.readClock (clock),
+	.writeClock (slowerClock[3]),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),

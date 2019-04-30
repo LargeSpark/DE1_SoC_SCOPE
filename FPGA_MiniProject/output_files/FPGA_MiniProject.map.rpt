@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Fri Apr 26 12:02:51 2019
+Tue Apr 30 09:48:27 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -18,25 +18,24 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated
- 16. Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated
- 17. Parameter Settings for User Entity Instance: ADCV2_adc_mega_0:adc_mega_0
- 18. Parameter Settings for User Entity Instance: ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
- 19. Parameter Settings for Inferred Entity Instance: Sample:sample2|altsyncram:sampleData_rtl_0
- 20. Parameter Settings for Inferred Entity Instance: Sample:sample|altsyncram:sampleData_rtl_0
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "ADCV2_adc_mega_0:adc_mega_0"
- 23. Port Connectivity Checks: "sevenseg:sevSeg"
- 24. Port Connectivity Checks: "Sample:sample2"
- 25. Port Connectivity Checks: "Sample:sample"
- 26. Port Connectivity Checks: "VGA_IP_Top:VGA"
- 27. Port Connectivity Checks: "sine_wave_gen:testWave"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated
+ 15. Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated
+ 16. Parameter Settings for User Entity Instance: ADCV2_adc_mega_0:adc_mega_0
+ 17. Parameter Settings for User Entity Instance: ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
+ 18. Parameter Settings for Inferred Entity Instance: Sample:sample2|altsyncram:sampleData_rtl_0
+ 19. Parameter Settings for Inferred Entity Instance: Sample:sample|altsyncram:sampleData_rtl_0
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "ADCV2_adc_mega_0:adc_mega_0"
+ 22. Port Connectivity Checks: "sevenseg:sevSeg"
+ 23. Port Connectivity Checks: "Sample:sample2"
+ 24. Port Connectivity Checks: "Sample:sample"
+ 25. Port Connectivity Checks: "VGA_IP_Top:VGA"
+ 26. Port Connectivity Checks: "sine_wave_gen:testWave"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,13 +61,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr 26 12:02:51 2019                    ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 09:48:27 2019                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; FPGA_MiniProject                                         ;
 ; Top-level Entity Name           ; FPGA_MiniProject                                         ;
 ; Family                          ; Cyclone V                                                ;
 ; Logic utilization (in ALMs)     ; N/A                                                      ;
-; Total registers                 ; 431                                                      ;
+; Total registers                 ; 455                                                      ;
 ; Total pins                      ; 91                                                       ;
 ; Total virtual pins              ; 0                                                        ;
 ; Total block memory bits         ; 19,224                                                   ;
@@ -182,7 +181,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -208,7 +209,7 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_q8n1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/FPGA_MiniProject/db/altsyncram_q8n1.tdf                         ;         ;
+; db/altsyncram_0cj1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/FPGA/FPGA_MiniProject/db/altsyncram_0cj1.tdf                         ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -217,16 +218,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 383         ;
+; Estimate of Logic utilization (ALMs needed) ; 385         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 654         ;
+; Combinational ALUT usage for logic          ; 658         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 103         ;
-;     -- 5 input functions                    ; 134         ;
-;     -- 4 input functions                    ; 86          ;
-;     -- <=3 input functions                  ; 330         ;
+;     -- 6 input functions                    ; 102         ;
+;     -- 5 input functions                    ; 133         ;
+;     -- 4 input functions                    ; 77          ;
+;     -- <=3 input functions                  ; 345         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 431         ;
+; Dedicated logic registers                   ; 455         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 91          ;
 ; Total MLAB memory bits                      ; 0           ;
@@ -235,9 +236,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 136         ;
-; Total fan-out                               ; 4373        ;
-; Average fan-out                             ; 3.39        ;
+; Maximum fan-out                             ; 184         ;
+; Total fan-out                               ; 4430        ;
+; Average fan-out                             ; 3.36        ;
 +---------------------------------------------+-------------+
 
 
@@ -246,17 +247,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name              ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |FPGA_MiniProject                         ; 654 (168)           ; 431 (99)                  ; 19224             ; 0          ; 91   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
+; |FPGA_MiniProject                         ; 658 (168)           ; 455 (99)                  ; 19224             ; 0          ; 91   ; 0            ; |FPGA_MiniProject                                                                           ; FPGA_MiniProject         ; work         ;
 ;    |ADCV2_adc_mega_0:adc_mega_0|          ; 96 (1)              ; 94 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0                                               ; ADCV2_adc_mega_0         ; work         ;
 ;       |altera_up_avalon_adv_adc:ADC_CTRL| ; 95 (95)             ; 81 (81)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL             ; altera_up_avalon_adv_adc ; work         ;
-;    |Sample:sample2|                       ; 42 (42)             ; 25 (25)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                                                            ; Sample                   ; work         ;
+;    |Sample:sample2|                       ; 42 (42)             ; 37 (37)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2                                                            ; Sample                   ; work         ;
 ;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0                                ; altsyncram               ; work         ;
-;          |altsyncram_q8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated ; altsyncram_q8n1          ; work         ;
-;    |Sample:sample|                        ; 41 (41)             ; 24 (24)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                             ; Sample                   ; work         ;
+;          |altsyncram_0cj1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated ; altsyncram_0cj1          ; work         ;
+;    |Sample:sample|                        ; 41 (41)             ; 36 (36)                   ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample                                                             ; Sample                   ; work         ;
 ;       |altsyncram:sampleData_rtl_0|       ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0                                 ; altsyncram               ; work         ;
-;          |altsyncram_q8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated  ; altsyncram_q8n1          ; work         ;
-;    |VGA_IP_Top:VGA|                       ; 171 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                            ; VGA_IP_Top               ; work         ;
-;       |gridandwave:gaw|                   ; 132 (132)           ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw                                            ; gridandwave              ; work         ;
+;          |altsyncram_0cj1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9612              ; 0          ; 0    ; 0            ; |FPGA_MiniProject|Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated  ; altsyncram_0cj1          ; work         ;
+;    |VGA_IP_Top:VGA|                       ; 175 (1)             ; 70 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA                                                            ; VGA_IP_Top               ; work         ;
+;       |gridandwave:gaw|                   ; 136 (136)           ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw                                            ; gridandwave              ; work         ;
 ;       |hsync:hs|                          ; 18 (18)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|hsync:hs                                                   ; hsync                    ; work         ;
 ;       |vsync:vs|                          ; 20 (20)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|VGA_IP_Top:VGA|vsync:vs                                                   ; vsync                    ; work         ;
 ;    |sevenseg:sevSeg|                      ; 81 (4)              ; 78 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_MiniProject|sevenseg:sevSeg                                                           ; sevenseg                 ; work         ;
@@ -275,8 +276,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +--------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 801          ; 12           ; 801          ; 12           ; 9612 ; None ;
-; Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 801          ; 12           ; 801          ; 12           ; 9612 ; None ;
+; Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 801          ; 12           ; 801          ; 12           ; 9612 ; None ;
+; Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 801          ; 12           ; 801          ; 12           ; 9612 ; None ;
 +--------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
@@ -319,8 +320,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 431   ;
-; Number of registers using Synchronous Clear  ; 175   ;
+; Total registers                              ; 455   ;
+; Number of registers using Synchronous Clear  ; 165   ;
 ; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -340,7 +341,7 @@ Encoding Type:  One-Hot
 ; cursorY2[6]                             ; 2       ;
 ; cursorY2[2]                             ; 2       ;
 ; cursorY2[5]                             ; 2       ;
-; cursorX1[5]                             ; 4       ;
+; cursorX1[5]                             ; 3       ;
 ; cursorX2[6]                             ; 2       ;
 ; cursorX2[1]                             ; 2       ;
 ; cursorX2[3]                             ; 2       ;
@@ -358,57 +359,48 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                              ;
-+----------------------------------+---------------------------------+------+
-; Register Name                    ; Megafunction                    ; Type ;
-+----------------------------------+---------------------------------+------+
-; Sample:sample2|outputData[0..11] ; Sample:sample2|sampleData_rtl_0 ; RAM  ;
-; Sample:sample|outputData[0..11]  ; Sample:sample|sampleData_rtl_0  ; RAM  ;
-+----------------------------------+---------------------------------+------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[3]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[4]       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[1]  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[1]       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[8]                                               ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[7]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[2]       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[7]                                               ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|samplecounter[10]                                               ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[11]                                               ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[6]                                                 ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|samplecounter[5]                                                 ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY1[10]                                                                   ;
 ; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|numbersplit:NS|counter[4]                                      ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[1]                                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[1] ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX2[5]                                                                    ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x[10]                                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[2] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX2[10]                                                                   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[8] ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX1[10]                                                                   ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY2[8]                                                                    ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput0|seg[5]                       ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput1|seg[0]                       ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput2|seg[5]                       ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput3|seg[4]                       ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |FPGA_MiniProject|cursorX1[6]                                                                    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|cursorY2[10]                                                                   ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput0|seg[4]                       ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput1|seg[5]                       ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput2|seg[1]                       ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|sevenseg:sevSeg|generateSevenSegOutput:segoutput3|seg[1]                       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY1[4]                                                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |FPGA_MiniProject|cursorX2[6]                                                                    ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY2[2]                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |FPGA_MiniProject|cursorX2[4]                                                                    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |FPGA_MiniProject|cursorY2[6]                                                                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight0                                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight0                                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add2                                                                           ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |FPGA_MiniProject|Add4                                                                           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|VGA_IP_Top:VGA|gridandwave:gaw|x                                               ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight1                                                                    ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |FPGA_MiniProject|ShiftRight0                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
-; Source assignments for Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated ;
+; Source assignments for Sample:sample2|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                 ;
 +---------------------------------+--------------------+------+------------------------------------+
@@ -417,7 +409,7 @@ Encoding Type:  One-Hot
 
 
 +-------------------------------------------------------------------------------------------------+
-; Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_q8n1:auto_generated ;
+; Source assignments for Sample:sample|altsyncram:sampleData_rtl_0|altsyncram_0cj1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------+
 ; Assignment                      ; Value              ; From ; To                                ;
 +---------------------------------+--------------------+------+-----------------------------------+
@@ -482,7 +474,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
-; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                         ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
 ; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
 ; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
 ; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
@@ -495,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
 ; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
 ; BYTE_SIZE                          ; 8                    ; Untyped                         ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
 ; INIT_FILE                          ; UNUSED               ; Untyped                         ;
@@ -511,7 +503,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                         ;
-; CBXI_PARAMETER                     ; altsyncram_q8n1      ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_0cj1      ; Untyped                         ;
 +------------------------------------+----------------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -543,7 +535,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
 ; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
 ; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
 ; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
@@ -556,7 +548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
 ; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
 ; BYTE_SIZE                          ; 8                    ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
 ; INIT_FILE                          ; UNUSED               ; Untyped                        ;
@@ -572,7 +564,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_q8n1      ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_0cj1      ; Untyped                        ;
 +------------------------------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -590,10 +582,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
 ;     -- WIDTH_B                            ; 12                                         ;
 ;     -- NUMWORDS_B                         ; 801                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
 ; Entity Instance                           ; Sample:sample|altsyncram:sampleData_rtl_0  ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                  ;
 ;     -- WIDTH_A                            ; 12                                         ;
@@ -601,10 +593,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
 ;     -- WIDTH_B                            ; 12                                         ;
 ;     -- NUMWORDS_B                         ; 801                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
 +-------------------------------------------+--------------------------------------------+
 
 
@@ -690,13 +682,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 431                         ;
+; arriav_ff             ; 455                         ;
 ;     ENA               ; 168                         ;
 ;     ENA SCLR          ; 56                          ;
-;     SCLR              ; 119                         ;
+;     SCLR              ; 109                         ;
 ;     SLD               ; 13                          ;
-;     plain             ; 75                          ;
-; arriav_lcell_comb     ; 655                         ;
+;     plain             ; 109                         ;
+; arriav_lcell_comb     ; 659                         ;
 ;     arith             ; 296                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 206                         ;
@@ -706,19 +698,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 50                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 358                         ;
+;     normal            ; 362                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 26                          ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 78                          ;
-;         5 data inputs ; 84                          ;
-;         6 data inputs ; 103                         ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 69                          ;
+;         5 data inputs ; 83                          ;
+;         6 data inputs ; 102                         ;
 ; boundary_port         ; 91                          ;
 ; stratixv_ram_block    ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 2.79                        ;
+; Max LUT depth         ; 6.80                        ;
+; Average LUT depth     ; 2.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -727,7 +719,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -737,7 +729,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Fri Apr 26 12:02:38 2019
+    Info: Processing started: Tue Apr 30 09:48:06 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -801,7 +793,7 @@ Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(218): trun
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(223): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 223
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(228): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 228
 Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(233): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 233
-Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(367): truncated value with size 32 to match size of target (20) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 367
+Warning (10230): Verilog HDL assignment warning at FPGA_MiniProject.v(369): truncated value with size 32 to match size of target (20) File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 369
 Warning (10034): Output port "ADDAClock" at FPGA_MiniProject.v(38) has no driver File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
 Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 257
 Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 32
@@ -835,15 +827,15 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(290): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 293
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(294): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 294
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(295): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 295
-Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 288
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "outputcounter" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 16
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "randomreg1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(19): object "randomreg2" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 19
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(49): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 49
+Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 289
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(17): object "outputcounter" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 17
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(19): object "randomreg1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 19
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(20): object "randomreg2" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 20
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(50): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 50
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 54
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(51): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 51
 Warning (10230): Verilog HDL assignment warning at Sample_IP.v(55): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 55
-Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:sevSeg" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 321
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(56): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 56
+Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:sevSeg" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 323
 Info (12128): Elaborating entity "numbersplit" for hierarchy "sevenseg:sevSeg|numbersplit:NS" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 36
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(99): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 99
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(110): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 110
@@ -852,8 +844,10 @@ Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(113): truncated
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(115): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 115
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(117): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 117
 Info (12128): Elaborating entity "generateSevenSegOutput" for hierarchy "sevenseg:sevSeg|generateSevenSegOutput:segoutput0" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 42
-Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 364
+Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 366
 Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL" File: C:/FPGA/FPGA_MiniProject/ADA_Generated.v Line: 58
+Warning (276027): Inferred dual-clock RAM node "Sample:sample2|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "Sample:sample|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "sine_wave_gen:testWave|sine" is uninferred due to inappropriate RAM size File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
 Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (30) in the Memory Initialization File "C:/FPGA/FPGA_MiniProject/db/FPGA_MiniProject.ram0_sine_wave_gen_630b7358.hdl.mif" -- setting initial value for remaining addresses to 0
@@ -870,10 +864,9 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
         Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Sample:sample|sampleData_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 12
@@ -886,10 +879,9 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
         Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
 Info (12130): Elaborated megafunction instantiation "Sample:sample2|altsyncram:sampleData_rtl_0"
 Info (12133): Instantiated megafunction "Sample:sample2|altsyncram:sampleData_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -903,12 +895,11 @@ Info (12133): Instantiated megafunction "Sample:sample2|altsyncram:sampleData_rt
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
     Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q8n1.tdf
-    Info (12023): Found entity 1: altsyncram_q8n1 File: C:/FPGA/FPGA_MiniProject/db/altsyncram_q8n1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0cj1.tdf
+    Info (12023): Found entity 1: altsyncram_0cj1 File: C:/FPGA/FPGA_MiniProject/db/altsyncram_0cj1.tdf Line: 27
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ADDAClock" is stuck at GND File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
@@ -937,16 +928,16 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ADCin[12]" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
     Warning (15610): No output dependent on input pin "ADCin[13]" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 24
     Warning (15610): No output dependent on input pin "OutOfRange" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 25
-Info (21057): Implemented 824 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 863 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 31 input pins
     Info (21059): Implemented 60 output pins
-    Info (21061): Implemented 709 logic cells
+    Info (21061): Implemented 748 logic cells
     Info (21064): Implemented 24 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 708 megabytes
-    Info: Processing ended: Fri Apr 26 12:02:51 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 706 megabytes
+    Info: Processing ended: Tue Apr 30 09:48:27 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
