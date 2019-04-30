@@ -65,6 +65,9 @@ reg testCx;
 reg testCy;
 reg buttPush = 0;
 reg buttPush1 = 0;
+reg hol;
+reg hold1 = 0;
+reg hold2 = 0;
 //Wave wires
 wire [11:0] waveSigIn1;
 wire [11:0] waveSigIn2;
@@ -183,6 +186,22 @@ begin
 		begin
 				offset2 <= offset2 - moveSize;		
 		end		
+		/*else if (switch3 && !butt0)
+		begin
+			shiftDown1 = shiftDown1 + 1;
+		end
+		else if (switch3 && !butt1)
+		begin
+			shiftDown1 = shiftDown1 - 1;
+		end
+		else if (switch3 && !butt2)
+		begin
+			shiftDown2 = shiftDown2 + 1;
+		end
+		else if (switch3 && !butt3)
+		begin
+			shiftDown2 = shiftDown2 - 1;
+		end*/	
 	end
 end
 
@@ -191,6 +210,11 @@ always @ (posedge slowerClock[19])
 begin
 	if (!switch9 && switch8)
 	begin 
+		/*if (switch3 && !butt3 && !buttPush)
+		begin
+			buttPush <= 1;
+			shiftDown1 = shiftDown1 + 1;			
+		end*/
 		if (switch3 && !butt3 && !buttPush)
 		begin
 			buttPush <= 1;
@@ -211,12 +235,44 @@ begin
 			buttPush <= 1;
 			shiftDown2 = shiftDown2 - 1;			
 		end
+		/*else if (switch3 && !butt0) //&& buttPush1)
+		begin
+			buttPush <= 0;
+			shiftDown2 = shiftDown2 - 1;			
+		end*/
 		else if ((butt0 && butt1 && butt2 && butt3) && buttPush) begin
 			buttPush <= 0;
 		end
 	end
 end  
-  
+// Code for hold
+always @ (posedge slowerClock[19])
+begin
+	if (!switch9 && switch8)
+	begin 
+		if (!butt3 && !hold1)
+		begin
+			hold1 <= 1;
+			hol  <= hold1;
+		end
+		else if (!butt2 && hold1)
+		begin
+			hold1 <= 0;
+			hol  <= hold1;
+		end
+		else if (!butt1 && !hold2)
+		begin
+			hold2 <= 1;
+			hol  <= hold2;
+		end
+		else if (!butt0 && !hold2)
+		begin
+			hold2 <= 0;
+			hol  <= hold2;
+		end	
+	end
+end
+ 
 wire [11:0] CH0;
 wire [11:0] CH1;
 wire [11:0] CH2;
@@ -256,7 +312,7 @@ VGA_IP_Top VGA(
 Sample sample(
 	.readClock (clock),
 	.writeClock (slowerClock[3]),
-	.hold ( ),
+	.hold (hol ),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -267,7 +323,7 @@ Sample sample(
 Sample sample2(
 	.readClock (clock),
 	.writeClock (slowerClock[3]),
-	.hold ( ),
+	.hold ( hol),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),
