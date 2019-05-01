@@ -7,6 +7,7 @@ module Sample(
 	input [11:0] screenX,
 	input reset,
 	input hold,
+	input [11:0] triggerthreshold,
 	output [11:0] screenData,
 	output resample
 );
@@ -28,7 +29,7 @@ always @(posedge readClock) begin
 end
 
 //Trigger Set
-always @(posedge writeClock) begin
+/*always @(posedge writeClock) begin
 	//randomreg1 <= ~randomreg1;
 	if(triggerHighPoint<data) begin
 		triggerHighPoint <= data;
@@ -36,12 +37,14 @@ always @(posedge writeClock) begin
 	end else if (triggercounter > 1999) begin
 		triggerHighPoint <= 0;
 	end
-end
+end*/
+
+
 
 //Trigger Sample Data
 always @(posedge writeClock) begin
 //find highest point after 
-	if(data == /*triggerHighPoint*/0 && samplecounter > 800) begin
+	if(data >= 0 && data <= triggerthreshold && samplecounter > 800) begin
 		samplecounter <= 0;
 		triggercounter <= 0;
 		resamplereg = ~resamplereg;
