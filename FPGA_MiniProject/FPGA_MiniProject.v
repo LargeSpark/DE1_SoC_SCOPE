@@ -58,8 +58,8 @@ wire cursorX_EN;
 wire cursorY_EN;
 
 
-wire offset1;
-wire offset2;
+wire [10:0] offset1;
+wire [10:0] offset2;
 wire hold1;
 wire hold2;
 wire [10:0] cursorY1;

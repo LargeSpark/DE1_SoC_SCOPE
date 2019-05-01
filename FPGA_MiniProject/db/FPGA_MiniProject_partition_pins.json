@@ -288,6 +288,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "switch4",
+					"strict" : false
+				},
+				{
 					"name" : "ADC_DOUT",
 					"strict" : false
 				}

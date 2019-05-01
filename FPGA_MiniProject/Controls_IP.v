@@ -13,7 +13,7 @@ input					butt0,	//x1/y1 left/up
 input					butt1,  	//x1/y1 right/down
 input					butt2,	//x2/y2 left/up
 input					butt3,	//x2/y2 right/down
-input       		buttonClock,
+input       		buttonClock, //Clock for button refresh
 output				hold1Out,
 output				hold2Out,
 output	[10:0]	cursorY1Out,
@@ -31,20 +31,12 @@ output				Wave2_ENOut,
 output 	[10:0]	offset1Out,
 output 	[10:0]	offset2Out
 );
-
-reg hold1 = 0;
-reg hold2 = 0;
-reg buttPush = 0;
-reg buttPush1 = 0;
-reg hol;
-
 localparam defaultY1 = 25;
 localparam defaultY2 = 100;
 localparam defaultX1 = 32;
 localparam defaultX2 = 90;
 //Parameters for Cursors
 localparam moveSize = 1;	
-
 reg [10:0] cursorY1 = defaultY1; 	//TESTCODE
 reg [10:0] cursorY2 = defaultY2;	//TESTCODE
 reg [10:0] cursorX1 = defaultX1;  //TESTCODE
@@ -53,7 +45,11 @@ reg [10:0] offset1 = 30;
 reg [10:0] offset2 = 200;
 reg [5:0] sampleAdjust1 = 0;
 reg [5:0] sampleAdjust2 = 0;
-
+reg hold1 = 0;
+reg hold2 = 0;
+reg buttPush = 0;
+reg buttPush1 = 0;
+reg hol;
 reg [3:0] shiftDown1 = 0;
 reg [3:0] shiftDown2 = 3;
 reg cursorX_EN = 0;
@@ -217,22 +213,18 @@ begin
 		if (switch4 && !butt3 && !hold1)
 		begin
 			hold1 <= 1;
-			hol  <= hold1;
 		end
 		else if (switch4 && !butt2 && hold1)
 		begin
 			hold1 <= 0;
-			hol  <= hold1;
 		end
 		else if (switch4 && !butt1 && !hold2)
 		begin
 			hold2 <= 1;
-			hol  <= hold2;
 		end
 		else if (switch4 && !butt0 && hold2)
 		begin
 			hold2 <= 0;
-			hol  <= hold2;
 		end	
 	end
 end
