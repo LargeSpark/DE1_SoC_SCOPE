@@ -27,7 +27,9 @@ output	[5:0]		sampleAdjust2Out,
 output 				cursorX_ENOut,
 output 				cursorY_ENOut,
 output 				Wave1_ENOut,
-output				Wave2_ENOut
+output				Wave2_ENOut,
+output 	[10:0]	offset1Out,
+output 	[10:0]	offset2Out
 );
 
 reg hold1 = 0;
@@ -74,6 +76,8 @@ assign cursorX_ENOut = cursorX_EN;
 assign cursorY_ENOut = cursorY_EN;
 assign Wave1_ENOut = Wave1_EN;
 assign Wave2_ENOut = Wave2_EN;
+assign offset1Out = offset1;
+assign offset2Out = offset2;
 
 always @ (posedge buttonClock)
 begin

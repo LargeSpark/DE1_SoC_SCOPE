@@ -58,7 +58,8 @@ wire cursorX_EN;
 wire cursorY_EN;
 
 
-
+wire offset1;
+wire offset2;
 wire hold1;
 wire hold2;
 wire [10:0] cursorY1;
@@ -131,7 +132,7 @@ VGA_IP_Top VGA(
 Sample sample(
 	.readClock (clock),
 	.writeClock (sampleWriteClock1),
-	.hold (hol ),
+	.hold (hold1),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -142,7 +143,7 @@ Sample sample(
 Sample sample2(
 	.readClock (clock),
 	.writeClock (sampleWriteClock2),
-	.hold ( hol),
+	.hold (hold2),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),
@@ -151,14 +152,14 @@ Sample sample2(
 );
 
 sevenseg sevSeg(
-.clock (clock),
-.seg_En (4'b1111),
-.number (4567),
-.decimalPoint_EN (0),
-.seg0 (seg0),
-.seg1 (seg1),
-.seg2 (seg2),
-.seg3 (seg3)
+	.clock (clock),
+	.seg_En (4'b1111),
+	.number (4567),
+	.decimalPoint_EN (0),
+	.seg0 (seg0),
+	.seg1 (seg1),
+	.seg2 (seg2),
+	.seg3 (seg3)
 );
 
 wire [25:0] slClock;
@@ -169,35 +170,37 @@ clockcounter slclock(
 );
 
 controls Ctrl(
-.switch0 (switch0), //Cursor X En
-.switch1 (switch1),	//Cursor Y En
-.switch2 (switch2), //Signal 1 En
-.switch3 (switch3),	//Signal 2 En
-.switch4 (switch4), //Cursor Y set
-.switch5 (switch5), //Cursor X Set 
-.switch6 (switch6), //Wave 1 Shift /Squish
-.switch7 (switch7), //Wave 2 Shift/Squish
-.switch8 (switch8), //Wave 1 Clock 
-.switch9 (switch9), //Wave 2 Clock 
-.butt0 (butt0),	//x1/y1 left/up
-.butt1 (butt1),  	//x1/y1 right/down
-.butt2 (butt2),	//x2/y2 left/up
-.butt3 (butt3),	//x2/y2 right/down
-.buttonClock (slClock[19]),
-.hold1Out (hold1),
-.hold2Out (hold2),
-.cursorY1Out (cursorY1),
-.cursorY2Out (cursorY2),
-.cursorX1Out (cursorX1),
-.cursorX2Out (cursorX2),
-.shiftDown1Out (shiftDown1),
-.shiftDown2Out (shiftDown2),
-.sampleAdjust1Out (sampleAdjust1),
-.sampleAdjust2Out (sampleAdjust2),
-.cursorX_ENOut (cursorX_EN),
-.cursorY_ENOut (cursorY_EN),
-.Wave1_ENOut (Wave1_EN),
-.Wave2_ENOut (Wave2_EN)
+	.switch0 (switch0), //Cursor X En
+	.switch1 (switch1),	//Cursor Y En
+	.switch2 (switch2), //Signal 1 En
+	.switch3 (switch3),	//Signal 2 En
+	.switch4 (switch4), //Cursor Y set
+	.switch5 (switch5), //Cursor X Set 
+	.switch6 (switch6), //Wave 1 Shift /Squish
+	.switch7 (switch7), //Wave 2 Shift/Squish
+	.switch8 (switch8), //Wave 1 Clock 
+	.switch9 (switch9), //Wave 2 Clock 
+	.butt0 (butt0),	//x1/y1 left/up
+	.butt1 (butt1),  	//x1/y1 right/down
+	.butt2 (butt2),	//x2/y2 left/up
+	.butt3 (butt3),	//x2/y2 right/down
+	.buttonClock (slClock[19]),
+	.hold1Out (hold1),
+	.hold2Out (hold2),
+	.cursorY1Out (cursorY1),
+	.cursorY2Out (cursorY2),
+	.cursorX1Out (cursorX1),
+	.cursorX2Out (cursorX2),
+	.shiftDown1Out (shiftDown1),
+	.shiftDown2Out (shiftDown2),
+	.sampleAdjust1Out (sampleAdjust1),
+	.sampleAdjust2Out (sampleAdjust2),
+	.cursorX_ENOut (cursorX_EN),
+	.cursorY_ENOut (cursorY_EN),
+	.Wave1_ENOut (Wave1_EN),
+	.Wave2_ENOut (Wave2_EN),
+	.offset1Out (offset1),
+	.offset2Out (offset2)
 );
 
 
