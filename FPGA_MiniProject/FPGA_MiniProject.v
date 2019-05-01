@@ -54,6 +54,7 @@ wire TWave_EN;
 wire [25:0] slClock;
 wire [10:0] offset1;
 wire [10:0] offset2;
+wire [13:0] num;
 wire hold1;
 wire hold2;
 wire [10:0] cursorY1;
@@ -199,7 +200,20 @@ controls Ctrl(
 	.TWave_EnOut (TWave_EN)
 );
 
-
+Measure measure(
+	.buttonClock (slClock[19]), 	
+	.cursory1 (cursorY1),
+	.cursory2 (cursorY2),
+	.cursorx1 (cursorX1),
+	.cursorx2 (cursorX2),
+	.sampleadjust1 (sampleAdjust1),  
+	.sampleadjust2 (sampleAdjust2),
+	.shiftDown1 (shiftDown1),
+	.shiftDown2 (shiftDown1),
+	.waveSel (0),
+	.measurement (0), 
+	.num (num)
+);
 
 
 	ADCV2_adc_mega_0 #(
