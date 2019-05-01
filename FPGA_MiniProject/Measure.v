@@ -20,6 +20,7 @@ reg [13:0] deltax1 = 0;
 reg [13:0] deltax2 = 0;
 
 reg [13:0] result = 6;
+reg [13:0] vx1 = 0;
 assign num = result;
 
 wire [13:0] Diffx; //Delta x
@@ -34,7 +35,9 @@ always @(posedge buttonClock) begin
 	deltay2 <= cursory2 - cursory1;
 	deltax1 <= cursorx1 - cursorx2;
 	deltax2 <= cursorx2 - cursorx1;
-	result <= Diffx;
+	vx1 <= (shiftDown1 + 1) * Diffx;
+	
+	result <= vx1;
 end
 
 endmodule 
