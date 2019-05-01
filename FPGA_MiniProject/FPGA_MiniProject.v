@@ -56,7 +56,7 @@ wire Wave1_EN;
 wire Wave2_EN;
 wire cursorX_EN;
 wire cursorY_EN;
-
+wire TWave_EN;
 
 wire [10:0] offset1;
 wire [10:0] offset2;
@@ -70,11 +70,13 @@ wire [3:0] shiftDown1;
 wire [3:0] shiftDown2;
 wire [5:0] sampleAdjust1;
 wire [5:0] sampleAdjust2;
+wire [11:0] TCH0;
 
 wire sampleWriteClock1; //stay
 wire sampleWriteClock2; //stay
 assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
 assign sampleWriteClock2 = slClock[sampleAdjust2]; //stay
+assign TCH0 = (TWave_EN) ? testwave : CH0;
 
 //Wave wires
 wire [11:0] waveSigIn1;
@@ -91,7 +93,7 @@ assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave samp
 //assign ADDAClock = slClock;
 //wire [11:0] adda1;
 //Code to move cursors on Measre screen
-
+//assign 
  
 wire [11:0] CH0;
 wire [11:0] CH1;
@@ -133,7 +135,7 @@ Sample sample(
 	.readClock (clock),
 	.writeClock (sampleWriteClock1),
 	.hold (hold1),
-	.data (testwave),
+	.data (TCH0),
 	.screenX (sX),
 	.reset (0),
 	.screenData (sampledwave1)
@@ -144,23 +146,23 @@ Sample sample2(
 	.readClock (clock),
 	.writeClock (sampleWriteClock2),
 	.hold (hold2),
-	.data (CH0),
+	.data (CH1),
 	.screenX (sX),
 	.reset (0),
 	.screenData (sampledwave2),
 	.resample(ResampleLED)
 );
 
-sevenseg sevSeg(
+/*sevenseg sevSeg(
 	.clock (clock),
 	.seg_En (4'b1111),
-	.number (4567),
+	.number (num),
 	.decimalPoint_EN (0),
 	.seg0 (seg0),
 	.seg1 (seg1),
 	.seg2 (seg2),
 	.seg3 (seg3)
-);
+);*/
 
 wire [25:0] slClock;
 
@@ -200,7 +202,8 @@ controls Ctrl(
 	.Wave1_ENOut (Wave1_EN),
 	.Wave2_ENOut (Wave2_EN),
 	.offset1Out (offset1),
-	.offset2Out (offset2)
+	.offset2Out (offset2),
+	.TWave_EnOut   (TWave_En)
 );
 
 

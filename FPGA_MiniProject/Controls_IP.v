@@ -29,10 +29,11 @@ output 				cursorY_ENOut,
 output 				Wave1_ENOut,
 output				Wave2_ENOut,
 output 	[10:0]	offset1Out,
-output 	[10:0]	offset2Out
+output 	[10:0]	offset2Out,
+output   			TWave_EnOut
 );
-localparam defaultY1 = 25;
-localparam defaultY2 = 100;
+localparam defaultY1 = 60; // 60 pixels = 500mV
+localparam defaultY2 = 120;
 localparam defaultX1 = 32;
 localparam defaultX2 = 90;
 //Parameters for Cursors
@@ -50,7 +51,12 @@ reg hold2 = 0;
 reg buttPush = 0;
 reg buttPush1 = 0;
 reg hol;
-reg [3:0] shiftDown1 = 0;
+// TEST
+reg [5:0] num = 0;
+reg TWave_En = 0;
+assign TWave_EnOut = TWave_En;
+
+reg [3:0] shiftDown1 = 3;
 reg [3:0] shiftDown2 = 3;
 reg cursorX_EN = 0;
 reg cursorY_EN = 0;
@@ -83,6 +89,7 @@ begin
 	//Switch on Cursors
 	cursorX_EN <= switch0;
 	cursorY_EN <= switch1;
+	num <= 500;
 		//Code for yCursors 
 		if (switch3 && !butt3)
 		begin 
@@ -100,7 +107,7 @@ begin
 		begin 
 				cursorY2 <= cursorY2 - moveSize;
 		end 
-		//Codr for xCursors
+		//Code for xCursors
 		if (switch2 && !butt3)
 		begin 
 				cursorX1 <= cursorX1 + moveSize;
@@ -258,4 +265,13 @@ begin
 		end
 	end
 end
+// Code for testWave
+always @ (posedge buttonClock)
+begin
+	//State 3
+	if (switch9 && switch8)
+	begin 
+		TWave_En <= switch0;
+	end
+end 
 endmodule

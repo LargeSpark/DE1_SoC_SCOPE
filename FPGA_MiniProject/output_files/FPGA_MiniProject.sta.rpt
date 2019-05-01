@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for FPGA_MiniProject
-Wed May 01 10:47:10 2019
+Wed May 01 12:37:32 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.31        ;
+; Average used               ; 1.30        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.4%      ;
-;     Processor 3            ;  10.3%      ;
-;     Processor 4            ;  10.3%      ;
+;     Processor 2            ;  10.2%      ;
+;     Processor 3            ;  10.1%      ;
+;     Processor 4            ;  10.0%      ;
 +----------------------------+-------------+
 
 
@@ -117,7 +117,6 @@ refer to the applicable agreement for further details.
 +----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------+
 ; clock                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                            ;
 ; clockcounter:slclock|counter[2]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockcounter:slclock|counter[2] }  ;
-; clockcounter:slclock|counter[6]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockcounter:slclock|counter[6] }  ;
 ; clockcounter:slclock|counter[19] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockcounter:slclock|counter[19] } ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_IP_Top:VGA|hsync:hs|blank }    ;
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_IP_Top:VGA|hsync:hs|newline }  ;
@@ -129,12 +128,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                       ; Note ;
 +------------+-----------------+----------------------------------+------+
-; 136.07 MHz ; 136.07 MHz      ; clock                            ;      ;
-; 155.28 MHz ; 155.28 MHz      ; clockcounter:slclock|counter[19] ;      ;
-; 155.28 MHz ; 155.28 MHz      ; clockcounter:slclock|counter[2]  ;      ;
-; 155.28 MHz ; 155.28 MHz      ; clockcounter:slclock|counter[6]  ;      ;
-; 333.67 MHz ; 333.67 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline  ;      ;
-; 364.3 MHz  ; 364.3 MHz       ; VGA_IP_Top:VGA|hsync:hs|blank    ;      ;
+; 136.02 MHz ; 136.02 MHz      ; clock                            ;      ;
+; 174.06 MHz ; 174.06 MHz      ; clockcounter:slclock|counter[19] ;      ;
+; 174.06 MHz ; 174.06 MHz      ; clockcounter:slclock|counter[2]  ;      ;
+; 329.38 MHz ; 329.38 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline  ;      ;
+; 376.51 MHz ; 376.51 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank    ;      ;
 +------------+-----------------+----------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,12 +148,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[6]  ; -6.451 ; -977.171      ;
-; clockcounter:slclock|counter[19] ; -6.436 ; -992.287      ;
-; clock                            ; -6.349 ; -616.143      ;
-; clockcounter:slclock|counter[2]  ; -6.230 ; -1125.291     ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -1.997 ; -45.276       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -1.745 ; -29.097       ;
+; clock                            ; -6.352 ; -480.042      ;
+; clockcounter:slclock|counter[19] ; -6.306 ; -975.866      ;
+; clockcounter:slclock|counter[2]  ; -4.745 ; -988.844      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -2.036 ; -38.858       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -1.656 ; -29.735       ;
 +----------------------------------+--------+---------------+
 
 
@@ -164,12 +161,11 @@ HTML report is unavailable in plain text report export.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[19] ; -0.250 ; -1.922        ;
-; clock                            ; -0.077 ; -0.168        ;
-; clockcounter:slclock|counter[2]  ; 0.143  ; 0.000         ;
+; clockcounter:slclock|counter[2]  ; -0.219 ; -4.686        ;
+; clock                            ; 0.002  ; 0.000         ;
+; clockcounter:slclock|counter[19] ; 0.138  ; 0.000         ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.279  ; 0.000         ;
-; clockcounter:slclock|counter[6]  ; 0.351  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.399  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.304  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -190,12 +186,11 @@ No paths to report.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[19] ; -2.174 ; -410.799      ;
-; clockcounter:slclock|counter[2]  ; -2.174 ; -409.926      ;
-; clockcounter:slclock|counter[6]  ; -2.174 ; -367.007      ;
-; clock                            ; -2.174 ; -277.560      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.394 ; -13.084       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.394 ; -10.180       ;
+; clockcounter:slclock|counter[2]  ; -2.174 ; -438.637      ;
+; clockcounter:slclock|counter[19] ; -2.174 ; -402.099      ;
+; clock                            ; -2.174 ; -228.474      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.394 ; -11.287       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.394 ; -10.640       ;
 +----------------------------------+--------+---------------+
 
 
@@ -211,12 +206,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+----------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                       ; Note ;
 +------------+-----------------+----------------------------------+------+
-; 135.65 MHz ; 135.65 MHz      ; clock                            ;      ;
-; 158.45 MHz ; 158.45 MHz      ; clockcounter:slclock|counter[19] ;      ;
-; 158.45 MHz ; 158.45 MHz      ; clockcounter:slclock|counter[2]  ;      ;
-; 158.45 MHz ; 158.45 MHz      ; clockcounter:slclock|counter[6]  ;      ;
-; 337.61 MHz ; 337.61 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline  ;      ;
-; 353.23 MHz ; 353.23 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank    ;      ;
+; 136.65 MHz ; 136.65 MHz      ; clock                            ;      ;
+; 182.38 MHz ; 182.38 MHz      ; clockcounter:slclock|counter[19] ;      ;
+; 182.38 MHz ; 182.38 MHz      ; clockcounter:slclock|counter[2]  ;      ;
+; 328.62 MHz ; 328.62 MHz      ; VGA_IP_Top:VGA|hsync:hs|newline  ;      ;
+; 363.37 MHz ; 363.37 MHz      ; VGA_IP_Top:VGA|hsync:hs|blank    ;      ;
 +------------+-----------------+----------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -226,12 +220,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clock                            ; -6.372 ; -596.162      ;
-; clockcounter:slclock|counter[6]  ; -6.314 ; -940.323      ;
-; clockcounter:slclock|counter[19] ; -6.285 ; -945.481      ;
-; clockcounter:slclock|counter[2]  ; -6.108 ; -1087.487     ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -1.962 ; -44.444       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -1.831 ; -30.076       ;
+; clock                            ; -6.318 ; -463.927      ;
+; clockcounter:slclock|counter[19] ; -6.047 ; -943.956      ;
+; clockcounter:slclock|counter[2]  ; -4.483 ; -946.807      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -2.043 ; -38.370       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -1.752 ; -29.642       ;
 +----------------------------------+--------+---------------+
 
 
@@ -240,12 +233,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clock                            ; -0.277 ; -1.074        ;
-; clockcounter:slclock|counter[19] ; -0.249 ; -5.453        ;
-; clockcounter:slclock|counter[2]  ; 0.179  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.281  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.392  ; 0.000         ;
-; clockcounter:slclock|counter[6]  ; 0.419  ; 0.000         ;
+; clockcounter:slclock|counter[2]  ; -0.322 ; -9.117        ;
+; clock                            ; -0.272 ; -1.232        ;
+; clockcounter:slclock|counter[19] ; 0.057  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.282  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.303  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -266,12 +258,11 @@ No paths to report.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[2]  ; -2.174 ; -409.233      ;
-; clockcounter:slclock|counter[19] ; -2.174 ; -409.175      ;
-; clockcounter:slclock|counter[6]  ; -2.174 ; -364.774      ;
-; clock                            ; -2.174 ; -282.777      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.394 ; -13.132       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.394 ; -10.180       ;
+; clockcounter:slclock|counter[2]  ; -2.174 ; -436.095      ;
+; clockcounter:slclock|counter[19] ; -2.174 ; -401.401      ;
+; clock                            ; -2.174 ; -231.404      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.394 ; -11.252       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.394 ; -10.500       ;
 +----------------------------------+--------+---------------+
 
 
@@ -287,12 +278,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[6]  ; -4.178 ; -606.515      ;
-; clockcounter:slclock|counter[19] ; -4.164 ; -613.851      ;
-; clockcounter:slclock|counter[2]  ; -3.875 ; -656.436      ;
-; clock                            ; -3.483 ; -322.884      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.887 ; -19.175       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.665 ; -10.617       ;
+; clockcounter:slclock|counter[19] ; -3.913 ; -566.848      ;
+; clock                            ; -3.748 ; -284.962      ;
+; clockcounter:slclock|counter[2]  ; -3.070 ; -566.249      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.890 ; -15.439       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.646 ; -12.900       ;
 +----------------------------------+--------+---------------+
 
 
@@ -301,12 +291,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clock                            ; -0.310 ; -0.815        ;
-; clockcounter:slclock|counter[19] ; -0.227 ; -3.320        ;
-; clockcounter:slclock|counter[2]  ; 0.030  ; 0.000         ;
-; clockcounter:slclock|counter[6]  ; 0.036  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.090  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.161  ; 0.000         ;
+; clockcounter:slclock|counter[2]  ; -0.178 ; -3.495        ;
+; clock                            ; -0.101 ; -0.271        ;
+; clockcounter:slclock|counter[19] ; 0.020  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.091  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.105  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -327,12 +316,11 @@ No paths to report.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[19] ; -2.174 ; -312.810      ;
-; clockcounter:slclock|counter[2]  ; -2.174 ; -303.332      ;
-; clockcounter:slclock|counter[6]  ; -2.174 ; -299.607      ;
-; clock                            ; -2.174 ; -202.490      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.031  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.159  ; 0.000         ;
+; clockcounter:slclock|counter[2]  ; -2.174 ; -313.530      ;
+; clockcounter:slclock|counter[19] ; -2.174 ; -305.113      ;
+; clock                            ; -2.174 ; -193.874      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.094  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.101  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -348,12 +336,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[19] ; -3.612 ; -522.245      ;
-; clockcounter:slclock|counter[6]  ; -3.526 ; -518.074      ;
-; clockcounter:slclock|counter[2]  ; -3.358 ; -559.876      ;
-; clock                            ; -2.980 ; -273.070      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.741 ; -16.550       ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.634 ; -9.655        ;
+; clockcounter:slclock|counter[19] ; -3.329 ; -487.644      ;
+; clock                            ; -3.153 ; -243.663      ;
+; clockcounter:slclock|counter[2]  ; -2.572 ; -479.106      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; -0.775 ; -13.311       ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; -0.578 ; -10.619       ;
 +----------------------------------+--------+---------------+
 
 
@@ -362,12 +349,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clock                            ; -0.430 ; -1.184        ;
-; clockcounter:slclock|counter[19] ; -0.237 ; -4.185        ;
-; clockcounter:slclock|counter[2]  ; 0.012  ; 0.000         ;
-; clockcounter:slclock|counter[6]  ; 0.017  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.071  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.141  ; 0.000         ;
+; clock                            ; -0.270 ; -1.162        ;
+; clockcounter:slclock|counter[2]  ; -0.250 ; -6.160        ;
+; clockcounter:slclock|counter[19] ; -0.050 ; -1.011        ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.079  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.091  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -388,12 +374,11 @@ No paths to report.
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; clockcounter:slclock|counter[19] ; -2.174 ; -306.609      ;
-; clockcounter:slclock|counter[2]  ; -2.174 ; -300.181      ;
-; clockcounter:slclock|counter[6]  ; -2.174 ; -298.253      ;
-; clock                            ; -2.174 ; -202.216      ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.054  ; 0.000         ;
-; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.160  ; 0.000         ;
+; clockcounter:slclock|counter[2]  ; -2.174 ; -306.748      ;
+; clockcounter:slclock|counter[19] ; -2.174 ; -301.553      ;
+; clock                            ; -2.174 ; -193.855      ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; 0.106  ; 0.000         ;
+; VGA_IP_Top:VGA|hsync:hs|blank    ; 0.112  ; 0.000         ;
 +----------------------------------+--------+---------------+
 
 
@@ -404,26 +389,24 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+---------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                               ;
-+-----------------------------------+-----------+--------+----------+---------+---------------------+
-; Clock                             ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                  ; -6.451    ; -0.430 ; N/A      ; N/A     ; -2.174              ;
-;  VGA_IP_Top:VGA|hsync:hs|blank    ; -1.831    ; 0.071  ; N/A      ; N/A     ; -0.394              ;
-;  VGA_IP_Top:VGA|hsync:hs|newline  ; -1.997    ; 0.141  ; N/A      ; N/A     ; -0.394              ;
-;  clock                            ; -6.372    ; -0.430 ; N/A      ; N/A     ; -2.174              ;
-;  clockcounter:slclock|counter[19] ; -6.436    ; -0.250 ; N/A      ; N/A     ; -2.174              ;
-;  clockcounter:slclock|counter[2]  ; -6.230    ; 0.012  ; N/A      ; N/A     ; -2.174              ;
-;  clockcounter:slclock|counter[6]  ; -6.451    ; 0.017  ; N/A      ; N/A     ; -2.174              ;
-; Design-wide TNS                   ; -3785.265 ; -6.527 ; 0.0      ; 0.0     ; -1489.271           ;
-;  VGA_IP_Top:VGA|hsync:hs|blank    ; -30.076   ; 0.000  ; N/A      ; N/A     ; -10.180             ;
-;  VGA_IP_Top:VGA|hsync:hs|newline  ; -45.276   ; 0.000  ; N/A      ; N/A     ; -13.132             ;
-;  clock                            ; -616.143  ; -1.184 ; N/A      ; N/A     ; -282.777            ;
-;  clockcounter:slclock|counter[19] ; -992.287  ; -5.453 ; N/A      ; N/A     ; -410.799            ;
-;  clockcounter:slclock|counter[2]  ; -1125.291 ; 0.000  ; N/A      ; N/A     ; -409.926            ;
-;  clockcounter:slclock|counter[6]  ; -977.171  ; 0.000  ; N/A      ; N/A     ; -367.007            ;
-+-----------------------------------+-----------+--------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                ;
++-----------------------------------+-----------+---------+----------+---------+---------------------+
+; Clock                             ; Setup     ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------+-----------+---------+----------+---------+---------------------+
+; Worst-case Slack                  ; -6.352    ; -0.322  ; N/A      ; N/A     ; -2.174              ;
+;  VGA_IP_Top:VGA|hsync:hs|blank    ; -1.752    ; 0.079   ; N/A      ; N/A     ; -0.394              ;
+;  VGA_IP_Top:VGA|hsync:hs|newline  ; -2.043    ; 0.091   ; N/A      ; N/A     ; -0.394              ;
+;  clock                            ; -6.352    ; -0.272  ; N/A      ; N/A     ; -2.174              ;
+;  clockcounter:slclock|counter[19] ; -6.306    ; -0.050  ; N/A      ; N/A     ; -2.174              ;
+;  clockcounter:slclock|counter[2]  ; -4.745    ; -0.322  ; N/A      ; N/A     ; -2.174              ;
+; Design-wide TNS                   ; -2513.345 ; -10.349 ; 0.0      ; 0.0     ; -1091.137           ;
+;  VGA_IP_Top:VGA|hsync:hs|blank    ; -29.735   ; 0.000   ; N/A      ; N/A     ; -10.640             ;
+;  VGA_IP_Top:VGA|hsync:hs|newline  ; -38.858   ; 0.000   ; N/A      ; N/A     ; -11.287             ;
+;  clock                            ; -480.042  ; -1.232  ; N/A      ; N/A     ; -231.404            ;
+;  clockcounter:slclock|counter[19] ; -975.866  ; -1.011  ; N/A      ; N/A     ; -402.099            ;
+;  clockcounter:slclock|counter[2]  ; -988.844  ; -9.117  ; N/A      ; N/A     ; -438.637            ;
++-----------------------------------+-----------+---------+----------+---------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -810,24 +793,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
 ; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
-; clock                            ; clock                            ; 6794     ; 0        ; 0        ; 0        ;
+; clock                            ; clock                            ; 5565     ; 0        ; 0        ; 0        ;
 ; clockcounter:slclock|counter[2]  ; clock                            ; 24       ; 24       ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clock                            ; 20       ; 20       ; 0        ; 0        ;
 ; clockcounter:slclock|counter[19] ; clock                            ; 4303     ; 7        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; clock                            ; 348      ; 63       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; clock                            ; 63       ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[2]  ; 6972     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[2]  ; 4522     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[2]  ; 3959     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[6]  ; 4762     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[6]  ; 6767     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[6]  ; 3959     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[19] ; 4762     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[19] ; 4522     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[19] ; 4455     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[2]  ; 8526     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[2]  ; 4294     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[19] ; 6075     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[19] ; 4790     ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; VGA_IP_Top:VGA|hsync:hs|blank    ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|blank    ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|newline  ; 367      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|newline  ; 344      ; 0        ; 0        ; 0        ;
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -837,24 +814,18 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
 ; From Clock                       ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
-; clock                            ; clock                            ; 6794     ; 0        ; 0        ; 0        ;
+; clock                            ; clock                            ; 5565     ; 0        ; 0        ; 0        ;
 ; clockcounter:slclock|counter[2]  ; clock                            ; 24       ; 24       ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clock                            ; 20       ; 20       ; 0        ; 0        ;
 ; clockcounter:slclock|counter[19] ; clock                            ; 4303     ; 7        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; clock                            ; 348      ; 63       ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; clock                            ; 63       ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[2]  ; 6972     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[2]  ; 4522     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[2]  ; 3959     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[6]  ; 4762     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[6]  ; 6767     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[6]  ; 3959     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[19] ; 4762     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[19] ; 4522     ; 0        ; 0        ; 0        ;
-; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[19] ; 4455     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[2]  ; 8526     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[2]  ; 4294     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[19] ; 6075     ; 0        ; 0        ; 0        ;
+; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[19] ; 4790     ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|blank    ; VGA_IP_Top:VGA|hsync:hs|blank    ; 210      ; 0        ; 0        ; 0        ;
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|blank    ; 20       ; 0        ; 0        ; 0        ;
-; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|newline  ; 367      ; 0        ; 0        ; 0        ;
+; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|newline  ; 344      ; 0        ; 0        ; 0        ;
 +----------------------------------+----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -879,9 +850,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 14    ; 14   ;
-; Unconstrained Input Port Paths  ; 632   ; 632  ;
-; Unconstrained Output Ports      ; 59    ; 59   ;
-; Unconstrained Output Port Paths ; 108   ; 108  ;
+; Unconstrained Input Port Paths  ; 633   ; 633  ;
+; Unconstrained Output Ports      ; 31    ; 31   ;
+; Unconstrained Output Port Paths ; 80    ; 80   ;
 +---------------------------------+-------+------+
 
 
@@ -894,7 +865,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; VGA_IP_Top:VGA|hsync:hs|newline  ; VGA_IP_Top:VGA|hsync:hs|newline  ; Base ; Constrained ;
 ; clock                            ; clock                            ; Base ; Constrained ;
 ; clockcounter:slclock|counter[2]  ; clockcounter:slclock|counter[2]  ; Base ; Constrained ;
-; clockcounter:slclock|counter[6]  ; clockcounter:slclock|counter[6]  ; Base ; Constrained ;
 ; clockcounter:slclock|counter[19] ; clockcounter:slclock|counter[19] ; Base ; Constrained ;
 +----------------------------------+----------------------------------+------+-------------+
 
@@ -955,34 +925,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; R[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ResampleLED ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VClock      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -1044,34 +986,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; R[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ResampleLED ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VClock      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; seg3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -1083,7 +997,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Wed May 01 10:46:58 2019
+    Info: Processing started: Wed May 01 12:37:20 2019
 Info: Command: quartus_sta FPGA_MiniProject -c FPGA_MiniProject
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1098,43 +1012,39 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_IP_Top:VGA|hsync:hs|newline VGA_IP_Top:VGA|hsync:hs|newline
     Info (332105): create_clock -period 1.000 -name VGA_IP_Top:VGA|hsync:hs|blank VGA_IP_Top:VGA|hsync:hs|blank
     Info (332105): create_clock -period 1.000 -name clockcounter:slclock|counter[19] clockcounter:slclock|counter[19]
-    Info (332105): create_clock -period 1.000 -name clockcounter:slclock|counter[6] clockcounter:slclock|counter[6]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.451
+Info (332146): Worst-case setup slack is -6.352
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.451            -977.171 clockcounter:slclock|counter[6] 
-    Info (332119):    -6.436            -992.287 clockcounter:slclock|counter[19] 
-    Info (332119):    -6.349            -616.143 clock 
-    Info (332119):    -6.230           -1125.291 clockcounter:slclock|counter[2] 
-    Info (332119):    -1.997             -45.276 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.745             -29.097 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.250
+    Info (332119):    -6.352            -480.042 clock 
+    Info (332119):    -6.306            -975.866 clockcounter:slclock|counter[19] 
+    Info (332119):    -4.745            -988.844 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.036             -38.858 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -1.656             -29.735 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.219
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.250              -1.922 clockcounter:slclock|counter[19] 
-    Info (332119):    -0.077              -0.168 clock 
-    Info (332119):     0.143               0.000 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.219              -4.686 clockcounter:slclock|counter[2] 
+    Info (332119):     0.002               0.000 clock 
+    Info (332119):     0.138               0.000 clockcounter:slclock|counter[19] 
     Info (332119):     0.279               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.351               0.000 clockcounter:slclock|counter[6] 
-    Info (332119):     0.399               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.304               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -410.799 clockcounter:slclock|counter[19] 
-    Info (332119):    -2.174            -409.926 clockcounter:slclock|counter[2] 
-    Info (332119):    -2.174            -367.007 clockcounter:slclock|counter[6] 
-    Info (332119):    -2.174            -277.560 clock 
-    Info (332119):    -0.394             -13.084 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.180 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -2.174            -438.637 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.174            -402.099 clockcounter:slclock|counter[19] 
+    Info (332119):    -2.174            -228.474 clock 
+    Info (332119):    -0.394             -11.287 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.394             -10.640 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -1142,36 +1052,33 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.372
+Info (332146): Worst-case setup slack is -6.318
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.372            -596.162 clock 
-    Info (332119):    -6.314            -940.323 clockcounter:slclock|counter[6] 
-    Info (332119):    -6.285            -945.481 clockcounter:slclock|counter[19] 
-    Info (332119):    -6.108           -1087.487 clockcounter:slclock|counter[2] 
-    Info (332119):    -1.962             -44.444 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -1.831             -30.076 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.277
+    Info (332119):    -6.318            -463.927 clock 
+    Info (332119):    -6.047            -943.956 clockcounter:slclock|counter[19] 
+    Info (332119):    -4.483            -946.807 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.043             -38.370 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -1.752             -29.642 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.277              -1.074 clock 
-    Info (332119):    -0.249              -5.453 clockcounter:slclock|counter[19] 
-    Info (332119):     0.179               0.000 clockcounter:slclock|counter[2] 
-    Info (332119):     0.281               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.392               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.419               0.000 clockcounter:slclock|counter[6] 
+    Info (332119):    -0.322              -9.117 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.272              -1.232 clock 
+    Info (332119):     0.057               0.000 clockcounter:slclock|counter[19] 
+    Info (332119):     0.282               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.303               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -409.233 clockcounter:slclock|counter[2] 
-    Info (332119):    -2.174            -409.175 clockcounter:slclock|counter[19] 
-    Info (332119):    -2.174            -364.774 clockcounter:slclock|counter[6] 
-    Info (332119):    -2.174            -282.777 clock 
-    Info (332119):    -0.394             -13.132 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.394             -10.180 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -2.174            -436.095 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.174            -401.401 clockcounter:slclock|counter[19] 
+    Info (332119):    -2.174            -231.404 clock 
+    Info (332119):    -0.394             -11.252 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.394             -10.500 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
@@ -1179,78 +1086,72 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.178
+Info (332146): Worst-case setup slack is -3.913
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.178            -606.515 clockcounter:slclock|counter[6] 
-    Info (332119):    -4.164            -613.851 clockcounter:slclock|counter[19] 
-    Info (332119):    -3.875            -656.436 clockcounter:slclock|counter[2] 
-    Info (332119):    -3.483            -322.884 clock 
-    Info (332119):    -0.887             -19.175 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.665             -10.617 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.310
+    Info (332119):    -3.913            -566.848 clockcounter:slclock|counter[19] 
+    Info (332119):    -3.748            -284.962 clock 
+    Info (332119):    -3.070            -566.249 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.890             -15.439 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.646             -12.900 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.310              -0.815 clock 
-    Info (332119):    -0.227              -3.320 clockcounter:slclock|counter[19] 
-    Info (332119):     0.030               0.000 clockcounter:slclock|counter[2] 
-    Info (332119):     0.036               0.000 clockcounter:slclock|counter[6] 
-    Info (332119):     0.090               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.161               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.178              -3.495 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.101              -0.271 clock 
+    Info (332119):     0.020               0.000 clockcounter:slclock|counter[19] 
+    Info (332119):     0.091               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.105               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -312.810 clockcounter:slclock|counter[19] 
-    Info (332119):    -2.174            -303.332 clockcounter:slclock|counter[2] 
-    Info (332119):    -2.174            -299.607 clockcounter:slclock|counter[6] 
-    Info (332119):    -2.174            -202.490 clock 
-    Info (332119):     0.031               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.159               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -2.174            -313.530 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.174            -305.113 clockcounter:slclock|counter[19] 
+    Info (332119):    -2.174            -193.874 clock 
+    Info (332119):     0.094               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.101               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.612
+Info (332146): Worst-case setup slack is -3.329
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.612            -522.245 clockcounter:slclock|counter[19] 
-    Info (332119):    -3.526            -518.074 clockcounter:slclock|counter[6] 
-    Info (332119):    -3.358            -559.876 clockcounter:slclock|counter[2] 
-    Info (332119):    -2.980            -273.070 clock 
-    Info (332119):    -0.741             -16.550 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):    -0.634              -9.655 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332146): Worst-case hold slack is -0.430
+    Info (332119):    -3.329            -487.644 clockcounter:slclock|counter[19] 
+    Info (332119):    -3.153            -243.663 clock 
+    Info (332119):    -2.572            -479.106 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.775             -13.311 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.578             -10.619 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332146): Worst-case hold slack is -0.270
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.430              -1.184 clock 
-    Info (332119):    -0.237              -4.185 clockcounter:slclock|counter[19] 
-    Info (332119):     0.012               0.000 clockcounter:slclock|counter[2] 
-    Info (332119):     0.017               0.000 clockcounter:slclock|counter[6] 
-    Info (332119):     0.071               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-    Info (332119):     0.141               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):    -0.270              -1.162 clock 
+    Info (332119):    -0.250              -6.160 clockcounter:slclock|counter[2] 
+    Info (332119):    -0.050              -1.011 clockcounter:slclock|counter[19] 
+    Info (332119):     0.079               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+    Info (332119):     0.091               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -306.609 clockcounter:slclock|counter[19] 
-    Info (332119):    -2.174            -300.181 clockcounter:slclock|counter[2] 
-    Info (332119):    -2.174            -298.253 clockcounter:slclock|counter[6] 
-    Info (332119):    -2.174            -202.216 clock 
-    Info (332119):     0.054               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
-    Info (332119):     0.160               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
-Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332119):    -2.174            -306.748 clockcounter:slclock|counter[2] 
+    Info (332119):    -2.174            -301.553 clockcounter:slclock|counter[19] 
+    Info (332119):    -2.174            -193.855 clock 
+    Info (332119):     0.106               0.000 VGA_IP_Top:VGA|hsync:hs|newline 
+    Info (332119):     0.112               0.000 VGA_IP_Top:VGA|hsync:hs|blank 
+Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1039 megabytes
-    Info: Processing ended: Wed May 01 10:47:10 2019
+    Info: Peak virtual memory: 1034 megabytes
+    Info: Processing ended: Wed May 01 12:37:32 2019
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:13
 
 
