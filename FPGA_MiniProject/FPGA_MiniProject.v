@@ -57,7 +57,7 @@ wire Wave2_EN;
 wire cursorX_EN;
 wire cursorY_EN;
 wire TWave_EN;
-
+wire [25:0] slClock;
 wire [10:0] offset1;
 wire [10:0] offset2;
 wire hold1;
@@ -71,7 +71,6 @@ wire [3:0] shiftDown2;
 wire [5:0] sampleAdjust1;
 wire [5:0] sampleAdjust2;
 wire [11:0] TCH0;
-
 wire sampleWriteClock1; //stay
 wire sampleWriteClock2; //stay
 assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
@@ -138,7 +137,8 @@ Sample sample(
 	.data (TCH0),
 	.screenX (sX),
 	.reset (0),
-	.screenData (sampledwave1)
+	.screenData (sampledwave1),
+	.triggerthreshold(0)
 );
 
 //test adc
@@ -150,7 +150,8 @@ Sample sample2(
 	.screenX (sX),
 	.reset (0),
 	.screenData (sampledwave2),
-	.resample(ResampleLED)
+	.resample(ResampleLED),
+	.triggerthreshold(100)
 );
 
 /*sevenseg sevSeg(
@@ -164,7 +165,6 @@ Sample sample2(
 	.seg3 (seg3)
 );*/
 
-wire [25:0] slClock;
 
 clockcounter slclock(
 	.clock (clock),
