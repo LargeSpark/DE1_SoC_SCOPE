@@ -47,241 +47,51 @@ output 	[6:0]		seg3
 assign VClock = clock;
 wire [11:0] testwave; //test wave output
 //test code
-reg [10:0] cursorY1 = defaultY1; 	//TESTCODE
-reg [10:0] cursorY2 = defaultY2;	//TESTCODE
-reg [10:0] cursorX1 = defaultX1;  //TESTCODE
-reg [10:0] cursorX2 = defaultX2; //TESTCODE
-reg [10:0] offset1 = 30;
-reg [10:0] offset2 = 200;
+
 //Default codes 
-localparam defaultY1 = 25;
-localparam defaultY2 = 100;
-localparam defaultX1 = 32;
-localparam defaultX2 = 90;
+
 //TEST REG's
-reg testWave1;
-reg testWave2;
-reg testCx;
-reg testCy;
-reg buttPush = 0;
-reg buttPush1 = 0;
-reg hol;
-reg hold1 = 0;
-reg hold2 = 0;
-reg [5:0] sampleAdjust1 = 0;
-reg [5:0] sampleAdjust2 = 0;
-wire sampleWriteClock1;
-wire sampleWriteClock2;
-assign sampleWriteClock1 = slowerClock[sampleAdjust1];
-assign sampleWriteClock2 = slowerClock[sampleAdjust2];
+
+wire Wave1_EN;
+wire Wave2_EN;
+wire cursorX_EN;
+wire cursorY_EN;
+
+
+wire [10:0] offset1;
+wire [10:0] offset2;
+wire hold1;
+wire hold2;
+wire [10:0] cursorY1;
+wire [10:0] cursorY2;
+wire [10:0] cursorX1;
+wire [10:0] cursorX2;
+wire [3:0] shiftDown1;
+wire [3:0] shiftDown2;
+wire [5:0] sampleAdjust1;
+wire [5:0] sampleAdjust2;
+
+wire sampleWriteClock1; //stay
+wire sampleWriteClock2; //stay
+assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
+assign sampleWriteClock2 = slClock[sampleAdjust2]; //stay
+
 //Wave wires
 wire [11:0] waveSigIn1;
 wire [11:0] waveSigIn2;
 wire [11:0] sampledwave1;
 wire [11:0] sampledwave2;
-//Clocks
-reg [25:0] slowerClock = 0;
 //VGA IP Wires 
 wire [10:0] sX;
 wire [10:0] sY;
 //To programatically change down shifts
-reg [3:0] shiftDown1 = 0;
-reg [3:0] shiftDown2 = 3;
 assign waveSigIn1 = (sampledwave1 >> shiftDown1); // Squish 
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
 //wire slClock = slowerClock[clockTest];
 //assign ADDAClock = slClock;
-wire [11:0] adda1;
-//Parameters for Cursors
-localparam moveSize = 1;	
+//wire [11:0] adda1;
 //Code to move cursors on Measre screen
-always @ (posedge slowerClock[19])
-begin
-	//State 1
-	if (!switch9 && !switch8)
-	begin	
-	//Switch on Cursors
-	testCx <= switch0;
-	testCy <= switch1;
-		//Code for yCursors 
-		if (switch3 && !butt3)
-		begin 
-				cursorY1 <= cursorY1 + moveSize;
-		end 
-		else if (switch3 && !butt2)
-		begin 
-				cursorY1 <= cursorY1 - moveSize;
-		end 
-		else if (switch3 && !butt1)
-		begin 
-				cursorY2 <= cursorY2 + moveSize;
-		end 
-		else if (switch3 && !butt0)
-		begin 
-				cursorY2 <= cursorY2 - moveSize;
-		end 
-		//Codr for xCursors
-		if (switch2 && !butt3)
-		begin 
-				cursorX1 <= cursorX1 + moveSize;
-		end 
-		else if (switch2 && !butt2)
-		begin 
-				cursorX1 <= cursorX1 - moveSize;
-		end 
-		else if (switch2 && !butt1)
-		begin 
-				cursorX2 <= cursorX2 + moveSize;
-		end 
-		else if (switch2 && !butt0)
-		begin 
-				cursorX2 <= cursorX2 - moveSize;
-		end
-		//Code to move both Y Cursors @ same time
-		if (switch3 && switch2 && !butt3)
-		begin
-				cursorY1 <= cursorY1 + moveSize;
-				cursorY2 <= cursorY2 + moveSize;
-				cursorX1 <= defaultX1;
-		end
-		if (switch3 && switch2 && !butt2)
-		begin
-				cursorY1 <= cursorY1 - moveSize;
-				cursorY2 <= cursorY2 - moveSize;
-				cursorX1 <= defaultX1;
-		end
-		//Code to move both X Cursors @ same time
-		if (switch3 && switch2 && !butt1)
-		begin
-				cursorX1 <= cursorX1 + moveSize;
-				cursorX2 <= cursorX2 + moveSize;
-				cursorY2 <= defaultY2;
-		end
-		if (switch3 && switch2	&& !butt0)
-		begin
-				cursorX1 <= cursorX1 - moveSize;
-				cursorX2 <= cursorX2 - moveSize;
-				cursorY2 <= defaultY2;
-		end
-	end
-end 
-//Code for Waves 
-always @ (posedge slowerClock[19])
-begin
-	//State 2
-	if (!switch9 && switch8)
-	begin 
-	//Code to see Waves 	
-	testWave1 <= switch0;
-	testWave2 <= switch1;
-		//Move Wave 1 up and down 
-		if (switch2 && !butt3 && !switch5)
-		begin
-				offset1 <= offset1 + moveSize;		
-		end	
-		else if (switch2 && !butt2 && !switch5)
-		begin
-				offset1 <= offset1 - moveSize;		
-		end	
-		//Move Wave 2 up and down 
-		else if (switch2 && !butt1 && !switch5)
-		begin
-				offset2 <= offset2 + moveSize;		
-		end	
-		else if (switch2 && !butt0 && !switch5)
-		begin
-				offset2 <= offset2 - moveSize;		
-		end				
-	end
-end
 
-//Code for Squish
-always @ (posedge slowerClock[19])
-begin
-	if (!switch9 && switch8)
-	begin
-		if (switch3 && !butt3 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown1 = shiftDown1 + 1;			
-		end
-		else if (switch3 && !butt2 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown1 = shiftDown1 - 1;			
-		end
-		else if (switch3 && !butt1 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown2 = shiftDown2 + 1;			
-		end
-		else if (switch3 && !butt0 && !buttPush)
-		begin
-			buttPush <= 1;
-			shiftDown2 = shiftDown2 - 1;			
-		end
-		else if ((butt0 && butt1 && butt2 && butt3) && buttPush) begin
-			buttPush <= 0;
-		end
-	end
-end  
-// Code for hold
-always @ (posedge slowerClock[19])
-begin
-	if (!switch9 && switch8)
-	begin 
-		if (switch4 && !butt3 && !hold1)
-		begin
-			hold1 <= 1;
-			hol  <= hold1;
-		end
-		else if (switch4 && !butt2 && hold1)
-		begin
-			hold1 <= 0;
-			hol  <= hold1;
-		end
-		else if (switch4 && !butt1 && !hold2)
-		begin
-			hold2 <= 1;
-			hol  <= hold2;
-		end
-		else if (switch4 && !butt0 && hold2)
-		begin
-			hold2 <= 0;
-			hol  <= hold2;
-		end	
-	end
-end
-// Code for sample adjust
-always @ (posedge slowerClock[19])
-begin
-	if (!switch9 && switch8)
-	begin 
-		if (switch5 && !butt3 && !buttPush1)
-		begin
-			buttPush1 <= 1; 
-			sampleAdjust1 <= sampleAdjust1 + 1;
-		end 
-		else if (switch5 &&  !butt2 && !buttPush1)
-		begin
-		   buttPush1 <= 1;
-			sampleAdjust1 <= sampleAdjust1 - 1;
-		end
-		else if (switch5 &&  !butt1	&& !buttPush1)
-		begin
-			buttPush1 <= 1;
-			sampleAdjust2 <= sampleAdjust2 + 1;
-		end 
-		else if (switch5 &&  !butt0 && !buttPush1)
-		begin
-			buttPush1 <= 1;
-			sampleAdjust2 <= sampleAdjust2 - 1;
-		end
-		else if ((butt0 && butt1 && butt2 && butt3) && buttPush1) begin
-			buttPush1 <= 0;
-		end
-	end
-end
  
 wire [11:0] CH0;
 wire [11:0] CH1;
@@ -292,22 +102,22 @@ wire [11:0] CH5;
 wire [11:0] CH6;
 wire [11:0] CH7;
 sine_wave_gen testWave(
-	.Clk (slowerClock[6]),
+	.Clk (slClock[6]),
 	.data_out (testwave)
 	);
 
 VGA_IP_Top VGA(
 	.clk50 		(clock),
-	.cursorX_EN (testCx),
-	.cursorY_EN (testCy),
+	.cursorX_EN (cursorX_EN),
+	.cursorY_EN (cursorY_EN),
 	.cursorY1 	(cursorY1),
 	.cursorY2 	(cursorY2),
 	.cursorX1 	(cursorX1),
 	.cursorX2 	(cursorX2),
 	.waveSigIn1 (waveSigIn1),
 	.waveSigIn2 (waveSigIn2),
-	.waveSigIn1_En (testWave1),
-	.waveSigIn2_En (testWave2),
+	.waveSigIn1_En (Wave1_EN),
+	.waveSigIn2_En (Wave2_EN),
 	.hsync_out 	(vga_hsync),
 	.vsync_out 	(vga_vsync),
 	.red_out 	(R),
@@ -322,7 +132,7 @@ VGA_IP_Top VGA(
 Sample sample(
 	.readClock (clock),
 	.writeClock (sampleWriteClock1),
-	.hold (hol ),
+	.hold (hold1),
 	.data (testwave),
 	.screenX (sX),
 	.reset (0),
@@ -333,55 +143,68 @@ Sample sample(
 Sample sample2(
 	.readClock (clock),
 	.writeClock (sampleWriteClock2),
-	.hold ( hol),
+	.hold (hold2),
 	.data (CH0),
 	.screenX (sX),
 	.reset (0),
 	.screenData (sampledwave2),
 	.resample(ResampleLED)
 );
-/*
-ADDA adda(
-	.clock (clock),				//clock
-	.ADC (ADCin),					//ADDA GPIO
-	.OutOfRange (OutOfRange),			//OUT OF RANGE INDICATOR
-	.EN (1),					//CHANNEL ENABLE PIN
-	.clockEN (1),				//CLOCK ENABLE
-	.invertEN (0),			//INVERT OUTPUT
-	.ADCOut (adda1),				
-	.OutOfRangeOut ( ),
-	.clockOut	( )
-);*/
 
 sevenseg sevSeg(
-.clock (clock),
-.seg_En (4'b1111),
-.number (4567),
-.decimalPoint_EN (0),
-.seg0 (seg0),
-.seg1 (seg1),
-.seg2 (seg2),
-.seg3 (seg3)
+	.clock (clock),
+	.seg_En (4'b1111),
+	.number (4567),
+	.decimalPoint_EN (0),
+	.seg0 (seg0),
+	.seg1 (seg1),
+	.seg2 (seg2),
+	.seg3 (seg3)
+);
+
+wire [25:0] slClock;
+
+clockcounter slclock(
+	.clock (clock),
+	.counterout (slClock)
+);
+
+controls Ctrl(
+	.switch0 (switch0), //Cursor X En
+	.switch1 (switch1),	//Cursor Y En
+	.switch2 (switch2), //Signal 1 En
+	.switch3 (switch3),	//Signal 2 En
+	.switch4 (switch4), //Cursor Y set
+	.switch5 (switch5), //Cursor X Set 
+	.switch6 (switch6), //Wave 1 Shift /Squish
+	.switch7 (switch7), //Wave 2 Shift/Squish
+	.switch8 (switch8), //Wave 1 Clock 
+	.switch9 (switch9), //Wave 2 Clock 
+	.butt0 (butt0),	//x1/y1 left/up
+	.butt1 (butt1),  	//x1/y1 right/down
+	.butt2 (butt2),	//x2/y2 left/up
+	.butt3 (butt3),	//x2/y2 right/down
+	.buttonClock (slClock[19]),
+	.hold1Out (hold1),
+	.hold2Out (hold2),
+	.cursorY1Out (cursorY1),
+	.cursorY2Out (cursorY2),
+	.cursorX1Out (cursorX1),
+	.cursorX2Out (cursorX2),
+	.shiftDown1Out (shiftDown1),
+	.shiftDown2Out (shiftDown2),
+	.sampleAdjust1Out (sampleAdjust1),
+	.sampleAdjust2Out (sampleAdjust2),
+	.cursorX_ENOut (cursorX_EN),
+	.cursorY_ENOut (cursorY_EN),
+	.Wave1_ENOut (Wave1_EN),
+	.Wave2_ENOut (Wave2_EN),
+	.offset1Out (offset1),
+	.offset2Out (offset2)
 );
 
 
 
-/*ADA ada(
-	.CLOCK(slowerClock[3]),
-	.RESET(0),
-	.ADC_CS_N(ADC_CS_N),
-	.ADC_SCLK(ADC_SCLK),
-	.ADC_DIN(ADC_DIN),
-	.ADC_DOUT(ADC_DOUT),
-	.CH0 (CH0), 
-	.CH1 (CH1), 
-	.CH2 (CH2), 
-	.CH3 (CH3), 
-	.CH4 (CH4), 
-	.CH5 (CH5), 
-	.CH6 (CH6), 
-	.CH7 (CH7)
-);*/
 
 	ADCV2_adc_mega_0 #(
 		.board          ("DE1-SoC"),
@@ -391,7 +214,7 @@ sevenseg sevSeg(
 		.max10pllmultby (1),
 		.max10plldivby  (1)
 	) adc_mega_0 (
-		.CLOCK    (slowerClock[2]),    //                clk.clk
+		.CLOCK    (slClock[2]),    //                clk.clk
 		.RESET    (0),    //              reset.reset
 		.CH0      (CH0),      //           readings.export
 		.CH1      (CH1),      //                   .export
@@ -406,10 +229,5 @@ sevenseg sevSeg(
 		.ADC_DOUT (ADC_DOUT), //                   .export
 		.ADC_DIN  (ADC_DIN)   //                   .export
 	);
-
-always @(posedge clock) begin
-	slowerClock <= slowerClock + 1;
-
-end
 
 endmodule 
