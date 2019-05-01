@@ -76,7 +76,7 @@ wire sampleWriteClock1; //stay
 wire sampleWriteClock2; //stay
 assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
 assign sampleWriteClock2 = slClock[sampleAdjust2]; //stay
-assign TCH0 = (TWave_EN) ? testwave : CH0;
+assign TCH0 = (TWave_EN == 1) ? testwave : CH0;
 
 //Wave wires
 wire [11:0] waveSigIn1;
@@ -203,7 +203,7 @@ controls Ctrl(
 	.Wave2_ENOut (Wave2_EN),
 	.offset1Out (offset1),
 	.offset2Out (offset2),
-	.TWave_EnOut   (TWave_En)
+	.TWave_EnOut (TWave_EN)
 );
 
 
