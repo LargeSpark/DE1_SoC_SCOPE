@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_MiniProject
-Wed May 01 10:45:09 2019
+Wed May 01 11:26:45 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 01 10:45:09 2019                    ;
+; Analysis & Synthesis Status     ; Successful - Wed May 01 11:26:45 2019                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; FPGA_MiniProject                                         ;
 ; Top-level Entity Name           ; FPGA_MiniProject                                         ;
@@ -225,10 +225,10 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 737         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 104         ;
-;     -- 5 input functions                    ; 129         ;
-;     -- 4 input functions                    ; 105         ;
-;     -- <=3 input functions                  ; 398         ;
+;     -- 6 input functions                    ; 105         ;
+;     -- 5 input functions                    ; 130         ;
+;     -- 4 input functions                    ; 104         ;
+;     -- <=3 input functions                  ; 397         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 474         ;
 ;                                             ;             ;
@@ -240,8 +240,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 190         ;
-; Total fan-out                               ; 4752        ;
-; Average fan-out                             ; 3.35        ;
+; Total fan-out                               ; 4758        ;
+; Average fan-out                             ; 3.36        ;
 +---------------------------------------------+-------------+
 
 
@@ -383,7 +383,7 @@ Encoding Type:  One-Hot
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[2] ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |FPGA_MiniProject|controls:Ctrl|cursorX2[2]                                                      ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample2|triggercounter[8]                                               ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[0]                                                ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |FPGA_MiniProject|Sample:sample|triggercounter[1]                                                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |FPGA_MiniProject|ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[8] ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |FPGA_MiniProject|controls:Ctrl|cursorX1[1]                                                      ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |FPGA_MiniProject|controls:Ctrl|cursorY2[9]                                                      ;
@@ -654,27 +654,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Sample:sample2"                                                                                                                                                                        ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; screenX   ; Input ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sample:sample2"                                                                                                                                                                                       ;
++-------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                    ; Type  ; Severity ; Details                                                                                                                                                                             ;
++-------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; screenX                 ; Input ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                 ;
+; reset                   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; reset[-1]               ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; triggerthreshold        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; triggerthreshold[6..5]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; triggerthreshold[11..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; triggerthreshold[4..3]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; triggerthreshold[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; triggerthreshold[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++-------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Sample:sample"                                                                                                                                                                          ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; screenX   ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                ;
-; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; resample  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sample:sample"                                                                                                                                                                                         ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                    ; Type   ; Severity ; Details                                                                                                                                                                             ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; screenX                 ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "screenX[11..11]" will be connected to GND.                                 ;
+; reset                   ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; reset[-1]               ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; triggerthreshold        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; triggerthreshold[11..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; resample                ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                            ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -720,11 +728,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 425                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 26                          ;
-;         2 data inputs ; 44                          ;
-;         3 data inputs ; 94                          ;
-;         4 data inputs ; 77                          ;
-;         5 data inputs ; 79                          ;
-;         6 data inputs ; 104                         ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 95                          ;
+;         4 data inputs ; 76                          ;
+;         5 data inputs ; 80                          ;
+;         6 data inputs ; 105                         ;
 ; boundary_port         ; 91                          ;
 ; stratixv_ram_block    ; 24                          ;
 ;                       ;                             ;
@@ -748,7 +756,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Wed May 01 10:44:55 2019
+    Info: Processing started: Wed May 01 11:26:31 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -784,7 +792,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file counter
 Warning (10236): Verilog HDL Implicit Net warning at VGATB.v(28): created implicit net for "R" File: C:/FPGA/FPGA_MiniProject/VGATB.v Line: 28
 Info (12127): Elaborating entity "FPGA_MiniProject" for the top level hierarchy
 Warning (10034): Output port "ADDAClock" at FPGA_MiniProject.v(38) has no driver File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 38
-Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 107
+Info (12128): Elaborating entity "sine_wave_gen" for hierarchy "sine_wave_gen:testWave" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 105
 Warning (10230): Verilog HDL assignment warning at sineGen.v(32): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 32
 Warning (10230): Verilog HDL assignment warning at sineGen.v(33): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 33
 Warning (10230): Verilog HDL assignment warning at sineGen.v(34): truncated value with size 32 to match size of target (14) File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 34
@@ -803,7 +811,7 @@ Warning (10230): Verilog HDL assignment warning at sineGen.v(51): truncated valu
 Warning (10030): Net "sine.data_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.waddr_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
 Warning (10030): Net "sine.we_a" at sineGen.v(9) has no driver or initial value, using a default initial value '0' File: C:/FPGA/FPGA_MiniProject/sineGen.v Line: 9
-Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 130
+Info (12128): Elaborating entity "VGA_IP_Top" for hierarchy "VGA_IP_Top:VGA" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 128
 Info (12128): Elaborating entity "hsync" for hierarchy "VGA_IP_Top:VGA|hsync:hs" File: C:/FPGA/FPGA_MiniProject/VGA_IP_Top.v Line: 32
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(53): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 53
 Info (12128): Elaborating entity "vsync" for hierarchy "VGA_IP_Top:VGA|vsync:vs" File: C:/FPGA/FPGA_MiniProject/VGA_IP_Top.v Line: 38
@@ -816,14 +824,15 @@ Warning (10230): Verilog HDL assignment warning at VGA_IP.v(290): truncated valu
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(293): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 293
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(294): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 294
 Warning (10230): Verilog HDL assignment warning at VGA_IP.v(295): truncated value with size 32 to match size of target (8) File: C:/FPGA/FPGA_MiniProject/VGA_IP.v Line: 295
-Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 140
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(18): object "outputcounter" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(20): object "randomreg1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 20
-Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(21): object "randomreg2" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 21
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(53): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 53
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(54): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 54
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(58): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 58
-Warning (10230): Verilog HDL assignment warning at Sample_IP.v(59): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 59
+Info (12128): Elaborating entity "Sample" for hierarchy "Sample:sample" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 139
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(16): object "triggerHighPoint" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(19): object "outputcounter" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 19
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(21): object "randomreg1" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at Sample_IP.v(22): object "randomreg2" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 22
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(56): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 56
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(57): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 57
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(61): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 61
+Warning (10230): Verilog HDL assignment warning at Sample_IP.v(62): truncated value with size 32 to match size of target (12) File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 62
 Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:sevSeg" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 163
 Info (12128): Elaborating entity "numbersplit" for hierarchy "sevenseg:sevSeg|numbersplit:NS" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 36
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(99): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 99
@@ -833,51 +842,50 @@ Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(113): truncated
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(115): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 115
 Warning (10230): Verilog HDL assignment warning at SevenSeg_IP.v(117): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 117
 Info (12128): Elaborating entity "generateSevenSegOutput" for hierarchy "sevenseg:sevSeg|generateSevenSegOutput:segoutput0" File: C:/FPGA/FPGA_MiniProject/SevenSeg_IP.v Line: 42
-Info (12128): Elaborating entity "clockcounter" for hierarchy "clockcounter:slclock" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 170
+Info (12128): Elaborating entity "clockcounter" for hierarchy "clockcounter:slclock" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 169
 Warning (10230): Verilog HDL assignment warning at Counter_IP.v(11): truncated value with size 32 to match size of target (26) File: C:/FPGA/FPGA_MiniProject/Counter_IP.v Line: 11
-Info (12128): Elaborating entity "controls" for hierarchy "controls:Ctrl" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 204
-Warning (10036): Verilog HDL or VHDL warning at Controls_IP.v(39): object "hol" assigned a value but never read File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 39
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(48): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 48
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(49): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 49
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(50): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 50
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(51): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 51
+Info (12128): Elaborating entity "controls" for hierarchy "controls:Ctrl" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 203
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(40): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 40
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(41): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 41
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(42): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 42
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(43): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 43
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(89): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 89
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(93): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 93
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(97): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 97
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(101): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 101
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(105): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 105
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(106): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 106
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(110): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 110
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(114): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 114
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(118): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 118
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(122): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 122
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(127): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 127
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(128): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 128
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(123): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 123
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(124): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 124
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(125): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 125
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(129): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 129
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(133): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 133
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(134): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 134
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(135): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 135
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(140): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 140
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(141): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 141
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(130): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 130
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(131): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 131
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(136): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 136
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(137): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 137
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(138): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 138
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(142): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 142
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(146): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 146
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(147): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 147
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(148): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 148
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(143): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 143
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(144): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 144
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(160): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 160
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(164): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 164
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(168): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 168
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(169): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 169
 Warning (10230): Verilog HDL assignment warning at Controls_IP.v(173): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 173
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(177): truncated value with size 32 to match size of target (11) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 177
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(190): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 190
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(195): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 195
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(200): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 200
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(205): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 205
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(247): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 247
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(252): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 252
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(257): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 257
-Warning (10230): Verilog HDL assignment warning at Controls_IP.v(262): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 262
-Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 231
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(186): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 186
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(191): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 191
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(196): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 196
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(201): truncated value with size 32 to match size of target (4) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 201
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(239): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 239
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(244): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 244
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(249): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 249
+Warning (10230): Verilog HDL assignment warning at Controls_IP.v(254): truncated value with size 32 to match size of target (6) File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 254
+Info (12128): Elaborating entity "ADCV2_adc_mega_0" for hierarchy "ADCV2_adc_mega_0:adc_mega_0" File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 230
 Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "ADCV2_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL" File: C:/FPGA/FPGA_MiniProject/ADA_Generated.v Line: 58
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Mux1 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 77
-    Warning (19017): Found clock multiplexer Mux0 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 76
+    Warning (19017): Found clock multiplexer Mux1 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 75
+    Warning (19017): Found clock multiplexer Mux0 File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 74
 Warning (276027): Inferred dual-clock RAM node "Sample:sample2|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "Sample:sample|sampleData_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 1 instances of uninferred RAM logic
@@ -965,7 +973,7 @@ Info (21057): Implemented 942 device resources after synthesis - the final resou
     Info (21064): Implemented 24 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
     Info: Peak virtual memory: 710 megabytes
-    Info: Processing ended: Wed May 01 10:45:09 2019
+    Info: Processing ended: Wed May 01 11:26:45 2019
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:26
 

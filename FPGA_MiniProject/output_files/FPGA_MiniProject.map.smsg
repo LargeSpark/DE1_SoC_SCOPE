@@ -1,4 +1,4 @@
 Info (10281): Verilog HDL Declaration information at FPGA_MiniProject.v(48): object "testwave" differs only in case from object "testWave" in the same scope File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 48
-Info (10281): Verilog HDL Declaration information at FPGA_MiniProject.v(165): object "slClock" differs only in case from object "slclock" in the same scope File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 165
-Warning (10268): Verilog HDL information at Sample_IP.v(42): always construct contains both blocking and non-blocking assignments File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 42
-Warning (10268): Verilog HDL information at Controls_IP.v(183): always construct contains both blocking and non-blocking assignments File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 183
+Info (10281): Verilog HDL Declaration information at FPGA_MiniProject.v(59): object "slClock" differs only in case from object "slclock" in the same scope File: C:/FPGA/FPGA_MiniProject/FPGA_MiniProject.v Line: 59
+Warning (10268): Verilog HDL information at Sample_IP.v(45): always construct contains both blocking and non-blocking assignments File: C:/FPGA/FPGA_MiniProject/Sample_IP.v Line: 45
+Warning (10268): Verilog HDL information at Controls_IP.v(179): always construct contains both blocking and non-blocking assignments File: C:/FPGA/FPGA_MiniProject/Controls_IP.v Line: 179
