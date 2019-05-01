@@ -256,10 +256,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "butt2",
-					"strict" : false
-				},
-				{
 					"name" : "butt3",
 					"strict" : false
 				},
@@ -268,11 +264,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch2",
-					"strict" : false
-				},
-				{
-					"name" : "butt0",
+					"name" : "butt2",
 					"strict" : false
 				},
 				{
@@ -280,19 +272,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "butt0",
+					"strict" : false
+				},
+				{
+					"name" : "switch2",
+					"strict" : false
+				},
+				{
 					"name" : "switch0",
 					"strict" : false
 				},
 				{
-					"name" : "switch5",
-					"strict" : false
-				},
-				{
-					"name" : "switch4",
-					"strict" : false
-				},
-				{
 					"name" : "ADC_DOUT",
+					"strict" : false
+				},
+				{
+					"name" : "switch5",
 					"strict" : false
 				}
 			]

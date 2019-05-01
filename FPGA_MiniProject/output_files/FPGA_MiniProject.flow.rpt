@@ -1,5 +1,5 @@
 Flow report for FPGA_MiniProject
-Tue Apr 30 12:15:22 2019
+Wed May 01 10:07:21 2019
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -40,25 +40,25 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 30 12:15:22 2019                    ;
+; Flow Status                     ; Successful - Wed May 01 10:07:21 2019                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; FPGA_MiniProject                                         ;
 ; Top-level Entity Name           ; FPGA_MiniProject                                         ;
 ; Family                          ; Cyclone V                                                ;
 ; Device                          ; 5CSEMA5F31C6                                             ;
 ; Timing Models                   ; Final                                                    ;
-; Logic utilization (in ALMs)     ; 427 / 32,070 ( 1 % )                                     ;
-; Total registers                 ; 544                                                      ;
-; Total pins                      ; 91 / 457 ( 20 % )                                        ;
+; Logic utilization (in ALMs)     ; N/A                                                      ;
+; Total registers                 ; 450                                                      ;
+; Total pins                      ; 91                                                       ;
 ; Total virtual pins              ; 0                                                        ;
-; Total block memory bits         ; 19,224 / 4,065,280 ( < 1 % )                             ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                           ;
+; Total block memory bits         ; 19,224                                                   ;
+; Total DSP Blocks                ; 0                                                        ;
 ; Total HSSI RX PCSs              ; 0                                                        ;
 ; Total HSSI PMA RX Deserializers ; 0                                                        ;
 ; Total HSSI TX PCSs              ; 0                                                        ;
 ; Total HSSI PMA TX Serializers   ; 0                                                        ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                            ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                            ;
+; Total PLLs                      ; 0                                                        ;
+; Total DLLs                      ; 0                                                        ;
 +---------------------------------+----------------------------------------------------------+
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2019 12:12:56 ;
+; Start date & time ; 05/01/2019 10:07:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA_MiniProject    ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                        ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                  ; 70465358177714.155662277608440         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                  ; 70465358162119.155670162405528         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME               ; NA                                     ; --            ; --          ; VGATest_tb     ;
 ; EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ; simulation/load_sim.tcl                ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH   ; VGATest_tb                             ; --            ; --          ; eda_simulation ;
@@ -101,41 +101,29 @@ refer to the applicable agreement for further details.
 +----------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 713 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:01:45     ; 1.1                     ; 2608 MB             ; 00:02:31                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 698 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:13     ; 1.3                     ; 1037 MB             ; 00:00:15                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 625 MB              ; 00:00:02                           ;
-; Total                     ; 00:02:22     ; --                      ; --                  ; 00:03:20                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 707 MB              ; 00:00:26                           ;
+; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:26                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EENTPC67         ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; EENTPC67         ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; EENTPC67         ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EENTPC67         ; Windows 7 ; 6.1        ; x86_64         ;
-; EDA Netlist Writer        ; EENTPC67         ; Windows 7 ; 6.1        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; EENTPC147        ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
-quartus_fit --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
-quartus_asm --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
-quartus_sta FPGA_MiniProject -c FPGA_MiniProject
-quartus_eda --read_settings_files=off --write_settings_files=off FPGA_MiniProject -c FPGA_MiniProject
 
 
 
