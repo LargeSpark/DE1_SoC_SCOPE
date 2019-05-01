@@ -20,9 +20,6 @@ input					butt0,	//x1/y1 left/up
 input					butt1,  	//x1/y1 right/down
 input					butt2,	//x2/y2 left/up
 input					butt3,	//x2/y2 right/down
-//input [2:0]			clockTest,
-input [13:0] 	ADCin,
-input 			OutOfRange,
 //ADC Onboard
 output				ADC_CS_N,
 output 				ADC_SCLK, //clock
@@ -35,7 +32,6 @@ output	[7:0]		R,
 output	[7:0]		G,
 output	[7:0]		B,
 output				VClock,
-output				ADDAClock,
 output				ResampleLED,
 //seven seg
 output 	[6:0]		seg0,
@@ -46,11 +42,6 @@ output 	[6:0]		seg3
 
 assign VClock = clock;
 wire [11:0] testwave; //test wave output
-//test code
-
-//Default codes 
-
-//TEST REG's
 
 wire Wave1_EN;
 wire Wave2_EN;
@@ -88,11 +79,7 @@ wire [10:0] sY;
 //To programatically change down shifts
 assign waveSigIn1 = (sampledwave1 >> shiftDown1); // Squish 
 assign waveSigIn2 = (sampledwave2 >> shiftDown2); //needs to change to wave sample 2 sampledwave1
-//wire slClock = slowerClock[clockTest];
-//assign ADDAClock = slClock;
-//wire [11:0] adda1;
-//Code to move cursors on Measre screen
-//assign 
+
  
 wire [11:0] CH0;
 wire [11:0] CH1;
@@ -154,16 +141,16 @@ Sample sample2(
 	.triggerthreshold(100)
 );
 
-/*sevenseg sevSeg(
+sevenseg sevSeg(
 	.clock (clock),
 	.seg_En (4'b1111),
-	.number (num),
+	.number (0),
 	.decimalPoint_EN (0),
 	.seg0 (seg0),
 	.seg1 (seg1),
 	.seg2 (seg2),
 	.seg3 (seg3)
-);*/
+);
 
 
 clockcounter slclock(
