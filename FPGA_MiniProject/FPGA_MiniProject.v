@@ -46,12 +46,6 @@ output 	[6:0]		seg3
 
 assign VClock = clock;
 wire [11:0] testwave; //test wave output
-//test code
-
-//Default codes 
-
-//TEST REG's
-
 wire Wave1_EN;
 wire Wave2_EN;
 wire cursorX_EN;
@@ -76,7 +70,6 @@ wire sampleWriteClock2; //stay
 assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
 assign sampleWriteClock2 = slClock[sampleAdjust2]; //stay
 assign TCH0 = (TWave_EN == 1) ? testwave : CH0;
-
 //Wave wires
 wire [11:0] waveSigIn1;
 wire [11:0] waveSigIn2;
@@ -154,7 +147,7 @@ Sample sample2(
 	.triggerthreshold(100)
 );
 
-/*sevenseg sevSeg(
+sevenseg sevSeg(
 	.clock (clock),
 	.seg_En (4'b1111),
 	.number (num),
@@ -163,7 +156,7 @@ Sample sample2(
 	.seg1 (seg1),
 	.seg2 (seg2),
 	.seg3 (seg3)
-);*/
+);
 
 
 clockcounter slclock(

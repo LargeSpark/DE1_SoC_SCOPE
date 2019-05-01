@@ -89,7 +89,6 @@ begin
 	//Switch on Cursors
 	cursorX_EN <= switch0;
 	cursorY_EN <= switch1;
-	num <= 500;
 		//Code for yCursors 
 		if (switch3 && !butt3)
 		begin 
