@@ -25,6 +25,7 @@ reg [13:0] deltax2 = 0;
 reg [13:0] result = 6;
 reg [13:0] vx1 = 0;
 reg [13:0] vx2 = 0;
+reg [13:0] fy1 = 0;
 assign num = result;
 localparam n = 0;
 
@@ -47,6 +48,9 @@ begin
 		result <= vx1;
 		//vx2 <= ((shiftDown2 + 1) * Diffx)*2; //Measuring Pk-Pk	
 		//result <= vx2;	
+		/*fy1 <= (((sampleadjust1 + 1) * Diffy));
+		result <= fy1;*/
+
 end
 
 endmodule 
