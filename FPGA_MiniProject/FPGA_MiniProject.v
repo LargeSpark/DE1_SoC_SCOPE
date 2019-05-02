@@ -196,7 +196,9 @@ controls Ctrl(
 );
 
 Measure measure(
-	.buttonClock (slClock[19]), 	
+	.buttonClock (slClock[19]),
+	.switch8 (switch8), //Wave 1 Clock 
+	.switch9 (switch9), //Wave 2 Clock  	
 	.switch7	 (switch7),
 	.cursory1 (cursorY1),
 	.cursory2 (cursorY2),
