@@ -1,6 +1,6 @@
 /* Controls for FPGA_MiniProject
 This module contros which waves/cursor display on screen
-the position of the waves/cursors. the colts/div aswell as the time/div 
+the position of the waves/cursors. the volts/div aswell as the time/div 
 N-Channel Oscilloscope */
 
 //All the inputs & outputs
@@ -294,6 +294,7 @@ begin
 			buttPush1 <= 1;
 			sampleAdjust2 <= sampleAdjust2 + 1;
 	   //When switch 5 is 1, buttpush is 0, and key 0 is pressed 
+		end
 		else if (switch5 &&  !butt0 && !buttPush1)
 		begin
 		   //Make buttpush 1, Decrease time/div for wave 2
