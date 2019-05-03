@@ -20,7 +20,6 @@ input					butt0,	//x1/y1 left/up
 input					butt1,  	//x1/y1 right/down
 input					butt2,	//x2/y2 left/up
 input					butt3,	//x2/y2 right/down
-//input [2:0]			clockTest,
 input [13:0] 	ADCin,
 input 			OutOfRange,
 //ADC Onboard
@@ -43,8 +42,7 @@ output 	[6:0]		seg1,
 output 	[6:0]		seg2,
 output 	[6:0]		seg3
 );
-
-assign VClock = clock;
+// Various wires to enable waves/cursors/clocks
 wire [11:0] testwave; //test wave output
 wire Wave1_EN;
 wire Wave2_EN;
@@ -57,6 +55,7 @@ wire [10:0] offset2;
 wire [13:0] num;
 wire hold1;
 wire hold2;
+//Wires to hold the position of cursors
 wire [10:0] cursorY1;
 wire [10:0] cursorY2;
 wire [10:0] cursorX1;
@@ -70,6 +69,7 @@ wire sampleWriteClock1; //stay
 wire sampleWriteClock2; //stay
 assign sampleWriteClock1 = slClock[sampleAdjust1]; //stay
 assign sampleWriteClock2 = slClock[sampleAdjust2]; //stay
+assign VClock = clock;
 assign TCH0 = (TWave_EN == 1) ? testwave : CH0;
 //Wave wires
 wire [11:0] waveSigIn1;
