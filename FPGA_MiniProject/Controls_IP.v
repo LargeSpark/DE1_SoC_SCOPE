@@ -1,3 +1,9 @@
+/* Controls for FPGA_MiniProject
+This module contros which waves/cursor display on screen
+the position of the waves/cursors. the colts/div aswell as the time/div 
+N-Channel Oscilloscope */
+
+//All the inputs & outputs
 module controls(
 input					switch0, //Cursor X En
 input					switch1,	//Cursor Y En
@@ -32,37 +38,41 @@ output 	[10:0]	offset1Out,
 output 	[10:0]	offset2Out,
 output   			TWave_EnOut
 );
-localparam defaultY1 = 60; // 60 pixels = 500mV
+//Default posiions of the cursors
+localparam defaultY1 = 60; // 60 pixels = ~500mV
 localparam defaultY2 = 120;
 localparam defaultX1 = 32;
 localparam defaultX2 = 90;
-//Parameters for Cursors
+//Parameter for Cursor move Cursor by 1 every clock cycle
 localparam moveSize = 1;	
-reg [10:0] cursorY1 = defaultY1; 	//TESTCODE
-reg [10:0] cursorY2 = defaultY2;	//TESTCODE
-reg [10:0] cursorX1 = defaultX1;  //TESTCODE
-reg [10:0] cursorX2 = defaultX2; //TESTCODE
+//Set each cursor to the default position 
+reg [10:0] cursorY1 = defaultY1; 	
+reg [10:0] cursorY2 = defaultY2;	
+reg [10:0] cursorX1 = defaultX1;  
+reg [10:0] cursorX2 = defaultX2; 
+//Offset sets the intial postion of the waves on the screen
 reg [10:0] offset1 = 30;
 reg [10:0] offset2 = 200;
+//Initially showing the defualt samples on the screen
 reg [5:0] sampleAdjust1 = 0;
 reg [5:0] sampleAdjust2 = 0;
+//The hold and buttpush reg's are to make sure the buttons work on push and not hold
+//Useful for control the size of the time or volts/div
 reg hold1 = 0;
 reg hold2 = 0;
 reg buttPush = 0;
 reg buttPush1 = 0;
-reg hol;
-// TEST
-reg [5:0] num = 0;
+//Following is to get the test wave up and running, instead of wave 1
 reg TWave_En = 0;
 assign TWave_EnOut = TWave_En;
-
+//Intial value of shiftdown, allows user to see decent size wave
 reg [3:0] shiftDown1 = 3;
 reg [3:0] shiftDown2 = 3;
+//Enable cursors and Waves to 0
 reg cursorX_EN = 0;
 reg cursorY_EN = 0;
 reg Wave1_EN = 0;
 reg Wave2_EN = 0;
-
 //assignments
 assign hold1Out = hold1;
 assign hold2Out = hold2;
@@ -80,7 +90,8 @@ assign Wave1_ENOut = Wave1_EN;
 assign Wave2_ENOut = Wave2_EN;
 assign offset1Out = offset1;
 assign offset2Out = offset2;
-
+//Following code is for state 1, when switch 8 & 9 are 0
+//Contros whether the cursors are on the screen, and the position of them 
 always @ (posedge buttonClock)
 begin
 	//State 1

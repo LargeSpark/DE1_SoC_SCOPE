@@ -44,12 +44,9 @@ begin
 	deltax1 <= cursorx1 - cursorx2;
 	deltax2 <= cursorx2 - cursorx1;
 
-		vx1 <= ((((shiftDown1 + 1) * Diffx)) * 2); //Measuring Pk-Pk
+		vx1 <= ((((shiftDown1 + 1) * Diffx)) * 2); //Measuring voltage
 		result <= vx1;
-		//vx2 <= ((shiftDown2 + 1) * Diffx)*2; //Measuring Pk-Pk	
-		//result <= vx2;	
-		/*fy1 <= (((sampleadjust1 + 1) * Diffy));
-		result <= fy1;*/
+		
 
 end
 
