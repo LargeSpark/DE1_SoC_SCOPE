@@ -20,8 +20,6 @@ input					butt0,	//x1/y1 left/up
 input					butt1,  	//x1/y1 right/down
 input					butt2,	//x2/y2 left/up
 input					butt3,	//x2/y2 right/down
-input [13:0] 	ADCin,
-input 			OutOfRange,
 //ADC Onboard
 output				ADC_CS_N,
 output 				ADC_SCLK, //clock
@@ -34,7 +32,6 @@ output	[7:0]		R,
 output	[7:0]		G,
 output	[7:0]		B,
 output				VClock,
-output				ADDAClock,
 output				ResampleLED,
 //seven seg
 output 	[6:0]		seg0,
@@ -44,6 +41,7 @@ output 	[6:0]		seg3
 );
 // Various wires to enable waves/cursors/clocks
 wire [11:0] testwave; //test wave output
+
 wire Wave1_EN;
 wire Wave2_EN;
 wire cursorX_EN;
@@ -154,7 +152,7 @@ Sample sample2(
 sevenseg sevSeg(
 	.clock (clock),
 	.seg_En (4'b1111),
-	.number (num),
+	.number (0),
 	.decimalPoint_EN (0),
 	.seg0 (seg0),
 	.seg1 (seg1),
