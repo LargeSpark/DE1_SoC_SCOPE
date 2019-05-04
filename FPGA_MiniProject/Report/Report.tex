@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{graphicx} 
+\usepackage[export]{adjustbox}
+\usepackage{titlepic}
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{helvet}
+%\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{ragged2e}
+\bibliographystyle{IEEEtran}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    %citecolor=gray,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all
+}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+\lstset{style=mystyle}
+
+\pretitle{%
+  \begin{center}
+  \LARGE
+\includegraphics[width=0.5\textwidth, right]{UniLogo.png}\\[\bigskipamount]
+
+\hspace{15cm}
+
+\hspace{27cm}
+
+\hspace{27cm}
+
+\hspace{10cm}
+}
+\posttitle{\end{center}}	
+
+\begin{document}
+
+\title{\\ \textbf{ELEC5566M \\ Mini Project \\ \- \\ DE1-SoC Oscilloscope }}
+\author{Alexander Bolton \\ 200938078}
+\date{May 2019}
+\maketitle
+\begin{center}
+Submitted in accordance with the requirements for the degree of \\
+Master of Science in Embedded Systems Engineering \\ \- \\ Supervisor: Dr David Cowell \\ Assessor: Dr Chris Trayner \\ \- \\ \- \\ 
+\end{center}
+\vfill
+\begin{center}
+The University of Leeds \\  School of Electronic and Electrical Engineering
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage 
+\addcontentsline{toc}{section}{Abstract}
+\begin{flushleft}
+\textbf{{\Large Abstract}}
+\end{flushleft}
+\begin{flushleft}
+Abstract \cite{mccahillnorris2002} %test
+\end{flushleft}
+
+
+\addcontentsline{toc}{section}{References}
+\begin{flushleft}
+\bibliography{refs}
+\end{flushleft}
+\end{document}
