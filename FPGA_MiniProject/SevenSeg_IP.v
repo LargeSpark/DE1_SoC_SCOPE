@@ -19,6 +19,8 @@ wire [3:0] thousands;
 
 reg [13:0] prevNumber = 0;
 
+reg numberCountto = 0;
+
 reg [3:0] onescomplete;
 reg [3:0] tenscomplete;
 reg [3:0] hundredscomplete;
@@ -75,6 +77,13 @@ always @(posedge clock) begin
 	end
 end
 
+/*always @(posedge clock) begin
+	if(!done && started) begin
+	end else begin
+	numberCountto <= number;
+	end
+end*/
+
 endmodule
 
 
@@ -96,7 +105,7 @@ module numbersplit(
 	reg   [3:0]  thousands = 0;
 	reg done = 0;
 	assign doneOut = done;
-	assign onesOut = ones - 1;
+	assign onesOut = ones;
 	assign tensOut = tens;
 	assign hundredsOut = hundreds;
 	assign thousandsOut = thousands;
@@ -104,9 +113,13 @@ module numbersplit(
 		 if(start) begin
 			  counter <= 0;
 			  done <= 0;
+			  ones <= 0;
+			  tens <= 0;
+			  hundreds <= 0;
+			  thousands<= 0;
 		 end else if(counter == mynumber) begin
 			  done <= 1;
-		 end else begin
+		 end else if (!done) begin
 			  counter <= counter + 1;
 			  ones <= ones == 9 ? 0 : ones + 1;
 			  if(ones == 9) begin
