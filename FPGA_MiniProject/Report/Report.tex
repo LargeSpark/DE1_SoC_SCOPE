@@ -74,12 +74,12 @@
 \begin{document}
 
 \title{\\ \textbf{ELEC5566M \\ Mini Project \\ \- \\ DE1-SoC Oscilloscope }}
-\author{Alexander Bolton \\ 200938078}
+\author{Alexander Bolton - 200938078 \\ Haider Shafiq - 201207577}
 \date{May 2019}
 \maketitle
 \begin{center}
 Submitted in accordance with the requirements for the degree of \\
-Master of Science in Embedded Systems Engineering \\ \- \\ Supervisor: Dr David Cowell \\ Assessor: Dr Chris Trayner \\ \- \\ \- \\ 
+Master of Science in Embedded Systems Engineering
 \end{center}
 \vfill
 \begin{center}
@@ -89,15 +89,71 @@ The University of Leeds \\  School of Electronic and Electrical Engineering
 
 \tableofcontents
 \newpage 
-\addcontentsline{toc}{section}{Abstract}
+\section{Introduction}
 \begin{flushleft}
-\textbf{{\Large Abstract}}
+This report shall discuss the group project for the FGPA Design for System-on-Chip module. The group consisted of Alexander Bolton, and Haider Shafiq. The project chosen was to design and develop a multi-channel oscilloscope on the DE1-SoC. The aim of this project was to take multiple input signals from a signal generator, and display them accurately on a separate monitor, via the VGA port of the DE1-SoC. \\ \- \\
+The report shall cover the various parts of this project, and how they were then tested, as well as why they were needed. In chapter 2 the design of the VGA driver will be discussed, as well as the challenges presented with its development. The VGA port was used to output the waves to a separate monitor such that they can then be analysed.
+Chapter 3 shall discuss the development of the ADC module. The ADC used was the one on-board the DE1-SoC. This ADC has 10 pins, a ground pin a voltage pin, and 8 pins which can act as separate channels. The data from the ADC shall be displayed on the VGA, and they will be waves will be seen on the monitor. Multiples signals will be given to the ADC via a signal generator, and the waves will be displayed on a separate monitor, via the VGA. \\ \- \\
+In chapter 4 the design of the seven-segment display will be discussed. The seven-segment display will provide the user with the information of the waves on the screen, such as the voltage of the wave. This will be measured by the cursors on the screen which will be discussed in chapter 5. The controls for the system including two cursors in the x-axis and two cursors in the y-axis. These cursors will be controlled by the keys on the DE1-SoC board, and which cursor is being moved at which time shall be controlled by the switches on the board. The controls shall also acts as enable switches displaying, whether the cursors are being controlled, or whether the waves on screen are. The controls chapter will also discuss the design of the slower clock module, and the purpose of it.   \\ \- \\
+Chapter 6 will discuss the design of the measurement's module.  The measurements module was the module responsible for calculating the wave information such as the voltage of each wave. This information was then displayed on the seven-segment display. Chapter 7 will discuss any problems encountered while completing this project, such as problems with the LT24 LCD, or problems with the Terasic ADDA ADC board. \\ \- \\
+This report shall conclude in chapter 8 with an analysis of the overall work completed in the project, as well as any further work which could be undertaken as part of this project. This further work could be in the from of an expansion to the current work already completed, or any modifications to the current project which could improve it.  All the code will be put in the appendices at the end of this report, including the code for any test benches. 
 \end{flushleft}
+\newpage
+\section{VGA}
+\newpage
+\section{ADC}
+\newpage
+\section{Seven Segment Display}
+\newpage
+\section{Controls}
 \begin{flushleft}
-Abstract \cite{mccahillnorris2002} %test
+This chapter of the report shall discuss the design of the control IP for the project. The purpose of this module was to enable and control both the cursors, and the waves, such that they appeared on the monitor. They could then be controlled using the keys and the switches, to move, increase/decrease the volts per division, as well as the time per division. This chapter will also discuss the button clock, also known as the slClock. \\ \- \\
+Due to the limited number of buttons and switches on the DE1-SoC board, various states were used to decide what was being controlled. These states were controlled by switches 9 and 8. State 1 was the default state when switches 9 and 8 were 0, this state controlled the cursors. State 2 happened when switch 8 was 1 and switch 9 was 0, this state controlled the waves. The final stage was stage 3, and this happened when both switch 9 and 8 were 1, and this displayed the test wave. The purpose of the test wave, was such that while the ADC module was being designed the controls module could still be worked, as well as the VGA module could be tested in hardware. There is a spare state left, which could be used for further expansion in the future. The states and functions shall be described in more detail below. \\ \- \\
+The following table below details state 1.  S9 – 0 represents switch 9 to 0, and B3 – 0 represents buttons 3 – 0. \\ \- \\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Button \& Switches & Purpose & Menu 0 & Menu 1 & Menu 2 \\ 
+\hline 
+S9 & Menu Selection bit 1 & • & • & • \\ 
+\hline 
+S8 & Menu Selection bit 0 & • & • & • \\ 
+\hline 
+S7 & Multipurpose & • & • & • \\ 
+\hline 
+S6 & Multipurpose & • & • & • \\ 
+\hline 
+S5 & Multipurpose & • & • & • \\ 
+\hline 
+S4 & Multipurpose & • & • & • \\ 
+\hline 
+S3 & Multipurpose & • & • & • \\ 
+\hline 
+S2 & Multipurpose & • & • & • \\ 
+\hline 
+S1 & Multipurpose & • & • & • \\ 
+\hline 
+B3 & Toggle 3 & • & • & • \\ 
+\hline 
+B2 & Toggle 2 & • & • & • \\ 
+\hline 
+B1 & Toggle 1 & • & • & • \\ 
+\hline 
+B0 & Toggle 0 & • & • & • \\ 
+\hline 
+\end{tabular} 
+\end{center}
 \end{flushleft}
+\newpage
+\section{Measurement}
+\newpage
+\section{Problems Encountered}
+\newpage
+\section{Conclusion}
+\newpage
+\section{Appendix}
 
-
+\newpage
 \addcontentsline{toc}{section}{References}
 \begin{flushleft}
 \bibliography{refs}
