@@ -1,10 +1,11 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
 \contentsline {section}{\numberline {2}VGA}{4}{section.2}
-\contentsline {section}{\numberline {3}ADC}{5}{section.3}
-\contentsline {section}{\numberline {4}Seven Segment Display}{6}{section.4}
-\contentsline {section}{\numberline {5}Controls}{7}{section.5}
-\contentsline {section}{\numberline {6}Measurement}{9}{section.6}
-\contentsline {section}{\numberline {7}Problems Encountered}{10}{section.7}
-\contentsline {section}{\numberline {8}Conclusion}{11}{section.8}
-\contentsline {section}{\numberline {9}Appendix}{12}{section.9}
-\contentsline {section}{References}{13}{section.9}
+\contentsline {section}{\numberline {3}ADC}{6}{section.3}
+\contentsline {section}{\numberline {4}Seven Segment Display}{7}{section.4}
+\contentsline {section}{\numberline {5}Controls}{8}{section.5}
+\contentsline {section}{\numberline {6}Measurement}{10}{section.6}
+\contentsline {section}{\numberline {7}Problems Encountered}{11}{section.7}
+\contentsline {section}{\numberline {8}Conclusion}{12}{section.8}
+\contentsline {section}{\numberline {9}Appendix}{13}{section.9}
+\contentsline {subsection}{\numberline {9.1}Appendix A - VGA Timing Specifications}{13}{subsection.9.1}
+\contentsline {section}{References}{14}{table.4}

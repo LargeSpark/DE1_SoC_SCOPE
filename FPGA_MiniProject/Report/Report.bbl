@@ -25,4 +25,11 @@
 TerasIC, \emph{TerasIC DE1-Soc User Manual}.\hskip 1em plus 0.5em minus
   0.4em\relax TerasIC, 2014.
 
+\bibitem{stump_2012}
+\BIBentryALTinterwordspacing
+M.~Stump, ``Verilog vga clock controller,'' Jun 2012, accessed April 2019.
+  [Online]. Available:
+  \url{https://github.com/mstump/verilog-vga-controller/blob/master/src/clock.v}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

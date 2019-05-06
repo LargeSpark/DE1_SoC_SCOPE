@@ -47,7 +47,7 @@
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
+    keywordstyle=\color{blue},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\footnotesize,
@@ -111,20 +111,36 @@ This report shall conclude in chapter 8 with an analysis of the overall work com
 \newpage
 \section{VGA}
 \begin{flushleft}
+For this project it was decided to make the wave as visible as possible it would be the most beneficial to use the Video Graphics Array (VGA) connector to connect the FPGA to a monitor. The VGA comprises of 3 buses of 8 bits for colour (Red, Green, Blue), a clock signal, a horizontal sync signal (HSync), and finally a vertical sync signal (VSync) as shown in Figure 1. The resolution chosen was 800x600 at a frequency of 75Hz. To carry out his resolution is required a clock of 49MHz (50MHz clock was used direct from the FPGA). All the timing specifications were found in the DE1-SoC manual (See Appendix A).\\
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/VGA.png}}
 	\caption{VGA Pins \cite{terasic_2014}}
 \end{figure}
+The VGA signal is made up of 4 parts which are the Sync Signal, Back porch, Display Interval, and Front porch as shown in Figure 2. Both HSync and VSync use the same layout however the VSync signal uses the HSync positive edge as a clock signal. \\ \- \\ The horizontal part of the signal sets the sync to low for 1.6us. The sync signal is then set high and the back porch blanking period starts for 3.2us. At this point the colour signals (RGB) start. Each of the positive edge of the 49MHz clock is equivalent to 1 pixel. After 800 clock signals (around 16.2us) the RGB signal ends and the front porch of the signal begins. After the front porch the sync signal once again is low which indicates a horizontal line is complete. \\ \- \\
+Once the HSync signal has completed 600 iterations the vertical part of the signal begins. The vertical part of the signal is similar however there is no RGB signal included in this part of the signal and it uses the HSync as a clock signal for a number of "lines". Once this has been completed it indicates that a whole frame of image is complete.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/VGATiming.png}}
 	\caption{VGA Timings \cite{terasic_2014}}
 \end{figure}
+Initially for the IP block the library was created to carry out the VSync and HSync signals which was written by the project group. However, there was a 2ns delay which could not be solved. A number of methods were attempted to correct this 2ns but created a problem with the HSync signal would be 2ns early or 2ns late which was enough to effect the VSync signal that it could not be displayed on a monitor. Due to timing constraints the decision was made to find and implement a pre-made IP and modify it to work on the DE1-SoC board.\cite{stump_2012} The HSync and VSync parts of the IP was used to create the signals. A counter was created to count how many x (Clock signal within display interval) iterations and y (HSync signal) iterations have been completed. The x counter resets on the positive edge of the HSync and the y counter resets on the positive edge of the VSync signal. The IP was then modified to use a full 8 bit colour range available on the DE1-SoC. 
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=148, lastline=157, frame=bt]{../VGA_IP.v}
+		\caption{X Counter with reset}
+\end{figure}
+	\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=286, lastline=292, frame=bt]{../VGA_IP.v}
+	\caption{Y Counter with reset}
+\end{figure}
+The grid was displayed by having an if statement in an always block which checked if x counter or y counter was equal to where a line wanted to be placed. When the counter equalled these values the RGB data signal was set to white. The wave was displayed by passing the x counter through the block to the top layer. This then went to the sampler which had a sample buffer. This data was passed back to the VGA IP which then the value is compared with the y counter. If it is equal to the y counter then the pixel is set to the desired colour. Offsets were added to the waves so it can be controlled 
 \end{flushleft}
 \newpage
 \section{ADC}
 \begin{flushleft}
+To allow signals to be captured so they can be sampled the onboard analogue-to-digital converter (ADC) was decided to be used. It was decided after having difficulty getting the TerasIC ADDA board to work, so decided to stay within the time constraints to use the onboard ADC. To initialise this QSys was used to generate the appropriate code. The onboard ADC has 4 pins connected to the FPGA. The clock, data in, data out, and CS\_n. QSys allows you to generate the code for these pins in a graphical user interface. It also allows you to select clock speed to update at and the channels you wish to use. The ADC pins allow up to 8 channels of ADC to be used so for expandability all channels where selected to be used. The code was generated and then 2 .v files was copied into the main project and instantiated. The channels where labeled from CH0 to CH7. For this project only CH0 and CH1 were used and the outputs of these were inputted into the sampler. This then samples the values of 800 clock cycles (to match the screen width). This is then ready to be output to the VGA IP.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/ADCPins.png}}
@@ -257,7 +273,19 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 \section{Conclusion}
 \newpage
 \section{Appendix}
-
+\subsection{Appendix A - VGA Timing Specifications}
+\begin{flushleft}
+\begin{table}[H]
+	\centering
+	\fbox{\includegraphics[width=0.9\textwidth]{./images/VGAHTimingSpec.png}}
+	\caption{VGA Horizontal Timing Specification \cite{terasic_2014}}
+\end{table}
+\begin{table}[H]
+	\centering
+	\fbox{\includegraphics[width=0.9\textwidth]{./images/VGAVTimingSpec.png}}
+	\caption{VGA Vertical Timing Specification \cite{terasic_2014}}
+\end{table}
+\end{flushleft}
 \newpage
 \addcontentsline{toc}{section}{References}
 \begin{flushleft}

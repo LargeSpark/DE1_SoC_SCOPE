@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.26)  6 MAY 2019 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.26)  6 MAY 2019 15:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1109,7 +1109,7 @@ LaTeX Info: Redefining \nameref on input line 84.
 \@outlinefile=\write3
 \openout3 = `Report.out'.
 
-<UniLogo.png, id=43, 2007.5pt x 582.175pt>
+<UniLogo.png, id=48, 2007.5pt x 582.175pt>
 File: UniLogo.png Graphic file (type png)
 <use UniLogo.png>
 Package pdftex.def Info: UniLogo.png  used on input line 90.
@@ -1157,83 +1157,104 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
  (./Report.toc
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 10.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 10.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 10.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 10.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 10.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 10.
 )
 \tf@toc=\write4
 \openout4 = `Report.toc'.
 
  [2] [3]
-<./images/VGA.png, id=82, 994.71625pt x 454.69875pt>
+<./images/VGA.png, id=89, 994.71625pt x 454.69875pt>
 File: ./images/VGA.png Graphic file (type png)
 <use ./images/VGA.png>
-Package pdftex.def Info: ./images/VGA.png  used on input line 116.
+Package pdftex.def Info: ./images/VGA.png  used on input line 117.
 (pdftex.def)             Requested size: 241.84843pt x 110.55225pt.
-<./images/VGATiming.png, id=84, 789.95125pt x 351.3125pt>
+<./images/VGATiming.png, id=91, 789.95125pt x 351.3125pt>
 File: ./images/VGATiming.png Graphic file (type png)
 <use ./images/VGATiming.png>
-Package pdftex.def Info: ./images/VGATiming.png  used on input line 121.
+Package pdftex.def Info: ./images/VGATiming.png  used on input line 124.
 (pdftex.def)             Requested size: 241.84843pt x 107.55487pt.
 
-[4 <./images/VGA.png> <./images/VGATiming.png>]
-<./images/ADCPins.png, id=93, 501.875pt x 421.575pt>
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+) (../VGA_IP.v)
+[4 <./images/VGA.png> <./images/VGATiming.png>] (../VGA_IP.v) [5]
+<./images/ADCPins.png, id=127, 501.875pt x 421.575pt>
 File: ./images/ADCPins.png Graphic file (type png)
 <use ./images/ADCPins.png>
-Package pdftex.def Info: ./images/ADCPins.png  used on input line 130.
+Package pdftex.def Info: ./images/ADCPins.png  used on input line 146.
 (pdftex.def)             Requested size: 241.84843pt x 203.15778pt.
-<./images/ADCConnections.png, id=95, 844.15375pt x 378.41376pt>
+<./images/ADCConnections.png, id=129, 844.15375pt x 378.41376pt>
 File: ./images/ADCConnections.png Graphic file (type png)
 <use ./images/ADCConnections.png>
-Package pdftex.def Info: ./images/ADCConnections.png  used on input line 136.
+Package pdftex.def Info: ./images/ADCConnections.png  used on input line 152.
 (pdftex.def)             Requested size: 241.84843pt x 108.4149pt.
- [5 <./images/ADCPins.png> <./images/ADCConnections.png>]
-<./images/SevenSeg.png, id=103, 636.3775pt x 297.11pt>
+ [6 <./images/ADCPins.png> <./images/ADCConnections.png>]
+<./images/SevenSeg.png, id=137, 636.3775pt x 297.11pt>
 File: ./images/SevenSeg.png Graphic file (type png)
 <use ./images/SevenSeg.png>
-Package pdftex.def Info: ./images/SevenSeg.png  used on input line 145.
+Package pdftex.def Info: ./images/SevenSeg.png  used on input line 161.
 (pdftex.def)             Requested size: 241.84843pt x 112.91203pt.
- [6 <./images/SevenSeg.png>]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 158.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 158.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 158.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 158.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 158.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 158.
- [7] [8] [9] [10] [11]
-[12] (./Report.bbl
+ [7 <./images/SevenSeg.png>]
+[8] [9] [10] [11] [12]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 276.
+<./images/VGAHTimingSpec.png, id=168, 780.9175pt x 295.1025pt>
+File: ./images/VGAHTimingSpec.png Graphic file (type png)
+<use ./images/VGAHTimingSpec.png>
+Package pdftex.def Info: ./images/VGAHTimingSpec.png  used on input line 280.
+(pdftex.def)             Requested size: 435.32422pt x 164.50427pt.
+<./images/VGAVTimingSpec.png, id=170, 774.895pt x 262.9825pt>
+File: ./images/VGAVTimingSpec.png Graphic file (type png)
+<use ./images/VGAVTimingSpec.png>
+Package pdftex.def Info: ./images/VGAVTimingSpec.png  used on input line 285.
+(pdftex.def)             Requested size: 435.32422pt x 147.74269pt.
+ [13 <./images/VGAHTimingSpec.png> <./images/VGAVTimingSpec.png>] (./Report.bbl
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 294.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 294.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 266.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 294.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 294.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: E825922898E9B1B74CCC69862C3AA5E8;457.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
+(rerunfilecheck)             Checksum: CD3D4B61F82F924C307A33AD17941987;543.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
  ) 
 Here is how much of TeX's memory you used:
- 9749 strings out of 492982
- 139431 string characters out of 6134896
- 225616 words of memory out of 5000000
- 13075 multiletter control sequences out of 15000+600000
- 70801 words of font info for 78 fonts, out of 8000000 for 9000
+ 10382 strings out of 492982
+ 146753 string characters out of 6134896
+ 280683 words of memory out of 5000000
+ 13660 multiletter control sequences out of 15000+600000
+ 79311 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,16n,54p,838b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,16n,75p,1115b,1556s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/helvetic/uhvro8a.pfb>
-Output written on Report.pdf (13 pages, 822806 bytes).
+Output written on Report.pdf (14 pages, 935943 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
