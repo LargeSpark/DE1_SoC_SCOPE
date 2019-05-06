@@ -78,19 +78,19 @@
   \or Alexander Bolton% page = 5
   \or Alexander Bolton% page = 6
   \or Alexander Bolton% page = 7
-  \or Insert Author% page = 8
-  \or Insert Author% page = 9
-  \or Insert Author% page = 10
-  \or Insert Author% page = 11
-  \or Insert Author% page = 12
-  \or Insert Author% page = 13
-  \or Insert Author% page = 14
+  \or Alexander Bolton% page = 8
+  \or Haider Shafiq% page = 9
+  \or Haider Shafiq% page = 10
+  \or Haider Shafiq% page = 11
+  \or Haider Shafiq% page = 12
+  \or Haider Shafiq% page = 13
+  \or % page = 14
   \else
   % Empty chead here!
   \fi
 }
 
-
+\cfoot{\thepage}
 
 \lstset{style=mystyle}
 
@@ -190,12 +190,8 @@ For measurements to be displayed it was decided for simplicity to use the seven 
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/SevenSeg.png}}
 	\caption{Seven Segment Display Pins \cite{terasic_2014}}
 \end{figure}
-It was very trivial to setup the seven segment display to output a signal number. To do this a register of 7 bits was initialised which could act for each bit of a single seven segment display. It had 2 inputs (clock and number) and then the output for the seven segment display. When a number was entered between 0 to 9 an if statement in an always block was run to give the appropriate output. It was noted that the output is inverted as the seven segment display is active low. 
-\begin{figure}[H]
-	\centering
-	\lstinputlisting[language=Verilog, firstline=138, lastline=167, frame=bt]{../SevenSeg_IP.v}
-		\caption{Generate Seven Segment Output Module}
-\end{figure}
+It was very trivial to setup the seven segment display to output a signal number. To do this a register of 7 bits was initialised which could act for each bit of a single seven segment display. It had 2 inputs (clock and number) and then the output for the seven segment display. When a number was entered between 0 to 9 an if statement in an always block was run to give the appropriate output. It was noted that the output is inverted as the seven segment display is active low. This can be shown in Appendix C.
+\\ \- \\
 The next challenge was to have numbers between 0 to 9999 to be separated into singular numbers to be output to the seven segment display. On FPGA division is a very expensive resource. It was decided to use a counter which the idea was taken from online. \cite{stack_overflow} The counter method uses 5 counters, ones, tens, hundreds, thousands, and counter. As the counters count up the ones gets to the number 9 it will reset the ones counter and increase the tens counter. This is the same for the tens, hundreds, and thousands. When the counter reaches the number it then stops and the output number is sent to the seven segment output generator module which turns the numbers into an output for the seven segment displays. This runs at full clock speed so the counting cannot be seen with the human eye. This code can be found on Appendix B.
 \end{flushleft}
 \newpage
@@ -303,8 +299,20 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 \end{flushleft}
 \newpage
 \section{Measurement}
+\begin{flushleft}
+This chapter of the report shall discuss the design of the measurement IP for the project. The purpose of this module was to be able to measure the voltage of the waveform on the monitor, using the y-cursors. This module would then display the voltage to the seven-segment display, in mV. \\ \- \\
+This module was designed to take the cursors from the control’s module, and measure the difference between them, and display the value on the seven-segment display. This was designed so that the cursors can be moved to either of the waves on the monitor and measure the voltage between the peaks of the waveforms. Depending on what was being measured between the cursors the, value between them would display on the seven-segment display. Therefore, if the user wanted to measure wave 2, the cursors would be placed between the top peak, and bottom peak of the wave, and the voltage in mV, would then display on the seven-segment display. This is also how the user would measure the other wave on the screen. \\ \- \\
+The code for this module can be seen in appendix G. From the code it can be seen that the value of distance between the cursors is put into the variable vx1. This variable was then stored in the variable result, which was then assigned to num. When the measurement IP module was instantiated into the top-level module, the local parameter num was attached to a local parameter in the top-level module also called num. This parameter controlled what values were displayed on the seven-segment display. 
+\end{flushleft}
 \newpage
 \section{Problems Encountered}
+\begin{flushleft}
+This chapter will discuss the various problems encountered during this project. It also will discuss the decisions made in overcoming these problems. 
+\\ \- \\
+ALEX – WRITE YOUR PROBS HERE – ADDA and VGA
+\\ \- \\
+Initially the controls were to be done using the LT24 LCD. This module would utilise the touchscreen capabilities of the LT24, and would allow the user to use the display to decide what would display on the monitor, i.e. waves, cursors. The initial stage of this was to draw a user interface to the display, such that the user could interact with the display and choose which option was desired. However, when drawing to the screen difficulties were found in controlling what appeared on the screen. Instead random patterns would appear, which were unable to be manipulated into what was desired. After being unable to fix these, and taking into consideration time constraints, a decision was made to use the switches and keys control the system. 
+\end{flushleft}
 \newpage
 \section{Conclusion}
 \newpage
@@ -323,8 +331,6 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 \end{table}
 \end{flushleft}
 \newpage
-\addcontentsline{toc}{section}{References}
-\begin{flushleft}
 \subsection{Appendix B - Number Split Module}
 \begin{figure}[H]
 	\centering
@@ -332,6 +338,16 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 		\caption{Number Split Module}
 \end{figure}
 \newpage
+\subsection{Appendix C - Generate Seven Segment Output Module}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=138, lastline=167, frame=bt]{../SevenSeg_IP.v}
+		\caption{Generate Seven Segment Output Module}
+\end{figure}
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\begin{flushleft}
 \bibliography{refs}
 \end{flushleft}
 \end{document}

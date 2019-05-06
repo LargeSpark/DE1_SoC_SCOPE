@@ -8,5 +8,6 @@
 \BOOKMARK [1][-]{section.8}{Conclusion}{}% 8
 \BOOKMARK [1][-]{section.9}{Appendix}{}% 9
 \BOOKMARK [2][-]{subsection.9.1}{Appendix A - VGA Timing Specifications}{section.9}% 10
-\BOOKMARK [1][-]{table.4}{References}{}% 11
-\BOOKMARK [2][-]{subsection.9.2}{Appendix B - Number Split Module}{table.4}% 12
+\BOOKMARK [2][-]{subsection.9.2}{Appendix B - Number Split Module}{section.9}% 11
+\BOOKMARK [2][-]{subsection.9.3}{Appendix C - Generate Seven Segment Output Module}{section.9}% 12
+\BOOKMARK [1][-]{figure.9}{References}{}% 13
