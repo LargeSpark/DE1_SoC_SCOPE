@@ -12,16 +12,26 @@
 \usepackage[utf8]{inputenc}
 \usepackage{wrapfig}
 \usepackage{helvet}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
 %\usepackage[square,sort,comma,numbers]{natbib}
 \usepackage{ragged2e}
+\usepackage{placeins}
 \bibliographystyle{IEEEtran}
-
+\usepackage{float}
+\setlength{\belowcaptionskip}{-15pt}
 \renewcommand{\familydefault}{\sfdefault}
-
+\newcommand{\squeezeup}{\vspace{-2.5mm}}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -100,49 +110,144 @@ This report shall conclude in chapter 8 with an analysis of the overall work com
 \end{flushleft}
 \newpage
 \section{VGA}
+\begin{flushleft}
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.5\textwidth]{./images/VGA.png}}
+	\caption{VGA Pins \cite{terasic_2014}}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.5\textwidth]{./images/VGATiming.png}}
+	\caption{VGA Timings \cite{terasic_2014}}
+\end{figure}
+\end{flushleft}
 \newpage
 \section{ADC}
+\begin{flushleft}
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.5\textwidth]{./images/ADCPins.png}}
+	\caption{ADC Pins \cite{terasic_2014}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.5\textwidth]{./images/ADCConnections.png}}
+	\caption{ADC Connections to FPGA \cite{terasic_2014}}
+\end{figure}
+\end{flushleft}
 \newpage
 \section{Seven Segment Display}
+\begin{flushleft}
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=0.5\textwidth]{./images/SevenSeg.png}}
+	\caption{Seven Segment Display Pins \cite{terasic_2014}}
+\end{figure}
+\end{flushleft}
 \newpage
 \section{Controls}
 \begin{flushleft}
 This chapter of the report shall discuss the design of the control IP for the project. The purpose of this module was to enable and control both the cursors, and the waves, such that they appeared on the monitor. They could then be controlled using the keys and the switches, to move, increase/decrease the volts per division, as well as the time per division. This chapter will also discuss the button clock, also known as the slClock. \\ \- \\
 Due to the limited number of buttons and switches on the DE1-SoC board, various states were used to decide what was being controlled. These states were controlled by switches 9 and 8. State 1 was the default state when switches 9 and 8 were 0, this state controlled the cursors. State 2 happened when switch 8 was 1 and switch 9 was 0, this state controlled the waves. The final stage was stage 3, and this happened when both switch 9 and 8 were 1, and this displayed the test wave. The purpose of the test wave, was such that while the ADC module was being designed the controls module could still be worked, as well as the VGA module could be tested in hardware. There is a spare state left, which could be used for further expansion in the future. The states and functions shall be described in more detail below. \\ \- \\
-The following table below details state 1.  S9 – 0 represents switch 9 to 0, and B3 – 0 represents buttons 3 – 0. \\ \- \\
+The following table below details state 1, when switch 9 and 8 are both 0.  S7 – 0 represents switch 7 to 0, and B3 – 0 represents buttons 3 – 0.\\
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-Button \& Switches & Purpose & Menu 0 & Menu 1 & Menu 2 \\ 
-\hline 
-S9 & Menu Selection bit 1 & • & • & • \\ 
-\hline 
-S8 & Menu Selection bit 0 & • & • & • \\ 
-\hline 
-S7 & Multipurpose & • & • & • \\ 
-\hline 
-S6 & Multipurpose & • & • & • \\ 
-\hline 
-S5 & Multipurpose & • & • & • \\ 
-\hline 
-S4 & Multipurpose & • & • & • \\ 
-\hline 
-S3 & Multipurpose & • & • & • \\ 
-\hline 
-S2 & Multipurpose & • & • & • \\ 
-\hline 
-S1 & Multipurpose & • & • & • \\ 
-\hline 
-B3 & Toggle 3 & • & • & • \\ 
-\hline 
-B2 & Toggle 2 & • & • & • \\ 
-\hline 
-B1 & Toggle 1 & • & • & • \\ 
-\hline 
-B0 & Toggle 0 & • & • & • \\ 
-\hline 
-\end{tabular} 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+	\hline 
+	\textbf{Buttons or Switches} & \textbf{Purpose} \\ 
+	\hline 
+	S7 & N/A \\ 
+	\hline 
+	S6 & N/A \\ 
+	\hline 
+	S5 & N/A \\ 
+	\hline 
+	S4 & N/A \\ 
+	\hline 
+	S3 & Allow the y-cursors to be moved \\ 
+	\hline 
+	S2 & Allow the x-cursors to be moved \\ 
+	\hline 
+	S1 & Enable y-cursors when 1, so that they display on the monitor.
+	 \\ 
+	\hline 
+	S0 & Enable x-cursors when 1, so that they display on the monitor. \\ 
+	\hline 
+	B3 & \makecell{When S2 is 1 – Move cursor x1 right.\\  When S3 is 1 – Move cursor y1 down.\\ When both S2 and S3 is 1 – Move both x-cursors right.}
+	 \\ 
+	\hline 
+	B2 & \makecell{When S2 is 1 – Move cursor x1 left.\\ When S3 is 1 – Move cursor y1 up.\\ When both S2 and S3 is 1 – Move both x-cursors left.}
+	 \\ 
+	\hline 
+	B1 & \makecell{When S2 is 1 – Move cursor x2 right.\\ When S3 is 1 – Move cursor y2 down.\\ When both S2 and S3 is 1 – Move both y-cursors down.} \\ 
+	\hline 
+	B0 & \makecell{When S2 is 1 – Move cursor x2 left.\\ When S3 is 1 – Move cursor y2 up.\\ When both S2 and S3 is 1 – Move both y-cursors up.}
+	 \\ 
+	\hline 
+	\end{tabular} 
+	\caption{State 1 functions}
+\end{table}
 \end{center}
+\squeezeup
+During state 1 if switch 2 and switch 3 are 0, the buttons do nothing. While in state 1 switches 7 to 4 also do nothing. The table below shows state 2, when switch 9 is 0, and switch 8 is 1.\\
+\begin{center}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+	\hline 
+	\textbf{Buttons or Switches} & \textbf{Purpose} \\ 
+	\hline 
+	S7 & N/A \\ 
+	\hline 
+	S6 & N/A \\ 
+	\hline 
+	S5 & Adjust the time/division for both waves.  \\ 
+	\hline 
+	S4 & \makecell{Allows a snapshot in time to be taking of both\\ waves, similar to the run/stop feature on oscilloscopes.}  \\ 
+	\hline 
+	S3 & Adjust the volts/division for both waves. \\ 
+	\hline 
+	S2 & Allows both waves to be moved. \\ 
+	\hline 
+	S1 & Enables wave 2 when 1, so that it displays on the monitor.\\ 
+	\hline 
+	S0 & Enables wave 1 when 1, so that it displays on the monitor. \\ 
+	\hline 
+	B3 & \makecell{When S2 is 1 – Move wave 1 down.\\
+When S3 is 1 – Increase volts/div for wave 1.\\
+When S4 is 1 – Freeze wave 1.\\
+When S5 is 1 – Increase time/div for wave 1.}
+	 \\ 
+	\hline 
+	B2 & \makecell{When S2 is 1 – Move wave 1 up.\\
+When S3 is 1 – Decrease volts/div for wave 1.\\
+When S4 is 1 – Run wave 1.\\
+When S5 is 1 – Decrease time/div for wave 1.}
+	 \\ 
+	\hline 
+	B1 & \makecell{When S2 is 1 – Move wave 2 down.\\
+When S3 is 1 – Increase volts/div for wave 2.\\
+When S4 is 1 – Freeze wave 2.\\
+When S5 is 1 – Increase time/div for wave 2.\\
+} \\
+	\hline 
+	B0 & \makecell{When S2 is 1 – Move wave 2 up.\\
+When S3 is 1 – Decrease volts/div for wave 2.\\
+When S4 is 1 – Run wave 2.\\
+When S5 is 1 – Decrease time/div for wave 2.\\
+}
+	 \\ 
+	\hline 
+	\end{tabular} 
+	\caption{State 2 functions}
+\end{table}
+\end{center}
+\squeezeup
+Similar to state 1, the buttons will do nothing if S2 – 5 are all 0. State 3, which occurs when both switch 8 and 9 are 1, enables the test wave to display on the monitor. All cursors and waves move by a size of 1, this is indicated by the localparam moveSize. 
+The code for the controls IP can be seen in appendix E. All the controls happen on the positive edge of buttonClock. In appendix A, it can be seen that the buttonClock attaches to the slClock [19]. The code for the slClock can be seen in appendix F. The slClock module was created so that the cursors and waves could be moved accurately. They could not be moved with any precision when running off of the main clock as the main clock ran at 50MHz. This meant that when the cursors or waves moved, they would move to fast to control. However, using the slClock [19] meant that the frequency was approximately 93Hz, and as such was much easier to control.
 \end{flushleft}
 \newpage
 \section{Measurement}
