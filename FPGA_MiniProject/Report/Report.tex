@@ -33,6 +33,10 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
+\usepackage{fancyhdr,lipsum}
+\pagestyle{fancy}
+\fancyhf{}% Clear header/footer
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -50,7 +54,7 @@
     keywordstyle=\color{blue},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
+    basicstyle=\tiny,
     breakatwhitespace=false,         
     breaklines=true,                 
     captionpos=b,                    
@@ -62,6 +66,30 @@
     showtabs=false,                  
     tabsize=2
 }
+
+
+\chead{%
+  \ifcase\value{page}
+  % empty test for page = 0
+  \or % page=1
+  \or % page = 2
+  \or Haider Shafiq% page = 3
+  \or Alexander Bolton% page = 4
+  \or Alexander Bolton% page = 5
+  \or Alexander Bolton% page = 6
+  \or Alexander Bolton% page = 7
+  \or Insert Author% page = 8
+  \or Insert Author% page = 9
+  \or Insert Author% page = 10
+  \or Insert Author% page = 11
+  \or Insert Author% page = 12
+  \or Insert Author% page = 13
+  \or Insert Author% page = 14
+  \else
+  % Empty chead here!
+  \fi
+}
+
 
 
 \lstset{style=mystyle}
@@ -156,11 +184,19 @@ To allow signals to be captured so they can be sampled the onboard analogue-to-d
 \newpage
 \section{Seven Segment Display}
 \begin{flushleft}
+For measurements to be displayed it was decided for simplicity to use the seven segment display. Each seven segment display is made up of 6 pins which control each part of the seven segments. A limitation was found which did not allow a pin to control the decimal point which was required for our measurements. 
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/SevenSeg.png}}
 	\caption{Seven Segment Display Pins \cite{terasic_2014}}
 \end{figure}
+It was very trivial to setup the seven segment display to output a signal number. To do this a register of 7 bits was initialised which could act for each bit of a single seven segment display. It had 2 inputs (clock and number) and then the output for the seven segment display. When a number was entered between 0 to 9 an if statement in an always block was run to give the appropriate output. It was noted that the output is inverted as the seven segment display is active low. 
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=138, lastline=167, frame=bt]{../SevenSeg_IP.v}
+		\caption{Generate Seven Segment Output Module}
+\end{figure}
+The next challenge was to have numbers between 0 to 9999 to be separated into singular numbers to be output to the seven segment display. On FPGA division is a very expensive resource. It was decided to use a counter which the idea was taken from online. \cite{stack_overflow} The counter method uses 5 counters, ones, tens, hundreds, thousands, and counter. As the counters count up the ones gets to the number 9 it will reset the ones counter and increase the tens counter. This is the same for the tens, hundreds, and thousands. When the counter reaches the number it then stops and the output number is sent to the seven segment output generator module which turns the numbers into an output for the seven segment displays. This runs at full clock speed so the counting cannot be seen with the human eye. This code can be found on Appendix B.
 \end{flushleft}
 \newpage
 \section{Controls}
@@ -289,6 +325,13 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 \newpage
 \addcontentsline{toc}{section}{References}
 \begin{flushleft}
+\subsection{Appendix B - Number Split Module}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=91, lastline=136, frame=bt]{../SevenSeg_IP.v}
+		\caption{Number Split Module}
+\end{figure}
+\newpage
 \bibliography{refs}
 \end{flushleft}
 \end{document}

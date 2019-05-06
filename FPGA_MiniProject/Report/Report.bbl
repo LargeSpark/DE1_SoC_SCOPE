@@ -32,4 +32,10 @@ M.~Stump, ``Verilog vga clock controller,'' Jun 2012, accessed April 2019.
   \url{https://github.com/mstump/verilog-vga-controller/blob/master/src/clock.v}
 \BIBentrySTDinterwordspacing
 
+\bibitem{stack_overflow}
+\BIBentryALTinterwordspacing
+``Split up a four-digit number in verilog.'' [Online]. Available:
+  \url{https://stackoverflow.com/questions/22882882/split-up-a-four-digit-number-in-verilog}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
