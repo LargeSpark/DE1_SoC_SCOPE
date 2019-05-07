@@ -4,10 +4,7 @@ N-Channel Oscilloscope */
 
 //All the inputs & outputs
 module Measure(
-input	 		  buttonClock, 
-input 		  switch9,
-input 		  switch8,
-input 		  switch7,	
+input	 		  buttonClock, 	
 input  [10:0] cursory1,
 input  [10:0] cursory2,
 input  [10:0] cursorx1,
@@ -45,14 +42,28 @@ assign Diffy = (deltax1 < 0) ? deltax2 : deltax1;
 
 always @(posedge buttonClock) 
 begin 
+	if (waveSel == 0)
+	begin
 	//Get values of Delta's
 	deltay1 <= cursory1 - cursory2;
 	deltay2 <= cursory2 - cursory1;
 	deltax1 <= cursorx1 - cursorx2;
 	deltax2 <= cursorx2 - cursorx1;
 	//Caluclate voltage
-	vx1 <= ((((shiftDown1 + 1) * Diffx)) * 2); 
+	vx1 <= (((shiftDown1)* (shiftDown1)) * Diffx); 
 	//Store value in result
 	result <= vx1;
+	end
+	else if(waveSel == 1)
+	begin
+	deltay1 <= cursory1 - cursory2;
+	deltay2 <= cursory2 - cursory1;
+	deltax1 <= cursorx1 - cursorx2;
+	deltax2 <= cursorx2 - cursorx1;
+	//Caluclate voltage
+	vx2 <= (((shiftDown2)* (shiftDown2)) * Diffx); 
+	//Store value in result
+	result <= vx2;	
+	end
 end
 endmodule 
