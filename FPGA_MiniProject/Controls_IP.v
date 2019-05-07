@@ -37,7 +37,8 @@ output 				Wave1_ENOut,
 output				Wave2_ENOut,
 output 	[10:0]	offset1Out,
 output 	[10:0]	offset2Out,
-output   			TWave_EnOut
+output   			TWave_EnOut,
+output reg	[1:0]		waveSel
 );
 //Default posiions of the cursors
 localparam defaultY1 = 60; // 60 pixels = ~500mV
@@ -168,6 +169,15 @@ begin
 				cursorX1 <= cursorX1 - moveSize;
 				cursorX2 <= cursorX2 - moveSize;
 				cursorY2 <= defaultY2;
+		end
+		//Menu 1 switch 4 decides what wave we gonna measure
+		if (!switch4)
+		begin 
+				waveSel <= 0;
+		end
+		else if (switch4)
+		begin
+				waveSel <= 1;
 		end
 	end
 end 
