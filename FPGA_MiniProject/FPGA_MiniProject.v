@@ -5,7 +5,8 @@ N-Channel Oscilloscope */
 
 // Top Level Module
 module FPGA_MiniProject(
-input 				clock,
+input 				clock, //50MHz Clock
+//Controls
 input					switch0, //Cursor X En
 input					switch1,	//Cursor Y En
 input					switch2, //Signal 1 En
@@ -23,25 +24,25 @@ input					butt3,	//x2/y2 right/down
 //ADC Onboard
 output				ADC_CS_N,
 output 				ADC_SCLK, //clock
-output 				ADC_DIN,
-input					ADC_DOUT,
+output 				ADC_DIN, //Data in
+input					ADC_DOUT, //Data out
 //VGA
-output 				vga_hsync,
-output				vga_vsync,
-output	[7:0]		R,
-output	[7:0]		G,
-output	[7:0]		B,
-output				VClock,
-output				ResampleLED,
+output 				vga_hsync, //VGA HSync signal out
+output				vga_vsync, //VGA VSync signal out
+output	[7:0]		R, //VGA Red Colour bits out
+output	[7:0]		G, //VGA Red Colour bits out
+output	[7:0]		B, //VGA Red Colour bits out
+output				VClock, //VGA Clock out
+output				ResampleLED0, //Resample LED
+output				ResampleLED1, //Resample LED
 //seven seg
-output 	[6:0]		seg0,
-output 	[6:0]		seg1,
-output 	[6:0]		seg2,
-output 	[6:0]		seg3
+output 	[6:0]		seg0, //Seven Seg Display 0 Output
+output 	[6:0]		seg1, //Seven Seg Display 1 Output
+output 	[6:0]		seg2, //Seven Seg Display 2 Output
+output 	[6:0]		seg3 //Seven Seg Display 3 Output
 );
 // Various wires to enable waves/cursors/clocks
 wire [11:0] testwave; //test wave output
-
 wire Wave1_EN;
 wire Wave2_EN;
 wire cursorX_EN;
@@ -96,73 +97,73 @@ wire [11:0] CH5;
 wire [11:0] CH6;
 wire [11:0] CH7;
 wire [1:0] waveSel;
-//Instatiating the Test Sine Wave module#
+//Instatiating the Test Sine Wave module
 //Used a test sine wave so we could work on controls, while we were working on the ADC
 sine_wave_gen testWave(
 	.Clk (slClock[6]),
 	.data_out (testwave)
 	);
-//Instatiating the Test VGA module
+//Instatiating the VGA module
 VGA_IP_Top VGA(
-	.clk50 		(clock),
-	.cursorX_EN (cursorX_EN),
-	.cursorY_EN (cursorY_EN),
-	.cursorY1 	(cursorY1),
-	.cursorY2 	(cursorY2),
-	.cursorX1 	(cursorX1),
-	.cursorX2 	(cursorX2),
-	.waveSigIn1 (waveSigIn1),
-	.waveSigIn2 (waveSigIn2),
-	.waveSigIn1_En (Wave1_EN),
-	.waveSigIn2_En (Wave2_EN),
-	.hsync_out 	(vga_hsync),
-	.vsync_out 	(vga_vsync),
-	.red_out 	(R),
-	.blue_out 	(G),
-	.green_out 	(B),
-	.waveSigIn1_Offset (offset1),
-	.waveSigIn2_Offset (offset2),
-	.sX (sX),
-	.sY (sY)
+	.clk50 		(clock), //50 MHz Clock
+	.cursorX_EN (cursorX_EN), //Cursor X Enable
+	.cursorY_EN (cursorY_EN), //Cursor Y Enable
+	.cursorY1 	(cursorY1), //Cursor Y1 Position
+	.cursorY2 	(cursorY2), //Cursor Y2 Position
+	.cursorX1 	(cursorX1), //Cursor X1 Position
+	.cursorX2 	(cursorX2), //Cursor X2 Position
+	.waveSigIn1 (waveSigIn1), //Wave signal in for channel 0
+	.waveSigIn2 (waveSigIn2), //Wave signal in for channel 1
+	.waveSigIn1_En (Wave1_EN), //Channel 0 Enable
+	.waveSigIn2_En (Wave2_EN), //Channel 1 Enable
+	.hsync_out 	(vga_hsync), //HSync out for VGA
+	.vsync_out 	(vga_vsync), //VSync out for VGA
+	.red_out 	(R), //VGA Colour Out
+	.blue_out 	(G), //VGA Colour Out
+	.green_out 	(B), //VGA Colour Out
+	.waveSigIn1_Offset (offset1), //Channel 0 Offset
+	.waveSigIn2_Offset (offset2), //Channel 1 Offset
+	.sX (sX), //Counter X value
+	.sY (sY) //Counter Y value
 );
 //Instatiating the 1st sample module for channel0
 Sample sample(
-	.readClock (clock),
-	.writeClock (sampleWriteClock1),
-	.hold (hold1),
-	.data (TCH0),
-	.screenX (sX),
-	.reset (0),
-	.screenData (sampledwave1),
-	.triggerthreshold(100)
+	.readClock (clock), //50MHz Clock to read as fast as possible
+	.writeClock (sampleWriteClock1), //Sample write clock to vary sampling rate
+	.hold (hold1), //Hold
+	.data (TCH0), //Date in
+	.screenX (sX), //Counter X in from VGA IP
+	.reset (0), //reset
+	.screenData (sampledwave1), //screenData out
+	.resample(ResampleLED0), //Resample LED indicator
+	.triggerthreshold(100) //trigger threshold
 );
-
+//Instatiating the 1st sample module for channel0
 Sample sample2(
-	.readClock (clock),
-	.writeClock (sampleWriteClock2),
-	.hold (hold2),
-	.data (CH1),
-	.screenX (sX),
-	.reset (0),
-	.screenData (sampledwave2),
-	.resample(ResampleLED),
-	.triggerthreshold(100)
+	.readClock (clock), //50MHz Clock to read as fast as possible
+	.writeClock (sampleWriteClock2), //Sample write clock to vary sampling rate
+	.hold (hold2), //Hold
+	.data (CH1), //Date in
+	.screenX (sX), //Counter X in from VGA IP
+	.reset (0), //reset
+	.screenData (sampledwave2), //screenData out
+	.resample(ResampleLED1), //Resample LED indicator
+	.triggerthreshold(100) //trigger threshold
 );
 //Instatiating the 7seg module
 sevenseg sevSeg(
-	.clock (clock),
-	.seg_En (4'b1111),
-	.number (0),
-	.decimalPoint_EN (0),
-	.seg0 (seg0),
-	.seg1 (seg1),
-	.seg2 (seg2),
-	.seg3 (seg3)
+	.clock (clock), //50MHz clock
+	.seg_En (4'b1111), //Seven Segment Enable
+	.number (num), //4 digit number in
+	.seg0 (seg0), //Seven Segment Display out 0
+	.seg1 (seg1), //Seven Segment Display out 1
+	.seg2 (seg2), //Seven Segment Display out 2
+	.seg3 (seg3) //Seven Segment Display out 3
 );
 //Instatiating the slower clock module
 clockcounter slclock(
-	.clock (clock),
-	.counterout (slClock)
+	.clock (clock), //50MHz Clock in
+	.counterout (slClock) //Counter reg out
 );
 //Instatiating the Scope controls module
 controls Ctrl(
@@ -180,42 +181,42 @@ controls Ctrl(
 	.butt1 (butt1),  	//x1/y1 right/down
 	.butt2 (butt2),	//x2/y2 left/up
 	.butt3 (butt3),	//x2/y2 right/down
-	.buttonClock (slClock[19]),
-	.hold1Out (hold1),
-	.hold2Out (hold2),
-	.cursorY1Out (cursorY1),
-	.cursorY2Out (cursorY2),
-	.cursorX1Out (cursorX1),
-	.cursorX2Out (cursorX2),
-	.shiftDown1Out (shiftDown1),
-	.shiftDown2Out (shiftDown2),
-	.sampleAdjust1Out (sampleAdjust1),
-	.sampleAdjust2Out (sampleAdjust2),
-	.cursorX_ENOut (cursorX_EN),
-	.cursorY_ENOut (cursorY_EN),
-	.Wave1_ENOut (Wave1_EN),
-	.Wave2_ENOut (Wave2_EN),
-	.offset1Out (offset1),
-	.offset2Out (offset2),
-	.TWave_EnOut (TWave_EN),
-	.waveSel (waveSel)
+	.buttonClock (slClock[19]), //Slower clock to move cursors/wave
+	.hold1Out (hold1), //Freeze wave 1
+	.hold2Out (hold2), //Freeze wave 2
+	.cursorY1Out (cursorY1), //Cursor y1
+	.cursorY2Out (cursorY2), //Cursor y2
+	.cursorX1Out (cursorX1), //Cursor x1
+	.cursorX2Out (cursorX2), //Cursor x2
+	.shiftDown1Out (shiftDown1), //Squish wave 1 down
+	.shiftDown2Out (shiftDown2), //Squish wave 2 down
+	.sampleAdjust1Out (sampleAdjust1), //Adjust wave 1 to have more samples
+	.sampleAdjust2Out (sampleAdjust2), //Adjust wave 2 to have more samples
+	.cursorX_ENOut (cursorX_EN), //Enable x-cursors 
+	.cursorY_ENOut (cursorY_EN), //Enable y-cursors
+	.Wave1_ENOut (Wave1_EN), //Enable wave 1
+	.Wave2_ENOut (Wave2_EN), //Enable wave 1
+	.offset1Out (offset1), //Offset for wave 1 
+	.offset2Out (offset2), //Offset for wave 2
+	.TWave_EnOut (TWave_EN), //Enable Test wave 
+	.waveSel (waveSel) //Select wave to be measured
 );
 //Instatiating the Scope measurements module
 Measure measure(
-	.buttonClock (slClock[19]),
-	.cursory1 (cursorY1),
-	.cursory2 (cursorY2),
-	.cursorx1 (cursorX1),
-	.cursorx2 (cursorX2),
-	.sampleadjust1 (sampleAdjust1),  
-	.sampleadjust2 (sampleAdjust2),
-	.shiftDown1 (shiftDown1),
-	.shiftDown2 (shiftDown2),
-	.waveSel (waveSel),
-	.measurement (0), 
-	.num (num)
+	.buttonClock (slClock[19]), //Slower clock to measure distance between cursors
+	.cursory1 (cursorY1), //Cursor y1
+	.cursory2 (cursorY2), //Cursor y2
+	.cursorx1 (cursorX1), //Cursor x1
+	.cursorx2 (cursorX2), //Cursor x2
+	.sampleadjust1 (sampleAdjust1), //Adjust wave 1 to have more samples  
+	.sampleadjust2 (sampleAdjust2), //Adjust wave 2 to have more samples
+	.shiftDown1 (shiftDown1), //Squish wave 1 down
+	.shiftDown2 (shiftDown2), //Squish wave 2 down
+	.waveSel (waveSel), //Select wave to be measured
+	.measurement (0), //Selelct Cursors - on x permenantly 
+	.num (num) //Num to be displayed on the seven-seg
 );
-//Generated ADC module
+//Generated ADC module using QSys
 ADCV2_adc_mega_0 #(
 	.board          ("DE1-SoC"),
 	.board_rev      ("Autodetect"),
