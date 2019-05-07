@@ -140,8 +140,11 @@ input clock,
 input [3:0] number,
 output [6:0] segOutput
 );
+
 reg [6:0] seg;
+
 assign segOutput = seg;
+
 always @(posedge clock) begin
 	if(number == 0) begin
 		seg <= ~(7'h3F);
