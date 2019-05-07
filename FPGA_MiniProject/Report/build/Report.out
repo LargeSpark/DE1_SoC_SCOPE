@@ -10,4 +10,12 @@
 \BOOKMARK [2][-]{subsection.9.1}{Appendix A - VGA Timing Specifications}{section.9}% 10
 \BOOKMARK [2][-]{subsection.9.2}{Appendix B - Number Split Module}{section.9}% 11
 \BOOKMARK [2][-]{subsection.9.3}{Appendix C - Generate Seven Segment Output Module}{section.9}% 12
-\BOOKMARK [1][-]{figure.9}{References}{}% 13
+\BOOKMARK [2][-]{subsection.9.4}{Appendix D - Top Level RTL View}{section.9}% 13
+\BOOKMARK [2][-]{subsection.9.5}{Appendix E - Slower Clock RTL View}{section.9}% 14
+\BOOKMARK [2][-]{subsection.9.6}{Appendix F - VGA Top Level RTL View}{section.9}% 15
+\BOOKMARK [2][-]{subsection.9.7}{Appendix F - VGA HSync RTL View}{section.9}% 16
+\BOOKMARK [2][-]{subsection.9.8}{Appendix F - VGA VSync RTL View}{section.9}% 17
+\BOOKMARK [2][-]{subsection.9.9}{Appendix E - Measurement RTL View}{section.9}% 18
+\BOOKMARK [2][-]{subsection.9.10}{Appendix G - Seven Segment Display RTL View}{section.9}% 19
+\BOOKMARK [2][-]{subsection.9.11}{Appendix H - Sampler RTL View}{section.9}% 20
+\BOOKMARK [1][-]{figure.17}{References}{}% 21
