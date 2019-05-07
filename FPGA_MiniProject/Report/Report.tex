@@ -37,6 +37,9 @@
 \pagestyle{fancy}
 \fancyhf{}% Clear header/footer
 
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -78,10 +81,10 @@
   \or Alexander Bolton% page = 5
   \or Alexander Bolton% page = 6
   \or Alexander Bolton% page = 7
-  \or Alexander Bolton% page = 8
+  \or Haider Shafiq% page = 8
   \or Haider Shafiq% page = 9
   \or Haider Shafiq% page = 10
-  \or Haider Shafiq% page = 11
+  \or Haider Shafiq - Alexander Bolton% page = 11
   \or Haider Shafiq% page = 12
   \or Haider Shafiq% page = 13
   \or % page = 14
@@ -155,12 +158,12 @@ Once the HSync signal has completed 600 iterations the vertical part of the sign
 Initially for the IP block the library was created to carry out the VSync and HSync signals which was written by the project group. However, there was a 2ns delay which could not be solved. A number of methods were attempted to correct this 2ns but created a problem with the HSync signal would be 2ns early or 2ns late which was enough to effect the VSync signal that it could not be displayed on a monitor. Due to timing constraints the decision was made to find and implement a pre-made IP and modify it to work on the DE1-SoC board.\cite{stump_2012} The HSync and VSync parts of the IP was used to create the signals. A counter was created to count how many x (Clock signal within display interval) iterations and y (HSync signal) iterations have been completed. The x counter resets on the positive edge of the HSync and the y counter resets on the positive edge of the VSync signal. The IP was then modified to use a full 8 bit colour range available on the DE1-SoC. 
 \begin{figure}[H]
 	\centering
-	\lstinputlisting[language=Verilog, firstline=148, lastline=157, frame=bt]{../VGA_IP.v}
+	\lstinputlisting[language=Verilog, firstline=129, lastline=136, frame=bt]{../VGA_IP.v}
 		\caption{X Counter with reset}
 \end{figure}
 	\begin{figure}[H]
 	\centering
-	\lstinputlisting[language=Verilog, firstline=286, lastline=292, frame=bt]{../VGA_IP.v}
+	\lstinputlisting[language=Verilog, firstline=267, lastline=277, frame=bt]{../VGA_IP.v}
 	\caption{Y Counter with reset}
 \end{figure}
 The grid was displayed by having an if statement in an always block which checked if x counter or y counter was equal to where a line wanted to be placed. When the counter equalled these values the RGB data signal was set to white. The wave was displayed by passing the x counter through the block to the top layer. This then went to the sampler which had a sample buffer. This data was passed back to the VGA IP which then the value is compared with the y counter. If it is equal to the y counter then the pixel is set to the desired colour. Offsets were added to the waves so it can be controlled 
@@ -383,7 +386,7 @@ In conclusion, while the original aims of the project were met, there is room to
 \-
 \end{flushleft}
 \newpage
-\subsection{Appendix F - VGA HSync RTL View}
+\subsection{Appendix G - VGA HSync RTL View}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.9\textwidth]{./images/VGAHSyncRTL.png}}
@@ -392,28 +395,28 @@ In conclusion, while the original aims of the project were met, there is room to
 \begin{flushleft}
 \-
 \end{flushleft}
-\subsection{Appendix F - VGA VSync RTL View}
+\subsection{Appendix H - VGA VSync RTL View}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.9\textwidth]{./images/VGAVSyncRTL.png}}
 	\caption{VGA VSync RTL View}
 \end{figure}
 \newpage
-\subsection{Appendix E - Measurement RTL View}
+\subsection{Appendix I - Measurement RTL View}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=1.1\textwidth, angle =270]{./images/measurement.png}}
 	\caption{Measurement RTL View}
 \end{figure}
 \newpage
-\subsection{Appendix G - Seven Segment Display RTL View}
+\subsection{Appendix J - Seven Segment Display RTL View}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=1.1\textwidth, angle =270]{./images/sevenseg.png}}
 	\caption{Seven Segment Display RTL View}
 \end{figure}
 \newpage
-\subsection{Appendix H - Sampler RTL View}
+\subsection{Appendix K - Sampler RTL View}
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=1.1\textwidth, angle =270]{./images/sampler.png}}
