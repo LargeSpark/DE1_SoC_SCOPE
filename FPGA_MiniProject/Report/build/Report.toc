@@ -18,4 +18,12 @@
 \contentsline {subsection}{\numberline {9.9}Appendix I - Measurement RTL View}{19}{subsection.9.9}% 
 \contentsline {subsection}{\numberline {9.10}Appendix J - Seven Segment Display RTL View}{20}{subsection.9.10}% 
 \contentsline {subsection}{\numberline {9.11}Appendix K - Sampler RTL View}{21}{subsection.9.11}% 
-\contentsline {section}{References}{22}{figure.17}% 
+\contentsline {subsection}{\numberline {9.12}Appendix L - Top Level Module Code}{22}{subsection.9.12}% 
+\contentsline {subsection}{\numberline {9.13}Appendix M - VGA Top Level Module Code}{25}{subsection.9.13}% 
+\contentsline {subsection}{\numberline {9.14}Appendix N - Seven Segment Display Code}{30}{subsection.9.14}% 
+\contentsline {subsection}{\numberline {9.15}Appendix O - Sampler Code}{32}{subsection.9.15}% 
+\contentsline {subsection}{\numberline {9.16}Appendix P - Controls Module Code}{33}{subsection.9.16}% 
+\contentsline {subsection}{\numberline {9.17}Appendix Q - Counter Module Code}{37}{subsection.9.17}% 
+\contentsline {subsection}{\numberline {9.18}Appendix R - Measure Module Code}{38}{subsection.9.18}% 
+\contentsline {subsection}{\numberline {9.19}Appendix S - VGA Module Original Team Code}{39}{subsection.9.19}% 
+\contentsline {section}{References}{42}{figure.37}% 

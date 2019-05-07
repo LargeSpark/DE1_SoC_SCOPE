@@ -171,7 +171,7 @@ The grid was displayed by having an if statement in an always block which checke
 \newpage
 \section{ADC}
 \begin{flushleft}
-To allow signals to be captured so they can be sampled the onboard analogue-to-digital converter (ADC) was decided to be used. It was decided after having difficulty getting the TerasIC ADDA board to work, so decided to stay within the time constraints to use the onboard ADC. To initialise this QSys was used to generate the appropriate code. The onboard ADC has 4 pins connected to the FPGA. The clock, data in, data out, and CS\_n. QSys allows you to generate the code for these pins in a graphical user interface. It also allows you to select clock speed to update at and the channels you wish to use. The ADC pins allow up to 8 channels of ADC to be used so for expandability all channels where selected to be used. The code was generated and then 2 .v files was copied into the main project and instantiated. The channels where labeled from CH0 to CH7. For this project only CH0 and CH1 were used and the outputs of these were inputted into the sampler. This then samples the values of 800 clock cycles (to match the screen width). This is then ready to be output to the VGA IP.
+To allow signals to be captured so they can be sampled the onboard analogue-to-digital converter (ADC) was decided to be used. It was decided after having difficulty getting the TerasIC ADDA board to work, so decided to stay within the time constraints to use the onboard ADC. To initialise this; QSys was used to generate the appropriate code. The onboard ADC has 4 pins connected to the FPGA. The clock, data in, data out, and CS\_n. QSys allows you to generate the code for these pins in a graphical user interface. It also allows you to select clock speed to update at and the channels you wish to use. The ADC pins allow up to 8 channels of ADC to be used so for expandability all channels where selected to be used. The code was generated, and then 2 .v files was copied into the main project and instantiated. The channels where labeled from CH0 to CH7. For this project only CH0 and CH1 were used and the outputs of these were inputted into the sampler. This then samples the values of 800 clock cycles (to match the screen width). This is then ready to be output to the VGA IP.
 \begin{figure}[H]
 	\centering
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/ADCPins.png}}
@@ -193,9 +193,9 @@ For measurements to be displayed it was decided for simplicity to use the seven 
 	\fbox{\includegraphics[width=0.5\textwidth]{./images/SevenSeg.png}}
 	\caption{Seven Segment Display Pins \cite{terasic_2014}}
 \end{figure}
-It was very trivial to setup the seven segment display to output a signal number. To do this a register of 7 bits was initialised which could act for each bit of a single seven segment display. It had 2 inputs (clock and number) and then the output for the seven segment display. When a number was entered between 0 to 9 an if statement in an always block was run to give the appropriate output. It was noted that the output is inverted as the seven segment display is active low. This can be shown in Appendix C.
+It was very trivial to setup the seven segment display to output a signal number. To do this a register of 7 bits was initialised which could act for each bit of a single seven segment display. It had 2 inputs (clock and number) and then the output for the seven segment display. When a number was entered between 0 to 9, an if statement in an always block was run to give the appropriate output. It was noted that the output is inverted as the seven segment display is active low. This can be seen in Appendix C.
 \\ \- \\
-The next challenge was to have numbers between 0 to 9999 to be separated into singular numbers to be output to the seven segment display. On FPGA division is a very expensive resource. It was decided to use a counter which the idea was taken from online. \cite{stack_overflow} The counter method uses 5 counters, ones, tens, hundreds, thousands, and counter. As the counters count up the ones gets to the number 9 it will reset the ones counter and increase the tens counter. This is the same for the tens, hundreds, and thousands. When the counter reaches the number it then stops and the output number is sent to the seven segment output generator module which turns the numbers into an output for the seven segment displays. This runs at full clock speed so the counting cannot be seen with the human eye. This code can be found on Appendix B.
+The next challenge was to have numbers between 0 to 9999 to be separated into singular numbers to be output to the seven segment display. On FPGA division is a very expensive resource. It was decided to use a counter which the idea was taken from online. \cite{stack_overflow} The counter method uses 5 counters, ones, tens, hundreds, thousands, and counter. As the counters count up the ones gets to the number 9 it will reset the ones counter and increase the tens counter. This is the same for the tens, hundreds, and thousands. When the counter reaches the number it then stops and the output number is sent to the seven segment output generator module which turns the numbers into an output for the seven segment displays. This runs at full clock speed so the counting cannot be seen with the human eye. This code can be found in Appendix B.
 \end{flushleft}
 \newpage
 \section{Controls}
@@ -216,7 +216,7 @@ The following table below details state 1, when switch 9 and 8 are both 0.  S7 �
 	\hline 
 	S5 & N/A \\ 
 	\hline 
-	S4 & N/A \\ 
+	S4 & Selects wave to be measured \\ 
 	\hline 
 	S3 & Allow the y-cursors to be moved \\ 
 	\hline 
@@ -298,7 +298,7 @@ When S5 is 1 – Decrease time/div for wave 2.\\
 \end{center}
 \squeezeup
 Similar to state 1, the buttons will do nothing if S2 – 5 are all 0. State 3, which occurs when both switch 8 and 9 are 1, enables the test wave to display on the monitor. All cursors and waves move by a size of 1, this is indicated by the localparam moveSize. 
-The code for the controls IP can be seen in appendix E. All the controls happen on the positive edge of buttonClock. In appendix A, it can be seen that the buttonClock attaches to the slClock [19]. The code for the slClock can be seen in appendix F. The slClock module was created so that the cursors and waves could be moved accurately. They could not be moved with any precision when running off of the main clock as the main clock ran at 50MHz. This meant that when the cursors or waves moved, they would move to fast to control. However, using the slClock [19] meant that the frequency was approximately 93Hz, and as such was much easier to control.
+The code for the controls IP can be seen in appendix P. All the controls happen on the positive edge of buttonClock. In appendix L, it can be seen that the buttonClock attaches to the slClock [19]. The code for the slClock can be seen in appendix Q. The slClock module was created so that the cursors and waves could be moved accurately. They could not be moved with any precision when running off of the main clock as the main clock ran at 50MHz. This meant that when the cursors or waves moved, they would move to fast to control. However, using the slClock [19] meant that the frequency was approximately 93Hz, and as such was much easier to control.
 \end{flushleft}
 \newpage
 \section{Measurement}
@@ -310,7 +310,7 @@ The equation to calculate the voltage of the waves is:
 VoltageX = ShiftDownX^{2} * DiffX
 \end{equation}
 Where X indicated which wave was being calculated i.e. shiftdownX was actually shiftdown1 or shiftdown2. Diffx was the difference between the cursors. The shiftdown function increases or decreases the volts/division for each wave. There are two functions as each wave may be shifted by different values. \\ \- \\
-The code for this module can be seen in appendix G. From the code it can be seen that the value of distance between the cursors is put into the variables vx1 or vx2. This output of these variables were then stored in the variable result, depending on the value of waveSel, which was then assigned to num. When the measurement IP module was instantiated into the top-level module, the local parameter num was attached to a local parameter in the top-level module also called num. This parameter controlled what values were displayed on the seven-segment display. \\ \- \\
+The code for this module can be seen in appendix R. From the code it can be seen that the value of distance between the cursors is put into the variables vx1 or vx2. This output of these variables were then stored in the variable result, depending on the value of waveSel, which was then assigned to num. When the measurement IP module was instantiated into the top-level module, the local parameter num was attached to a local parameter in the top-level module also called num. This parameter controlled what values were displayed on the seven-segment display. \\ \- \\
 The waveSel register was designed such that when waveSel is equal to 0, wave 1 is being measured, and the result of the measurement is displayed on the seven-segment display. If waveSel is equal to 2, wave 2 is measured. The waveSel function is controlled in the control IP, when in state 1, if switch 4 is 0, waveSel is 0, and as such wave 1 is being measured. When switch 4 is 1, waveSel is 1, and as such wave 2 is measured.  
 \end{flushleft}
 \newpage
@@ -318,9 +318,9 @@ The waveSel register was designed such that when waveSel is equal to 0, wave 1 i
 \begin{flushleft}
 This chapter will discuss the various problems encountered during this project. It also will discuss the decisions made in overcoming these problems. 
 \\ \- \\
-When trying to work with the TerasIC ADDA the IP was written in specification with the documentation. Unfortunately we could not get the ADDA to update and give an output to the sampler block so it was abandoned. The replacement was using the onboard ADC which has a reduced resolution but will still meet our goals. 
+When trying to work with the TerasIC ADDA, the IP was written in specification with the documentation. Unfortunately we could not get the ADDA to update and give an output to the sampler block, so it was abandoned. The replacement was using the onboard ADC which has a reduced resolution but will still meet our goals. 
 \\ \- \\
-When first creating the VGA IP the VSync signals and HSync signals where coded by the project group however it was quickly found that there was an error with the timing by a significant amount. This was corrected by replacing using always blocks to only use always blocks as counters and using assigning if statements to set the outputs. This then fixed the timing issue which was off by only 2ns in the HSync. Since the VSync worked off of the HSync as its clock it created an issue as the slight timing added up per line (unit of positive clock edge of HSync) putting off the VSync clock by a significant amount. Values were adjusted to try to alleviate this issue, however the closest the clock could be to the actual value was 2ns. The decision was made to find a VGA IP which was precoded and port it over to the DE1-SoC to save on time. The HSync and VSync signals were acquired from this IP and counters added.\cite{stump_2012} From here it was simple to produce the grid and waves.
+When first creating the VGA IP the VSync signals and HSync signals where coded by the project group, however it was quickly found that there was an error with the timing by a significant amount. This was corrected by replacing using always blocks to only use always blocks as counters, and using assigning if statements to set the outputs. This then fixed the timing issue which was off by only 2ns in the HSync. Since the VSync worked off of the HSync as its clock it created an issue as the slight timing added up per line (unit of positive clock edge of HSync) putting off the VSync clock by a significant amount. Values were adjusted to try to alleviate this issue, however the closest the clock could be to the actual value was 2ns. The decision was made to find a VGA IP which was precoded, and port it over to the DE1-SoC to save on time. The HSync and VSync signals were acquired from this IP and counters added.\cite{stump_2012} From here it was simple to produce the grid and waves.
 \\ \- \\
 Initially the controls were to be done using the LT24 LCD. This module would utilise the touchscreen capabilities of the LT24, and would allow the user to use the display to decide what would display on the monitor, i.e. waves, cursors. The initial stage of this was to draw a user interface to the display, such that the user could interact with the display and choose which option was desired. However, when drawing to the screen difficulties were found in controlling what appeared on the screen. Instead random patterns would appear, which were unable to be manipulated into what was desired. After being unable to fix these, and taking into consideration time constraints, a decision was made to use the switches and keys control the system. 
 \end{flushleft}
@@ -423,6 +423,134 @@ In conclusion, while the original aims of the project were met, there is room to
 	\centering
 	\fbox{\includegraphics[width=1.1\textwidth, angle =270]{./images/sampler.png}}
 	\caption{Sampler RTL View}
+\end{figure}
+\newpage
+\subsection{Appendix L - Top Level Module Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt, lastline = 85]{../FPGA_MiniProject.v}
+		\caption{FPGA\_MiniProject.v Part 1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt, firstline = 86, lastline = 170]{../FPGA_MiniProject.v}
+		\caption{FPGA\_MiniProject.v Part 2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt, firstline = 171]{../FPGA_MiniProject.v}
+		\caption{FPGA\_MiniProject.v Part 3}
+\end{figure}
+\newpage
+\subsection{Appendix M - VGA Top Level Module Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt]{../VGA_IP_Top.v}
+		\caption{VGA\_IP\_Top.v}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, lastline = 84, frame=bt]{../VGA_IP.v}
+		\caption{VGA\_IP.v Part 1}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline = 85, lastline = 170, frame=bt]{../VGA_IP.v}
+		\caption{VGA\_IP.v Part 2}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline = 171, lastline = 255, frame=bt]{../VGA_IP.v}
+		\caption{VGA\_IP.v Part 3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline = 256, frame=bt]{../VGA_IP.v}
+		\caption{VGA\_IP.v Part 4}
+\end{figure}
+\newpage
+\subsection{Appendix N - Seven Segment Display Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, lastline = 85, frame=bt]{../SevenSeg_IP.v}
+		\caption{SevenSeg\_IP.v Part 1}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline = 86, frame=bt]{../SevenSeg_IP.v}
+		\caption{SevenSeg\_IP.v Part 2}
+\end{figure}
+\newpage
+\subsection{Appendix O - Sampler Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt]{../Sample_IP.v}
+		\caption{Sample\_IP.v}
+\end{figure}
+\newpage
+\subsection{Appendix P - Controls Module Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, lastline=85, frame=bt]{../Controls_IP.v}
+		\caption{Controls\_IP.v Part 1}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=86, lastline=170, frame=bt]{../Controls_IP.v}
+		\caption{Controls\_IP.v Part 2}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=170, lastline=255, frame=bt]{../Controls_IP.v}
+		\caption{Controls\_IP.v Part 3}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=256, frame=bt]{../Controls_IP.v}
+		\caption{Controls\_IP.v Part 4}
+\end{figure}
+\newpage
+\subsection{Appendix Q - Counter Module Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt]{../Counter_IP.v}
+		\caption{Counter\_IP.v}
+\end{figure}
+\newpage
+\subsection{Appendix R - Measure Module Code}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, frame=bt]{../Measure.v}
+		\caption{Measure.v}
+\end{figure}
+\newpage
+\subsection{Appendix S - VGA Module Original Team Code}
+\begin{flushleft}
+This is the original code for the VGA IP which didn't work due to a 2ns time delay.
+\end{flushleft}
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, lastline=85. frame=bt]{../VGAOriginalIP.v}
+		\caption{Original VGA IP Part 1}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=86, lastline=170, frame=bt]{../VGAOriginalIP.v}
+		\caption{Original VGA IP Part 2}
+\end{figure}
+\newpage
+\begin{figure}[H]
+	\centering
+	\lstinputlisting[language=Verilog, firstline=171, frame=bt]{../VGAOriginalIP.v}
+		\caption{Original VGA IP Part 3}
 \end{figure}
 \newpage
 \addcontentsline{toc}{section}{References}

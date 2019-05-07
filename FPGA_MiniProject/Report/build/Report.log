@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.25)  7 MAY 2019 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.25)  7 MAY 2019 15:34
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -984,7 +984,7 @@ build/Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
 
-<UniLogo.png, id=87, 2007.5pt x 582.175pt>
+<UniLogo.png, id=119, 2007.5pt x 582.175pt>
 File: UniLogo.png Graphic file (type png)
 <use UniLogo.png>
 Package pdftex.def Info: UniLogo.png  used on input line 121.
@@ -1059,12 +1059,12 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [2] [3]
-<./images/VGA.png, id=148, 994.71625pt x 454.69875pt>
+<./images/VGA.png, id=196, 994.71625pt x 454.69875pt>
 File: ./images/VGA.png Graphic file (type png)
 <use ./images/VGA.png>
 Package pdftex.def Info: ./images/VGA.png  used on input line 148.
 (pdftex.def)             Requested size: 241.84843pt x 110.55225pt.
-<./images/VGATiming.png, id=150, 789.95125pt x 351.3125pt>
+<./images/VGATiming.png, id=198, 789.95125pt x 351.3125pt>
 File: ./images/VGATiming.png Graphic file (type png)
 <use ./images/VGATiming.png>
 Package pdftex.def Info: ./images/VGATiming.png  used on input line 155.
@@ -1080,18 +1080,18 @@ File: lstlang3.sty 2019/02/27 1.8b listings language file
 )
 (../VGA_IP.v) [4 <./images/VGA.png> <./images/VGATiming.png>] (../VGA_IP.v)
 [5]
-<./images/ADCPins.png, id=188, 501.875pt x 421.575pt>
+<./images/ADCPins.png, id=236, 501.875pt x 421.575pt>
 File: ./images/ADCPins.png Graphic file (type png)
 <use ./images/ADCPins.png>
 Package pdftex.def Info: ./images/ADCPins.png  used on input line 177.
 (pdftex.def)             Requested size: 241.84843pt x 203.15778pt.
-<./images/ADCConnections.png, id=190, 844.15375pt x 378.41376pt>
+<./images/ADCConnections.png, id=238, 844.15375pt x 378.41376pt>
 File: ./images/ADCConnections.png Graphic file (type png)
 <use ./images/ADCConnections.png>
 Package pdftex.def Info: ./images/ADCConnections.png  used on input line 183.
 (pdftex.def)             Requested size: 241.84843pt x 108.4149pt.
  [6 <./images/ADCPins.png> <./images/ADCConnections.png>]
-<./images/SevenSeg.png, id=198, 636.3775pt x 297.11pt>
+<./images/SevenSeg.png, id=246, 636.3775pt x 297.11pt>
 File: ./images/SevenSeg.png Graphic file (type png)
 <use ./images/SevenSeg.png>
 Package pdftex.def Info: ./images/SevenSeg.png  used on input line 193.
@@ -1099,87 +1099,105 @@ Package pdftex.def Info: ./images/SevenSeg.png  used on input line 193.
  [7 <./images/SevenSeg.png>] [8] [9] [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 337.
-<./images/VGAHTimingSpec.png, id=235, 780.9175pt x 295.1025pt>
+<./images/VGAHTimingSpec.png, id=283, 780.9175pt x 295.1025pt>
 File: ./images/VGAHTimingSpec.png Graphic file (type png)
 <use ./images/VGAHTimingSpec.png>
 Package pdftex.def Info: ./images/VGAHTimingSpec.png  used on input line 341.
 (pdftex.def)             Requested size: 435.32422pt x 164.50427pt.
-<./images/VGAVTimingSpec.png, id=237, 774.895pt x 262.9825pt>
+<./images/VGAVTimingSpec.png, id=285, 774.895pt x 262.9825pt>
 File: ./images/VGAVTimingSpec.png Graphic file (type png)
 <use ./images/VGAVTimingSpec.png>
 Package pdftex.def Info: ./images/VGAVTimingSpec.png  used on input line 346.
 (pdftex.def)             Requested size: 435.32422pt x 147.74269pt.
  [13 <./images/VGAHTimingSpec.png> <./images/VGAVTimingSpec.png>] (../SevenSeg_
 IP.v) [14] (../SevenSeg_IP.v) [15]
-<./images/TopLevelRTL.png, id=334, 1570.86874pt x 892.33376pt>
+<./images/TopLevelRTL.png, id=382, 1570.86874pt x 892.33376pt>
 File: ./images/TopLevelRTL.png Graphic file (type png)
 <use ./images/TopLevelRTL.png>
 Package pdftex.def Info: ./images/TopLevelRTL.png  used on input line 368.
 (pdftex.def)             Requested size: 628.8074pt x 357.1995pt.
  [16 <./images/TopLevelRTL.png>]
-<./images/SlowerClockRTL.png, id=340, 1408.26125pt x 454.69875pt>
+<./images/SlowerClockRTL.png, id=388, 1408.26125pt x 454.69875pt>
 File: ./images/SlowerClockRTL.png Graphic file (type png)
 <use ./images/SlowerClockRTL.png>
 Package pdftex.def Info: ./images/SlowerClockRTL.png  used on input line 375.
 (pdftex.def)             Requested size: 435.32422pt x 140.55273pt.
-<./images/VGATopRTL.png, id=341, 798.985pt x 532.99126pt>
+<./images/VGATopRTL.png, id=389, 798.985pt x 532.99126pt>
 File: ./images/VGATopRTL.png Graphic file (type png)
 <use ./images/VGATopRTL.png>
 Package pdftex.def Info: ./images/VGATopRTL.png  used on input line 384.
 (pdftex.def)             Requested size: 435.32422pt x 290.39722pt.
  [17 <./images/SlowerClockRTL.png> <./images/VGATopRTL.png>]
-<./images/VGAHSyncRTL.png, id=348, 1651.16875pt x 375.4025pt>
+<./images/VGAHSyncRTL.png, id=396, 1651.16875pt x 375.4025pt>
 File: ./images/VGAHSyncRTL.png Graphic file (type png)
 <use ./images/VGAHSyncRTL.png>
 Package pdftex.def Info: ./images/VGAHSyncRTL.png  used on input line 394.
 (pdftex.def)             Requested size: 435.32422pt x 98.97137pt.
-<./images/VGAVSyncRTL.png, id=349, 1678.27pt x 374.39874pt>
+<./images/VGAVSyncRTL.png, id=397, 1678.27pt x 374.39874pt>
 File: ./images/VGAVSyncRTL.png Graphic file (type png)
 <use ./images/VGAVSyncRTL.png>
 Package pdftex.def Info: ./images/VGAVSyncRTL.png  used on input line 403.
 (pdftex.def)             Requested size: 435.32422pt x 97.11285pt.
 [18 <./images/VGAHSyncRTL.png> <./images/VGAVSyncRTL.png>]
-<./images/measurement.png, id=356, 1610.015pt x 289.08pt>
+<./images/measurement.png, id=404, 1610.015pt x 289.08pt>
 File: ./images/measurement.png Graphic file (type png)
 <use ./images/measurement.png>
 Package pdftex.def Info: ./images/measurement.png  used on input line 410.
 (pdftex.def)             Requested size: 532.0695pt x 95.53343pt.
  [19 <./images/measurement.png>]
-<./images/sevenseg.png, id=363, 1629.08624pt x 344.28625pt>
+<./images/sevenseg.png, id=411, 1629.08624pt x 344.28625pt>
 File: ./images/sevenseg.png Graphic file (type png)
 <use ./images/sevenseg.png>
 Package pdftex.def Info: ./images/sevenseg.png  used on input line 417.
 (pdftex.def)             Requested size: 532.0695pt x 112.4433pt.
  [20 <./images/sevenseg.png>]
-<./images/sampler.png, id=369, 1608.0075pt x 251.94125pt>
+<./images/sampler.png, id=417, 1608.0075pt x 251.94125pt>
 File: ./images/sampler.png Graphic file (type png)
 <use ./images/sampler.png>
 Package pdftex.def Info: ./images/sampler.png  used on input line 424.
 (pdftex.def)             Requested size: 532.0695pt x 83.36383pt.
  [21 <./images/sampler.png>]
+(../FPGA_MiniProject.v
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 1.
+
+(/home/alex/.miktex/texmfs/install/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 2.
+)
+(../FPGA_MiniProject.v) (../FPGA_MiniProject.v) [22] [23] [24] (../VGA_IP_Top.v
+) [25] (../VGA_IP.v) [26] (../VGA_IP.v) [27] (../VGA_IP.v) (../VGA_IP.v)
+[28] [29] (../SevenSeg_IP.v) [30] (../SevenSeg_IP.v) [31] (../Sample_IP.v)
+[32] (../Controls_IP.v) [33] (../Controls_IP.v) [34] (../Controls_IP.v)
+[35] (../Controls_IP.v) [36] (../Counter_IP.v) [37] (../Measure.v) [38]
+(../VGAOriginalIP.v) [39] (../VGAOriginalIP.v) [40] (../VGAOriginalIP.v)
+[41]
 (/home/alex/Documents/Gits/ELEC5611_ASS1/DE1_SoC_SCOPE/FPGA_MiniProject/Report/
 build/Report.bbl
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
- [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
+ [42]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
 
 (/home/alex/Documents/Gits/ELEC5611_ASS1/DE1_SoC_SCOPE/FPGA_MiniProject/Report/
 build/Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 85A381948D4AA8CEE0FF7C8B4F9F2519;1395.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
+(rerunfilecheck)             Checksum: E790E44BC53C24940F0C9570DE86E7E7;2078.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
  ) 
 Here is how much of TeX's memory you used:
- 20271 strings out of 494865
- 347662 string characters out of 3178377
- 799459 words of memory out of 3000000
- 23485 multiletter control sequences out of 15000+200000
- 607311 words of font info for 100 fonts, out of 3000000 for 9000
+ 22135 strings out of 494865
+ 377153 string characters out of 3178377
+ 1540460 words of memory out of 3000000
+ 23773 multiletter control sequences out of 15000+200000
+ 616046 words of font info for 112 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  40i,16n,74p,1137b,1654s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/alex/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}</home/alex/.m
@@ -1190,9 +1208,9 @@ all/fonts/type1/urw/helvetic/uhvb8a.pfb></home/alex/.miktex/texmfs/install/font
 s/type1/urw/helvetic/uhvr8a.pfb></home/alex/.miktex/texmfs/install/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
 Output written on /home/alex/Documents/Gits/ELEC5611_ASS1/DE1_SoC_SCOPE/FPGA_Mi
-niProject/Report/build/Report.pdf (22 pages, 1193909 bytes).
+niProject/Report/build/Report.pdf (42 pages, 1484796 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
- 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2372 PDF objects out of 2487 (max. 8388607)
+ 1691 named destinations out of 1728 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 
