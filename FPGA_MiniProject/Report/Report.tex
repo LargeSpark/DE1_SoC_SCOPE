@@ -302,7 +302,13 @@ The code for the controls IP can be seen in appendix E. All the controls happen 
 \begin{flushleft}
 This chapter of the report shall discuss the design of the measurement IP for the project. The purpose of this module was to be able to measure the voltage of the waveform on the monitor, using the y-cursors. This module would then display the voltage to the seven-segment display, in mV. \\ \- \\
 This module was designed to take the cursors from the control’s module, and measure the difference between them, and display the value on the seven-segment display. This was designed so that the cursors can be moved to either of the waves on the monitor and measure the voltage between the peaks of the waveforms. Depending on what was being measured between the cursors the, value between them would display on the seven-segment display. Therefore, if the user wanted to measure wave 2, the cursors would be placed between the top peak, and bottom peak of the wave, and the voltage in mV, would then display on the seven-segment display. This is also how the user would measure the other wave on the screen. \\ \- \\
-The code for this module can be seen in appendix G. From the code it can be seen that the value of distance between the cursors is put into the variable vx1. This variable was then stored in the variable result, which was then assigned to num. When the measurement IP module was instantiated into the top-level module, the local parameter num was attached to a local parameter in the top-level module also called num. This parameter controlled what values were displayed on the seven-segment display. 
+The equation to calculate the voltage of the waves is:
+\begin{equation}
+VoltageX = ShiftDownX^{2} * DiffX
+\end{equation}
+Where X indicated which wave was being calculated i.e. shiftdownX was actually shiftdown1 or shiftdown2. Diffx was the difference between the cursors. The shiftdown function increases or decreases the volts/division for each wave. There are two functions as each wave may be shifted by different values. \\ \- \\
+The code for this module can be seen in appendix G. From the code it can be seen that the value of distance between the cursors is put into the variables vx1 or vx2. This output of these variables were then stored in the variable result, depending on the value of waveSel, which was then assigned to num. When the measurement IP module was instantiated into the top-level module, the local parameter num was attached to a local parameter in the top-level module also called num. This parameter controlled what values were displayed on the seven-segment display. \\ \- \\
+The waveSel register was designed such that when waveSel is equal to 0, wave 1 is being measured, and the result of the measurement is displayed on the seven-segment display. If waveSel is equal to 2, wave 2 is measured. The waveSel function is controlled in the control IP, when in state 1, if switch 4 is 0, waveSel is 0, and as such wave 1 is being measured. When switch 4 is 1, waveSel is 1, and as such wave 2 is measured.  
 \end{flushleft}
 \newpage
 \section{Problems Encountered}
@@ -315,6 +321,12 @@ Initially the controls were to be done using the LT24 LCD. This module would uti
 \end{flushleft}
 \newpage
 \section{Conclusion}
+\begin{flushleft}
+This chapter will conclude the report, as well as analyse the work completed in this project, against the original aims. It will also discuss the possibility of further work on the project, if more time were had to complete it. 
+The original aims of the project were; to be able to take to signals from a signal generator, present them to the FPGA, and be able to view and measure them. This has been completed as multiple signals from the FPGA can be seen on the separate monitor using the VGA. Using the cursors, the waves can also be accurately measured, via use of the switches and keys.  The value of the waves can be seen on the seven-segment display, in mV. \\ \- \\
+Given more time the project could be further extended. Currently, only 2 signals can be taken from the signal generator, and get measured by the DE1-SoC, and be displayed on the monitor. To expand this, all 8 channels of the ADC could be used. Also given more time, the LT24 touchscreen module would be fully developed and used to control various aspects of the project. These aspects would be the cursors, as well as enabling them, the waves, and also adjusting the volts/division as well as the time/division. Due to not having the touchscreen working, all the functions are on the switches. These switches can be set to toggles on the buttons, however, this was not done originally as it was not planned to have as many controls for the project. Further to these additions, the time/division which also be measured using the other cursors on the DE1-SoC scope, if more time were had, as well as a function to adjust the trigger threshold. Currently the trigger threshold has to be set manually within the code, every time it is to be changed the program has to be re-compiled and re-programmed onto the board. \\ \- \\
+In conclusion, while the original aims of the project were met, there is room to expand the project. This expansion could make the project more user friendly, and would also give the user the ability to measure more signals using the DE1-SoC scope. 
+\end{flushleft}
 \newpage
 \section{Appendix}
 \subsection{Appendix A - VGA Timing Specifications}
