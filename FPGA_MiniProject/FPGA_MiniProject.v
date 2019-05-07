@@ -20,8 +20,6 @@ input					butt0,	//x1/y1 left/up
 input					butt1,  	//x1/y1 right/down
 input					butt2,	//x2/y2 left/up
 input					butt3,	//x2/y2 right/down
-input [13:0] 	ADCin,
-input 			OutOfRange,
 //ADC Onboard
 output				ADC_CS_N,
 output 				ADC_SCLK, //clock
@@ -34,7 +32,6 @@ output	[7:0]		R,
 output	[7:0]		G,
 output	[7:0]		B,
 output				VClock,
-output				ADDAClock,
 output				ResampleLED,
 //seven seg
 output 	[6:0]		seg0,
@@ -44,6 +41,7 @@ output 	[6:0]		seg3
 );
 // Various wires to enable waves/cursors/clocks
 wire [11:0] testwave; //test wave output
+
 wire Wave1_EN;
 wire Wave2_EN;
 wire cursorX_EN;
@@ -97,6 +95,7 @@ wire [11:0] CH4;
 wire [11:0] CH5;
 wire [11:0] CH6;
 wire [11:0] CH7;
+wire [1:0] waveSel;
 //Instatiating the Test Sine Wave module#
 //Used a test sine wave so we could work on controls, while we were working on the ADC
 sine_wave_gen testWave(
@@ -135,10 +134,9 @@ Sample sample(
 	.screenX (sX),
 	.reset (0),
 	.screenData (sampledwave1),
-	.triggerthreshold(0)
+	.triggerthreshold(100)
 );
 
-//test adc
 Sample sample2(
 	.readClock (clock),
 	.writeClock (sampleWriteClock2),
@@ -199,14 +197,12 @@ controls Ctrl(
 	.Wave2_ENOut (Wave2_EN),
 	.offset1Out (offset1),
 	.offset2Out (offset2),
-	.TWave_EnOut (TWave_EN)
+	.TWave_EnOut (TWave_EN),
+	.waveSel (waveSel)
 );
 //Instatiating the Scope measurements module
 Measure measure(
 	.buttonClock (slClock[19]),
-	.switch8 (switch8), //Wave 1 Clock 
-	.switch9 (switch9), //Wave 2 Clock  	
-	.switch7	 (switch7),
 	.cursory1 (cursorY1),
 	.cursory2 (cursorY2),
 	.cursorx1 (cursorX1),
@@ -214,8 +210,8 @@ Measure measure(
 	.sampleadjust1 (sampleAdjust1),  
 	.sampleadjust2 (sampleAdjust2),
 	.shiftDown1 (shiftDown1),
-	.shiftDown2 (shiftDown1),
-	.waveSel (0),
+	.shiftDown2 (shiftDown2),
+	.waveSel (waveSel),
 	.measurement (0), 
 	.num (num)
 );
