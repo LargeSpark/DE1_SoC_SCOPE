@@ -6,3 +6,4 @@ project was to take multiple input signals from a signal generator, and display 
 accurately on a separate monitor, via the VGA port of the DE1-SoC.
 
 The report can be found in DE1_SoC_Scope/Report/Build/Report.pdf
+[Report](https://github.com/HectoSpark/DE1_SoC_SCOPE/blob/master/FPGA_MiniProject/Report/build/Report.pdf)
