@@ -8,3 +8,4 @@ accurately on a separate monitor, via the VGA port of the DE1-SoC.
 The report can be found in [here](https://github.com/HectoSpark/DE1_SoC_SCOPE/blob/master/FPGA_MiniProject/Report/build/Report.pdf).  
   
   
+Images of use:  
