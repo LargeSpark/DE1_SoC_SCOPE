@@ -10,4 +10,4 @@ The report can be found in [here](https://github.com/HectoSpark/DE1_SoC_SCOPE/bl
   
 Images of use:  
 ![Wave](/wave.jpg)  
-![Board](/board%20measurement.jpg)  
+![Board](/board.jpg)  
